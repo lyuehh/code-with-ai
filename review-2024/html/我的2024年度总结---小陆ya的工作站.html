@@ -1,0 +1,3258 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- head 中自定义的  -->
+
+<head>
+    
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width,initial-scale=1" name="viewport">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="var(--heo-card-bg)" name="theme-color">
+    <title>我的2024年度总结 | 小陆ya的工作站</title>
+    <link rel="shortcut icon"
+          href="/upload/西峰区小陆网络工作室LOGO.svg"/>
+    <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
+
+    <script src="/themes/theme-hao/assets/js/heo.js?v=1.6.1"></script>
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/zhheoblog.css?v=1.6.1">
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/custom.css?v=1.6.1">
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/zhheo/commentBarrage.css">
+
+    <style>
+        *::-webkit-scrollbar-thumb {
+            background-color: var(--heo-main);
+            background-image: -webkit-linear-gradient(45deg,rgba(255,255,255,.4) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.4) 50%,rgba(255,255,255,.4) 75%,transparent 75%,transparent);
+            border-radius: 2em
+        }
+    </style>
+
+    <!-- swiper 在瞬间滚动时会使用 -->
+    <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/8.0.6/swiper-bundle.min.css"/>
+    
+    <!-- 右下角通知 -->
+    <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.css"
+          media="print"
+          onload='this.media="all"'
+          rel="stylesheet"
+    />
+
+    <!-- 代码块自动识别语言 -->
+    
+    <!-- 解决 pjax问题  自动识别语言-->
+    
+
+    <!-- 自动识别语言 -->
+    
+        <script src="/themes/theme-hao/assets/libs/prism/highlight.min.js"></script>
+
+
+        <script>
+            document.addEventListener("pjax:complete", function () {
+                hljs.highlightAll()
+            })
+            document.addEventListener("DOMContentLoaded", function () {
+                hljs.highlightAll()
+            })
+        </script>
+
+    
+
+
+
+    <!--  代码块-->
+    
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="/themes/theme-hao/assets/libs/prism/prism.min.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'"
+          href="/themes/theme-hao/assets/libs/prism/code.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" data-code-theme="light"
+          href="/themes/theme-hao/assets/libs/prism/themes/prism-one-light.css">
+    <link rel="preload" as="style" onload="this.rel='stylesheet'" data-code-theme="dark"
+          href="/themes/theme-hao/assets/libs/prism/themes/prism-one-dark.css">
+    <script data-pjax type="text/javascript" src="/themes/theme-hao/assets/libs/prism/prism.min.js"></script>
+
+    <style>
+
+        #article-container .code-toolbar pre.close{
+            overflow: hidden;
+            height: 300px;
+        }
+    </style>
+
+
+
+    <!-- 页脚内容-样式一 -->
+    <script async="async">(function () {
+    var grt = new Date("10/05/2021 00:00:00"); //设置网站上线时间
+    var now = new Date();
+    var dnum;
+    var hnum;
+    var mnum;
+    var snum;
+    var nowHour;
+    var t;
+    var n;
+
+    // 计算并更新天数、小时数、分钟数和秒数
+    function updateTime() {
+        now = new Date(); // 更新 now 的值
+        nowHour = now.getHours(); // 更新 nowHour 的值
+        var days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        var hours = (now - grt) / 1000 / 60 / 60 - 24 * dnum;
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        var minutes = (now - grt) / 1000 / 60 - 24 * 60 * dnum - 60 * hnum;
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        var seconds = (now - grt) / 1000 - 24 * 60 * 60 * dnum - 60 * 60 * hnum - 60 * mnum;
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        t = Math.trunc(234e8 + (now - grt) / 1e3 * 17)
+        n = (t / 1496e5).toFixed(6)
+    }
+
+    // 更新网页中显示的网站运行时间
+    function updateHtml() {
+        const footer = document.getElementById("footer");
+        if (!footer) return
+        let currentTimeHtml = "";
+        let img = "";
+        let description = "";
+        if (nowHour < 18 && nowHour >= 9) {
+            // 如果是上班时间
+            img = "";
+            description = "";
+        } else {
+            // 如果是下班时间
+            img = "";
+            description = "";
+        }
+        if (document.getElementById("workboard")) {
+            currentTimeHtml =  `<img class="workSituationImg boardsign" src="${img}" alt="${description}" title="${description}">
+                <div id="runtimeTextTip"> 本站居然运行了 ${dnum} 天<span id='runtime'> ${hnum} 小时 ${mnum} 分 ${snum} 秒 </span><i class='haofont hao-icon-heartbeat' style='color:red'></i> <br> 旅行者 1 号当前距离地球 ${t} 千米，约为 ${n} 个天文单位 🚀 </div>`
+            document.getElementById("workboard").innerHTML = currentTimeHtml;
+        }
+    }
+    setInterval(() => {
+        updateTime();
+        updateHtml();
+    }, 1000);
+})();</script>
+
+
+    <script>
+        (win => {
+            win.saveToLocal = {
+                set: function setWithExpiry(key, value, ttl) {
+                    if (ttl === 0) return
+                    const now = new Date()
+                    const expiryDay = ttl * 86400000
+                    const item = {
+                        value: value,
+                        expiry: now.getTime() + expiryDay,
+                    }
+                    localStorage.setItem(key, JSON.stringify(item))
+                },
+
+                get: function getWithExpiry(key) {
+                    const itemStr = localStorage.getItem(key)
+
+                    if (!itemStr) {
+                        return undefined
+                    }
+                    const item = JSON.parse(itemStr)
+                    const now = new Date()
+
+                    if (now.getTime() > item.expiry) {
+                        localStorage.removeItem(key)
+                        return undefined
+                    }
+                    return item.value
+                }
+            }
+
+            win.getScript = url => new Promise((resolve, reject) => {
+                const script = document.createElement('script')
+                script.src = url
+                script.async = true
+                script.onerror = reject
+                script.onload = script.onreadystatechange = function () {
+                    const loadState = this.readyState
+                    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                    script.onload = script.onreadystatechange = null
+                    resolve()
+                }
+                document.head.appendChild(script)
+            })
+
+            win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
+                const link = document.createElement('link')
+                link.rel = 'stylesheet'
+                link.href = url
+                if (id) link.id = id
+                link.onerror = reject
+                link.onload = link.onreadystatechange = function() {
+                    const loadState = this.readyState
+                    if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+                    link.onload = link.onreadystatechange = null
+                    resolve()
+                }
+                document.head.appendChild(link)
+            })
+
+            win.activateDarkMode = function () {
+                document.documentElement.setAttribute('data-theme', 'dark')
+                document.documentElement.classList.add('color-scheme-dark')
+                heo.initThemeColor()
+            }
+            win.activateLightMode = function () {
+                document.documentElement.setAttribute('data-theme', 'light')
+                document.documentElement.classList.remove('color-scheme-dark')
+                heo.initThemeColor()
+            }
+            const t = saveToLocal.get('theme')
+
+            const isDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches
+            const isLightMode = window.matchMedia('(prefers-color-scheme: light)').matches
+            const isNotSpecified = window.matchMedia('(prefers-color-scheme: no-preference)').matches
+            const hasNoSupport = !isDarkMode && !isLightMode && !isNotSpecified
+
+            if (t === undefined) {
+                if (isLightMode) activateLightMode()
+                else if (isDarkMode) activateDarkMode()
+                else if (isNotSpecified || hasNoSupport) {
+                    const now = new Date()
+                    const hour = now.getHours()
+                    const isNight = hour <= 6 || hour >= 18
+                    isNight ? activateDarkMode() : activateLightMode()
+                }
+                window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
+                    if (saveToLocal.get('theme') === undefined) {
+                        e.matches ? activateDarkMode() : activateLightMode()
+                    }
+                })
+            } else if (t === 'light') activateLightMode()
+            else activateDarkMode()
+
+            if("system" === 'dark')
+                activateDarkMode()
+            if("system" === 'light')
+                activateLightMode()
+
+            const asideStatus = saveToLocal.get('aside-status')
+            if (asideStatus !== undefined) {
+                if (asideStatus === 'hide') {
+                    document.documentElement.classList.add('hide-aside')
+                } else {
+                    document.documentElement.classList.remove('hide-aside')
+                }
+            }
+        })(window)
+    </script>
+
+    <!-- 动态加载条 -->
+    <script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false,&quot;eventLag&quot;:false}"
+            src="/themes/theme-hao/assets/libs/pace/pace.min.js">
+    </script>
+
+    <!-- 复制 https://githubfast.com/zenorocha/clipboard.js -->
+    <script src="/themes/theme-hao/assets/libs/clipboard/clipboard.min.js"></script>
+
+    <!-- 关于统计-->
+    <script src="/themes/theme-hao/assets/libs/countup/countup.js"></script>
+
+    <!-- icon图标 -->
+    <link rel="stylesheet" href="/themes/theme-hao/assets/icon/iconfont.css?v=1.6.1">
+
+    <!-- 声明一些公共信息 -->
+<script id="site-config">
+    var GLOBAL_CONFIG = {
+        // 页面类型 index,page,post,tag,category
+        htmlType: "post",
+        postTitle: "\u6211\u76842024\u5E74\u5EA6\u603B\u7ED3",
+        isPost: true,
+        isHome: false,
+        copyright: undefined,
+        lightbox: 'fancybox',
+        lazyload: {
+            enable: true,
+            error: "\/upload\/\u5FAE\u4FE1\u56FE\u7247_20240624135142.jpg"
+        },
+        isFriendLinksInFooter: true,
+        loadingBox: true,
+        loadProgressBar: true,
+        navMusicEnable: true,
+        isMusic: false,
+        helloText: ["\uD83E\uDD16\uFE0F \u6570\u7801\u79D1\u6280\u7231\u597D\u8005"," \uD83D\uDD0D \u5206\u4EAB\u4E0E\u70ED\u5FC3\u5E2E\u52A9"," \uD83C\uDFE0 \u667A\u80FD\u5BB6\u5C45\u5C0F\u80FD\u624B"," \uD83D\uDD28 \u8BBE\u8BA1\u5F00\u53D1\u4E00\u6761\u9F99"," \uD83E\uDD1D \u4E13\u4FEE\u4EA4\u4E92\u4E0E\u8BBE\u8BA1"," \uD83C\uDFC3 \u811A\u8E0F\u5B9E\u5730\u884C\u52A8\u6D3E"," \uD83E\uDDF1 \u56E2\u961F\u5C0F\u7EC4\u53D1\u52A8\u673A"," \uD83D\uDCA2 \u58EE\u6C49\u4EBA\u72E0\u8BDD\u4E0D\u591A"],
+        profileStyle: "default",
+        rightMenuEnable: true,
+        date_suffix: {
+            just: '刚刚',
+            min: '分钟前',
+            hour: '小时前',
+            day: '天前',
+            month: '个月前'
+        },
+        Snackbar: {
+            chs_to_cht: "你已切换为繁体",
+            cht_to_chs: "你已切换为简体",
+            day_to_night: "你已切换为深色模式",
+            night_to_day: "你已切换为浅色模式",
+            bgLight: "#425AEF",
+            bgDark: "#f2b94b",
+            position: "top-center",
+        },
+        translate: {
+            defaultEncoding: 2,
+            translateDelay: 0,
+            msgToTraditionalChinese: "繁",
+            msgToSimplifiedChinese: "简",
+            rightMenuMsgToTraditionalChinese: "轉為繁體",
+            rightMenuMsgToSimplifiedChinese: "转为简体"
+        },
+        prism: {
+            enable: true,
+            enable_title: true,
+            enable_hr: true,
+            enable_line: true,
+            enable_copy: true,
+            enable_expander: true,
+            prism_limit: Number(300) + 30,
+            enable_height_limit: false
+        },
+        source: {
+            power: {
+                powerLink: "https:\/\/afdian.com\/a\/xlwlgzs",
+                showNum: 3,
+                username: null
+            },
+            links: {
+                linksUrl: "\/links",
+                linksNum: "4",
+            },
+            jQuery: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js',
+            justifiedGallery: {
+                js: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.min.js',
+                css: 'https://npm.elemecdn.com/flickr-justified-gallery@2.1.2/dist/fjGallery.css'
+            },
+            fancybox: {
+                js: 'https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.min.js',
+                css: '/null'
+            },
+            comments: {
+                use: "commentWidget",
+                maxBarrage: 1,
+                barrageTime: 4000,
+                mailMd5: "",
+                lazyload: false,
+                textarea: "appearance-none"
+            },
+            post: {
+                dynamicBackground: true
+            },
+            tool: {
+                switch: true
+            },
+            postAi: {
+                ai: "\u672C\u5730\u6A21\u5F0F\u9700\u8981\u81EA\u5DF1\u586B\u5199\u6587\u7AE0\u6458\u8981",
+                randomNum: 3,
+                basicWordCount: 1000,
+                btnLink: "https://afdian.net/item/f18c2e08db4411eda2f25254001e7c00",
+                gptName: "小陆ya",
+                modeName: "local",
+                switchBtn: true,
+                keys: "xxxx",
+                Referers: "https://www.xlwlgzs.com/",
+            },
+            img: {
+                src: "data-lazy-src"
+            },
+            twikoo: {
+                js: "\/themes\/theme-hao\/assets\/libs\/twikoo\/twikoo.all.min.js",
+                twikooUrl: "",
+                accessToken: "",
+            },
+            artalk: {
+                js: "\/themes\/theme-hao\/assets\/libs\/artalk\/Artalk.js",
+                css: "\/themes\/theme-hao\/assets\/libs\/artalk\/Artalk.css",
+                artalkUrl: "",
+                siteName: "",
+            },
+            waline: {
+                js: "https:\/\/cdn.cbd.int\/@waline\/client@2.15.7\/dist\/waline.js",
+                serverURL: "",
+                locale: "{'placeholder': '\u6B22\u8FCE\u8BC4\u8BBA', 'sofa': '\u6765\u53D1\u8BC4\u8BBA\u5427~1'}"
+            },
+            footer: {
+                default_enable: true
+            },
+            about: {
+                rewardList: [],
+                rewardAmount: "5"
+            }
+        }
+    };
+
+</script>
+
+
+
+
+    
+    <!--  解决 katex pjax问题 -->
+    
+    <script src="/themes/theme-hao/assets/js/custom.js?v=1.6.1"></script>
+    
+        
+    
+    <!-- Open Graph Start -->
+    <meta property="og:site_name" content="小陆ya的工作站" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="我的2024年度总结" />
+    <meta property="og:url" content="http://xlwlgzs.com//archives/wd2024ndzj" />
+    
+        <meta property="og:description" content="我的2024年 星霜荏苒，居诸不息。2024年的最后一个月也快接近尾声了，在这一年我的人生命运发生了很大的变化，历经两年辛苦，我如愿以偿上了一个大学，成为了家里的大学生，我也不再是家中学历最低的孩子。借一句诗意盎然的话语“前路浩浩荡荡，万事尽可期待。我与旧事归于尽，来年依旧迎花开” 展望新的一年，它" />
+        <meta property="og:image" content="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202411282210431.jpg" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="我的2024年度总结" />
+    <meta name="twitter:url" content="http://xlwlgzs.com//archives/wd2024ndzj" />
+    
+        <meta name="twitter:description" content="我的2024年 星霜荏苒，居诸不息。2024年的最后一个月也快接近尾声了，在这一年我的人生命运发生了很大的变化，历经两年辛苦，我如愿以偿上了一个大学，成为了家里的大学生，我也不再是家中学历最低的孩子。借一句诗意盎然的话语“前路浩浩荡荡，万事尽可期待。我与旧事归于尽，来年依旧迎花开” 展望新的一年，它" />
+        <meta name="twitter:image" content="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202411282210431.jpg" />
+    
+
+    <!-- Open Graph End -->
+
+
+    
+
+<meta name="keywords" content="互联网，博客，个人博客，网站搭建，halo
+" />
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ddd4ccd2dacfed009d7af502bc79010b";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+              <!-- Clarity tracking code for https://www.xlwlgzs.com/ --><script>    (function(c,l,a,r,i,t,y){        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i+"?ref=bwt";        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);    })(window, document, "clarity", "script", "nkghh6s2fy");</script>
+</script>
+
+<meta name="generator" content="Halo 2.20.13"/><meta name="description" content="我的2024年 星霜荏苒，居诸不息。2024年的最后一个月也快接近尾声了，在这一年我的人生命运发生了很大的变化，历经两年辛苦，我如愿以偿上了一个大学，成为了家里的大学生，我也不再是家中学历最低的孩子。借一句诗意盎然的话语&ldquo;前路浩浩荡荡，万事尽可期待。我与旧事归于尽，来年依旧迎花开&rdquo; 展望新的一年，它"/><!-- plugin-comment-widget start -->
+<script src="/plugins/PluginCommentWidget/assets/static/comment-widget.iife.js?version=2.4.0"></script>
+<link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/style.css?version=2.4.0" />
+<!-- plugin-comment-widget end -->
+              <meta name="baidu-site-verification" content="codeva-tFA7srcgKS" />
+              <meta name="msvalidate.01" content="01AB7BB5146BB267E7FABE29B8CA3ADE" />
+              <meta name="google-site-verification" content="sUR62_KN2Du5_kWXy4C2SHPe4_ntgPueQBudRwwh3nw" />
+    <!-- PluginHighlightJS start -->
+    <link href="/plugins/PluginHighlightJS/assets/static/styles/a11y-light.min.css" rel="stylesheet"/>
+    <script defer src="/plugins/PluginHighlightJS/assets/static/highlight.min.js"></script>
+    <link href="/plugins/PluginHighlightJS/assets/static/plugins/highlightjs-copy.min.css" rel="stylesheet"/>
+    <script defer src="/plugins/PluginHighlightJS/assets/static/plugins/highlightjs-copy.min.js"></script>
+<link href="/plugins/PluginHighlightJS/assets/static/plugins/override.css" rel="stylesheet"/>
+<script>
+document.addEventListener("DOMContentLoaded", async function () {
+    hljs.addPlugin(new CopyButtonPlugin({ lang: "zh"}));
+      const extraLanguages = "".split(",").filter((x) => x);
+      for (let i = 0; i < extraLanguages.length; i++) {
+        const lang = extraLanguages[i];
+        if (lang) {
+          await loadScript(`/plugins/PluginHighlightJS/assets/static/languages/${lang}.min.js`);
+        }
+      }
+
+      document.querySelectorAll("pre code").forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+
+    function loadScript(url) {
+      return new Promise(function (resolve, reject) {
+        const script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = url;
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+      });
+    }
+</script>
+<!-- PluginHighlightJS end -->
+<!-- PluginSearchWidget start -->
+<script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.5.0" async></script>
+<link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.5.0" />
+<!-- PluginSearchWidget end -->
+<script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="0b79995c-0501-49b5-ad65-de427a32fff6"></script>
+<link rel="icon" href="/upload/西峰区小陆网络工作室LOGO.svg" />
+</head>
+
+<body>
+
+<!-- loading 页面 -->
+<!-- loading页面 -->
+
+    <style type="text/css">
+        #loading-box {
+            -webkit-user-select: none;
+        }
+
+        #loading-box .loading-bg {
+            display: flex;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            background: var(--heo-card-bg);
+            z-index: 1999;
+            opacity: 1;
+            transition: 0.2s;
+            pointer-events: all;
+            animation: showLoading 0.3s 0s backwards;
+        }
+
+        #loading-box.loaded .loading-bg {
+            pointer-events: none;
+            transition: 0.2s;
+            animation: hideLoading 0.3s 0s forwards;
+        }
+
+        #loading-box .loading-img {
+            width: 100px;
+            margin: auto;
+            animation-duration: 0.2s;
+            animation-name: loadingAction;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+        }
+
+        #loading-box .loading-image-dot {
+            width: 30px;
+            height: 30px;
+            background: #6bdf8f;
+            position: absolute;
+            border-radius: 50%;
+            border: 6px solid #fff;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(18px, 24px);
+            -moz-transform: translate(18px, 24px);
+            -o-transform: translate(18px, 24px);
+            -ms-transform: translate(18px, 24px);
+            transform: translate(18px, 24px);
+        }
+
+        @keyframes loadingAction {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes hideLoading {
+            from {
+                opacity: 1;
+            }
+            to {
+                opacity: 0;
+            }
+        }
+
+        @keyframes showLoading {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+    <div id="loading-box" onclick="heo.hideLoading()">
+        <div class="loading-bg">
+            <img class="loading-img" style="border-radius: 50%;" src="/upload/微信图片_20240624135142.jpg">
+            <div class="loading-image-dot"></div>
+        </div>
+    </div>
+    <script>
+        var preloader = {
+            endLoading: () => {
+                //- document.body.style.overflow = 'auto';
+                document.getElementById('loading-box').classList.add("loaded")
+            },
+            initLoading: () => {
+                //- document.body.style.overflow = '';
+                document.getElementById('loading-box').classList.remove("loaded")
+            }
+        }
+        window.addEventListener('load', preloader.endLoading())
+        setTimeout(function () {
+            preloader.endLoading();
+        }, 3000)
+    </script>
+
+
+
+
+<!-- 网站背景 -->
+<div id="web_bg">
+    <div>
+        <img class="global_background_img"
+             src="https://api.vvhan.com/api/wallpaper/views"
+        />
+        
+    </div>
+</div>
+
+
+    <style>
+        @media screen and (min-width: 1300px) {
+            .global_background_img {
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 1;
+                position: fixed;
+                z-index: -999;
+                background: var(--heo-background);
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        }
+        
+        @media screen and (max-width: 1300px) {
+            .global_background_img {
+                display: none;
+            }
+        }
+    
+    </style>
+
+
+<script>
+    
+    function toRandomPost() {
+        // 随机跳转首页的一篇文章
+        // 后续改成跳转全站的文章，可以从 sitemap 中获取所有文章
+        let posts = null;
+        
+        let datum = posts.total < posts.size ? posts.total : posts.size;
+        
+        let number = Math.floor(Math.random() * datum);
+        
+        let post = posts.items[number];
+        
+        // 当前窗口打开
+        //window.location.href = post.status.permalink;
+        pjax.loadUrl(post.status.permalink)
+        // window.open(post.status.permalink);
+    }
+
+</script>
+
+<!-- 网站背景 -->
+<div id="an_music_bg"></div>
+
+<!-- 控制台 -->
+<!-- TODO 控制台功能 -->
+<div id="console" >
+  <div class="close-btn" onclick="heo.hideConsole()" href="javascript:void(0);">
+    <i class="haofont hao-icon-circle-xmark"></i>
+  </div>
+  <div class="console-card-group">
+    <!-- 评论，需要使用评论插件，获取最近评论 -->
+    <div class="console-card-group-left">
+      <div class="console-card" id="card-newest-comments" onclick="heo.hideConsole()">
+        <div class="card-content">
+          <div class="author-content-item-tips">互动</div>
+          <span class="author-content-item-title">最近评论</span>
+        </div>
+        <div class="aside-list">
+          
+            <!-- BUG：由于当前的列出所有评论API无过滤功能，非文章页的评论无法查询到页面信息，所以非文章评论跳转至首页-->
+            <div class="aside-list-item" >
+              <a href="/link#comment-553b8e39-8bf8-44de-b54d-e4ff9c193f39" class="thumbnail"  data-pjax-state="">
+                <img src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="Zap">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/link#comment-553b8e39-8bf8-44de-b54d-e4ff9c193f39" title="网站名称：Zap&#39;s Blog
+
+网站域名：https://zapsbg.com/
+
+网站头像：https://pic.imgdb.cn/item/675b54d7d0e0a243d4e30f72.webp
+
+邮箱：zz@zap520.com
+
+网站介绍：Zapの碎碎念" data-pjax-state="">网站名称：Zap&#39;s Blog
+
+网站域名：https://zapsbg.com/
+
+网站头像：https://pic.imgdb.cn/item/675b54d7d0e0a243d4e30f72.webp
+
+邮箱：zz@zap520.com
+
+网站介绍：Zapの碎碎念</a>
+                <time datetime="2024-12-13 07:06:28"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/link#comment-8a1bf635-9076-4ac2-9f9b-ee0559374575" class="thumbnail"  data-pjax-state="">
+                <img src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="菰城鸥鹭">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/link#comment-8a1bf635-9076-4ac2-9f9b-ee0559374575" title="站点名称: 菰城鸥鹭的大学之道
+网站地址: https://www.gcoulu.cn/
+站点图标: https://www.gcoulu.cn/upload/Logo_A%20(1).webp
+网站描述：物有本末 事有终始 知所先后 则近道矣
+站点类型：个人博客
+本站友链：https://www.gcoulu.cn/links
+本站RSS：https://www.gcoulu.cn/rss.xml
+邮箱地址：gcoulu@gcoulu.cn" data-pjax-state="">站点名称: 菰城鸥鹭的大学之道
+网站地址: https://www.gcoulu.cn/
+站点图标: https://www.gcoulu.cn/upload/Logo_A%20(1).webp
+网站描述：物有本末 事有终始 知所先后 则近道矣
+站点类型：个人博客
+本站友链：https://www.gcoulu.cn/links
+本站RSS：https://www.gcoulu.cn/rss.xml
+邮箱地址：gcoulu@gcoulu.cn</a>
+                <time datetime="2024-11-19 21:14:11"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/link#comment-931dfae9-62ce-470f-84df-fd3f8c85cb1f" class="thumbnail"  data-pjax-state="">
+                <img src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="Asanatsa">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/link#comment-931dfae9-62ce-470f-84df-fd3f8c85cb1f" title="网站名称：存在感很低的Asanatsa
+
+网站域名：https://asanatsa.cc/
+
+网站头像：https://asanatsa.cc/img/icon_hotaru.png
+
+网站截图：https://asanatsa.cc/img/main_bg.jpg
+
+邮箱：me@asanatsa.cc
+
+网站介绍：平凡之人" data-pjax-state="">网站名称：存在感很低的Asanatsa
+
+网站域名：https://asanatsa.cc/
+
+网站头像：https://asanatsa.cc/img/icon_hotaru.png
+
+网站截图：https://asanatsa.cc/img/main_bg.jpg
+
+邮箱：me@asanatsa.cc
+
+网站介绍：平凡之人</a>
+                <time datetime="2024-10-18 00:53:42"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/archives/sjswz#comment-6efcdeae-7f87-44e0-9161-30bd75055c83" class="thumbnail"  data-pjax-state="">
+                <img src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="ccbbp">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/archives/sjswz#comment-6efcdeae-7f87-44e0-9161-30bd75055c83" title="收藏了。
+评论验证码数值好大呀！" data-pjax-state="">收藏了。
+评论验证码数值好大呀！</a>
+                <time datetime="2024-09-30 15:18:15"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/" class="thumbnail"  data-pjax-state="">
+                <img src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="LiuShen">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/" title="请问是在重构吗？我没有看到我的友链地址😐" data-pjax-state="">请问是在重构吗？我没有看到我的友链地址😐</a>
+                <time datetime="2024-08-18 17:00:03"></time>
+              </div>
+            </div>
+            <div class="aside-list-item" >
+              <a href="/archives/rbwtjtxr#comment-4f7e33de-52a7-45f7-8bd8-3554e6963bb5" class="thumbnail"  data-pjax-state="">
+                <img src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://cravatar.cn/avatar/?d=mp"
+                     alt="楠笙">
+                <div class="name"><span>stonewu</span></div>
+              </a>
+              <div class="content">
+                <a class="comment" href="/archives/rbwtjtxr#comment-4f7e33de-52a7-45f7-8bd8-3554e6963bb5" title="牢记历史" data-pjax-state="">牢记历史</a>
+                <time datetime="2024-08-15 11:39:06"></time>
+              </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            <script data-pjax>
+              window.addEventListener('load', () => {
+                $(".aside-list time").each(function () {
+                  var timeVal = $(this).attr("datetime");
+                  $(this).text(btf.diffDateExact(timeVal,true));
+                })
+              });
+            </script>
+          
+          </div>
+      </div>
+    </div>
+    <!-- 右侧展示 tag -->
+    <div class="console-card-group-right">
+      <div class="console-card tags" onclick="heo.hideConsole()">
+        <div class="card-content">
+          <div class="author-content-item-tips">标签</div>
+          <span class="author-content-item-title">寻找感兴趣的领域</span>
+        </div>
+        <div class="card-tag-cloud">
+          <a style="font-size:1em;color:#d3d3d3"
+             href="/tags/halo">
+            Halo<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/da-xue-ying-yu">
+            大学英语<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/linux">
+            linux<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ji-nian">
+            纪念<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/jing-sai">
+            竞赛<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ji-nian">
+            纪念<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/hexo">
+            hexo<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/kao-yan">
+            考研<sup>3</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ren-sheng-gan-wu">
+            人生感悟<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/yi-shu-xue">
+            艺术学<sup>3</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ying-yu">
+            英语<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/liu-ji">
+            六级<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/si-ji">
+            四级<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/hexo">
+            hexo<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/you-lian-shen-qing-liu-yan">
+            友链申请留言<sup>0</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/cao-tu-da-shi">
+            草图大师<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ji-suan-ji-er-ji">
+            计算机二级<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ji-suan-ji">
+            计算机<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/xue-shu-jing-sai">
+            学术竞赛<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/tiao-zhan-bei">
+            挑战杯<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ji-nian">
+            纪念<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/zhi-ye-gui-hua">
+            职业规划<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/zhang-xue-feng">
+            张雪峰<sup>3</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/mei-shu-xue">
+            美术学<sup>2</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/ji-suan-ji-kao-shi">
+            计算机考试<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/jian-zhu">
+            建筑<sup>1</sup>
+          </a><a style="font-size:1em;color:#d3d3d3"
+             href="/tags/she-ji-xue">
+            设计学<sup>6</sup>
+          </a>
+        </div>
+      </div>
+      <!-- 底部展示时间归档 -->
+      <div class="console-card history" onclick="heo.hideConsole()">
+        <div class="item-headline"><i class="fas fa-archive"></i><span>文章</span></div>
+        <ul class="card-archive-list">
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/12"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十二月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/11"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  十一月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">2</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/09"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  九月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/08"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  八月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">12</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/07"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  七月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">4</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2024/01"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  一月 2024
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+            <li class="card-archive-list-item">
+              <a class="card-archive-list-link" href="/archives/2023/07"
+                 data-pjax-state="load"><span
+                      class="card-archive-list-date">
+                  七月 2023
+                </span>
+                <div class="card-archive-list-count-group"><span
+                        class="card-archive-list-count">1</span>
+                  <span class="card-archive-list-count-unit">篇</span>
+                </div>
+              </a>
+            </li>
+          
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="console-card-group-reward">
+    <ul class="reward-all console-card">
+      <li class="reward-item"><a href="/upload/赞赏码vx.jpg"
+                                 rel="external nofollow noreferrer" target="_blank" draggable="false"><img
+              class=" entered loaded" alt="微信"
+              src="/upload/赞赏码vx.jpg"></a>
+        <div class="post-qr-code-desc">微信</div>
+      </li>
+      <li class="reward-item"><a href="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E6%94%AF%E4%BB%98%E5%AE%9D.jpg"
+                                 rel="external nofollow noreferrer" target="_blank" draggable="false"><img
+              class=" entered loaded" alt="支付宝"
+              src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E6%94%AF%E4%BB%98%E5%AE%9D.jpg"></a>
+        <div class="post-qr-code-desc">支付宝</div>
+      </li>
+    </ul>
+  </div>
+  <div class="button-group">
+    <div class="console-btn-item">
+      <a class="darkmode_switchbutton" href="javascript:void(0);" onclick="navFn.switchDarkMode();" rel="external nofollow"
+         title="显示模式切换"><i class="haofont hao-icon-moon-clear-fill" style="font-size:1rem"></i>
+      </a>
+    </div>
+    <div class="console-btn-item" id="consoleHideAside" onclick="heo.hideAsideBtn()" title="边栏显示控制"><a
+            class="asideSwitch" data-pjax-state=""><i class="haofont hao-icon-arrows-left-right"></i></a></div>
+    <div class="console-btn-item on" id="consoleCommentBarrage" onclick="heo.switchCommentBarrage()" title="热评开关"><a
+            class="commentBarrage" data-pjax-state=""><i class="haofont hao-icon-chat--fill"></i></a></div>
+
+    <!--<div class="console-btn-item" id="consoleKeyboard" onclick="heo.keyboardToggle()" title="快捷键开关"><a-->
+    <!--        class="keyboard-switch"><i class="fa-duotone fa-keyboard"></i></a>-->
+    <!--</div>-->
+    <!--<div class="console-btn-item" id="assist-open" onclick="heo.hideConsole()" title="无障碍工具栏"><a-->
+    <!--        class="assist-btn"><i class="fa-duotone fa-wheelchair"></i></a>-->
+    <!--</div>-->
+    <div class="console-btn-item" id="consoleMusic" onclick="heo.musicToggle()" title="音乐开关">
+      <a class="music-switch" data-pjax-state="">
+        <i class="haofont hao-icon-disc-fill"></i>
+      </a>
+    </div>
+  </div>
+  <div class="console-mask" href="javascript:void(0);" onclick="heo.hideConsole()" rel="external nofollow">
+  </div>
+</div>
+
+
+<!-- 侧栏，主要是手机端时会使用 -->
+<div id="sidebar">
+    <div id="menu-mask"></div>
+    <div id="sidebar-menus">
+        <span class="sidebar-menu-item-title">功能</span>
+        <div class="sidebar-menu-item">
+            <a class="darkmode_switchbutton menu-child" href="javascript:void(0);" onclick="rm.switchDarkMode()"
+               rel="external nofollow" title="显示模式切换">
+                <i class="haofont hao-icon-moon" style="font-size: 0.9rem;"></i>
+                <span>显示模式</span>
+            </a>
+        </div>
+        
+            <div class="back-menu-list-groups">
+                <div class="back-menu-list-group">
+
+                    
+                </div>
+                <div class="back-menu-list-group">
+
+                    
+                </div>
+                <div class="back-menu-list-group">
+
+                    
+                        <!-- 菜单必须有子项才会展示 -->
+                        <div class="back-menu-list-title">关于</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://github.com/xlwlgzs/xlya/">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">Github</span>
+                                </a>
+                            
+                        </div>
+
+                    
+                </div>
+                <div class="back-menu-list-group">
+
+                    
+                        <!-- 菜单必须有子项才会展示 -->
+                        <div class="back-menu-list-title">📷相册</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://xlwlgzs.com/bangumis">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">追番</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://xlwlgzs.com/lyb">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">许愿墙</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.xlwlgzs.com/album">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">相册</span>
+                                </a>
+                            
+                        </div>
+
+                    
+                </div>
+                <div class="back-menu-list-group">
+
+                    
+                        <!-- 菜单必须有子项才会展示 -->
+                        <div class="back-menu-list-title">🌐朋友圈</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.xlwlgzs.com/dbqd">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">待办菜单</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.xlwlgzs.com/link">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">友链小伙伴（提交博客）</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://xlwlgzs.com/blog-requests/add">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">订阅博客（RSS）</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://xlwlgzs.com/blogs">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">订阅小伙伴的广场</span>
+                                </a>
+                            
+                        </div>
+
+                    
+                </div>
+                <div class="back-menu-list-group">
+
+                    
+                        <!-- 菜单必须有子项才会展示 -->
+                        <div class="back-menu-list-title">🎵MUSIC</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.xlwlgzs.com/music">
+                                    <!-- icon -->
+                                    
+                                    <span class="back-menu-item-text">🎵MUSIC </span>
+                                </a>
+                            
+                        </div>
+
+                    
+                </div>
+
+            </div>
+        
+        
+            <div class="menus_items">
+                <div class="menus_item">
+                    
+                </div>
+                <div class="menus_item">
+                    
+                </div>
+                <div class="menus_item">
+                    
+                        <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                            <span>关于</span>
+                        </a>
+                        
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="site-page child" href="https://github.com/xlwlgzs/xlya/">
+                                        
+                                        <span>Github</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                    
+                </div>
+                <div class="menus_item">
+                    
+                        <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                            <span>📷相册</span>
+                        </a>
+                        
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="site-page child" href="https://xlwlgzs.com/bangumis">
+                                        
+                                        <span>追番</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="https://xlwlgzs.com/lyb">
+                                        
+                                        <span>许愿墙</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="https://www.xlwlgzs.com/album">
+                                        
+                                        <span>相册</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                    
+                </div>
+                <div class="menus_item">
+                    
+                        <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                            <span>🌐朋友圈</span>
+                        </a>
+                        
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="site-page child" href="https://www.xlwlgzs.com/dbqd">
+                                        
+                                        <span>待办菜单</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="https://www.xlwlgzs.com/link">
+                                        
+                                        <span>友链小伙伴（提交博客）</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="https://xlwlgzs.com/blog-requests/add">
+                                        
+                                        <span>订阅博客（RSS）</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="site-page child" href="https://xlwlgzs.com/blogs">
+                                        
+                                        <span>订阅小伙伴的广场</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                    
+                </div>
+                <div class="menus_item">
+                    
+                        <a class="site-page" href="javascript:void(0);" rel="external nofollow">
+                            <span>🎵MUSIC</span>
+                        </a>
+                        
+                            <ul class="menus_item_child">
+                                <li>
+                                    <a class="site-page child" href="https://www.xlwlgzs.com/music">
+                                        
+                                        <span>🎵MUSIC </span>
+                                    </a>
+                                </li>
+                            </ul>
+                        
+                    
+                </div>
+            </div>
+        
+        <span class="sidebar-menu-item-title">标签</span>
+        <div class="card-widget card-tags card-archives card-webinfo card-allinfo">
+            <div class="item-headline"></div>
+            <div class="card-tag-cloud">
+                <a class="tag-item" style="font-size:1em" href="/tags/halo"
+                   title="Halo">
+                    <!-- 角标 -->
+                    Halo<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/da-xue-ying-yu"
+                   title="大学英语">
+                    <!-- 角标 -->
+                    大学英语<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/linux"
+                   title="linux">
+                    <!-- 角标 -->
+                    linux<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ji-nian"
+                   title="纪念">
+                    <!-- 角标 -->
+                    纪念<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/jing-sai"
+                   title="竞赛">
+                    <!-- 角标 -->
+                    竞赛<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ji-nian"
+                   title="纪念">
+                    <!-- 角标 -->
+                    纪念<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/hexo"
+                   title="hexo">
+                    <!-- 角标 -->
+                    hexo<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/kao-yan"
+                   title="考研">
+                    <!-- 角标 -->
+                    考研<sup>3</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ren-sheng-gan-wu"
+                   title="人生感悟">
+                    <!-- 角标 -->
+                    人生感悟<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/yi-shu-xue"
+                   title="艺术学">
+                    <!-- 角标 -->
+                    艺术学<sup>3</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ying-yu"
+                   title="英语">
+                    <!-- 角标 -->
+                    英语<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/liu-ji"
+                   title="六级">
+                    <!-- 角标 -->
+                    六级<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/si-ji"
+                   title="四级">
+                    <!-- 角标 -->
+                    四级<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/hexo"
+                   title="hexo">
+                    <!-- 角标 -->
+                    hexo<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/you-lian-shen-qing-liu-yan"
+                   title="友链申请留言">
+                    <!-- 角标 -->
+                    友链申请留言<sup>0</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/cao-tu-da-shi"
+                   title="草图大师">
+                    <!-- 角标 -->
+                    草图大师<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ji-suan-ji-er-ji"
+                   title="计算机二级">
+                    <!-- 角标 -->
+                    计算机二级<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ji-suan-ji"
+                   title="计算机">
+                    <!-- 角标 -->
+                    计算机<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/xue-shu-jing-sai"
+                   title="学术竞赛">
+                    <!-- 角标 -->
+                    学术竞赛<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/tiao-zhan-bei"
+                   title="挑战杯">
+                    <!-- 角标 -->
+                    挑战杯<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ji-nian"
+                   title="纪念">
+                    <!-- 角标 -->
+                    纪念<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/zhi-ye-gui-hua"
+                   title="职业规划">
+                    <!-- 角标 -->
+                    职业规划<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/zhang-xue-feng"
+                   title="张雪峰">
+                    <!-- 角标 -->
+                    张雪峰<sup>3</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/mei-shu-xue"
+                   title="美术学">
+                    <!-- 角标 -->
+                    美术学<sup>2</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/ji-suan-ji-kao-shi"
+                   title="计算机考试">
+                    <!-- 角标 -->
+                    计算机考试<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/jian-zhu"
+                   title="建筑">
+                    <!-- 角标 -->
+                    建筑<sup>1</sup>
+                </a><a class="tag-item" style="font-size:1em" href="/tags/she-ji-xue"
+                   title="设计学">
+                    <!-- 角标 -->
+                    设计学<sup>6</sup>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 左下角音乐 -->
+
+    <!-- 音乐 -->
+<div  class="needEndHide" id="nav-music" >
+    <a id="nav-music-hoverTips" onclick="heo.musicToggle()" accesskey="m">播放音乐</a>
+    <div id="console-music-bg"></div><meting-js id="8254202923" server="netease" type="playlist" mutex="true"
+                                                preload="none" theme="var(--heo-main)" data-lrctype="0" order="random"></meting-js>
+
+</div>
+
+
+<!-- 内容 -->
+
+    <div class="post" id="body-wrap">
+
+        <header class="post-bg" id="page-header">
+            <nav class="show" id="nav">
+    <div id="nav-group">
+
+        <!-- 导航栏左侧 -->
+        <!-- 导航栏左侧 -->
+<div id="blog_name" >
+
+    
+        <!-- 菜单栏左侧按钮，没有配置时，则不展示-->
+        <div class="back-home-button" tabindex="-1">
+
+            <i class="back-home-button-icon haofont hao-icon-apps-fill" style="font-size: 1rem"></i>
+            <div class="back-menu-list-groups">
+                <div class="back-menu-list-group">
+                    <!-- 菜单必须有子项才会展示 -->
+                    
+
+                </div>
+                <div class="back-menu-list-group">
+                    <!-- 菜单必须有子项才会展示 -->
+                    
+
+                </div>
+                <div class="back-menu-list-group">
+                    <!-- 菜单必须有子项才会展示 -->
+                    
+                        <div class="back-menu-list-title">关于</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_self" href="https://github.com/xlwlgzs/xlya/">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">Github</span>
+                                </a>
+                            
+                        </div>
+                    
+
+                </div>
+                <div class="back-menu-list-group">
+                    <!-- 菜单必须有子项才会展示 -->
+                    
+                        <div class="back-menu-list-title">📷相册</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_self" href="https://xlwlgzs.com/bangumis">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">追番</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_self" href="https://xlwlgzs.com/lyb">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">许愿墙</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.xlwlgzs.com/album">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">相册</span>
+                                </a>
+                            
+                        </div>
+                    
+
+                </div>
+                <div class="back-menu-list-group">
+                    <!-- 菜单必须有子项才会展示 -->
+                    
+                        <div class="back-menu-list-title">🌐朋友圈</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_self" href="https://www.xlwlgzs.com/dbqd">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">待办菜单</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_blank" href="https://www.xlwlgzs.com/link">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">友链小伙伴（提交博客）</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_self" href="https://xlwlgzs.com/blog-requests/add">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">订阅博客（RSS）</span>
+                                </a>
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_self" href="https://xlwlgzs.com/blogs">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">订阅小伙伴的广场</span>
+                                </a>
+                            
+                        </div>
+                    
+
+                </div>
+                <div class="back-menu-list-group">
+                    <!-- 菜单必须有子项才会展示 -->
+                    
+                        <div class="back-menu-list-title">🎵MUSIC</div>
+                        <div class="back-menu-list">
+                            
+                                <a class="back-menu-item" rel="external nofollow"
+                                   target="_self" href="https://www.xlwlgzs.com/music">
+                                    <!-- icon 预留 -->
+                                    
+                                    <span class="back-menu-item-text">🎵MUSIC </span>
+                                </a>
+                            
+                        </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    
+    <!-- 返回主页 -->
+    <!-- 这里可以指定使用什么作为图标，默认使用站点名称 -->
+    <a href="/" id="site-name" title="返回博客主页">
+        <span>小陆·Blog</span>
+    </a>
+</div>
+
+        <div id="page-name-mask">
+            <div id="page-name" >
+                <a id="page-name-text" onclick="btf.scrollToDest(0,500)">我的2024年度总结</a>
+            </div>
+        </div>
+
+        <!-- 导航栏中间 -->
+        <div id="menus">
+
+    <div class="menus_items">
+
+        <!-- 第一层仅展示使用，不做跳转 -->
+        <div class="menus_item">
+
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               href="/">
+                <span>首页</span>
+            </a>
+
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+        </div>
+        <div class="menus_item">
+
+            <!-- javascript:void(0);" -->
+            <a class="site-page" rel="external nofollow"
+               target="_self"
+               href="https://www.xlwlgzs.com/moments">
+                <span>瞬间</span>
+            </a>
+
+            
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+        </div>
+        <div class="menus_item">
+
+            <!-- javascript:void(0);" -->
+            
+
+            <a class="site-page" rel="external nofollow">
+                <span>关于</span>
+            </a>
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+        <!-- 子菜单 -->
+        <div class="menus_item_child">
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self" href="https://github.com/xlwlgzs/xlya/">
+                    
+                    <span>Github</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+        </div>
+    
+
+        </div>
+        <div class="menus_item">
+
+            <!-- javascript:void(0);" -->
+            
+
+            <a class="site-page" rel="external nofollow">
+                <span>📷相册</span>
+            </a>
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+        <!-- 子菜单 -->
+        <div class="menus_item_child">
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self" href="https://xlwlgzs.com/bangumis">
+                    
+                    <span>追番</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self" href="https://xlwlgzs.com/lyb">
+                    
+                    <span>许愿墙</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_blank" href="https://www.xlwlgzs.com/album">
+                    
+                    <span>相册</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+        </div>
+    
+
+        </div>
+        <div class="menus_item">
+
+            <!-- javascript:void(0);" -->
+            
+
+            <a class="site-page" rel="external nofollow">
+                <span>🌐朋友圈</span>
+            </a>
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+        <!-- 子菜单 -->
+        <div class="menus_item_child">
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self" href="https://www.xlwlgzs.com/dbqd">
+                    
+                    <span>待办菜单</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_blank" href="https://www.xlwlgzs.com/link">
+                    
+                    <span>友链小伙伴（提交博客）</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self" href="https://xlwlgzs.com/blog-requests/add">
+                    
+                    <span>订阅博客（RSS）</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self" href="https://xlwlgzs.com/blogs">
+                    
+                    <span>订阅小伙伴的广场</span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+        </div>
+    
+
+        </div>
+        <div class="menus_item">
+
+            <!-- javascript:void(0);" -->
+            
+
+            <a class="site-page" rel="external nofollow">
+                <span>🎵MUSIC</span>
+            </a>
+            <!--递归调用-->
+            
+    <!-- 有子菜单则显示子菜单 -->
+    
+        <!-- 子菜单 -->
+        <div class="menus_item_child vertical_nav">
+            <div class="recursion_menus_item">
+                <a class="site-page child" target="_self" href="https://www.xlwlgzs.com/music">
+                    
+                    <span>🎵MUSIC </span>
+                </a>
+                <!--递归调用-->
+                
+    <!-- 有子菜单则显示子菜单 -->
+    
+
+            </div>
+        </div>
+    
+
+        </div>
+
+    </div>
+</div>
+
+        <!-- 导航栏右侧 -->
+        <!-- 导航栏菜单栏 -->
+<div id="nav-right">
+
+    <!-- 功能都需要添加开关 -->
+
+    <!-- 随机前往一个开往项目网站 -->
+    <div class="nav-button only-home" id="travellings_button" title="随机前往一个开往项目网站">
+        <a class="site-page" href="https://www.travellings.cn/go.html"  rel="external nofollow"
+           title="随机前往一个开往项目网站">
+            <i class="haofont hao-icon-eicon_train-line"></i>
+        </a>
+    </div>
+
+    <div class="nav-button" id="randomPost_button">
+        <a class="site-page" href="javascript:void(0);" onclick="toRandomPost()" title="随机文章">
+            <i class="haofont hao-icon-signal-tower-fill"></i>
+        </a>
+    </div>
+
+    <!-- 切换模式 -->
+    <div class="nav-button" id="darkmode_button">
+        <a class="console_switchbutton" href="javascript:void(0);"  onclick="navFn.switchDarkMode();" rel="external nofollow"
+           title="切换模式 - 日夜交替，黑白互换。">
+            <i class="haofont hao-icon-moon-clear-fill" style="font-size: 1rem;"></i>
+        </a>
+    </div>
+
+    <!-- 搜索使用搜索插件 -->
+    <div class="nav-button" id="search-button">
+        <a class="site-page social-icon search" href="javascript:SearchWidget.open();" rel="external nofollow"
+           title="站内搜索">
+            <i class="haofont hao-icon-search--line"></i>
+        </a>
+    </div>
+
+    <div class="console-button" tabindex="-1">
+        <span class="site-page nav-login">
+            <i class="haofont hao-icon-zhanghao1 " style="font-size: 19.5px;"></i>
+            
+        </span>
+        <div class="back-menu-list-groups">
+            <div class="back-menu-list-group" style="margin: -4px -9px -4px -18px">
+                <div class="back-menu-list">
+                    
+                    <a class="back-menu-item" rel="external nofollow" target="_blank"
+                       href="/login"
+                       onclick="this.href = '/login?redirect_uri=' + encodeURIComponent(window.location.href)">
+                        <span class="back-menu-item-text">登录</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="nav-button" id="nav-console">
+        <a class="console_switchbutton" href="javascript:void(0);" onclick="heo.showConsole()" rel="external nofollow"
+           title="显示中控台">
+            <i class="haofont hao-icon-dashboard"></i>
+        </a>
+    </div>
+
+    <div class="nav-button" id="nav-totop" onclick="btf.scrollToDest(0,500)">
+        <a class="totopbtn">
+            <i class="haofont hao-icon-arrow-up" style="font-size: 1rem;"></i><span id="percent">0</span>
+        </a>
+    </div>
+
+    <div id="toggle-menu">
+        <a class="site-page">
+            <i class="haofont hao-icon-bars"></i>
+        </a>
+    </div>
+</div>
+
+
+    </div>
+</nav>
+            <div class="coverdiv loaded" id="coverdiv">
+                <img alt="cover" class="nolazyload" id="post-cover"
+                     src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202411282210431.jpg">
+            </div>
+
+            <div id="post-info">
+                <div id="post-firstinfo">
+                    <div class="meta-firstline">
+                        <!-- 这里要跳转到版权页 -->
+                        
+                            <a class="post-meta-original"
+                               title="该文章为原创文章，注意版权协议"
+                               href="#"
+                            >原创</a>
+                            
+                        
+                        
+                        
+                    </div>
+                </div>
+                <h1 class="post-title">我的2024年度总结</h1>
+                <div id="post-meta">
+                    <div class="meta-secondline">
+                        <span class="post-meta-author" data-flag-title="文章作者" title="文章作者">
+                            <i class="haofont hao-icon-zuozhe post-meta-icon"></i>小陆ya
+                        </span>
+                        <span class="post-meta-wordcount">
+                            <i class="haofont hao-icon-file-word post-meta-icon" title="字数"></i>
+                            <span class="post-meta-label">字数:</span>
+                            <span class="word-count">4377</span>
+                            <span class="post-meta-separator"></span>
+                            <i class="haofont hao-icon-clock post-meta-icon" title="阅读耗时"></i>
+                            <span class="post-meta-label">阅读耗时:</span>
+                            <span>10 分钟</span>
+                        </span>
+                        <span class="post-meta-date">
+                            <i class="haofont hao-icon-calendar-days post-meta-icon"></i>
+                            <time title="2024-12-21 16:25:53" datetime="2024-12-21">2024/12/21</time>
+                        </span>
+                        
+                        <span class="post-meta-wechat" title="该文章在博客首发">
+                            
+                                <i class="haofont hao-icon-rss post-meta-icon"></i>博客独享
+                            
+
+                            
+                        </span>
+                        <a class="post-meta-pv" data-flag-title="热度"
+                           title="热度" >
+                            <i class="haofont hao-icon-fire post-meta-icon"></i>
+                            <span class="post-meta-label">热度:</span>
+                            <span id="visit">55</span>
+                        </a>
+                        <a class="post-meta-commentcount"  data-flag-title="评论数"
+                           title="评论数"
+                           href="#post-comment">
+                            <i class="haofont hao-icon-chat--fill post-meta-icon" style="font-size: 17px;"></i>
+                            <span class="post-meta-label">评论:</span>
+                            <span id="comment-count">0</span>
+                            
+                            
+                        </a>
+                        
+                            
+                        
+                    </div>
+
+                </div>
+            </div>
+            <section class="main-hero-waves-area waves-area">
+                <svg class="waves-svg" preserveAspectRatio="none" shape-rendering="auto" viewBox="0 24 150 28"
+                     xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <path
+                                d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"
+                                id="gentle-wave"></path>
+                    </defs>
+                    <g class="parallax">
+                        <use href="#gentle-wave" x="48" y="0"></use>
+                        <use href="#gentle-wave" x="48" y="3"></use>
+                        <use href="#gentle-wave" x="48" y="5"></use>
+                        <use href="#gentle-wave" x="48" y="7"></use>
+                    </g>
+                </svg>
+            </section>
+        </header>
+        <main class="layout right-aside" id="content-inner">
+            <div id="post">
+
+
+                <!-- 文章ai摘要 -->
+                <div class="post-ai">
+                    <div class="ai-title"><i class="haofont hao-icon-bilibili"></i>
+                        <div class="ai-title-text">AI-摘要</div>
+                        <div id="ai-Toggle">切换</div>
+                        <i class="haofont hao-icon-arrow-rotate-right"></i>
+                        <div class="ai-tag" id="ai-tag">小陆ya GPT</div>
+                        
+                    </div>
+                    <div class="ai-explanation" style="display: block;">AI初始化中...</div>
+                    <div class="ai-btn-box">
+                        <div class="ai-btn-item">介绍自己</div>
+                        <div class="ai-btn-item">生成本文简介</div>
+                        <div class="ai-btn-item">推荐相关文章</div>
+                        <div class="ai-btn-item">前往主页</div>
+                        <div class="ai-btn-item" id="go-tianli-blog">前往tianli博客</div>
+                    </div>
+                </div>
+
+                <!-- 文章内容 -->
+                <article  class="post-content  line-numbers" id="article-container">
+                    
+                        
+                    
+                    <h1 style="text-align: center; " id="%E6%88%91%E7%9A%842024%E5%B9%B4"><span fontsize="" color="">我的2024年</span></h1><p style=""><span style="font-size: 14ptpx">         星霜荏苒，居诸不息。2024年的最后一个月也快接近尾声了，在这一年我的人生命运发生了很大的变化，历经两年辛苦，我如愿以偿上了一个大学，成为了家里的大学生，我也不再是家中学历最低的孩子。借一句诗意盎然的话语“前路浩浩荡荡，万事尽可期待。我与旧事归于尽，来年依旧迎花开”</span> <span style="font-size: 14ptpx">展望新的一年，它将是一个全新的天地，等待着我去探索学习，去拓宽认知的边界，去拥抱更加丰富多彩的生活！</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">“我站在儿时的小巷向回望，也再也没有了儿时的青涩脸庞。”以前眼里的那种目光也再也没有了，少了很多期待的目光，一切对我来说好像都没有了什么意义，又好像充分的有意义。</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">1月之际，随着12月31日的结束，我漫长而艰辛的高考艺术集训生涯缓缓落下了帷幕。当我迈出考场的那一刹那，内心的激动如潮水般涌动。对于甘肃省的学子而言，这段集训经历尤为漫长，从阳春三月直至岁末十二月，整整十个月的磨砺与坚持！这段旅程，泪水与汗水交织，对于任何一个艺术生来说，都绝非易事。唯有亲身经历，方能深刻体会其中的艰辛与不易。</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">在12月31日的清晨，我完成了最后一门考试的答卷。由于归家路途遥远，我只能无奈等待至次日启程。然而，就在那个夜晚，地震的突袭再次为我的兰州记忆增添了一抹惊心动魄。彼时，宿舍内众人正轻松愉快地沉浸在游戏世界中，突然间，所有手机的灯光闪烁，屏幕上的倒计时开始跳动。随着许多同学已提前离开集训学校，留下的多是家远难归的伙伴。我们慌忙跳下床，直奔楼下，仅用了短短三十秒便冲出了大楼。这一经历，为我在兰州的日子再次埋下了想要逃离的种子。</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">1月1日清晨五点，大家早早起床，享受最后的宿舍时光。六点半，离别的时刻终于到来，我们依依不舍地告别了宏刚美术（北龙校区）。七点整，我与几位家人一同踏上T3次列车，向着兰州西站进发！至今仍清晰记得，那天走出楼门时，最后一眼望向“宏刚美术”那几个字，清晨的集训学校，心中五味杂陈。这不仅是与集训生活的告别，更是我人生中一段重要时光的落幕。</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">在前往兰州西站的路上，我望着这座城市的点点滴滴，黄河大桥、黄河之水，既熟悉又带着几分陌生。抵达兰州西站后，我取出这几个月积攒的车票，看着手中的这一叠见证，心中感慨万千。历经数小时的旅途，我终于在下午时分回到了庆阳。然而，仅仅在家待了十五日，我又再次踏上了前往“兰州”的征途。</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">1月21日，联考成绩揭晓的日子，这天平淡无奇。但当成绩公布的那一刻，我的内心却充满了复杂的情绪，既有激动也有失落。这段经历，如同一部跌宕起伏的电影，在我心中留下了难以磨灭的印记。</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">2月，新东方、春节、返乡、返程！几个字总结了我匆匆忙忙的2月，2.3寒大雪纷飞，银装素裹之下，路途显得格外崎岖，几人又一同去兰州西站，这回是回家过年，但是丝毫感觉不到那种感觉！2024的春节是让我最无聊、最匆忙、最快、最无聊的一个春节，在家10天，又得远离！2.16凌晨3点强制起床，爸爸妈妈送我去兰州了+玩儿两天！</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">3-5月，新东方集训文化课，期间每天都在重复的做着相同的事情，在5月最后一次月考，是我考的最差的一次，特别差，地理最擅长的科目16分，距离大学已经不是一百多分了，仿佛看不到希望。躲在角落里自己一个人哭，和妈妈打视频刚打开，看到妈妈眼睛已经憋不住了，又是一顿大哭。妈妈安慰着我，“尽力就好，考不上咱就不上了”。这也是我一个重要的一个支撑点。5.12去了白云观求学，妈妈也听一个姨说的去了老家一个比较灵的一个道观也为我求学！我还到杭州西湖灵隐寺求了节节高。在这一刻我真正的从一个坚信的唯物主义变为唯心主义信仰者！</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">6月，迎来的是这一生中“高考”，正常考吧。但是在第二天考我最擅长的地理时，遇到了小插曲。家距离考点10min，9点考，8点起，一拉门，门坏了“这下完了”我在二楼住，从窗子一看，好像有点高，把门把手拉坏了还是开不开，拨打了传说中的119，来救我（这里属实实现到了往年在短视频中别人被困发生到自己身上了），破门而入，急匆匆地去考场！不过好的是地理正常发挥还好还好86最终还是挺满意。所有考完后还是很激动的，但是又是什么都不想做，只想慢慢走走散散步！</span></p><p style=""><span style="font-size: 14ptpx">7-8月，填报志愿，去了很多地方去玩儿，收到录取通知书！填报志愿对我来说还是很重视的，天天这跑那跑找老师，翻书查资料，提前查资料政策，写了好多好多，甘肃的高校是最先PASS的。就像现在我所在的河南省高校“洛阳理工学院”按照正常志愿，应该是在我的26志愿号，但是我知道我想要的一切，专业、地方、城市、距离，我想这也就是我的梦中情校，不出意外一定会录取！这是我自己为自己这一生决定最正确的一次！</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">9月，来到了我的高校“洛阳理工学院（九都校区）”！在我眼里它不仅仅是一所学校，还是我这十几年来走过来的成果，是我集训时哭的学，是我一生的幸运成分促使我来到这里继续学习。或许我不明白这里的一切，但是这也是我已经尽力了。9.2就已经离开了庆阳，一路上去到了“陕西咸阳-陕西西安-河南三门峡-河南洛阳”玩儿到洛阳，一路上满满都是开心！来到这里经历了报道、军训、开课吗，一段时间下来还是很容易适应的，也遇到了很多来自祖国各个地方的同学，大家都很好！</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">10-12月，和同学去了老君山，体验感真不错，爬完后的感觉也很爽，哈哈哈！再者这几个月我也不知道我干了什么就这么快的结束了！好快好快，又是一年。引用琼瑶老师的文字“生时愿如火花，燃烧到生命最后一刻。死时愿如雪花，飘然落地，化为尘土！”。</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">我们的一生中会有很多的故事，会见到很多很人，会错过很多人，会伤害很多人，会遇到很多的事情，会不断地在选择，去决定自己的一切。选择或对或错，不要埋怨命运的无情，不要埋怨远方的短暂，与其抱怨不如安心享受，当下缘分注定的一切。</span></p><p style=""><span fontsize="" color="">         </span><span style="font-size: 14ptpx">存在先于本质，存在就是生命的意义！时间不等人是完全正确的，我们与时间赛跑，一年又一年，顾然有迷茫失意，也有坎坷磨难，但总归是一路升级打怪才来到了现在，初心易动摇，无论几时，希望我们都能拥有从来再来的勇气，把自己摆正，把时间珍视，然后尽情地享受这世界！正如相信正义和善良，也要相信自己的存在是非常美好的事，正是经历过不同的人生才塑造了不同的我们，每一个人都有其独特的价值，而价值由你我本身来创造，面对他人的批判和评价，不要急着去否定自己，我们需要一些这样的魄力，坚定自己的内心做自己想做的事！</span></p><p style=""><span style="font-size: 14ptpx">&nbsp;</span></p><p style=""><span style="font-size: 14ptpx">2024年12月06日</span></p><p style=""><span style="font-size: 14ptpx">河南省洛阳市涧西区九都西路71号</span></p><p style=""><span style="font-size: 14ptpx">写于洛阳理工学院（九都校区）桢苑1号楼</span></p>
+                </article>
+
+                <!-- 文章ai摘要 -->
+                <script data-pjax src="/themes/theme-hao/assets/libs/gpt/post-ai.js"></script>
+
+                <!-- 版权声明 -->
+                <!-- 版权声明 -->
+
+    <!-- 默认样式 -->
+    <!-- 版权样式默认 -->
+
+    <div class="post-tools" id="post-tools">
+        <div class="post-tools-left">
+
+            <!-- 打赏 -->
+            <div class="post-reward"
+                 onclick="AddRewardMask()">
+                <div class="reward-button button&#45;&#45;animated" title="赞赏作者"><i class="haofont hao-icon-hand-heart-fill"></i>
+                    打赏作者
+                </div>
+                <div class="reward-main">
+                    <ul class="reward-all"><span class="reward-title">感谢你赐予我前进的力量</span>
+                        <ul class="reward-group">
+                            <li class="reward-item"><a href="/upload/赞赏码vx.jpg"
+                                                       target="_blank">
+                                <img alt="微信" class="post-qr-code-img"
+                                     src="/upload/赞赏码vx.jpg"></a>
+                                <div class="post-qr-code-desc">微信</div>
+                            </li>
+                            <li class="reward-item"><a href="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E6%94%AF%E4%BB%98%E5%AE%9D.jpg"
+                                                       target="_blank"><img alt="支付宝" class="post-qr-code-img"
+                                                                            src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E6%94%AF%E4%BB%98%E5%AE%9D.jpg"></a>
+                                <div class="post-qr-code-desc">支付宝</div>
+                            </li>
+                        </ul>
+                        <a class="reward-main-btn" href="/about"
+                           target="_blank">
+                            <div class="reward-text">赞赏者名单</div>
+                            <div class="reward-dec">因为你们的支持让我意识到写文章的价值🙏</div>
+                        </a>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 说明 -->
+            
+
+            <!-- 分享 -->
+            <div class="share-link mobile">
+                <div class="share-qrcode">
+                    <div class="share-button" title="使用手机访问这篇文章"><i class="haofont hao-icon-qrcode"></i>
+                    </div>
+                    <div class="share-main">
+                        <div class="share-main-all">
+                            <div id="qrcode"></div>
+                            <div class="reward-dec">使用手机访问这篇文章</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="share-link weibo">
+                <a class="share-button" rel="noopener external nofollow noreferrer noopener" target="_blank"
+                   href="https://service.weibo.com/share/share.php?title=我的2024年度总结" title="分享到微博">
+                    <i class="haofont hao-icon-weibo" style="font-size:22px"></i></a>
+            </div>
+            <div class="share-link copyurl">
+                <div class="share-button" id="post-share-url" onclick="rm.copyPageUrl()" title="复制链接"><i
+                        class="haofont hao-icon-link"></i></div>
+            </div>
+        </div>
+        <div class="post-tools-right">
+            <div class="tag_share">
+                <div class="post-meta__tag-list">
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 版权声明 -->
+    <div class="post-copyright">
+        <div class="post-copyright__author" >
+            <!-- 版权页 以及版权描述文字 -->
+            <a class="post-copyright__original" href="#"
+               title="该文章为原创文章，注意版权协议">原创</a>
+            
+            <a class="post-copyright-title" href="#"><span>我的2024年度总结</span></a>
+        </div>
+        <div class="post-copyright__type">
+            <span class="post-copyright-info" id="post-copyright-url">
+                <a href="javascript:window.location.href;">我的2024年度总结</a>
+            </span>
+            <button class="post-copyright-copybtn" onclick="rm.copyPageUrl()">
+                <i class="haofont hao-icon-paste"></i>
+            </button>
+        </div>
+        <div class="post-copyright__notice">
+            <span class="post-copyright-info">本文是原创文章，采用 <a target="_blank" href="/cc">CC BY-NC-ND 4.0</a> 协议，完整转载请注明来自 <a href="/" target="_blank" >程序员小陆ya</a></span>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/css/post-copyright.css?v=1.6.1">
+
+
+
+    <!-- 样式一 -->
+    <!-- 版权样式一 -->
+
+
+
+
+
+                <nav class="pagination-post needEndHide" id="pagination">
+                    
+                    <div class="next-post pull-full ">
+                        <a href="/archives/rsbkn">
+                            <img alt="cover" id="preimg" class="nolazyload"
+                                 src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                                 data-lazy-src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241128221038.jpg">
+                            <div class="pagination-info">
+                                <div class="label">下一篇</div>
+                                <div class="next_info">人生不可能每个选择都正确，很多事情就算重来一遍，以当时的阅历和心智，还是会做出同样的选择，结果还是无法避免</div>
+                            </div>
+                        </a>
+                    </div>
+                </nav>
+                <!-- 阅读建议 -->
+                
+<!-- 阅读建议 -->
+
+                <hr>
+                
+                
+    <!-- 已知问题 PJAX 下，comment 首次请求会出错。当前的临时解决办法是使用 js 重试 -->
+    <div id="post-comment">
+        <div class="comment-head">
+            <div class="comment-headline"><i class="haofont hao-icon-chat--fill" style="font-size: 20px;"></i> <span>评论</span></div>
+            <div  class="comment-randomInfo">
+                <a onclick="heo.addRandomCommentInfo()" href="javascript:void(0)">匿名评论</a>
+                <a href="/privacy">隐私政策</a>
+            </div>
+            <div class="comment-tips" id="comment-tips">
+                <span>你无需删除空行，直接评论以获取最佳展示效果</span>
+            </div>
+        </div>
+
+
+        
+
+        
+
+        
+
+        <div id="comment-content-halo-run-Post-0b79995c-0501-49b5-ad65-de427a32fff6"></div>
+<script>
+  CommentWidget.init(
+    "#comment-content-halo-run-Post-0b79995c-0501-49b5-ad65-de427a32fff6",
+    {
+      group: "content.halo.run",
+      kind: "Post",
+      name: "0b79995c-0501-49b5-ad65-de427a32fff6",
+      size: 20,
+      replySize: 10,
+      withReplies: false,
+      withReplySize: 5,
+      useAvatarProvider: true,
+      avatarProvider: "gravatar",
+      avatarProviderMirror: "https://gravatar.com",
+      avatarPolicy: "anonymousUser",
+      captchaEnabled: true,
+    }
+  );
+</script>
+
+    </div>
+
+
+            </div>
+
+            <!-- 侧栏 -->
+            <div class="aside-content" id="aside-content">
+
+    <!-- 侧栏部件，不包含 toc 则直接遍历 -->
+    
+
+    <!-- 侧栏部件，toc 之后的组件需要被 sticky_layout 包裹 -->
+    
+        
+            
+            
+                <!-- 侧边栏自我介绍 -->
+
+<div class="card-widget card-info" >
+
+    <!-- 默认 -->
+    
+        <!-- 描述信息 -->
+        <div class="card-content" style="background-image: url(https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240624135142.jpg);">
+            <div class="card-info-avatar is-center">
+                <div class="author-info__top-group">
+                    <div class="author-info__sayhi" id="author-info__sayhi" onclick="heo.changeSayHelloText()">你好啊！我是
+                    </div>
+                    <img class="avatar-img"
+                         src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                         data-lazy-src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20240624135142.jpg">
+                </div>
+                
+                <div class="author-info__name">小陆ya</div>
+                <div class="author-info__description">小陆ya，西峰区小陆网络工作室的法定代表人及联合创始人/CMO，众星公益创始人，阳光志愿协会会员，中国红十字会志愿者成员，甘肃省青年志愿协会成员！酷狗音乐、QQ音乐等平台发表了《亚当斯》《听见》等作品 。爱奇艺、企鹅网、百家号多家知名媒体平台签约作者！</div>
+            </div>
+        </div>
+
+        <!-- 跳转信息 -->
+        <div class="banner-button-group">
+            <a class="banner-button" href="/about">
+                <i class="haofont hao-icon-circle-arrow-right"></i>
+                <span class="banner-button-text">了解更多</span>
+            </a>
+        </div>
+
+        
+
+        <style>
+            /* 社交按钮 */
+            #aside-content .card-info #card-info-btn {
+                display: none;
+            }
+
+            #aside-content .card-info .card-info-social-icons {
+                margin: 0;
+                padding-top: 10px;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                cursor: pointer;
+                position: absolute;
+                bottom: 1rem;
+                left: 1rem;
+            }
+
+            #aside-content .card-info .card-info-social-icons .social-icon {
+                margin: 0;
+                margin-right: 8px;
+            }
+
+            #aside-content .card-info .card-info-social-icons i {
+                background: var(--heo-white-op);
+                color: var(--heo-white);
+                font-size: 1.2rem;
+                width: 40px;
+                height: 40px;
+                display: flex;
+                align-items: center;
+            }
+
+            #aside-content .card-info .card-info-social-icons i:hover {
+                background: var(--heo-white-op);
+                transform: scale(1.1);
+                color: var(--heo-white);
+                box-shadow: none;
+            }
+
+            #aside-content .card-info .banner-button {
+                height: 40px;
+                width: 124px;
+                border-radius: 20px;
+                justify-content: center;
+            }
+
+            @media screen and (min-width: 1300px) {
+                #aside-content .card-info .card-info-social-icons i {
+                    color: var(--heo-white);
+                }
+
+                [data-theme=dark] #aside-content .card-info .card-info-social-icons i {
+                    color: var(--heo-white);
+                }
+            }
+
+            #aside-content .card-info img {
+                width: 28px;
+                right: 24px;
+                top: 20px;
+                border-radius: 500px;
+                transition: all 0.5s ease 0s;
+                position: absolute;
+            }
+
+            #aside-content .card-info .author-info__name {
+                font-weight: 500;
+                font-size: 1.57em;
+            }
+
+            #aside-content .card-info .author-info__name {
+                text-align: left;
+                font-weight: bold;
+                color: var(--heo-white);
+                font-size: 28px;
+                line-height: 1.1;
+                margin-top: 0.8rem;
+                margin-bottom: 0.4rem;
+            }
+        </style>
+
+    
+
+
+    <!-- 样式一 -->
+    
+
+</div>
+
+            
+            
+            
+            
+            
+                <div class="card-widget heo-right-widget" id="card-wechat" onclick="javascript:window.open(&#39;/wechat&#39;)">
+    <div id="flip-wrapper">
+        <div id="flip-content">
+            <div class="face"
+                 style="background: url(/upload/微信截图_20240710192118.png) center center / 100% no-repeat;"></div>
+            <div class="back face"
+                 style="background: url(/upload/微信截图_20240710192102.png) center center / 100% no-repeat;"></div>
+        </div>
+    </div>
+
+    <style>
+        #aside-content .card-widget#card-wechat {
+            background: #07C160;
+        }
+        #aside-content .card-widget#card-wechat::before {
+            position: absolute;
+            width: 100%;
+            height: 90%;
+            left: 0;
+            top: 0;
+            background: url(/themes/theme-hao/assets/images/gzh_cover.png) center center no-repeat;
+            content: '';
+            background-size: cover;
+            transition: .2s cubic-bezier(.45,.04,.43,1.21)
+        }
+        #aside-content .card-widget#card-wechat:hover:before {
+            top: 100%;
+            opacity: 0;
+            transition: .3s ease-out
+        }
+
+    </style>
+</div>
+
+            
+            
+            
+            
+                <div class="sticky_layout">
+            
+            
+                <!-- 目录 -->
+<div class="card-widget" id="card-toc">
+    <div class="item-headline">
+        <i class="haofont hao-icon-bars"></i>
+        <span>文章目录</span>
+        <span class="toc-percentage"></span>
+    </div>
+    <!-- 目录容器 -->
+    <div class="toc-content"></div>
+</div>
+            
+            
+            
+            
+            
+                <!-- 最新评论 -->
+<div class="card-widget card-recent-post" >
+    <a onclick="pjax.loadUrl(&quot;\/newest&quot;)"
+       title="查看更多"
+       class="card-more-btn"
+       style="cursor:pointer" draggable="false"><i class="haofont hao-icon-chevron-right"></i></a>
+    <div class="item-headline"><i class="haofont hao-icon-chat--fill" style="font-size: 19px;"></i><span>最新评论</span></div>
+    <div class="aside-list" id="newcomm">
+        
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/link#comment-553b8e39-8bf8-44de-b54d-e4ff9c193f39" data-pjax-state="">
+                    <img alt="头像"
+                         src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif" data-lazy-src="https://cravatar.cn/avatar/36cee6ce207b6d4bc7849a36e595ed6a1eec80589cef3ae9d0f4ed11dcdd6923">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/link#comment-553b8e39-8bf8-44de-b54d-e4ff9c193f39" title="网站名称：Zap&#39;s Blog
+
+网站域名：https://zapsbg.com/
+
+网站头像：https://pic.imgdb.cn/item/675b54d7d0e0a243d4e30f72.webp
+
+邮箱：zz@zap520.com
+
+网站介绍：Zapの碎碎念" data-pjax-state="">网站名称：Zap&#39;s Blog
+
+网站域名：https://zapsbg.com/
+
+网站头像：https://pic.imgdb.cn/item/675b54d7d0e0a243d4e30f72.webp
+
+邮箱：zz@zap520.com
+
+网站介绍：Zapの碎碎念</a>
+                    <div class="name">
+                        <span>Zap / </span>
+                        <time
+                                datetime="2024-12-13 07:06:28"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/link#comment-8a1bf635-9076-4ac2-9f9b-ee0559374575" data-pjax-state="">
+                    <img alt="头像"
+                         src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif" data-lazy-src="https://cravatar.cn/avatar/ee664dde0c09362bd09dc10e7ff0cd5eabef28a39bd2e667c234d0b28182400e">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/link#comment-8a1bf635-9076-4ac2-9f9b-ee0559374575" title="站点名称: 菰城鸥鹭的大学之道
+网站地址: https://www.gcoulu.cn/
+站点图标: https://www.gcoulu.cn/upload/Logo_A%20(1).webp
+网站描述：物有本末 事有终始 知所先后 则近道矣
+站点类型：个人博客
+本站友链：https://www.gcoulu.cn/links
+本站RSS：https://www.gcoulu.cn/rss.xml
+邮箱地址：gcoulu@gcoulu.cn" data-pjax-state="">站点名称: 菰城鸥鹭的大学之道
+网站地址: https://www.gcoulu.cn/
+站点图标: https://www.gcoulu.cn/upload/Logo_A%20(1).webp
+网站描述：物有本末 事有终始 知所先后 则近道矣
+站点类型：个人博客
+本站友链：https://www.gcoulu.cn/links
+本站RSS：https://www.gcoulu.cn/rss.xml
+邮箱地址：gcoulu@gcoulu.cn</a>
+                    <div class="name">
+                        <span>菰城鸥鹭 / </span>
+                        <time
+                                datetime="2024-11-19 21:14:11"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/link#comment-931dfae9-62ce-470f-84df-fd3f8c85cb1f" data-pjax-state="">
+                    <img alt="头像"
+                         src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif" data-lazy-src="https://cravatar.cn/avatar/1d57d4b2b995df0dcda5d0bf18f827f8629193fd17bde0cea71b39036ebdea3b">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/link#comment-931dfae9-62ce-470f-84df-fd3f8c85cb1f" title="网站名称：存在感很低的Asanatsa
+
+网站域名：https://asanatsa.cc/
+
+网站头像：https://asanatsa.cc/img/icon_hotaru.png
+
+网站截图：https://asanatsa.cc/img/main_bg.jpg
+
+邮箱：me@asanatsa.cc
+
+网站介绍：平凡之人" data-pjax-state="">网站名称：存在感很低的Asanatsa
+
+网站域名：https://asanatsa.cc/
+
+网站头像：https://asanatsa.cc/img/icon_hotaru.png
+
+网站截图：https://asanatsa.cc/img/main_bg.jpg
+
+邮箱：me@asanatsa.cc
+
+网站介绍：平凡之人</a>
+                    <div class="name">
+                        <span>Asanatsa / </span>
+                        <time
+                                datetime="2024-10-18 00:53:42"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/archives/sjswz#comment-6efcdeae-7f87-44e0-9161-30bd75055c83" data-pjax-state="">
+                    <img alt="头像"
+                         src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif" data-lazy-src="https://cravatar.cn/avatar/b2c9c4e1fba5d90da5e0baa56e3d0d7aef3dfef2751fb77048364428089c3c37">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/archives/sjswz#comment-6efcdeae-7f87-44e0-9161-30bd75055c83" title="收藏了。
+评论验证码数值好大呀！" data-pjax-state="">收藏了。
+评论验证码数值好大呀！</a>
+                    <div class="name">
+                        <span>ccbbp / </span>
+                        <time
+                                datetime="2024-09-30 15:18:15"></time>
+                    </div>
+                </div>
+            </div>
+            <div class="aside-list-item">
+                <span></span>
+                <a class="thumbnail" href="/" data-pjax-state="">
+                    <img alt="头像"
+                         src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif" data-lazy-src="https://cravatar.cn/avatar/92c15d4a1d99a8ee04b986a14a5f7e009e574b3383fc575005947988ccf205e2">
+                </a>
+                <div class="content">
+                    <a class="comment"
+                       style="display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;overflow: hidden;"
+                       href="/" title="请问是在重构吗？我没有看到我的友链地址😐" data-pjax-state="">请问是在重构吗？我没有看到我的友链地址😐</a>
+                    <div class="name">
+                        <span>LiuShen / </span>
+                        <time
+                                datetime="2024-08-18 17:00:03"></time>
+                    </div>
+                </div>
+            </div>
+        
+    </div>
+</div>
+
+            
+            
+            
+            
+            
+                <div class="card-widget card-recent-post">
+    <div class="item-headline"><i class="haofont hao-icon-eicon_map-2-line1"></i><span>最近发布</span></div>
+    <div class="aside-list">
+        <!-- 最新文章，用户可以自定义展示数量 -->
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/wd2024ndzj" title="我的2024年度总结">
+                <img alt="我的2024年度总结"
+                     src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202411282210431.jpg">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/wd2024ndzj" title="我的2024年度总结">我的2024年度总结</a>
+                <time title="2024-12-21 16:25:53" datetime="2024-12-21 16:25:53">2024-12-21 16:25:53</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/rsbkn" title="人生不可能每个选择都正确，很多事情就算重来一遍，以当时的阅历和心智，还是会做出同样的选择，结果还是无法避免">
+                <img alt="人生不可能每个选择都正确，很多事情就算重来一遍，以当时的阅历和心智，还是会做出同样的选择，结果还是无法避免"
+                     src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20241128221038.jpg">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/rsbkn" title="人生不可能每个选择都正确，很多事情就算重来一遍，以当时的阅历和心智，还是会做出同样的选择，结果还是无法避免">人生不可能每个选择都正确，很多事情就算重来一遍，以当时的阅历和心智，还是会做出同样的选择，结果还是无法避免</a>
+                <time title="2024-11-08 16:24:00" datetime="2024-11-08 16:24:00">2024-11-08 16:24:00</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/tzbxm" title="”挑战杯“了解">
+                <img alt="”挑战杯“了解"
+                     src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://api.52vmy.cn/api/img/tu/view?”挑战杯“了解">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/tzbxm" title="”挑战杯“了解">”挑战杯“了解</a>
+                <time title="2024-11-06 09:07:15" datetime="2024-11-06 09:07:15">2024-11-06 09:07:15</time>
+            </div>
+        </div>
+        <div class="aside-list-item">
+            <a class="thumbnail" href="/archives/sjswz" title="设计网站,设计生你能用到的站点-欢迎收藏~">
+                <img alt="设计网站,设计生你能用到的站点-欢迎收藏~"
+                     src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%8E%9F%E5%88%9B%E6%B3%A8%E6%B0%B4%E5%88%9B%E6%84%8Floading%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.gif"
+                     data-lazy-src="https://xlwlgzs.oss-cn-beijing.aliyuncs.com/xlwlgzs.com//%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_202409042237391.jpg">
+            </a>
+            <div class="content">
+                <a class="title" href="/archives/sjswz" title="设计网站,设计生你能用到的站点-欢迎收藏~">设计网站,设计生你能用到的站点-欢迎收藏~</a>
+                <time title="2024-09-16 07:15:38" datetime="2024-09-16 07:15:38">2024-09-16 07:15:38</time>
+            </div>
+        </div>
+    </div>
+</div>
+            
+            
+            
+            
+            
+                <!-- 目录 -->
+<div class="card-widget card-categories">
+    <div class="item-headline"><i class="haofont hao-icon-folder-open"></i><span>分类</span></div>
+    <div class="aside-list">
+        <ul class="card-category-list">
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/jing-sai">
+                        <span class="card-category-list-name" title="竞赛">竞赛</span>
+                    <span class="card-category-list-count">1</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/si-liu-ji">
+                        <span class="card-category-list-name" title="四六级">四六级</span>
+                    <span class="card-category-list-count">1</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/kao-yan">
+                        <span class="card-category-list-name" title="考研">考研</span>
+                    <span class="card-category-list-count">4</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/gan-guan">
+                        <span class="card-category-list-name" title="感观">感观</span>
+                    <span class="card-category-list-count">1</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/peng-you-quan">
+                        <span class="card-category-list-name" title="朋友圈">朋友圈</span>
+                    <span class="card-category-list-count"></span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/jiao-cheng">
+                        <span class="card-category-list-name" title="教程">教程</span>
+                    <span class="card-category-list-count">7</span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/hexo">
+                        <span class="card-category-list-name" title="hexo">hexo</span>
+                    <span class="card-category-list-count"></span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/hexo">
+                        <span class="card-category-list-name" title="hexo">hexo</span>
+                    <span class="card-category-list-count"></span>
+                </a>
+            </li>
+            <li class="card-category-list-item">
+                <a class="card-category-list-link" href="/categories/default">
+                        <span class="card-category-list-name" title="默认分类">默认分类</span>
+                    <span class="card-category-list-count">5</span>
+                </a>
+            </li>
+        </ul>
+
+
+    </div>
+</div>
+
+            
+            
+            
+                </div>
+        </main>
+
+        <!-- 底部 -->
+        <!-- 页脚模块 -->
+<footer id="footer">
+
+    
+
+    <!-- 社交链接，需要填入 href class title -->
+    <div id="footer_deal">
+        
+            
+        
+
+        
+
+        
+            
+        
+    </div>
+
+    <!-- 相关地址  -->
+    
+        <div id="heo-footer">
+            <div class="footer-group">
+                <h3 class="footer-title">首页</h3>
+                <div class="footer-links">
+                    
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">瞬间</h3>
+                <div class="footer-links">
+                    
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">关于</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="https://github.com/xlwlgzs/xlya/" target="_self">Github</a>
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">📷相册</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="https://xlwlgzs.com/bangumis" target="_self">追番</a><a class="footer-item" href="https://xlwlgzs.com/lyb" target="_self">许愿墙</a><a class="footer-item" href="https://www.xlwlgzs.com/album" target="_blank">相册</a>
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">🌐朋友圈</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="https://www.xlwlgzs.com/dbqd" target="_self">待办菜单</a><a class="footer-item" href="https://www.xlwlgzs.com/link" target="_blank">友链小伙伴（提交博客）</a><a class="footer-item" href="https://xlwlgzs.com/blog-requests/add" target="_self">订阅博客（RSS）</a><a class="footer-item" href="https://xlwlgzs.com/blogs" target="_self">订阅小伙伴的广场</a>
+                </div>
+            </div>
+            <div class="footer-group">
+                <h3 class="footer-title">🎵MUSIC</h3>
+                <div class="footer-links">
+                    <a class="footer-item" href="https://www.xlwlgzs.com/music" target="_self">🎵MUSIC </a>
+                </div>
+            </div>
+            <div class="footer-group">
+                <div class="footer-title-group">
+                    <h3 class="footer-title">友链</h3>
+                    <a class="random-friends-btn" id="footer-random-friends-btn"
+                       href="javascript:heo.addFriendLinksInFooter();" rel="external nofollow" title="换一批友情链接"
+                       data-pjax-state="external"><i class="haofont hao-icon-arrow-rotate-right" style="font-size: 16px;"></i></a>
+                </div>
+                <div class="footer-links" id="friend-links-in-footer"></div>
+            </div>
+        </div>
+
+    
+    <!-- 底部 banner -->
+    
+
+    <div class="copyright">
+        ©2021 - 2025 By 小陆ya的工作站
+    </div>
+    
+    <div id="workboard"></div>
+    <p id="ghbdages" style="width:60%;margin: 0 auto 0;">
+        <a class="github-badge" target="_blank" href="https://halo.run/"
+           style="margin-inline:5px" title="博客框架为halo2.x">
+            <img src=""
+                 data-lazy-src="https://npm.onmicrosoft.cn/hao-theme-static@1.3.6/images/Frame-Halo-blue.svg" alt="博客框架为halo2.x" />
+        </a><a class="github-badge" target="_blank" href="http://beian.miit.gov.cn/"
+           style="margin-inline:5px" title="陇ICP备2024011531号-2">
+            <img src=""
+                 data-lazy-src="/upload/备案号-piai.svg" alt="陇ICP备2024011531号-2" />
+        </a><a class="github-badge" target="_blank" href="https://beian.mps.gov.cn/#/query/webSearch?code=62100202621164"
+           style="margin-inline:5px" title="甘公网安备62100202621164">
+            <img src=""
+                 data-lazy-src="/upload/logo/画板%201.png" alt="甘公网安备62100202621164" />
+        </a><a class="github-badge" target="_blank" href="https://icp.gov.moe/?keyword=20240351"
+           style="margin-inline:5px" title="萌ICP备20240351号">
+            <img src=""
+                 data-lazy-src="/upload/logo/画板%201萌国备案-zepc.png" alt="萌ICP备20240351号" />
+        </a>
+    </p>
+    
+
+    <style>
+        .copyright,
+        #ghbdages,
+        #workboard {
+            text-align: center;
+        }
+    </style>
+
+    <style>
+        #heo-footer {
+            margin-bottom: 1rem;
+        }
+    </style>
+
+    <div id="footer-banner" style="padding:1rem">
+        <div class="footer-banner-links">
+            <div class="footer-banner-left">
+                <div id="footer-banner-tips">
+                    <div style="display: flex;flex-direction: row;align-items: center;">
+                        
+                            ©2021 - 2025
+                        
+                        
+                        By <a class="footer-banner-link" href="/" target="_blank">小陆ya的工作站</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-banner-right">
+                
+                <!-- 又拍云 -->
+                
+                <!-- 阿里云 -->
+                
+                <!-- 腾讯云 -->
+                
+                <!-- 华为云 -->
+                
+                <!-- 自定义云服务信息 -->
+                
+                
+                <!-- 订阅 需要 RSS 插件支持 -->
+                <a class="footer-banner-link" href="/rss.xml">订阅</a>
+                
+                <a class="footer-banner-link" href="/about">关于</a>
+                <a class="footer-banner-link" href="https://beian.miit.gov.cn/#/Integrated/index"
+                   rel="noopener external nofollow noreferrer noopener"
+                   target="_blank">
+                    <span>陇ICP备2024011531号-2</span>
+                    
+                </a>
+                <a class="footer-banner-link" href="http://www.beian.gov.cn/portal/registerSystemInfo"
+                   rel="noopener external nofollow noreferrer noopener"
+                   target="_blank">
+                    <span>甘公网安备62100202621164</span>
+                    
+                </a>
+                <a class="footer-banner-link cc" href="西峰区小陆网络工作室"
+                   title="cc协议">
+                    <i class="haofont hao-icon-copyright-line"></i>
+                    <i class="haofont hao-icon-creative-commons-by-line"></i>
+                    <i class="haofont hao-icon-creative-commons-nc-line"></i>
+                    <i class="haofont hao-icon-creative-commons-nd-line"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 右下角 snackbar 弹窗 -->
+    <div class="needEndHide" id="cookies-window">
+        <div class="cookies-window-title">协议提醒助手</div>
+        <div class="cookies-window-content"><span class="cookies-tip">查看本站为你的个人隐私做出的努力</span>
+            <a class="cookies-link" href="/privacy"
+               title="本站如何保护你的隐私" data-pjax-state=""><i
+                    class="bber-gotobb haofont hao-icon-circle-arrow-right"></i></a>
+        </div>
+    </div>
+    <div id="quit-box" onclick="RemoveRewardMask()"></div>
+
+    <!--评论弹幕弹窗 -->
+    <div class="comment-barrage needEndHide" style="display: none;"></div>
+
+    <style>
+        a.footer-banner-link.cloud {
+            display: flex;
+            align-items: center;
+        }
+        img.entered.loading.cloud {
+            height: 32px;
+        }
+    </style>
+    
+    
+        <style>
+            @media screen and (min-width: 1300px) {
+                #footer {
+                    background: linear-gradient(180deg, var(--heo-card-bg-none) 0%, #fff0 25%);
+                    margin-top: 0.5rem;
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+            
+            @media screen and (max-width: 1300px) {
+                #footer {
+                    background: linear-gradient(180deg, var(--heo-background) 0%, #fff0 25%);
+                    margin-top: 0;
+                    z-index: 3;
+                }
+            }
+        
+        </style>
+    
+    
+</footer>
+
+
+
+
+    </div>
+
+
+
+
+<!-- todo 右下角悬浮操作按钮 -->
+
+    <div id="rightside">
+        <div id="rightside-config-hide">
+            <button id="readmode" type="button" title="阅读模式"><i class="haofont hao-icon-book-open"></i></button>
+            <button id="translateLink" type="button" title="简繁转换">繁</button>
+            <button id="darkmode" type="button" title="浅色和深色模式转换"><i class="haofont hao-icon-circle-half-stroke"></i></button>
+            <button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="haofont hao-icon-arrows-left-right"></i></button>
+        </div>
+        <div id="rightside-config-show">
+            <button id="rightside-config" type="button" title="设置"><i class="haofont hao-icon-gear"></i></button>
+            <button class="close" id="mobile-toc-button" type="button" title="目录"><i class="haofont hao-icon-list-ul"></i></button>
+            <a id="to_comment" href="#post-comment" title="直达评论" ><i class="haofont hao-icon-chat--fill" style="font-size: 17px;"></i></a>
+            <a id="switch-commentBarrage" href="javascript:heo.switchCommentBarrage();" rel="external nofollow noreferrer" title="开关弹幕" draggable="false" data-pjax-state="external"><i class="haofont hao-icon-danmu"></i></a>
+            <button id="go-up" type="button" title="回到顶部"><i class="haofont hao-icon-arrow-up"></i></button>
+            
+        </div>
+    </div>
+    
+
+    <link rel="stylesheet" href="/themes/theme-hao/assets/css/read-mode.css?v=1.6.1">
+
+
+
+<!-- 右键菜单 -->
+<div class="js-pjax">
+    <div id="rightMenu">
+        <div class="rightMenu-group rightMenu-small">
+            <div class="rightMenu-item" id="menu-backward"><i class="haofont hao-icon-arrow-left"></i></div>
+            <div class="rightMenu-item" id="menu-forward"><i class="haofont hao-icon-arrow-right"></i></div>
+            <div class="rightMenu-item" id="menu-refresh"><i class="haofont hao-icon-arrow-rotate-right"></i></div>
+            <div class="rightMenu-item" id="menu-top"><i class="haofont hao-icon-arrow-up"></i></div>
+        </div>
+        <div class="rightMenu-group rightMenu-line rightMenuPlugin">
+            <div class="rightMenu-item" id="menu-copytext">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制选中文本</span>
+            </div>
+            <div class="rightMenu-item" id="menu-pastetext">
+                <i class="haofont hao-icon-paste"></i>
+                <span>粘贴文本</span>
+            </div>
+            <a class="rightMenu-item" id="menu-commenttext">
+                <i class="haofont hao-icon-comment-medical"></i>
+                <span>引用到评论</span>
+            </a>
+            <div class="rightMenu-item" id="menu-newwindow">
+                <i class="haofont hao-icon-window-restore"></i>
+                <span>新窗口打开</span>
+            </div>
+            <div class="rightMenu-item" id="menu-copylink">
+                <i class="haofont hao-icon-link"></i>
+                <span>复制链接地址</span>
+            </div>
+            <div class="rightMenu-item" id="menu-copyimg">
+                <i class="haofont hao-icon-images"></i>
+                <span>复制此图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-downloadimg">
+                <i class="haofont hao-icon-download"></i>
+                <span>下载此图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-newwindowimg" >
+                <i class="haofont hao-icon-window-restore"></i>
+                <span>新窗口打开图片</span>
+            </div>
+            <div class="rightMenu-item" id="menu-search">
+                <i class="haofont hao-icon-search--line"></i>
+                <span>站内搜索</span>
+            </div>
+            <div class="rightMenu-item" id="menu-searchBaidu">
+                <i class="haofont hao-icon-baidu"></i>
+                <span>百度搜索</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-toggle" style="">
+                <i class="haofont hao-icon-play"></i>
+                <span>播放音乐</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-back" style="">
+                <i class="haofont hao-icon-backward"></i>
+                <span>切换到上一首</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-forward" style="">
+                <i class="haofont hao-icon-forward"></i>
+                <span>切换到下一首</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-playlist"
+                 style="" onclick="javascript:window.open(&#39;https://www.xlwlgzs.com/music&#39;)">
+                <i class="haofont hao-icon-radio"></i>
+                <span>查看所有歌曲</span>
+            </div>
+            <div class="rightMenu-item" id="menu-music-copyMusicName" style="">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制歌名</span>
+            </div>
+        </div>
+        <div class="rightMenu-group rightMenu-line rightMenuOther">
+            <a class="rightMenu-item menu-link" id="menu-randomPost" onclick="toRandomPost()">
+                <i class="haofont hao-icon-shuffle"></i>
+                <span>随便逛逛</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="../categories">
+                <i class="haofont hao-icon-cube"></i>
+                <span>博客分类</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="../tags">
+                <i class="haofont hao-icon-tags"></i>
+                <span>文章标签</span>
+            </a>
+        </div>
+        <!-- <div class="rightMenu-group rightMenu-line">
+            <a class="rightMenu-item menu-link" href="cc/index.html">
+                <i class="haofont icon-hand-holding"></i>
+                <span>隐私协议</span>
+            </a>
+            <a class="rightMenu-item menu-link" href="cc/index.html">
+                <i class="haofont icon-closed-captioning"></i>
+                <span>版权协议</span>
+            </a>
+        </div> -->
+        <div class="rightMenu-group rightMenu-line rightMenuOther">
+            <div class="rightMenu-item" id="menu-copy">
+                <i class="haofont hao-icon-copy"></i>
+                <span>复制地址</span>
+            </div>
+            <div class="rightMenu-item" id="menu-commentBarrage"
+                 rel="external nofollow noreferrer" draggable="false" style="display: flex;">
+                <i class="haofont hao-icon-chat--fill" style="font-size: 19px;"></i>
+                <span class="menu-commentBarrage-text">关闭热评</span>
+            </div>
+            <div class="rightMenu-item" id="menu-darkmode">
+                <i class="haofont hao-icon-moon-clear-fill" style="font-size: 19px;"></i>
+                <span class="menu-darkmode-text">深色模式</span>
+            </div>
+            <div class="rightMenu-item" id="menu-translate">
+                <i class="haofont hao-icon-fanti" style="font-size: 19px;"></i>
+                <span>轉為繁體</span>
+            </div>
+        </div>
+    </div>
+    <div id="rightmenu-mask"></div>
+</div>
+
+
+<div>
+    <script src="/themes/theme-hao/assets/js/utils.js?v=1.6.1"></script>
+    <script src="/themes/theme-hao/assets/js/halo.js?v=1.6.1"></script>
+    <script src="/themes/theme-hao/assets/js/main.js?v=1.6.1"></script>
+    <script charset="utf-8" data-pjax src="/themes/theme-hao/assets/zhheo/blogex.js?v=1.6.1"></script>
+    <script src="/themes/theme-hao/assets/js/tw_cn.js?v=1.6.1"></script>
+    <!-- https://instant.page/ 网站预加载， 放在 </body> 之前 -->
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.min.js"
+            type="module"></script>
+    
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vanilla-lazyload/17.3.1/lazyload.iife.min.js"></script>
+    
+    <!-- 右下角通知 https://www.polonel.com/snackbar/ -->
+    <!-- todo head 中有它的 css，应该可以写一块，并改成后台可配置的功能，代码中应该还有他的 js -->
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/node-snackbar/0.1.16/snackbar.min.js"></script>
+    
+    <div class="js-pjax">
+        <!-- 动态标题 -->
+        <!-- 动态标题 -->
+<script>
+    var leaveTitle = '😭不要走！再看看嘛！';
+    var backTitle = '😊欢迎肥来！';
+    var OriginTitile = "我的2024年度总结 | 小陆ya的工作站"
+    var titleTime
+    document.addEventListener('visibilitychange', function () {
+        if (document.hidden) {
+            //离开当前页面时标签显示内容
+            document.title = leaveTitle
+            clearTimeout(titleTime)
+        } else {
+            //返回当前页面时标签显示内容
+            document.title = backTitle + OriginTitile
+            //两秒后变回正常标题
+            titleTime = setTimeout(function () {
+                document.title = OriginTitile
+            }, 2000)
+        }
+    })
+</script>
+    </div>
+    
+    <!-- 评论 -->
+    
+    
+    <!--音乐-->
+    <script>var meting_api = "https://api-meting.bsancy.cn/api?server=:server&type=:type&id=:id&r=:r"; </script>
+    
+    <!-- 深色模式下添加粒子效果canvas -->
+    <canvas id="universe" width="1312" height="880"></canvas>
+    <script async="" src="/themes/theme-hao/assets/libs/canvas/dark.js"></script>
+    
+    <!-- https://davidshimjs.github.io/qrcodejs/ 生成二维码 -->
+    <!-- 应该是文章页分享使用 -->
+    <script data-pjax src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/qrcodejs/1.0.0/qrcode.min.js"></script>
+    
+    <!--  https://raphamorim.io/waterfall.js/  应该是这个 还有相关的 js 代码 是否可以调整-->
+    <script src="/themes/theme-hao/assets/libs/waterfall/waterfall.min.js"></script>
+    
+    <!-- 获取主色 https://lokeshdhakar.com/projects/color-thief/ -->
+    <!--<script th:src="@{/assets/libs/color-thief/color-thief.umd.js}"></script>-->
+    <script src="/themes/theme-hao/assets/libs/fast-average-color/index.browser.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/view-image/view-image.min.js"></script>
+    
+    <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css"
+          media="all" onload="this.media='all'">
+    
+    <script src="/themes/theme-hao/assets/libs/aplayer/APlayer.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/aplayer/Meting2.min.js"></script>
+    
+    <script src="/themes/theme-hao/assets/libs/pjax/pjax.min.js"></script>
+    
+    <!-- swiper 在瞬间滚动时会使用 -->
+    <script data-pjax
+            src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/Swiper/6.6.2/swiper-bundle.min.js"></script>
+    
+    <!-- 右键菜单 -->
+    <script src="/themes/theme-hao/assets/zhheo/rightmenu.js"></script>
+    
+    <!-- 评论弹幕 -->
+    
+    
+    <!-- Tocbot 目录生成 start -->
+    <!-- Tocbot 目录生成 start -->
+<th:bloc>
+    <script src="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.min.js"></script>
+    <link href="/themes/theme-hao/assets/libs/tocbot/4.18.2/tocbot.css" rel="stylesheet">
+</th:bloc>
+    
+    <!-- 51统计 -->
+    <!-- 51统计 -->
+
+    
+    <script>
+        let pjaxSelectors = ['title', '#config-diff', '#body-wrap', '#rightside-config-hide', '#rightside-config-show', '.js-pjax', '#site-config']
+        
+        pjaxSelectors.unshift('meta[property="og:type"]', 'meta[property="og:image"]', 'meta[property="og:title"]', 'meta[property="og:url"]', 'meta[property="og:description"]'
+                , 'meta[name="twitter:title"]', 'meta[name="twitter:url"]', 'meta[name="twitter:description"]', 'meta[name="twitter:image"]')
+        
+        var pjax = new Pjax({
+            elements: 'a:not([target="_blank"])',
+            selectors: pjaxSelectors,
+            cacheBust: false,
+            analytics: false,
+            scrollRestoration: false
+        })
+        
+        document.addEventListener('pjax:send', function () {
+            
+            // removeEventListener toc scroll
+            window.removeEventListener('scroll', window.tocScrollFn)
+            
+            typeof preloader === 'object' && preloader.initLoading()
+            
+            if (window.aplayers) {
+                for (let i = 0; i < window.aplayers.length; i++) {
+                    if (!window.aplayers[i].options.fixed) {
+                        window.aplayers[i].destroy()
+                    }
+                }
+            }
+            
+            typeof typed === 'object' && typed.destroy()
+            
+            //reset readmode
+            const $bodyClassList = document.body.classList
+            $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+        })
+        
+        document.addEventListener('pjax:complete', function () {
+            window.refreshFn()
+            
+            document.querySelectorAll('script[data-pjax]').forEach(item => {
+                        const newScript = document.createElement('script')
+                        const content = item.text || item.textContent || item.innerHTML || ""
+                        Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+                        newScript.appendChild(document.createTextNode(content))
+                        item.parentNode.replaceChild(newScript, item)
+                    }
+            )
+            
+            GLOBAL_CONFIG.lazyload.enable && window.lazyLoadInstance.update()
+            
+            typeof chatBtnFn === 'function' && chatBtnFn()
+            typeof panguInit === 'function' && panguInit()
+            
+            // google analytics
+            typeof gtag === 'function' && gtag('config', '', {
+                'page_path': window.location.pathname
+            });
+            
+            // baidu analytics
+            typeof _hmt === 'object' && _hmt.push(['_trackPageview', window.location.pathname]);
+            
+            typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+            
+            // Analytics
+            if (false) {
+                MtaH5.pgv()
+            }
+            
+            // prismjs
+            typeof Prism === 'object' && Prism.highlightAll()
+            
+            typeof preloader === 'object' && preloader.endLoading()
+        })
+        
+        document.addEventListener('pjax:error', (e) => {
+                    if (e.request.status === 404 || e.request.status === 500) {
+                        window.location.href = e.request.responseURL;
+                    }
+                }
+        )
+    </script>
+
+
+</div>
+
+<!-- 根据配置设置 css 变量值，全局 css 通过变量值进行处理 -->
+<style type="text/css">
+    [data-theme=light] {
+        --heo-theme: #425AEF !important;
+        --heo-theme-op: #425AEF23 !important;
+        --heo-theme-op-deep: #425AEFdd !important;
+        --heo-theme-none: #425AEF00 !important;
+    }
+
+    [data-theme=dark] {
+        --heo-theme: #f2b94b !important;
+        --heo-theme-op: #f2b94b23 !important;
+        --heo-theme-op-deep: #f2b94bdd !important;
+        --heo-theme-none: #f2b94b00 !important;
+    }
+
+    :root {
+        --halo-comment-widget-component-card-bg: var(--heo-card-bg);
+        --halo-comment-widget-component-theme-op: var(--heo-theme-op);
+        --halo-comment-widget-component-card-border: var(--heo-card-border);
+        --halo-comment-widget-component-shadow-border: var(--heo-shadow-border);
+        --halo-comment-widget-component-secondtext: var(--heo-secondtext);
+        --halo-comment-widget-component-lighttext: var(--heo-lighttext);
+        --halo-comment-widget-component-secondbg: var(--heo-secondbg);
+        --halo-comment-widget-component-fontcolor: var(--heo-fontcolor);
+        --halo-comment-widget-component-main: var(--heo-main);
+        --halo-comment-widget-component-background: var(--heo-background);
+        --halo-comment-widget-component-white: var(--heo-white);
+        --halo-comment-widget-component-shadow-black: var(--heo-shadow-black);
+    }
+    #page {
+        --halo-comment-widget-component-padding: 1rem;
+    }
+
+    .color-scheme-dark,.dark,[data-color-scheme=dark] {
+        --halo-search-widget-color-modal-layer: var(--heo-maskbgdeep);
+        --halo-search-widget-color-modal-content-bg: var(--heo-card-bg);
+        --halo-search-widget-color-form-input: rgb(255 255 255 / 79.9%);
+        --halo-search-widget-color-form-input-placeholder: #6b7280d9;
+        --halo-search-widget-color-form-input-bg: var(--heo-card-bg);
+        --halo-search-widget-color-form-divider: #bbbbbb0f;
+        --halo-search-widget-color-result-item-bg: var(--heo-card-bg);
+        --halo-search-widget-color-result-item-hover-bg: #90939914;
+        --halo-search-widget-color-result-item-title: rgb(255 255 255 / 79.9%);
+        --halo-search-widget-color-result-item-content: #ffffff82;
+        --halo-search-widget-color-command-kbd-item: #c0c4ccb3;
+        --halo-search-widget-color-command-kbd-border: #bbbbbb0f;
+        --halo-search-widget-color-result-empty: #6b7280d9
+    }
+
+    [data-theme=light] {
+        --halo-search-widget-color-result-item-title : #4B5563
+    }
+    
+</style>
+
+<script data-pjax="">
+    
+    //页脚友联
+    GLOBAL_CONFIG.isFriendLinksInFooter && heo.addFriendLinksInFooter()
+    //音乐页面切换歌曲调用
+    if (GLOBAL_CONFIG.isMusic) {
+        heo.changeMusicBg(false);
+    }
+    //代码块
+    if (GLOBAL_CONFIG.prism.enable) {
+        halo.addPrismTool()
+        halo.dataCodeTheme()
+    }
+
+</script>
+</body>
+
+</html>

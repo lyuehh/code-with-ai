@@ -1,0 +1,257 @@
+<!DOCTYPE html><html lang="zh"> <head><!-- Global --><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v4.16.7"><!-- Canonical URL --><link rel="canonical" href="https://situ2001.com/blog/2024-summary/"><title>2024 年终总结</title><meta name="title" content="2024 年终总结"><meta name="description" content="我的 2024 年终总结"><!-- Sitemap --><link rel="sitemap" href="/sitemap-index.xml"><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://situ2001.com/blog/2024-summary/"><meta property="og:title" content="2024 年终总结"><meta property="og:description" content="我的 2024 年终总结"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://situ2001.com/blog/2024-summary/"><meta property="twitter:title" content="2024 年终总结"><meta property="twitter:description" content="我的 2024 年终总结"><!-- Google Search Console --><meta name="google-site-verification" content="HKmw1FhzbCh-mBGnSzdcwyZCnqOq6NfeHht8lGh3wtE"><!-- Google tag (gtag.js) --><script async src="https://www.googletagmanager.com/gtag/js?id=G-JQ438Q8K4Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JQ438Q8K4Z');
+</script><script>
+  // For dark mode
+  const MEDIA_QUERY_STR = "(prefers-color-scheme: dark)";
+  const element = document.documentElement;
+
+  const theme = (() => {
+    // if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
+    //   return localStorage.getItem("theme");
+    // }
+    if (window.matchMedia(MEDIA_QUERY_STR).matches) {
+      return "dark";
+    }
+    return "light";
+  })();
+
+  if (theme === "light") {
+    element.classList.remove("dark");
+  } else {
+    element.classList.add("dark");
+  }
+
+  window.localStorage.setItem("theme", theme);
+
+  // add event listener for prefers-color-scheme
+  window.matchMedia(MEDIA_QUERY_STR).addEventListener("change", (e) => {
+    const isDark = e.matches;
+    const theme = isDark ? "dark" : "light";
+    if (isDark) {
+      element.classList.add("dark");
+      localStorage.setItem("theme", theme);
+    } else {
+      element.classList.remove("dark");
+      localStorage.setItem("theme", theme);
+    }
+  });
+</script><link rel="stylesheet" href="/_astro/_slug_.BMlaOxGF.css">
+<link rel="stylesheet" href="/_astro/_slug_.CfLxgM94.css"><script type="module" src="/_astro/page.V2R8AmkL.js"></script></head> <body class="bg-white dark:bg-zinc-900 text-zinc-800 dark:text-zinc-200 h-full"> <style>astro-island,astro-slot,astro-static-slot{display:contents}</style><script>(()=>{var e=async t=>{await(await t())()};(self.Astro||(self.Astro={})).load=e;window.dispatchEvent(new Event("astro:load"));})();;(()=>{var A=Object.defineProperty;var g=(i,o,a)=>o in i?A(i,o,{enumerable:!0,configurable:!0,writable:!0,value:a}):i[o]=a;var d=(i,o,a)=>g(i,typeof o!="symbol"?o+"":o,a);{let i={0:t=>m(t),1:t=>a(t),2:t=>new RegExp(t),3:t=>new Date(t),4:t=>new Map(a(t)),5:t=>new Set(a(t)),6:t=>BigInt(t),7:t=>new URL(t),8:t=>new Uint8Array(t),9:t=>new Uint16Array(t),10:t=>new Uint32Array(t),11:t=>1/0*t},o=t=>{let[l,e]=t;return l in i?i[l](e):void 0},a=t=>t.map(o),m=t=>typeof t!="object"||t===null?t:Object.fromEntries(Object.entries(t).map(([l,e])=>[l,o(e)]));class y extends HTMLElement{constructor(){super(...arguments);d(this,"Component");d(this,"hydrator");d(this,"hydrate",async()=>{var b;if(!this.hydrator||!this.isConnected)return;let e=(b=this.parentElement)==null?void 0:b.closest("astro-island[ssr]");if(e){e.addEventListener("astro:hydrate",this.hydrate,{once:!0});return}let c=this.querySelectorAll("astro-slot"),n={},h=this.querySelectorAll("template[data-astro-template]");for(let r of h){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("data-astro-template")||"default"]=r.innerHTML,r.remove())}for(let r of c){let s=r.closest(this.tagName);s!=null&&s.isSameNode(this)&&(n[r.getAttribute("name")||"default"]=r.innerHTML)}let p;try{p=this.hasAttribute("props")?m(JSON.parse(this.getAttribute("props"))):{}}catch(r){let s=this.getAttribute("component-url")||"<unknown>",v=this.getAttribute("component-export");throw v&&(s+=` (export ${v})`),console.error(`[hydrate] Error parsing props for component ${s}`,this.getAttribute("props"),r),r}let u;await this.hydrator(this)(this.Component,p,n,{client:this.getAttribute("client")}),this.removeAttribute("ssr"),this.dispatchEvent(new CustomEvent("astro:hydrate"))});d(this,"unmount",()=>{this.isConnected||this.dispatchEvent(new CustomEvent("astro:unmount"))})}disconnectedCallback(){document.removeEventListener("astro:after-swap",this.unmount),document.addEventListener("astro:after-swap",this.unmount,{once:!0})}connectedCallback(){if(!this.hasAttribute("await-children")||document.readyState==="interactive"||document.readyState==="complete")this.childrenConnectedCallback();else{let e=()=>{document.removeEventListener("DOMContentLoaded",e),c.disconnect(),this.childrenConnectedCallback()},c=new MutationObserver(()=>{var n;((n=this.lastChild)==null?void 0:n.nodeType)===Node.COMMENT_NODE&&this.lastChild.nodeValue==="astro:end"&&(this.lastChild.remove(),e())});c.observe(this,{childList:!0}),document.addEventListener("DOMContentLoaded",e)}}async childrenConnectedCallback(){let e=this.getAttribute("before-hydration-url");e&&await import(e),this.start()}async start(){let e=JSON.parse(this.getAttribute("opts")),c=this.getAttribute("client");if(Astro[c]===void 0){window.addEventListener(`astro:${c}`,()=>this.start(),{once:!0});return}try{await Astro[c](async()=>{let n=this.getAttribute("renderer-url"),[h,{default:p}]=await Promise.all([import(this.getAttribute("component-url")),n?import(n):()=>()=>{}]),u=this.getAttribute("component-export")||"default";if(!u.includes("."))this.Component=h[u];else{this.Component=h;for(let f of u.split("."))this.Component=this.Component[f]}return this.hydrator=p,this.hydrate},e,this)}catch(n){console.error(`[astro-island] Error hydrating ${this.getAttribute("component-url")}`,n)}}attributeChangedCallback(){this.hydrate()}}d(y,"observedAttributes",["props"]),customElements.get("astro-island")||customElements.define("astro-island",y)}})();</script><astro-island uid="ZCVgHA" prefix="r0" component-url="/_astro/NavigationBar.Drx1kd5J.js" component-export="default" renderer-url="/_astro/client.Bu3nMRue.js" props="{}" ssr="" client="load" opts="{&quot;name&quot;:&quot;TopNavigation&quot;,&quot;value&quot;:true}" await-children=""><header class="p-4 lg:mt-4 lg:mb-4 top-0 sticky transition-colors duration-300 z-10 dark:bg-zinc-900"><nav class="text-xl mx-auto max-w-screen-lg"><h2 class="left"><a href="/" class="font-serif"><div class="relative _container_fyi24_14"><div class="_container-year_fyi24_61"><span class="_year-20_fyi24_35 _transform-year-to-name_fyi24_57"><span class="_centered_fyi24_25">2</span><span class="_centered_fyi24_25">0</span></span><span class="_year-01_fyi24_36 _transform-year-to-name_fyi24_57"><span class="_centered_fyi24_25">0</span><span class="_centered_fyi24_25">1</span></span></div><div><span class="_si_fyi24_33 _transform-year-to-name_fyi24_57"><span class="_centered_fyi24_25">S</span><span class="_centered_fyi24_25">I</span></span><span class="_tu_fyi24_34 _transform-year-to-name_fyi24_57"><span class="_centered_fyi24_25">T</span><span class="_centered_fyi24_25">U</span></span></div></div></a></h2><div class="right flex items-center gap-4"><h2><a href="/blog" title="Blog">Blog</a></h2><h2><a href="/friends" title="Friends">Friends</a></h2><h2><a href="/rss.xml" title="RSS">RSS</a></h2></div></nav></header><!--astro:end--></astro-island> <main class="p-4 mx-auto max-w-screen-lg">  <div class="max-w-screen-md mx-auto"> <div class="font-serif mb-4"> <h1 class="text-3xl mb-1">2024 年终总结</h1> <time datetime="2025-01-01T09:30:00.000Z"> Jan 1, 2025 </time> <div> Category :  <a href="/blog/category/年终总结"> <span class="hover:underline underline-offset-4"> 年终总结 </span> </a> </div> </div> <hr> <div class="flex flex-row"> <article class="min-w-0">  <p>又到了一年的末尾，是时候为 2024 年做一份年终总结了。本文分为下图所示的几大部分</p>
+<blockquote>
+<p>今年的年终总结偏吃喝玩乐</p>
+</blockquote>
+<p><img  src="/_astro/intro.C2m-kmfc_23TwYS.webp" alt="" width="1700" height="830" loading="lazy" decoding="async" style=""></p>
+<h2 id="毕业">毕业</h2>
+<p>是的没错，我从 2024 年 6 月底开始，就已经从大学毕业，不再是个学生了</p>
+<p>毕业前每个人都要做的是毕业设计，正如老师所说的</p>
+<blockquote>
+<p>毕业设计将会是你们毕业前最有意义的一课。</p>
+</blockquote>
+<p>而确实，毕业设计狠狠地给我上了一课。如果没有毕业设计，我也不知道什么是只要<em>超出认知范围就会使劲打压你</em>的老师。再加上老师平时还是挺受同学欢迎的，就有点颠覆个人认知。不过这也认我学会不少为人处事的道理</p>
+<blockquote>
+<p>这是你胡编乱造的协议吗？别当我没有教过计算机网络，我还教过好几年的计网…书上说了 DNS 是只能通过 UDP 传输的！</p>
+<p>—— 检查老师如是说</p>
+</blockquote>
+<p>不过毕业设计是用 Rust 实现了一个多功能的 DNS Proxy，也是学到不少关于 Rust 和网络相关东西</p>
+<blockquote>
+<p>只要能学到东西就行。</p>
+<p>—— 我这么安慰自己道</p>
+</blockquote>
+<p>毕业照拍的比较早，3 月底就拍了。学院是整个学校最早拍毕业照的，没有啥毕业气息，学院和班级分别来个大合照就结束了。不过时间选得倒是挺合适的，没有撞上雨季，那天也是阳光明媚，很棒。毕业典礼则是在 6 月底，授予学位证书之后就散场结束了。大家也匆匆忙忙跑到生活区并从宿舍搬离。如无意外，可能也是跟班里大部分同学的最后一次见面了</p>
+<blockquote>
+<p>四年说长不长，说短也不短，但要显出结束的象征，也许并不用四小时。</p>
+<p>毕业典礼结束后的第二天早晨，宿舍空无一人，剩下打开着的柜子，而柜子也是空无一物。</p>
+<p>四年之旅结束，衣服杂物被移走，后面等待大家的，又会是什么道路呢？</p>
+<p>你说不准，我也猜不透，正如这黑洞一般的柜子空间。</p>
+<p>但也许里面一直有看不见的彩虹涌出来吧？也许那是人生后面路途充满无限可能的象征。</p>
+<p>—— situ2001</p>
+</blockquote>
+<p><img  src="/_astro/IMG_5482.B-lJQMbT_2rFQmc.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h2 id="工作">工作</h2>
+<p>从今年 7 月开始，开始了人生中第一份全职工作，成为了社畜</p>
+<p>工作的内容依旧是 JS Web 相关。维护过内部的前端轮子，负责过给内部/外界业务方用的中台 SDK，也为海外音乐 app 写过业务。至于作息，除了紧急事故和一时半会扯不清的历史遗留问题，只要效率在线，就能做到 10 点到公司，晚上 8 点坐班车下班，实现相对的工作与生活平衡（WLB）</p>
+<h3 id="个人生产力系统">个人生产力系统</h3>
+<p>大学毕业后，在职场和生活中产生的信息是特别多的，并且你不能在短时间将这些信息处理完。这个时候，一个适合自己的生产力系统就很有意义了。</p>
+<p>目前，我主要用的 app 有：滴答清单, Apple Notes, Zotero, Obsidian.</p>
+<p>流程的核心是：捕获输入 => 跟踪/消化/沉淀 => 输出</p>
+<p>这套流程已经顺滑在工作和生活中用了近一年了</p>
+<p><img  src="/_astro/2024-summary-20250101170844064.Dnx-_RAV_X6nPm.webp" alt="" width="1490" height="1201" loading="lazy" decoding="async" style=""></p>
+<h2 id="作息">作息</h2>
+<p>今年有两次作息尝试，分别是：</p>
+<ul>
+<li>12:30AM 睡觉，8:30AM 起床</li>
+<li>11:30PM 睡觉，7:30AM 起床</li>
+</ul>
+<p>结果发现在 7 点半的的时候起床很疲惫，后面工作的时候会很累，午睡也难以解救这种困倦感。而前一个休息方式在起床后会感到更加精神，不睡午觉也是可以的。并发现：只要入睡前够累，深度睡觉长度就能轻松超过 30 分钟</p>
+<p>这下知道为什么高中三年的状态这么拉跨了（11:00PM 睡觉 -6:20AM 起床）</p>
+<p>总而言之，找到适合自己的睡眠方法，并且保持一致是最重要的！</p>
+<h2 id="生病">生病</h2>
+<p>当然，都 2024 年了，我还是一如既往的脆皮体质。发烧过几次：</p>
+<ul>
+<li>1 月：放寒假回到家后立马发烧，体温持续在 38.0</li>
+<li>5 月：去了一趟中山，中途突然发烧，体温起伏大，有几小时在 39.0，其余时间维持在 38.0</li>
+<li>6 月：可能是上火了，工作日下班后感觉不舒服，一量发现发烧了，体温持续在 38.0</li>
+<li>12 月：应该是感染了新新冠变异毒株（现在应该没有这个说法了），体温 37.2 左右，全身乏力，有痰咳不出。但一旦咳出，则会立马舒服</li>
+</ul>
+<h2 id="旅游">旅游</h2>
+<h3 id="珠三角">珠三角</h3>
+<p>其实就是走走珠三角的城市，如珠海/澳门/佛山/中山/东莞。虽然说生活学习工作都在珠三角，但其实还没去过多少城市。这里放一张珠海的照片，沿着情侣路附近骑车拍的。珠海生活宜人，挺适合过来吹吹海风感受下慢节奏的</p>
+<p><img  src="/_astro/zhuhai-seaside.Bn3RztpL_Z6mz2A.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="重庆">重庆</h3>
+<p>重庆: 上年出省去了上海杭州后，就想着也去一趟西南城市重庆看看</p>
+<p><img  src="/_astro/furtherest-trip.CYHHnKjy_ZTGvmI.webp" alt="" width="1206" height="753" loading="lazy" decoding="async" style=""></p>
+<p>最后怎么说呢？就是在重庆不吃辣，纯纯感受着重庆的地理环境，走走玩玩过了三天</p>
+<p><img  src="/_astro/chongqing-dusk.Dy8NcTSJ_Z22SuLQ.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="香港">香港</h3>
+<p>工作之后也经常旅游：南下香港，主要是散步和购物</p>
+<p>除了繁华的九龙和港岛</p>
+<p><img  src="/_astro/hk-kowloon.BrHSfbZr_25TsHh.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/night-victoria-harbour.CHtcr39I_Z1pS820.webp" alt="" width="5712" height="4284" loading="lazy" decoding="async" style=""></p>
+<p>还去过宁静的离岛区（坪洲/大澳）</p>
+<p><img  src="/_astro/IMG_5792.Cn_FzlaE_1WCCMm.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/IMG_4540.ECTYfzSx_1oYOFT.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p>经常光顾的 DonDonDonki 商店</p>
+<p><img  src="/_astro/donki.BTgGbsE0_b97R4.webp" alt="" width="5712" height="4284" loading="lazy" decoding="async" style=""></p>
+<h2 id="运转">运转</h2>
+<p>上年在 Minecraft 游戏里建设了不少交通线路，今年就开始在现实世界运转了，主打一个实地感受</p>
+<h3 id="广州新造轮渡">广州新造轮渡</h3>
+<p>1 元就能坐轮渡跨江。即使有 4 号线连接大学城南和新造，但来往两岸的村民和外卖员还是不少的</p>
+<p><img  src="/_astro/Pearl_River.BF5An7Gy_Ka87E.webp" alt="" width="2028" height="802" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/xinzao-ship.DcyEV5Pr_1nK7mD.webp" alt="" width="3024" height="4032" loading="lazy" decoding="async" style=""></p>
+<h3 id="广东城际四线贯通">广东城际四线贯通</h3>
+<p>2024 年 5 月 26 日，广东城际完成四线贯通运营</p>
+<p><img  src="/_astro/guangdong-intercity-open.CD7Q9XgM_Z1zlnQ5.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p>大湾区城际第一线开通真的很兴奋</p>
+<p><img  src="/_astro/guangdong-intercity-in-train.DLL8ISQ3_ZYHV6F.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="穗莞深城际">穗莞深城际</h3>
+<p>周末找对象必搭，该城际线路大幅方便了莞深之间的城际通行。值得一提的是，深圳机场北站的地铁站和国铁站是紧紧挨在一起的，走几步路就完成了地铁和城际之间的换乘</p>
+<p><img  src="/_astro/PastedGraphic10.DHw7WejC_2gD8xm.webp" alt="" width="2476" height="1668" loading="lazy" decoding="async" style=""></p>
+<p>地铁/高铁/城际汇聚，就在今世</p>
+<p><img  src="/_astro/interchange-between-metro-intercity.BcbqN84w_Z2uBNlw.webp" alt="" width="3064" height="3464" loading="lazy" decoding="async" style=""></p>
+<h3 id="广清城际">广清城际</h3>
+<p>广佛东环，现以广清城际展示.jpg</p>
+<p><img  src="/_astro/PastedGraphic7.ByLg03Hd_Z1pUc7H.webp" alt="" width="2308" height="1912" loading="lazy" decoding="async" style=""></p>
+<p>更以羊角形态展现</p>
+<p><img  src="/_astro/IMG_4200.BISp0BIo_Z1GbqmW.webp" alt="" width="3024" height="4032" loading="lazy" decoding="async" style=""></p>
+<p>其中，这条线路有直通车，只需要 15 分钟，一站从花都到清城。相比之下，站站停列车要 33 分钟</p>
+<p><img  src="/_astro/IMG_4197.DK6MMavD_Z1OHLHX.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p>如果走运，还能碰到 CRH6A-A 车</p>
+<p><img  src="/_astro/IMG_6281.B38RZiBA_Z25jH6n.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="清远磁悬浮线">清远磁悬浮线</h3>
+<p>这条线是将游客从银盏城轨站载到清远长隆的，主要是去体验一下广东第一条中低速磁悬浮。不过 2025 年都要来了，清远长隆还没开业…</p>
+<p><img  src="/_astro/qingyuan-maglev-line.B1eWT9MK_Z20aNXL.webp" alt="" width="1206" height="1560" loading="lazy" decoding="async" style=""></p>
+<p>实物长这样</p>
+<p><img  src="/_astro/IMG_6296.mckVPu7p_16BoDV.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="中山市大站快车">中山市大站快车</h3>
+<p>只要 2～10 元，就能把你快速地从城轨中山北站运到中山市区，最远能去到中山与珠海的交界处</p>
+<p><img  src="/_astro/2024-summary-20241231234214461.2_dkXuTo_Z1oAOmA.webp" alt="" width="1265" height="400" loading="lazy" decoding="async" style=""></p>
+<p>真 大站快车</p>
+<p><img  src="/_astro/zhongshan-bus.CxrqN2fb_Z1gOdKT.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="珠海公交">珠海公交</h3>
+<p>全站一票制 1 元公交真香。是的，你没有看错，你没有看错，所有公交线路都是全程 1 元</p>
+<p><img  src="/_astro/zhuhai-bus-route.DC0zf4jl_Z3wtJ7.webp" alt="" width="2528" height="1684" loading="lazy" decoding="async" style=""></p>
+<p>只需要 1 块钱，就可以一条路坐到黑</p>
+<p><img  src="/_astro/zhuhai-bus-card-machine.CHMofYU5_Z1zrte9.webp" alt="" width="3024" height="4032" loading="lazy" decoding="async" style=""></p>
+<h3 id="珠机城际">珠机城际</h3>
+<p>又称珠海大地铁。不过所经之处，不是郊区就是待开发地区，平日人流量估计不大</p>
+<p><img  src="/_astro/2024-summary-20250101150720889.CsU0drng_1Fzi0r.webp" alt="" width="2606" height="1908" loading="lazy" decoding="async" style=""></p>
+<p>晴天坐着它看海也是不错的选择</p>
+<p><img  src="/_astro/zhuhai-airport-intercity.BHtoGyJ0_ZiDgYl.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="澳门轻轨-氹仔线">澳门轻轨 氹仔线</h3>
+<p>APM，游客观光车 。看着搭乘人数不多，间隔 10 分钟一班，站台也没有出现人数堆积的情况。不知道有没有方便到本地居民的出行</p>
+<p><img  src="/_astro/PastedGraphic8.C743YF9-_2m0Ym2.webp" alt="" width="2432" height="1910" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/macau-metro-1.CRZagYhc_Z1nAAKz.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/macau-metro.DzO-EZiE_1kP7NR.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="贵广高铁--成渝铁路">贵广高铁 &#x26; 成渝铁路</h3>
+<p>广州南 - 重庆西的列车会经过这两条线路。第一次体验到隧道这么多的高铁</p>
+<p><img  src="/_astro/PastedGraphic9.DExZ_Y1i_1nCpCw.webp" alt="" width="2492" height="1904" loading="lazy" decoding="async" style=""></p>
+<h3 id="重庆轨道交通-crt">重庆轨道交通 CRT</h3>
+<p>穿山过江，上天入地，单轨穿楼，这些都能在重庆 CRT 见到。能在这种地理环境下建成地铁系统，也算是一个奇迹了。这里放一张 2 号线的图</p>
+<p><img  src="/_astro/crt-line2.DBitAqLz_Z1850s8.webp" alt="" width="3024" height="4032" loading="lazy" decoding="async" style=""></p>
+<h3 id="重庆长江索道">重庆长江索道</h3>
+<p>在长江正上方经过的索道，建议在上新街索道站搭乘，排队的人会少很多</p>
+<p><img  src="/_astro/Pasted_Graphic.C2F_O9AG_7MW8V.webp" alt="" width="1544" height="874" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/yangtze-river-cableway-1.Dd_C8RHL_1Tx1Rj.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/yangtze-river-cableway-2.sjcn4kfQ_1xEO9E.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p>长江索道  行千里 · 致广大</p>
+<p><img  src="/_astro/yangtze-river-cableway.CkJPSb61_Znqict.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="香港缆车-昂坪-360">香港缆车 昂坪 360</h3>
+<p>在离岛区的缆车，可以直接将你从东涌地面运输到大屿山山顶。在途中，你可以看到大海/机场/高山。体验不错，就是钱包有点痛，单程票 HKD 195</p>
+<p><del>如果你只是想上去昂坪玩，建议坐巴士</del></p>
+<p><img  src="/_astro/ngong-ping-360-plaform.Dquoqvu4_RQhuH.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/ngong-ping-360-scene.BsP86vcB_40tnB.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="香港轮渡-屯门---大澳">香港轮渡 屯门 - 大澳</h3>
+<p>富裕小轮，票价 HKD 27</p>
+<p><img  src="/_astro/Pasted_Graphic2.BSCzuz8a_ZzjhDl.webp" alt="" width="2594" height="1906" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/IMG_4599.Di_xnsh0_Z1Aye5i.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p>适合黄昏搭乘。除了夕阳，一路上还能看港珠澳大桥和香港国际机场的密集飞机起落</p>
+<p><img  src="/_astro/IMG_4655.CD2T4McE_Z2whfyu.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/IMG_4827.CCk0O-kr_KVuQM.webp" alt="" width="3024" height="4032" loading="lazy" decoding="async" style=""></p>
+<h3 id="香港轮渡-中环---坪洲">香港轮渡 中环 - 坪洲</h3>
+<p>港九小轮 票价在 HKD 19.8~54.3 之间，因速度和日期而浮动</p>
+<p><img  src="/_astro/PastedGraphic3.Br5rZMQC_Th5Bj.webp" alt="" width="2850" height="1912" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/IMG_5788.Cu7Z4Bx9_Z9dbe1.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<h3 id="港珠澳大桥游轮">港珠澳大桥游轮</h3>
+<p>公司部门团建去的，主要是打卡观光港珠澳大桥。大致航线如下。全程 3 小时</p>
+<p><img  src="/_astro/Snipaste_2024-12-31_23-31-10.eb6ULgro_Z1P5vsd.webp" alt="" width="3460" height="2164" loading="lazy" decoding="async" style=""></p>
+<p>第一次坐游轮，能在甲板上近距离观赏港珠澳大桥</p>
+<p><img  src="/_astro/hong-kong%E2%80%93zhuhai%E2%80%93macao-bridge-1.D5Xza1Ue_Z1S4CDh.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p><img  src="/_astro/hong-kong%E2%80%93zhuhai%E2%80%93macao-bridge.C6dzSM5c_Js2oL.webp" alt="" width="5712" height="4284" loading="lazy" decoding="async" style=""></p>
+<h3 id="深圳-13-号线首班车">深圳 13 号线首班车</h3>
+<p>去坐了深圳 13 号线的首班车。这下也是方便科技园打工人的通勤了，只不过是倒闭间隔…</p>
+<p>《13 号线开通真的很兴奋》—— 2024.12.28 摄于高新中站深圳湾口岸方向 10:18 首班车发出前</p>
+<p><img  src="/_astro/first-train-to-shenzhen-bay.BAMpr8zP_16nNLK.webp" alt="" width="2048" height="1536" loading="lazy" decoding="async" style=""></p>
+<h2 id="游戏">游戏</h2>
+<p>主要是下面几个游戏，主要是在校区间和休息日玩</p>
+<ul>
+<li>Transport fever 2 —— 可以在游戏里建设自己的交通系统，并且你也只需要关注交通，因为城市的发展是随着交通的发展自动发展的。中秋买的，一下班就玩，玩了好久</li>
+<li>城市天际线 —— 经典，想设计点什么的时候就会玩</li>
+<li>Minecraft —— 经典，这里就不多多展开了</li>
+</ul>
+<p>此外，今年购入了 Steam Deck. 这是部好机器，治好了我工作后的电子 ED</p>
+<p><img  src="/_astro/steam-deck-wrap-up.BDaVnCmJ_1ucIyd.webp" alt="" width="3086" height="1850" loading="lazy" decoding="async" style=""></p>
+<h2 id="电影">电影</h2>
+<p>看的都是动画，也都挺不错的，没有雷点</p>
+<ul>
+<li>《熊出没·逆转时空》 —— 讲述光头强穿越时空来到大城市工作，但最终选择挽救旧时间线上的二狗熊的故事</li>
+<li>《蓦然回首 Look back》 —— 人生没有重来和后悔药。即使能在脑海想象出另一个平行世界，也不可能回溯并将其变为现实了。用大量的时间进行迷茫和对过去的回顾，在几个瞬间获得成长。这也许就是人生的旅程吧，且行且珍惜</li>
+<li>《名侦探柯南：百万美元的五棱星》 —— 剧情虽然套路化，但观感依旧不错。或许被称为函馆旅游宣传片更适合</li>
+<li>《孤独摇滚 Re》 —— 总集篇，就当是看过整部动画了</li>
+</ul>
+<h2 id="设备">设备</h2>
+<p>今年工作后买了 QNAP NAS 用于存储自己日益增长的数据，目前总容量为 2x8TiB，已存储 6TiB 的数据</p>
+<p><img  src="/_astro/nuc-nas.BYIwaCyf_1KT10o.webp" alt="" width="3024" height="4032" loading="lazy" decoding="async" style=""></p>
+<p>配上我的 NUC/UPS/路由器，也算是组成了一个小型 Home lab 了</p>
+<p><img  src="/_astro/IMG_6483.BDoVYAOa_2mViL2.webp" alt="" width="4032" height="3024" loading="lazy" decoding="async" style=""></p>
+<p>之前画过一张图梳理个人的家庭网络与 self-hosted 服务的现状。后面会把折腾的过程写成文章发出来</p>
+<p><img  src="/_astro/Snipaste_2025-01-01_15-15-01.Dg8PcdpY_Z1lfbNk.webp" alt="" width="2004" height="1762" loading="lazy" decoding="async" style=""></p>
+<h2 id="展望-2025">展望 2025</h2>
+<p>2025 年是蛇年，同时也是我的本命年。如果能把 2025 年过得更好就好了。思考后，有两个问题待解决：拖延和不善表达</p>
+<h3 id="克服拖延">克服拖延</h3>
+<p>反思了一下，2024 年最大的主旋律还是“拖延”。希望 2025 新的一年能做到：管他什么情况，先做一坨垃圾出来再说</p>
+<p><img  src="/_astro/first-make-a-garbage-plz.rcu0W29r_ILYqK.webp" alt="" width="1280" height="960" loading="lazy" decoding="async" style=""></p>
+<h3 id="表达自我">表达自我</h3>
+<p>我是一个较为内向的人。平时即使有很多想法和灵感，也只会停留在我的头脑，然后走向自我消亡</p>
+<p>就像前文中对个人生产力系统的介绍，实际上我有 80% 的时间都在输入这一步（放入收藏夹/加书签/收集各种信息），并没有多少输出</p>
+<p>我希望在 2025 年能通过文字、代码、文章、照片或视频，更多地表达自我。将输入输出的比例从 2:8 扭转为 8:2</p>
+<h2 id="end">End</h2>
+<p>好了，到这里，2024 年的故事就结束了。谢谢你能耐心地看到这里。也许能用什么词能总结 2024 年，但并没有，人的一年是不能被简简单单的几个词总结的</p>  </article> <!-- TODO adjust height --> <!-- <aside
+          class="hidden md:block pl-4 sticky top-0 self-start h-[90vh] mt-4 min-w-48"
+        >
+          <div class="flex flex-col h-full">
+            <div id="reading-progress"></div>
+            <div class="text-lg font-bold">ToC</div>
+            <div class="overflow-y-auto">
+              <TableOfContent headings={headings} />
+            </div>
+            <div class="py-2"></div>
+            <ReadingProgress querySelector="article" client:only="react" />
+          </div>
+        </aside> --> </div> </div>  </main> <footer class="p-4 mx-auto max-w-screen-lg text-center"> <p class="text-sm text-zinc-400">
+© 2025 situ2001. All rights reserved.
+</p> </footer> </body></html>

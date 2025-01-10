@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html
+  lang="zh"
+  style="border: 0px solid"
+  data-color-scheme="auto" theme="auto-blue"
+>
+  <head>
+    <!-- th:fragment="html (title, content, header, navbar, language)" -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2024 年终总结 &amp; 博客一周年</title>
+    
+    <link
+      rel="stylesheet"
+      href="/themes/howiehz-higan/assets/dist/style.css?v=1.20.0"
+    />
+    
+    <script src="/themes/howiehz-higan/assets/lib/jquery/jquery.min.js?v=1.20.0" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+    
+    <script src="/themes/howiehz-higan/assets/dist/main.iife.js?v=1.20.0" defer type="c66ca6e44927cd86397326ad-text/javascript"></script>
+    
+    <script src="/themes/howiehz-higan/assets/lib/instantpage/5.2.0.js?v=1.20.0" type="c66ca6e44927cd86397326ad-module" defer></script>
+    
+    
+
+    <script type="c66ca6e44927cd86397326ad-text/javascript">
+      const THEME_DARK = "dark-blue";
+      const THEME_LIGHT = "light-blue";
+      const THEME_AUTO = "auto-blue";
+
+      const themeColorSchemeMap = {
+        auto: "auto",
+        dark: "dark",
+        light: "light",
+        "auto-blue": "auto",
+        "dark-blue": "dark",
+        "light-blue": "light",
+        gray: "light",
+      };
+
+      function updateThemeIcon(theme) {
+        const themeIcon = document.getElementById("theme-toggle-button-icon");
+        if (theme === THEME_LIGHT) {
+          themeIcon.setAttribute("data-icon", "ph:sun-bold");
+        } else if (theme === THEME_DARK) {
+          themeIcon.setAttribute("data-icon", "ph:moon-bold");
+        } else {
+          themeIcon.setAttribute("data-icon", "ph:circle-bold");
+        }
+      }
+
+      function updateTagAttribute(theme) {
+        document.documentElement.setAttribute("data-color-scheme", themeColorSchemeMap[theme]);
+        document.documentElement.setAttribute("theme", theme);
+      }
+
+      function applyThemeNoSave(theme) {
+        updateTagAttribute(theme);
+        updateThemeIcon(theme);
+      }
+
+      function applyTheme(theme) {
+        if (typeof Storage !== "undefined") {
+          localStorage.setItem("pref-theme", themeColorSchemeMap[theme]);
+        } else {
+          console.log("Sorry, your browser does not support web storage...");
+        }
+        applyThemeNoSave(theme);
+      }
+
+      function getPreferredTheme() {
+        const storedTheme = localStorage.getItem("pref-theme");
+        if (storedTheme) {
+          return storedTheme;
+        }
+        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+          return "dark";
+        }
+        return "light";
+      }
+
+      (function () {
+        switch (getPreferredTheme()) {
+          case "dark":
+            updateTagAttribute(THEME_DARK);
+            break;
+          case "light":
+            updateTagAttribute(THEME_LIGHT);
+            break;
+          case "auto":
+            updateTagAttribute(THEME_AUTO);
+            break;
+        }
+      })();
+
+      document.addEventListener("DOMContentLoaded", function () {
+        switch (getPreferredTheme()) {
+          case "dark":
+            updateThemeIcon(THEME_DARK);
+            break;
+          case "light":
+            updateThemeIcon(THEME_LIGHT);
+            break;
+          case "auto":
+            updateThemeIcon(THEME_AUTO);
+            break;
+        }
+      });
+
+      function toggleTheme(event) {
+        event.preventDefault(); // 阻止默认行为，防止页面刷新
+        const currentTheme = document.documentElement.attributes["theme"].value;
+        let newTheme;
+        // light -> dark -> auto -> light
+        if (currentTheme === THEME_LIGHT) {
+          newTheme = THEME_DARK;
+        } else if (currentTheme === THEME_DARK) {
+          newTheme = THEME_AUTO;
+        } else {
+          newTheme = THEME_LIGHT;
+        }
+        applyTheme(newTheme);
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("theme-toggle-button").addEventListener("click", toggleTheme);
+      });
+    </script>
+  <meta name="keywords" content="博客,Blog,技术,tech,编程,howiehz,皓子,开源,前端,后端,日常,随笔,生活,杂谈,分享" />
+<!-- 网站自动变灰 -->
+    <script type="c66ca6e44927cd86397326ad-text/javascript">
+        var date = new Date()
+        var month = date.getMonth() + 1
+        var day = date.getDate()
+        if (month == 12 && day == 13) {
+            document.documentElement.setAttribute("theme-mode", "gray");
+        }
+    </script>
+    <style type="text/css">
+        html[theme-mode="gray"] {
+            /*webkit*/
+            -webkit-filter: grayscale(100%);
+            /*firefox*/
+            -moz-filter: grayscale(100%);
+            /*ie9*/
+            -ms-filter: grayscale(100%);
+            /*opera*/
+            -o-filter: grayscale(100%);
+            /*ie*/
+            filter: grayscale(100%);
+            filter: progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);
+        }
+    </style>
+
+    <!-- 缺失JavaScript提示 -->
+    <noscript>
+        <center>
+            <div class="noscript-warning">本站在允许 JavaScript 运行的环境下浏览效果更佳</div>
+        </center>
+    </noscript>
+
+    <!-- bing验证代码 -->
+        <!-- 百度验证代码 -->
+        <!-- 头条搜索验证代码 -->
+        <!-- yandex验证代码 -->
+        <!-- 360验证代码 -->
+        <!-- 自建umami统计 -->
+    <script defer src="https://umami.howiehz.top/script.js" data-website-id="7b461ac5-155d-45a8-a118-178d0a2936e4" data-domains="howiehz.top" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+<meta name="msvalidate.01" content="CB8D27B3050244FA53BCE622938C642C" />
+<meta name="baidu-site-verification" content="codeva-vcRsW7KIOZ" />
+<meta name="bytedance-verification-code" content="bDRxeFHTMfaVDM3eFomN" />
+<meta content="6b096216bc33a284" name="yandex-verification">
+<meta name="360-site-verification" content="4af3c9d0cb93089103be81a60b75f22d" />
+<meta name="generator" content="Halo 2.20.12"/><meta name="description" content="谨以此文记录我平凡但独一无二的 2024 学习生活 生活 计算机上那些事 博客 有关博客的简单感想 统计图表 趣闻 开源"/><!-- plugin-comment-widget start -->
+<script src="/plugins/PluginCommentWidget/assets/static/comment-widget.iife.js?version=2.5.1" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+<link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/style.css?version=2.5.1" />
+<!-- plugin-comment-widget end -->
+<!-- PluginSearchWidget start -->
+<script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.6.2" async type="c66ca6e44927cd86397326ad-text/javascript"></script>
+<link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.6.2" />
+<!-- PluginSearchWidget end -->
+<!-- PluginLightGallery start -->
+<link href="/plugins/PluginLightGallery/assets/static/css/lightgallery.min.css" rel="stylesheet" />
+<script defer src="/plugins/PluginLightGallery/assets/static/js/lightgallery.min.js" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+<!-- PluginLightGallery zoom plugin -->
+<script defer src="/plugins/PluginLightGallery/assets/static/js/plugins/zoom/lg-zoom.min.js" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+<script type="c66ca6e44927cd86397326ad-text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+       document.querySelectorAll(`article .content img`)?.forEach(function (node) {
+  if (node) {
+    node.dataset.src = node.src;
+  }
+
+  const galleries = document.querySelectorAll(`article .content`);
+
+  if (galleries.length > 0) {
+    galleries.forEach(function (node) {
+      lightGallery(node, {
+          selector: "img",
+      });
+    });
+  }
+});
+
+    });
+</script>
+<!-- PluginLightGallery end -->
+<!-- PluginHighlightJS start -->
+<link href="/plugins/PluginHighlightJS/assets/static/styles/an-old-hope.min.css?version=1.3.2" rel="stylesheet"/>
+<script defer src="/plugins/PluginHighlightJS/assets/static/highlight.min.js?version=1.3.2" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+
+
+    <link href="/plugins/PluginHighlightJS/assets/static/plugins/highlightjs-copy.css?version=1.3.2" rel="stylesheet"/>
+    <script defer src="/plugins/PluginHighlightJS/assets/static/plugins/highlightjs-copy.js?version=1.3.2" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+
+
+<link href="/plugins/PluginHighlightJS/assets/static/plugins/override.css?version=1.3.2" rel="stylesheet"/>
+
+<script type="c66ca6e44927cd86397326ad-text/javascript">
+document.addEventListener("DOMContentLoaded", function () {
+    
+        hljs.addPlugin(new CopyButtonPlugin({ lang: "zh"}));
+    
+    document.querySelectorAll("pre code").forEach((el) => {
+        hljs.highlightElement(el);
+    });
+});
+</script>
+<!-- PluginHighlightJS end -->
+<script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="2d624b2f-503f-4b7f-bdd1-a6060dcb9ef1" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+<link rel="icon" href="/upload/ico.ico" />
+</head>
+
+  <body class="transition-colors text-size-normal">
+    <script type="c66ca6e44927cd86397326ad-text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        // 
+        const targetElementList = document.querySelectorAll(".matched-menu");
+
+        if (targetElementList.length === 0) {
+          // 
+          const defaultMenus = document.querySelectorAll(".default-menu");
+
+          // 
+          defaultMenus.forEach((menu) => {
+            if (menu.style.display === "none") {
+              menu.style.display = ""; // 
+            }
+          });
+        } else {
+          // 
+          const defaultMenus = document.querySelectorAll(".default-menu");
+
+          defaultMenus.forEach((menu) => {
+            menu.remove();
+          });
+        }
+      });
+    </script>
+    
+    <style>
+      .max-width {
+        max-width:
+      55rem;
+      }
+    </style>
+    
+    
+    
+    <style>
+      article .content blockquote:before {
+        margin-right: 0.25em;
+        color: var(--color-quote);
+        content: "\201C";
+        vertical-align: -0.4em;
+        font-size: 2em;
+        line-height: 0.1em;
+      }
+    </style>
+    
+    <div class="max-width min-width mx-auto px-8 ltr content-width">
+      
+  <div id="header-post">
+    <a id="menu-icon" href="javascript:void(0);" aria-label="Expand more menus">
+      <i class="iconify iconify-middle" data-icon="material-symbols:menu"></i>
+    </a>
+    <a id="menu-icon-tablet" href="javascript:void(0);"
+      ><i class="iconify iconify-middle" data-icon="material-symbols:menu"></i
+    ></a>
+    <a id="top-icon-tablet" href="javascript:void(0);" onclick="if (!window.__cfRLUnblockHandlers) return false; $('html, body').animate({ scrollTop: 0 }, 'fast');" style="display: none" data-cf-modified-c66ca6e44927cd86397326ad-=""><i class="iconify iconify-middle" data-icon="material-symbols:keyboard-arrow-up"></i
+    ></a>
+    <span id="menu">
+      <span id="nav">
+        
+  <ul>
+    
+
+    
+  
+    
+
+    
+
+    
+      
+      
+        
+          <li class="matched-menu">
+            <a
+              href="/"
+              target="_self"
+              aria-label="Menu named Home"
+              >Home</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/archives"
+              target="_self"
+              aria-label="Menu named Archives"
+              >Archives</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/moments"
+              target="_self"
+              aria-label="Menu named Moments"
+              >Moments</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/links"
+              target="_self"
+              aria-label="Menu named Links"
+              >Links</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/about"
+              target="_self"
+              aria-label="Menu named About Me"
+              >About Me</a
+            >
+          </li>
+        
+      
+        
+      
+    
+
+    
+    
+      
+        <li style="display: none" class="default-menu">
+          <a
+            href="/"
+            target="_self"
+            aria-label="Menu named Home"
+            >Home</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/archives"
+            target="_self"
+            aria-label="Menu named Archives"
+            >Archives</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/moments"
+            target="_self"
+            aria-label="Menu named Moments"
+            >Moments</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/links"
+            target="_self"
+            aria-label="Menu named Links"
+            >Links</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/about"
+            target="_self"
+            aria-label="Menu named About Me"
+            >About Me</a
+          >
+        </li>
+      
+    
+      
+    
+  
+
+
+    <li>
+      <a
+        href="javascript:SearchWidget.open();"
+        aria-label="Search in site"
+      >Search</a>
+    </li>
+  </ul>
+
+      </span>
+      <br />
+
+      <span id="actions">
+        <ul>
+          <li>
+            <a href="/" class="icon" aria-label="Back to Home" onmouseover="if (!window.__cfRLUnblockHandlers) return false; $('#i-home').toggle();" onmouseout="if (!window.__cfRLUnblockHandlers) return false; $('#i-home').toggle();" data-cf-modified-c66ca6e44927cd86397326ad-="">
+              <i class="iconify iconify-large" data-icon="mdi:home-circle"></i>
+            </a>
+          </li>
+          
+
+          <li>
+            <a
+              class="icon"
+              aria-label="Navigate to the next post"
+              href="/archives/How-To-Ask-Questions"
+            >
+              <i class="iconify iconify-large" data-icon="ic:round-chevron-right" onmouseover="if (!window.__cfRLUnblockHandlers) return false; $('#i-next').toggle();" onmouseout="if (!window.__cfRLUnblockHandlers) return false; $('#i-next').toggle();" data-cf-modified-c66ca6e44927cd86397326ad-=""></i>
+            </a>
+          </li>
+
+          <li>
+            <a class="icon" href="javascript:void(0);" onclick="if (!window.__cfRLUnblockHandlers) return false; $('html, body').animate({ scrollTop: 0 }, 'fast');" aria-label="Back to top" data-cf-modified-c66ca6e44927cd86397326ad-="">
+              <i class="iconify iconify-large" data-icon="material-symbols:keyboard-arrow-up" onmouseover="if (!window.__cfRLUnblockHandlers) return false; $('#i-top').toggle();" onmouseout="if (!window.__cfRLUnblockHandlers) return false; $('#i-top').toggle();" data-cf-modified-c66ca6e44927cd86397326ad-=""></i>
+            </a>
+          </li>
+          <li>
+            <a class="icon" href="#" aria-label="Share this post">
+              <i id="action-share" class="iconify iconify-middle" data-icon="mdi:share-variant-outline" onmouseover="if (!window.__cfRLUnblockHandlers) return false; $('#i-share').toggle();" onmouseout="if (!window.__cfRLUnblockHandlers) return false; $('#i-share').toggle();" onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-c66ca6e44927cd86397326ad-=""></i>
+            </a>
+          </li>
+        </ul>
+
+        <span id="i-prev" class="info" style="display: none">Previous Post</span>
+        <span id="i-next" class="info" style="display: none">Next Post</span>
+
+        <span id="i-top" class="info" style="display: none">Back to Top</span>
+        <span id="i-share" class="info" style="display: none">Share Post</span>
+        <span id="i-home" class="info" style="display: none">Back to Home</span>
+      </span>
+      <br />
+      <div id="share-list" style="display: none">
+        
+  
+    <ul>
+      <li>
+        <a class="icon" aria-label="Share to E-mail" href="/cdn-cgi/l/email-protection#16296563747c7375622b2426242236f3afa2f1ad9ef096adf1ad853630777b662d36f39b8cf3b8b4f2ae96f387bef3afa230777b662d7479726f2b557e73757d3679636236627e7f65367764627f757a732c367e626266652c39397e79617f737e6c38627966397764757e7f60736539242624223b6f7377643b7f783b6473607f7361">
+          <i class="iconify" data-icon="icomoon-free:mail4"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          class="icon"
+          aria-label="Share to Facebook"
+          href="https://facebook.com/sharer/sharer.php?u=https://howiehz.top/archives/2024-year-in-review&amp;title=2024 年终总结 &amp; 博客一周年"
+        >
+          <i class="iconify" data-icon="ic:baseline-facebook"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          class="icon"
+          aria-label="Share to X"
+          href="https://x.com/share?url=https://howiehz.top/archives/2024-year-in-review&amp;title=2024 年终总结 &amp; 博客一周年"
+        >
+          <i class="iconify" data-icon="mdi:twitter-circle"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          class="icon"
+          aria-label="Share to LinkedIn"
+          href="http://www.linkedin.com/shareArticle?url=https://howiehz.top/archives/2024-year-in-review&amp;title=2024 年终总结 &amp; 博客一周年"
+        >
+          <i class="iconify" data-icon="entypo-social:linkedin-with-circle"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          class="icon"
+          aria-label="Share to Pinterest"
+          href="https://pinterest.com/pin/create/bookmarklet/?url=https://howiehz.top/archives/2024-year-in-review&amp;title=2024 年终总结 &amp; 博客一周年"
+        >
+          <i class="iconify" data-icon="mdi:pinterest"></i
+        ></a>
+      </li>
+    </ul>
+  
+
+      </div>
+      <div id="toc"></div>
+    </span>
+  </div>
+
+
+      <div
+        class="content index pt-16 !min-h-screen"
+      >
+        
+
+        
+    <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+      <header>
+        <h1 class="posttitle" itemprop="name headline">
+          2024 年终总结 &amp; 博客一周年<button
+  id="theme-toggle-button"
+  accesskey="t"
+  title="(Alt + T)"
+  type="button"
+>
+  <i id="theme-toggle-button-icon" class="icon iconify iconify-large -translate-x-[1px] -translate-y-[1px]"></i>
+</button>
+        </h1>
+        <div class="meta">
+          <span class="author" itemprop="author" itemscope>
+            <a
+              href="/authors/howiehz"
+              itemprop="name"
+              style="background-image: none"
+            >HowieHz</a>
+          </span>
+
+          <div class="postdate">
+            <time
+              datetime="2024-12-31T17:52:46.020344659Z"
+              itemprop="datePublished"
+            >2025-01-01</time>
+          </div>
+
+          <div class="article-tag">
+            <span class="iconify" data-icon="fa-solid:tag" data-inline="false"></span>
+            
+              <a class="tag-link" href="/tags/cn">🌍简体中文</a>
+            
+              <a class="tag-link" href="/tags/Featured">精选</a>
+            
+          </div>
+
+          <span title="Visit Stats 345">
+            <span class="iconify" data-icon="mdi:eye-outline" data-inline="false"></span>
+            <span>345</span>
+          </span>
+        </div>
+      </header>
+
+      <div class="content flex-auto" itemprop="articleBody"><div data-type="sign" id="vditor-article-sign"></div><div data-type="var" id="vditor-var-cdn" value="/plugins/vditor-mde/assets/static"></div><link rel="stylesheet" type="text/css" href="/plugins/vditor-mde/assets/static/vditor-render.css?version=1.8.0" id="vditor-style"><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/plugins/vditor-mde/assets/static/dist/method.min.js?version=1.8.0" id="vditor-methods" type="c66ca6e44927cd86397326ad-text/javascript"></script><script src="/plugins/vditor-mde/assets/static/render-utils.js?version=1.8.0" id="vditor-render-utils" type="c66ca6e44927cd86397326ad-text/javascript"></script><script src="/plugins/vditor-mde/assets/static/external/media-render.js?version=1.8.0" id="vditor-media" type="c66ca6e44927cd86397326ad-text/javascript"></script><script src="/plugins/vditor-mde/assets/static/dark-mode/dark-system.js?version=1.8.0" id="vditor-dark-mode" type="c66ca6e44927cd86397326ad-text/javascript"></script><script src="/plugins/vditor-mde/assets/static/halo-renders/index.js?version=1.8.0" id="vditor-halo-render-js" type="c66ca6e44927cd86397326ad-text/javascript"></script><link rel="stylesheet" type="text/css" href="/plugins/vditor-mde/assets/static/halo-renders/index.css?version=1.8.0" id="vditor-halo-render-css"><script src="/plugins/vditor-mde/assets/static/external/halo-renders.js?version=1.8.0" id="vditor-halo-render" type="c66ca6e44927cd86397326ad-text/javascript"></script><script src="/plugins/vditor-mde/assets/static/render.js?version=1.8.0" id="vditor-render" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+<p>谨以此文记录我平凡但独一无二的 2024</p>
+<div class="vditor-toc" data-block="0" data-type="toc-block" contenteditable="false"><ul><li><span data-target-id="学习生活">学习生活</span></li><li><span data-target-id="生活">生活</span><ul><li><span data-target-id="计算机上那些事">计算机上那些事</span><ul><li><span data-target-id="博客">博客</span><ul><li><span data-target-id="有关博客的简单感想">有关博客的简单感想</span></li><li><span data-target-id="统计图表">统计图表</span></li><li><span data-target-id="趣闻">趣闻</span></li></ul></li><li><span data-target-id="开源代码贡献">开源代码贡献</span></li><li><span data-target-id="计算机技能">计算机技能</span><ul><li><span data-target-id="会用的工具-用过的工具">会用的工具/用过的工具</span></li></ul></li><li><span data-target-id="关于-AI">关于 AI</span></li><li><span data-target-id="自媒体">自媒体</span></li><li><span data-target-id="其他">其他</span></li></ul></li><li><span data-target-id="文字阅读">文字阅读</span><ul><li><span data-target-id="出版物阅读">出版物阅读</span></li><li><span data-target-id="网文阅读">网文阅读</span></li><li><span data-target-id="其他-">其他</span></li><li><span data-target-id="读后感">读后感</span><ul><li><span data-target-id="读完的书">读完的书</span></li><li><span data-target-id="没读完的书">没读完的书</span></li></ul></li></ul></li><li><span data-target-id="生活习惯">生活习惯</span></li><li><span data-target-id="其他--">其他</span></li></ul></li><li><span data-target-id="展望-2025">展望 2025</span><ul><li><span data-target-id="第一部分">第一部分</span></li><li><span data-target-id="第二部分">第二部分</span></li><li><span data-target-id="第三部分">第三部分</span></li></ul></li></ul></div>
+<h2 id="学习生活">学习生活</h2>
+<ul>
+<li>结束了在上海的高中生活</li>
+<li>进入了 哈尔滨理工大学 计算机科学与技术专业</li>
+<li>北方真冷。对冰雪没啥特殊情感，因为南方也有</li>
+<li>没竞选上任何时间换分数的班级委员</li>
+<li>进入学校单片机与嵌入式协会</li>
+<li>进入学校 ACM 集训队</li>
+<li>CET4 肯定没过</li>
+</ul>
+<h2 id="生活">生活</h2>
+<h3 id="计算机上那些事">计算机上那些事</h3>
+<h4 id="博客">博客</h4>
+<ul>
+<li>建站一周年，可喜可贺🎉️</li>
+<li>始于 2023-12-31 14:13:45</li>
+<li>Halo cms 统计（截至撰文前）：14772 阅读量，76 评论，66 篇文章</li>
+<li>Umami 统计（截至撰文前）：21508 浏览量，10042 访问次数，4473 访客，跳出率 60%，平均访问时长 2 分 14 秒。</li>
+<li>阅读量最高的文章是 <a href="https://howiehz.top/archives/chinese-blogosphere-list">中文博客圈列表 - 博客圈大全 - 博客大全 - 收集全部中文博客圈的列表</a></li>
+<li>阅读量第二高的文章是 <a href="https://howiehz.top/about">关于我</a></li>
+<li>阅读量第三高的文章是 <a href="https://howiehz.top/archives/minecraft-spigot-bukkit-plugin-development-tutorial-collection">Minecraft（我的世界）Spigot Bukkit 服务器插件开发 教程收集</a></li>
+</ul>
+<h5 id="有关博客的简单感想">有关博客的简单感想</h5>
+<p>从小学开始，我就有一个执念：那就是要有一个自己的域名，自己的网站，自己完全掌控的服务器。</p>
+<p>只有这样，才是在互联网上有一个小天地，才是互联网的参与者。有些人认为 UGC 就已经是参与了互联网，但是我在多个平台发文章和审核斗智斗勇的环节中意识到，这种随时可能消失的网络服务并不是我期望的。</p>
+<p>现在我化解了这个执念，也在此认识到了许多朋友。</p>
+<p>非常高兴能够认识博客圈的大家，让我能看到在 2024 年还有这么一群“守旧派”，依旧在坚持，在创作。</p>
+<h5 id="统计图表">统计图表</h5>
+<p><img src="/upload/2024-year-in-review-umami.jpg" alt="2024-year-in-review-umami.jpg" srcset="/upload/thumbnails/2024/w1200/2024-year-in-review-umami.jpg 1200w, /upload/thumbnails/2024/w1600/2024-year-in-review-umami.jpg 1600w, /upload/thumbnails/2024/w400/2024-year-in-review-umami.jpg 400w, /upload/thumbnails/2024/w800/2024-year-in-review-umami.jpg 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"><br>
+<img src="/upload/2024-year-in-review-most-url.jpg" alt="2024-year-in-review-most-url.jpg" srcset="/upload/thumbnails/2024/w400/2024-year-in-review-most-url.jpg 400w, /upload/thumbnails/2024/w800/2024-year-in-review-most-url.jpg 800w, /upload/thumbnails/2024/w1200/2024-year-in-review-most-url.jpg 1200w, /upload/thumbnails/2024/w1600/2024-year-in-review-most-url.jpg 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<h5 id="趣闻">趣闻</h5>
+<p>第一篇在酷安上发的文章，获得了 48 万 + 的阅读量，期望有一天能在某处突破单篇文章 50 万 阅读量的成就。<br>
+（截图于 2025-1-1）</p>
+<p><img src="/upload/my-kuan-blog.jpg" alt="my-kuan-blog.jpg" srcset="/upload/thumbnails/2025/w400/my-kuan-blog.jpg 400w, /upload/thumbnails/2025/w800/my-kuan-blog.jpg 800w, /upload/thumbnails/2025/w1200/my-kuan-blog.jpg 1200w, /upload/thumbnails/2025/w1600/my-kuan-blog.jpg 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<h4 id="开源代码贡献">开源代码贡献</h4>
+<ul>
+<li>获得星数大幅提升 - 写的东西有人用了</li>
+<li>代码占比中添加了不少前端成分 - 点亮新技能</li>
+<li>贡献仓库数和组织数创新高 - 已成为一个开源社区享受者</li>
+</ul>
+<p>这一年中有意义也有人用的项目：</p>
+<ul>
+<li><a href="https://github.com/HowieHz/halo-theme-higan-hz">HowieHz/halo-theme-higan-hz: 适用于 Halo 2.0 的 Higan-Hz 主题，魔改于 theme-higan，侧重于更高的配置自由度与更激进的修改。</a></li>
+<li><a href="https://github.com/HowieHz/osu-beatmap-to-mania-converter">HowieHz/osu-beatmap-to-mania-converter: 转换 osu!standard(osu!std) 铺面至 osu!mania</a></li>
+<li><a href="https://github.com/HowieHz/plugin-compatibility-checking-tool">HowieHz/plugin-compatibility-checking-tool: 基于二分法和分治检查插件兼容性问题，支持多插件同时错误的情况</a></li>
+<li><a href="https://github.com/chinese-blog-evaluation-association/chinese-blog-guidelines">chinese-blog-evaluation-association/chinese-blog-guidelines: Chinese blog guidelines for better visitor experience／中文博客倡议</a></li>
+</ul>
+<p>这一年中我认为有意义但没啥人用的项目：</p>
+<ul>
+<li><a href="https://github.com/HowieHz/domain-checker">HowieHz/domain-checker: 批量检查域名是否过期</a></li>
+</ul>
+<p>以下是一些统计图表<br>
+（<a href="https://github.com/chinese-blog-evaluation-association/chinese-blog-guidelines">中文博客倡议项目</a>获得了 10 star，未包括在下表）</p>
+<p><img src="/upload/Howie-GitHub-Stat-in-2024.svg" alt="Howie-GitHub-Stat-in-2024.svg" srcset="/upload/Howie-GitHub-Stat-in-2024.svg 400w, /upload/Howie-GitHub-Stat-in-2024.svg 800w, /upload/Howie-GitHub-Stat-in-2024.svg 1200w, /upload/Howie-GitHub-Stat-in-2024.svg 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"><br>
+<img src="/upload/Howie-GitHub-Stat-in-2024-2.svg" alt="Howie-GitHub-Stat-in-2024-2.svg" srcset="/upload/Howie-GitHub-Stat-in-2024-2.svg 400w, /upload/Howie-GitHub-Stat-in-2024-2.svg 800w, /upload/Howie-GitHub-Stat-in-2024-2.svg 1200w, /upload/Howie-GitHub-Stat-in-2024-2.svg 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"><br>
+<img src="/upload/github-2024.jpg" alt="github-2024.jpg" srcset="/upload/thumbnails/2024/w400/github-2024.jpg 400w, /upload/thumbnails/2024/w800/github-2024.jpg 800w, /upload/thumbnails/2024/w1200/github-2024.jpg 1200w, /upload/thumbnails/2024/w1600/github-2024.jpg 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"><br>
+<img src="/upload/github-2024-2.jpg" alt="github-2024-2.jpg" srcset="/upload/thumbnails/2024/w400/github-2024-2.jpg 400w, /upload/thumbnails/2024/w800/github-2024-2.jpg 800w, /upload/thumbnails/2024/w1200/github-2024-2.jpg 1200w, /upload/thumbnails/2024/w1600/github-2024-2.jpg 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"><br>
+<img src="/upload/postspark_export_2024-12-31_23-52-57.webp" alt="postspark_export_2024-12-31_23-52-57.webp" srcset="/upload/thumbnails/2024/w400/postsparkexport2024-12-3123-52-57.webp 400w, /upload/thumbnails/2024/w800/postsparkexport2024-12-3123-52-57.webp 800w, /upload/thumbnails/2024/w1200/postsparkexport2024-12-3123-52-57.webp 1200w, /upload/thumbnails/2024/w1600/postsparkexport2024-12-3123-52-57.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<h4 id="计算机技能">计算机技能</h4>
+<h5 id="会用的工具-用过的工具">会用的工具/用过的工具</h5>
+<ul>
+<li>C++ OOP 相关/现代 C++ 语法 —— 克服心魔，学校课程和打算法竞赛需要就一口气整完了</li>
+<li>C 语言 —— 克服心魔，嵌入式需要就一口气整完了</li>
+<li>STM32 环境配置（VSC+ST 官方 STM32 插件+STM32CubeCLT/keil5/STM32CubeIDE)，STM32 标准库/HAL 库/PID 闭环控制/PWM 控制 ——  克服心魔，从 Arduino 和 树莓派 的舒适区离开，前方是更广阔的天地。</li>
+<li>前端语言相关 HTML/CSS/Javascript/Style</li>
+<li>前端库相关 Thymeleaf/Jquery</li>
+<li>相关工具使用 pnpm/Vite/UnoCSS/PostCSS/Tailwindcss/ESLint/prettier/husky</li>
+</ul>
+<p><img src="/upload/my-stm32-car.jpg" alt="my-stm32-car.jpg" title="一辆简单的小车" srcset="/upload/thumbnails/2025/w400/my-stm32-car.jpg 400w, /upload/thumbnails/2025/w800/my-stm32-car.jpg 800w, /upload/thumbnails/2025/w1200/my-stm32-car.jpg 1200w, /upload/thumbnails/2025/w1600/my-stm32-car.jpg 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<h4 id="关于-AI">关于 AI</h4>
+<ul>
+<li>开始使用生成式 AI 辅助学习生活了，买的 OpenAI 的号被封禁了，找到好用的镜像站一直用着了。加之进入大学申请了学校的 edu 邮箱，成功申请了 GitHub 学生开发者包。GitHub Copilot 明显有效的提升了我的代码编写效率。</li>
+<li>过去一年我用生成式 AI 做的事：应付水课作业（生成大纲、问卷、总结、感想、看法）、学习 C++、辅助写代码、润化聊天时句子的语气。</li>
+<li>用 4060m 部署了几个参数比较少的大模型，结合 onebot api 实现了简单的 QQ 聊天机器人，非常好玩。</li>
+</ul>
+<h4 id="自媒体">自媒体</h4>
+<ul>
+<li>自媒体账号头像和昵称改为站点默认</li>
+<li>不评论，尽量清空之前的动态</li>
+<li>隐藏低播放量的视频</li>
+<li>始于 2019-01-05 终于 2024-10-05</li>
+<li>原因：想远离戾气太重的地方</li>
+<li>成效：几乎杜绝了绝大部分“网络撕逼”</li>
+</ul>
+<h4 id="其他">其他</h4>
+<ul>
+<li>部署了不少服务 —— 部署服务、静态网页已经非常熟练了，简单又好玩</li>
+<li>在部署服务的过程中熟悉了 Linux 的使用 —— 工具越用越熟练</li>
+<li>上大学换了新电脑：天选 Air 2024，不到 1.5 kg 的全能本，ai9hx370+RTX4060Laptop，32G+1T，屏幕非 oled，散热非液金 —— 离电有续航，接电有性能。实在是找不到比这个还好的机子了，感谢老爸的经济支持！（离电也有性能，890M 核显非常强）</li>
+</ul>
+<h3 id="文字阅读">文字阅读</h3>
+<h4 id="出版物阅读">出版物阅读</h4>
+<p>Kinde 上的阅读</p>
+<ul>
+<li>一月 05:45:47（282 页）</li>
+<li>二月 00:01:42（1 页）</li>
+<li>三月 00:08:42（7 页）</li>
+<li>四月 00:34:36（32 页）</li>
+<li>五月 00:01:51（5 页）</li>
+<li>六月 02:59:53（257 页）</li>
+<li>七月 01:53:35（102 页）</li>
+<li>八月 00:33:07（43 页）</li>
+<li>九月 00:30:01（31 页）</li>
+<li>十月 x</li>
+<li>十一月 00:03:08（5 页）</li>
+<li>十二月 00:23:13（15 页）</li>
+<li>合计 12 时 55 分 35 秒</li>
+<li>总结：情况不太妙，需要加强</li>
+</ul>
+<h4 id="网文阅读">网文阅读</h4>
+<ul>
+<li>番茄小说：95 时 46 分</li>
+<li>七猫小说：9 时 47 分</li>
+<li>阅读 APP：110 时 36 分 44 秒</li>
+<li>总计 216 时 9 分 44 秒</li>
+<li>总结：情况不太妙，还是少点好</li>
+</ul>
+<h4 id="其他-">其他</h4>
+<p>纸质书无法统计，但感觉上也没多少</p>
+<h4 id="读后感">读后感</h4>
+<h5 id="读完的书">读完的书</h5>
+<ul>
+<li>《刘擎西方现代思想讲义》—— 应试为目的打开，兴趣为目的看完。好似在和先贤对话，学到了很多，一两句说不完。值得一读。</li>
+</ul>
+<h5 id="没读完的书">没读完的书</h5>
+<ul>
+<li>没读完没啥好说的，读完再说。</li>
+</ul>
+<h3 id="生活习惯">生活习惯</h3>
+<ul>
+<li>吃饭变得不规律了，很多天不吃早餐，午饭晚饭当一餐吃</li>
+<li>睡眠变得不规律了，很少早睡</li>
+<li>体重在假期的时候减下来了，上大学又加回去了</li>
+<li>总结：惨不忍睹，急需调整</li>
+</ul>
+<h3 id="其他--">其他</h3>
+<ul>
+<li>感恩先人的付出，换来如今新中国和平的局面。我能在这里平静的写作而不是在战火中流离，这并不是从天赐的。</li>
+<li>望世界和平。</li>
+</ul>
+<h2 id="展望-2025">展望 2025</h2>
+<p>简单分类为三部分</p>
+<h3 id="第一部分">第一部分</h3>
+<ul>
+<li>处理待办列表</li>
+<li>学习计算机技术</li>
+<li>多看书</li>
+</ul>
+<h3 id="第二部分">第二部分</h3>
+<ul>
+<li>完成学校任务，我带队的大创整完</li>
+<li>过 CET4</li>
+<li>算法竞赛中拿出可说道的成绩</li>
+</ul>
+<h3 id="第三部分">第三部分</h3>
+<ul>
+<li>有一个良好的作息</li>
+<li>瘦下来</li>
+<li>大家都健健康康平平安安</li>
+</ul>
+</div>
+      
+        <hr class="divide my-10" />
+      
+      
+        <div id="comment-content-halo-run-Post-2d624b2f-503f-4b7f-bdd1-a6060dcb9ef1"></div>
+<script type="c66ca6e44927cd86397326ad-text/javascript">
+  CommentWidget.init(
+    "#comment-content-halo-run-Post-2d624b2f-503f-4b7f-bdd1-a6060dcb9ef1",
+    {
+      group: "content.halo.run",
+      kind: "Post",
+      name: "2d624b2f-503f-4b7f-bdd1-a6060dcb9ef1",
+      size: 20,
+      replySize: 10,
+      withReplies: true,
+      withReplySize: 5,
+      useAvatarProvider: true,
+      avatarProvider: "gravatar",
+      avatarProviderMirror: "https://cravatar.cn",
+      avatarPolicy: "noAvatarUser",
+      captchaEnabled: true,
+    }
+  );
+</script>
+
+      
+    </article>
+    
+      
+  <div id="footer-post-container">
+    <div id="footer-post">
+      <div id="nav-footer" style="display: none">
+        
+  <ul>
+    
+
+    
+  
+    
+
+    
+
+    
+      
+      
+        
+          <li class="matched-menu">
+            <a
+              href="/"
+              target="_self"
+              aria-label="Menu named Home"
+              >Home</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/archives"
+              target="_self"
+              aria-label="Menu named Archives"
+              >Archives</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/moments"
+              target="_self"
+              aria-label="Menu named Moments"
+              >Moments</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/links"
+              target="_self"
+              aria-label="Menu named Links"
+              >Links</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/about"
+              target="_self"
+              aria-label="Menu named About Me"
+              >About Me</a
+            >
+          </li>
+        
+      
+        
+      
+    
+
+    
+    
+      
+        <li style="display: none" class="default-menu">
+          <a
+            href="/"
+            target="_self"
+            aria-label="Menu named Home"
+            >Home</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/archives"
+            target="_self"
+            aria-label="Menu named Archives"
+            >Archives</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/moments"
+            target="_self"
+            aria-label="Menu named Moments"
+            >Moments</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/links"
+            target="_self"
+            aria-label="Menu named Links"
+            >Links</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/about"
+            target="_self"
+            aria-label="Menu named About Me"
+            >About Me</a
+          >
+        </li>
+      
+    
+      
+    
+  
+
+
+    <li>
+      <a
+        href="javascript:SearchWidget.open();"
+        aria-label="Search in site"
+      >Search</a>
+    </li>
+  </ul>
+
+      </div>
+
+      <div id="toc-footer" style="display: none"></div>
+      <div id="share-footer" style="display: none">
+        
+  
+    <ul>
+      <li>
+        <a class="icon" aria-label="Share to E-mail" href="/cdn-cgi/l/email-protection#cbf4b8bea9a1aea8bff6f9fbf9ffeb2e727f2c70432d4b702c7058ebedaaa6bbf0eb2e46512e65692f734b2e5a632e727fedaaa6bbf0a9a4afb2f688a3aea8a0eba4bebfebbfa3a2b8ebaab9bfa2a8a7aef1eba3bfbfbbb8f1e4e4a3a4bca2aea3b1e5bfa4bbe4aab9a8a3a2bdaeb8e4f9fbf9ffe6b2aeaab9e6a2a5e6b9aebda2aebc">
+          <i class="iconify" data-icon="icomoon-free:mail4"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          class="icon"
+          aria-label="Share to Facebook"
+          href="https://facebook.com/sharer/sharer.php?u=https://howiehz.top/archives/2024-year-in-review&amp;title=2024 年终总结 &amp; 博客一周年"
+        >
+          <i class="iconify" data-icon="ic:baseline-facebook"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          class="icon"
+          aria-label="Share to X"
+          href="https://x.com/share?url=https://howiehz.top/archives/2024-year-in-review&amp;title=2024 年终总结 &amp; 博客一周年"
+        >
+          <i class="iconify" data-icon="mdi:twitter-circle"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          class="icon"
+          aria-label="Share to LinkedIn"
+          href="http://www.linkedin.com/shareArticle?url=https://howiehz.top/archives/2024-year-in-review&amp;title=2024 年终总结 &amp; 博客一周年"
+        >
+          <i class="iconify" data-icon="entypo-social:linkedin-with-circle"></i
+        ></a>
+      </li>
+      <li>
+        <a
+          class="icon"
+          aria-label="Share to Pinterest"
+          href="https://pinterest.com/pin/create/bookmarklet/?url=https://howiehz.top/archives/2024-year-in-review&amp;title=2024 年终总结 &amp; 博客一周年"
+        >
+          <i class="iconify" data-icon="mdi:pinterest"></i
+        ></a>
+      </li>
+    </ul>
+  
+
+      </div>
+      <div id="actions-footer">
+        <a id="menu" class="icon" href="javascript:void(0);" onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-c66ca6e44927cd86397326ad-="">
+          <i class="iconify" data-icon="ic:baseline-menu" aria-hidden="true"></i>
+          Menu</a
+        >
+        <a id="toc" class="icon" href="javascript:void(0);" onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-c66ca6e44927cd86397326ad-="">
+          <i class="iconify" data-icon="ic:baseline-toc" aria-hidden="true"></i>
+          Table of Contents</a
+        >
+        <a id="share" class="icon" href="javascript:void(0);" onclick="if (!window.__cfRLUnblockHandlers) return false; return false;" data-cf-modified-c66ca6e44927cd86397326ad-="">
+          <i class="iconify" data-icon="ic:baseline-share" aria-hidden="true"></i>
+          Share</a
+        >
+        <a id="top" style="transform: scale(0); width: 0" class="icon transition-transform duration-200 ease-in-out" href="javascript:void(0);" onclick="if (!window.__cfRLUnblockHandlers) return false; $('html, body').animate({ scrollTop: 0 }, 'fast');" data-cf-modified-c66ca6e44927cd86397326ad-="">
+          <i class="iconify" data-icon="ic:baseline-arrow-upward" aria-hidden="true"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+
+    
+    
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/themes/howiehz-higan/assets/lib/clipboard/clipboard.min.js" type="c66ca6e44927cd86397326ad-text/javascript"></script>
+    <script type="c66ca6e44927cd86397326ad-text/javascript">
+      $(function () {
+        // mount it!
+        $(".content pre").wrap('<figure class="highlight"></figure>');
+        // copy-btn HTML
+
+        const copySvg = `<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="currentColor" d="M19 21H8V7h11m0-2H8a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2m-3-4H4a2 2 0 0 0-2 2v14h2V3h12V1Z"/></svg>`;
+        $(".content figure pre").before(
+          `<span class="btn-copy tooltipped tooltipped-sw" aria-label="Copy to clipboard!">${copySvg}</span>`
+        );
+        // code highlight
+        // document.querySelectorAll('pre code').forEach(el => {
+        //   hljs.highlightElement(el)
+        // })
+
+        var clip = new ClipboardJS(".btn-copy", {
+          text: function (trigger) {
+            return Array.from(trigger.nextElementSibling.querySelectorAll("code")).reduce(
+              (str, it) => str + it.innerText + "\n",
+              ""
+            );
+          },
+        });
+        clip.on("success", function (e) {
+          e.trigger.setAttribute("aria-label", "Copied!");
+          e.clearSelection();
+        });
+
+        // generate toc
+        const contentDom = document.querySelector("article > .content");
+        const tocSelector = isMobile() ? "#toc-footer" : "#toc";
+        // wontfix：如果电脑屏幕较窄，文章页用的是底部导航栏，目录按钮按了之后不会显示目录
+        // 但是目录按钮在手机端是正常的，为了保证性能，不做特殊处理
+        main.generateTOC(contentDom.innerHTML, tocSelector);
+
+        const postTitleUpperCase = false;
+        if (postTitleUpperCase) {
+          $(".post .posttitle").addClass("title-upper-case");
+        }
+
+        // toc collapse control
+        window.addEventListener("scroll", () => {
+          headings = document.querySelectorAll("h2, h3, h4, h5, h6");
+          let currentActiveHeading;
+          headings.forEach((heading) => {
+            const headingTop = heading.offsetTop;
+            if (pageYOffset >= headingTop - 50) {
+              currentActiveHeading = heading;
+            }
+          });
+          // remove all active class
+          const tocActiveClassName = "toc-active";
+          document.querySelectorAll("." + tocActiveClassName).forEach((el) => {
+            el.classList.remove(tocActiveClassName);
+          });
+
+          if (currentActiveHeading) {
+            const tocLevel = document.querySelector(`.toc-link[href="#${currentActiveHeading.id}"]`);
+            if (tocLevel) {
+              tocLevel.classList.add(tocActiveClassName);
+            }
+          }
+        });
+      });
+    </script>
+  
+
+        <footer id="footer">
+          <div class="footer-left">
+            <center>
+        <!-- 备案展示 -->
+        <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener noreferrer">沪ICP备2024054655号-1</a>
+        <details>
+          <summary>趣味备案 点我展开</summary>
+          <a href="https://icp.gov.moe/?keyword=20242466" target="_blank" rel="noopener noreferrer" title="萌ICP备20242466号">萌ICP备20242466号</a>
+          <br /><a href="https://guan.ma/hao/2024000029/" target="_blank" rel="noopener noreferrer" title="官码2024000029号">官码2024000029号</a> <br /><a
+            href="https://beian.miit.cn.com/gov/search.php?domain=howiehz.top"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="MIIT备20242024号"
+            >MIIT20242024号</a
+          >
+        </details>
+        <br />
+
+        <center>
+          <!-- 博客园塔 -->
+          <a href="https://blogverse.cn" target="_blank" rel="noopener noreferrer" title="中文博客圈列表">博客圈列表</a>
+          <br /># -> 随机跳转页面
+          <div class="bokequan">
+            <a href="http://www.jetli.com.cn" target="_blank" rel="noopener noreferrer" title="博客志-优秀个人独立博客导航">博客志</a>
+            |
+            <a href="https://www.boyouquan.com" target="_blank" rel="noopener noreferrer" title="博友圈-博客人的朋友圈">博友圈</a>
+            <a href="https://www.boyouquan.com/planet-shuttle" target="_blank" rel="noopener noreferrer" title="星球穿梭-博友圈">#</a>
+            <br />
+            <a href="https://chuanliu.org" target="_blank" rel="noopener noreferrer" title="川流，取川之意，流水之情">川流</a>
+            |
+            <a href="https://bokequan.cn" target="_blank" rel="noopener noreferrer" title="致力于个人独立博客，按地区分类，由段先森维护">博客圈</a>
+            <a href="https://bokequan.cn/?suiji" target="_blank" rel="noopener noreferrer" title="穿梭-致力于个人独立博客博客园">#</a>
+            |
+            <a href="https://boke.lu" target="_blank" rel="noopener noreferrer" title="boke.lu · 博客收录展示平台~">博客录</a>
+            <a href="https://bokelu.suijiboke.gs" target="_blank" rel="noopener noreferrer" title="随机浏览博客录收录的所有博客">#</a>
+            <br />
+            <a href="https://blogwe.com" target="_blank" rel="noopener noreferrer" title="致敬还在写博客的我们！">BlogWe</a>
+            |
+            <a href="https://zhblogs.ohyee.cc" target="_blank" rel="noopener noreferrer" title="尝试链接几乎所有的中文博客">中文博客列表导航</a>
+            <a href="https://zhblogs.ohyee.cc/go" target="_blank" rel="noopener noreferrer" title="随机跳转-尝试链接几乎所有的中文博客">#</a>
+            <br />
+            <a href="https://storeweb.cn" target="_blank" rel="noopener noreferrer" title="一个精致的，带社交元素的个人网站发布平台，博客收录网站">个站商店</a>
+            <a href="https://storeweb.cn/s/2070" target="_blank" rel="noopener noreferrer" title="个站商店-虫洞">#</a>
+            |
+            <a href="https://bf.zzxworld.com" target="_blank" rel="noopener noreferrer" title="BlogFinder-发现优秀的个人博客">BlogFinder</a>
+            |
+            <a href="https://blogtalk.org" target="_blank" rel="noopener noreferrer" title="博客说-个人博客站点聚合">博客说</a>
+            <a href="https://blogtalk.org/planet-shuttle" target="_blank" rel="noopener noreferrer" title="文苑淘真-博客说">#</a>
+            <br />
+            <a href="https://blogscn.fun" target="_blank" rel="noopener noreferrer" title="致敬还在写博客的我们">笔墨迹</a>
+            <a href="https://blogscn.fun/random.html" target="_blank" rel="noopener noreferrer" title="笔墨迹-虫洞">#</a>
+            |
+            <a href="https://github.com/timqian/chinese-independent-blogs" target="_blank" rel="noopener noreferrer" title="中文独立博客列表">中文独立博客列表</a>
+            |
+            <a href="https://www.foreverblog.cn" target="_blank" rel="noopener noreferrer" title="一个人的寂寞，一群人的狂欢。">十年之约</a>
+            <a href="https://www.foreverblog.cn/go.html" target="_blank" rel="noopener noreferrer" title="穿梭虫洞-随机访问十年之约友链博客">#</a>
+            <br />
+            <a href="https://ourblo.gs" target="_blank" rel="noopener noreferrer" title="在茫茫比特流之中，能遇见你，真是幸运！">OurBlogs</a>
+            |
+            <a href="https://travel.moe" target="_blank" rel="noopener noreferrer" title="我们一起去萌站成员de星球旅行吧 ！">异次元之旅</a>
+            <a href="https://travel.moe/go.html?travel=on" target="_blank" rel="noopener noreferrer" title="跃迁-我们一起去萌站成员de星球旅行吧 ！">#</a>
+            |
+            <a href="https://www.travellings.cn" target="_blank" rel="noopener noreferrer" title="让传统友链“活跃”，让网页相互接力，让流量相互流动，让网络开放起来">开往</a>
+            <a href="https://www.travellings.cn/go.html" target="_blank" rel="noopener noreferrer" title="开往-友链接力">#</a>
+            |
+            <a href="https://www.blogsclub.org" target="_blank" rel="noopener noreferrer" title="BlogsClub-博客俱乐部">BlogsClub</a>
+            <a href="https://www.blogsclub.org/go" target="_blank" rel="noopener noreferrer" title="空间穿梭">#</a>
+            <br />
+          </div>
+        </center>
+
+        <br />
+        <!-- 网站运营时间展示 -->
+        <span id="website_uptime_banner"></span>
+        <script type="c66ca6e44927cd86397326ad-text/javascript">
+          const TIME_CONST = 365 * 24 * 60 * 60 * 1000;
+          const TIME_START = new Date("12/31/2023 14:13:45");
+          function update_website_uptime_banner() {
+            var timestamp_now = new Date(); // 当前时间
+            var time = timestamp_now.getTime() - TIME_START.getTime();
+            var years = time / TIME_CONST;
+            var int_years = parseInt(years);
+            var days = (years - int_years) * 365; // 计算有多少天 比如 39.512313123天
+            var int_days = parseInt(days); // 计算有多少完整的天 比如 39
+            var hours = (days - int_days) * 24; // 计算除去完整的天 剩下不完整的天有多少 ×24得到有多少个小时
+            var int_hours = parseInt(hours); // 计算完整的小时 比如 12
+            var mins = (hours - int_hours) * 60; // 计算除去完整的天,小时 剩下不完整的小时 x60得到有多少分钟
+            var int_mins = parseInt(mins); // 计算完整的分钟
+            var sec = (mins - int_mins) * 60; // 计算除去完整的天,小时,分钟 剩下不完整的分钟 x60得到有多少秒
+            var int_sec = parseInt(sec); // 计算完整的秒
+            // var msec = (sec - int_sec) * 1000
+            // var int_msec = parseInt(time) - parseInt(time / 1000) * 1000;
+            // var µSEC = (msec - int_msec) * 1000
+            // var int_µSEC = Math.floor(µSEC)
+            website_uptime_banner.innerHTML =
+              "本站存活时间: " +
+              "<br>" +
+              int_years +
+              " 年 " +
+              String(int_days) +
+              " 天 " +
+              String(int_hours).padStart(2, "0") +
+              " 小时 " +
+              String(int_mins).padStart(2, "0") +
+              " 分 " +
+              String(int_sec).padStart(2, "0") +
+              " 秒 ";
+            // String(int_msec).padStart(3, "0") +
+            // " 毫秒";
+          }
+          update_website_uptime_banner();
+          setInterval(update_website_uptime_banner, 1000);
+          // setInterval(update_website_uptime_banner, 73);
+        </script>
+        <br />
+
+        <!-- 缺失JavaScript提示 -->
+        <noscript>
+          <div class="noscript-warning">本站在允许 JavaScript 运行的环境下浏览效果更佳</div>
+        </noscript>
+        <br />
+
+        <!-- cdn展示 -->
+        <!-- <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral&ref=howiehz.top"><img src="/upload/ypy_logo_blue.png" width="59px" height="30px" align="absmiddle" title="又拍云" /></a> -->
+        <span>本站由</span>
+        <a href="https://www.dogecloud.com/?iuid=9290" target="_blank" rel="noopener noreferrer">多吉云</a> &
+        <a href="https://www.upyun.com/?utm_source=lianmeng&utm_medium=referral" target="_blank" rel="noopener noreferrer">又拍云</a>
+        <span> 提供加速服务</span>
+      </center>
+            <div
+            >
+              <span class="info">
+                Theme is
+                <a href="https://github.com/howiehz/halo-theme-higan-hz" rel="noopener noreferrer" target="_blank"
+                  >higan-hz</a
+                >
+                Powered by <a href="https://halo.run" rel="noopener noreferrer" target="_blank">Halo</a>
+              </span>
+              <span class="copyright">
+                ©
+                <span
+                  id="site_date"
+                >2025</span>
+                <span>皓子的小站</span>
+              </span>
+            </div>
+          </div>
+          <div class="footer-right">
+            <ul>
+              
+  
+    
+
+    
+
+    
+      
+      
+        
+          <li class="matched-menu">
+            <a
+              href="/"
+              target="_self"
+              aria-label="Menu named Home"
+              >Home</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/archives"
+              target="_self"
+              aria-label="Menu named Archives"
+              >Archives</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/moments"
+              target="_self"
+              aria-label="Menu named Moments"
+              >Moments</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/links"
+              target="_self"
+              aria-label="Menu named Links"
+              >Links</a
+            >
+          </li>
+          <li class="matched-menu">
+            <a
+              href="/about"
+              target="_self"
+              aria-label="Menu named About Me"
+              >About Me</a
+            >
+          </li>
+        
+      
+        
+      
+    
+
+    
+    
+      
+        <li style="display: none" class="default-menu">
+          <a
+            href="/"
+            target="_self"
+            aria-label="Menu named Home"
+            >Home</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/archives"
+            target="_self"
+            aria-label="Menu named Archives"
+            >Archives</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/moments"
+            target="_self"
+            aria-label="Menu named Moments"
+            >Moments</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/links"
+            target="_self"
+            aria-label="Menu named Links"
+            >Links</a
+          >
+        </li>
+        <li style="display: none" class="default-menu">
+          <a
+            href="/about"
+            target="_self"
+            aria-label="Menu named About Me"
+            >About Me</a
+          >
+        </li>
+      
+    
+      
+    
+  
+
+            </ul>
+          </div>
+          
+        </footer>
+      </div>
+    </div>
+  <script src="/cdn-cgi/scripts/7d0fa10a/cloudflare-static/rocket-loader.min.js" data-cf-settings="c66ca6e44927cd86397326ad-|49" defer></script><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8ffba3f948e03f4f',t:'MTczNjUwMTM0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

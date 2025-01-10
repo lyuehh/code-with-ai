@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+
+    <title>2024 年度回顾</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="preload" as="style" href="https://pt.plus/assets/built/screen.css?v=07dd052e98">
+    <link rel="preload" as="script" href="https://pt.plus/assets/built/source.js?v=07dd052e98">
+    
+    <link rel="preload" as="font" type="font/woff2" href="https://pt.plus/assets/fonts/inter-roman.woff2?v=07dd052e98" crossorigin="anonymous">
+<style>
+    @font-face {
+        font-family: "Inter";
+        font-style: normal;
+        font-weight: 100 900;
+        font-display: optional;
+        src: url(https://pt.plus/assets/fonts/inter-roman.woff2?v=07dd052e98) format("woff2");
+        unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+    }
+</style>
+
+    <link rel="stylesheet" type="text/css" href="https://pt.plus/assets/built/screen.css?v=07dd052e98">
+
+    <style>
+        :root {
+            --background-color: #ffffff
+        }
+    </style>
+
+    <script>
+        /* The script for calculating the color contrast has been taken from
+        https://gomakethings.com/dynamically-changing-the-text-color-based-on-background-color-contrast-with-vanilla-js/ */
+        var accentColor = getComputedStyle(document.documentElement).getPropertyValue('--background-color');
+        accentColor = accentColor.trim().slice(1);
+
+        if (accentColor.length === 3) {
+            accentColor = accentColor[0] + accentColor[0] + accentColor[1] + accentColor[1] + accentColor[2] + accentColor[2];
+        }
+
+        var r = parseInt(accentColor.substr(0, 2), 16);
+        var g = parseInt(accentColor.substr(2, 2), 16);
+        var b = parseInt(accentColor.substr(4, 2), 16);
+        var yiq = ((r * 299) + (g * 587) + (b * 114)) / 1000;
+        var textColor = (yiq >= 128) ? 'dark' : 'light';
+
+        document.documentElement.className = `has-${textColor}-text`;
+    </script>
+
+    <meta name="description" content="2024 年是一道分水岭。">
+    <link rel="icon" href="https://pt.plus/content/images/size/w256h256/2024/08/PT--1-.png" type="image/png">
+    <link rel="canonical" href="https://pt.plus/2024-year-in-review/">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <link rel="amphtml" href="https://pt.plus/2024-year-in-review/amp/">
+    
+    <meta property="og:site_name" content="Platform Thinking">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="2024 年度回顾">
+    <meta property="og:description" content="2024 年是一道分水岭。">
+    <meta property="og:url" content="https://pt.plus/2024-year-in-review/">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1635495673385-44de3565203c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta property="article:published_time" content="2024-12-31T03:09:41.000Z">
+    <meta property="article:modified_time" content="2024-12-31T03:09:41.000Z">
+    <meta property="article:tag" content="learning &amp;amp; thinking">
+    
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2024 年度回顾">
+    <meta name="twitter:description" content="2024 年是一道分水岭。">
+    <meta name="twitter:url" content="https://pt.plus/2024-year-in-review/">
+    <meta name="twitter:image" content="https://images.unsplash.com/photo-1635495673385-44de3565203c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000">
+    <meta name="twitter:label1" content="Written by">
+    <meta name="twitter:data1" content="Neo Zhang">
+    <meta name="twitter:label2" content="Filed under">
+    <meta name="twitter:data2" content="learning &amp; thinking">
+    <meta name="twitter:site" content="@neozhang">
+    <meta name="twitter:creator" content="@neozhang">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="800">
+    
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "publisher": {
+        "@type": "Organization",
+        "name": "Platform Thinking",
+        "url": "https://pt.plus/",
+        "logo": {
+            "@type": "ImageObject",
+            "url": "https://pt.plus/content/images/size/w256h256/2024/08/PT--1-.png",
+            "width": 60,
+            "height": 60
+        }
+    },
+    "author": {
+        "@type": "Person",
+        "name": "Neo Zhang",
+        "image": {
+            "@type": "ImageObject",
+            "url": "https://pt.plus/content/images/size/w1200/2020/04/D344E6A8-1619-4844-AEB6-0A8372783328_1_201_a.jpeg",
+            "width": 1200,
+            "height": 1600
+        },
+        "url": "https://pt.plus/author/neozhang/",
+        "sameAs": [
+            "https://twitter.com/neozhang"
+        ]
+    },
+    "headline": "2024 年度回顾",
+    "url": "https://pt.plus/2024-year-in-review/",
+    "datePublished": "2024-12-31T03:09:41.000Z",
+    "dateModified": "2024-12-31T03:09:41.000Z",
+    "image": {
+        "@type": "ImageObject",
+        "url": "https://images.unsplash.com/photo-1635495673385-44de3565203c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&ixlib=rb-4.0.3&q=80&w=2000",
+        "width": 1200,
+        "height": 800
+    },
+    "keywords": "learning & thinking",
+    "description": "2024 年是一道分水岭。",
+    "mainEntityOfPage": "https://pt.plus/2024-year-in-review/"
+}
+    </script>
+
+    <meta name="generator" content="Ghost 5.105">
+    <link rel="alternate" type="application/rss+xml" title="Platform Thinking" href="https://pt.plus/rss/">
+    <script defer src="https://cdn.jsdelivr.net/ghost/portal@~2.46/umd/portal.min.js" data-i18n="true" data-ghost="https://pt.plus/" data-key="a9868115863bd67eafabb34125" data-api="https://ptplus.ghost.io/ghost/api/content/" data-locale="zh" crossorigin="anonymous"></script><style id="gh-members-styles">.gh-post-upgrade-cta-content,
+.gh-post-upgrade-cta {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+    width: 100%;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.gh-post-upgrade-cta-content {
+    border-radius: 8px;
+    padding: 40px 4vw;
+}
+
+.gh-post-upgrade-cta h2 {
+    color: #ffffff;
+    font-size: 28px;
+    letter-spacing: -0.2px;
+    margin: 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta p {
+    margin: 20px 0 0;
+    padding: 0;
+}
+
+.gh-post-upgrade-cta small {
+    font-size: 16px;
+    letter-spacing: -0.2px;
+}
+
+.gh-post-upgrade-cta a {
+    color: #ffffff;
+    cursor: pointer;
+    font-weight: 500;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a:hover {
+    color: #ffffff;
+    opacity: 0.8;
+    box-shadow: none;
+    text-decoration: underline;
+}
+
+.gh-post-upgrade-cta a.gh-btn {
+    display: block;
+    background: #ffffff;
+    text-decoration: none;
+    margin: 28px 0 0;
+    padding: 8px 18px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.gh-post-upgrade-cta a.gh-btn:hover {
+    opacity: 0.92;
+}</style><script async src="https://js.stripe.com/v3/"></script>
+    <script defer src="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/sodo-search.min.js" data-key="a9868115863bd67eafabb34125" data-styles="https://cdn.jsdelivr.net/ghost/sodo-search@~1.5/umd/main.css" data-sodo-search="https://ptplus.ghost.io/" data-locale="zh" crossorigin="anonymous"></script>
+    
+    <link href="https://pt.plus/webmentions/receive/" rel="webmention">
+    <script defer src="/public/cards.min.js?v=07dd052e98"></script>
+    <link rel="stylesheet" type="text/css" href="/public/cards.min.css?v=07dd052e98">
+    <script defer src="/public/comment-counts.min.js?v=07dd052e98" data-ghost-comments-counts-api="https://pt.plus/members/api/comments/counts/"></script>
+    <script defer src="/public/member-attribution.min.js?v=07dd052e98"></script><style>:root {--ghost-accent-color: #1647fb;}</style>
+    <script async src="https://cdn.seline.so/seline.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-164054592-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-164054592-1');
+</script>
+<meta name="google-site-verification" content="2akgM8QP52i9jYHvMTfM9KxocnezkdRLxXYXX_kJQZs" />
+<style>
+    .post-contents blockquote {
+    	font-size: 24px;
+	    font-weight: 600;
+	    font-style: normal;
+	    line-height: 44px;
+	    max-width: 660px;
+	    margin: 20px 0 20px 0px;
+	    padding: 5px 0 5px 20px;
+    }
+</style>
+
+</head>
+<body class="post-template tag-learning-thinking has-sans-title has-sans-body">
+
+<div class="gh-signup-page" id="gh-signup-page">
+    <div class="gh-signup-content">
+        <button
+            class="gh-signup-close gh-signup-close-corner"
+            id="gh-signup-close-corner"
+            aria-label="Close"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+            >
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <h1 class="gh-signup-title">Platform Thinking</h1>
+        <p class="gh-signup-description">创造者的思考伙伴</p>
+        <div class="gh-signup-form-wrapper">
+            <script
+                src="https://cdn.jsdelivr.net/ghost/signup-form@~0.1/umd/signup-form.min.js"
+                data-button-color="#1647fb"
+                data-button-text-color="#FFFFFF"
+                data-site="http://localhost:2368/"
+                data-locale="zh"
+                async
+            ></script>
+        </div>
+
+        <button class="gh-signup-close" id="gh-signup-close">Maybe later</button>
+    </div>
+</div>
+<div class="gh-viewport">
+    
+    <header id="gh-navigation" class="gh-navigation is-middle-logo gh-outer">
+    <div class="gh-navigation-inner gh-inner">
+
+        <div class="gh-navigation-brand">
+            <a class="gh-navigation-logo is-title" href="https://pt.plus">
+                    Platform Thinking
+            </a>
+            <button class="gh-search gh-icon-button" aria-label="Search this site" data-ghost-search>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>            <button class="gh-burger gh-icon-button" aria-label="Menu">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M224,128a8,8,0,0,1-8,8H40a8,8,0,0,1,0-16H216A8,8,0,0,1,224,128ZM40,72H216a8,8,0,0,0,0-16H40a8,8,0,0,0,0,16ZM216,184H40a8,8,0,0,0,0,16H216a8,8,0,0,0,0-16Z"></path></svg>                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 256 256"><path d="M205.66,194.34a8,8,0,0,1-11.32,11.32L128,139.31,61.66,205.66a8,8,0,0,1-11.32-11.32L116.69,128,50.34,61.66A8,8,0,0,1,61.66,50.34L128,116.69l66.34-66.35a8,8,0,0,1,11.32,11.32L139.31,128Z"></path></svg>            </button>
+        </div>
+
+        <nav class="gh-navigation-menu">
+            <ul class="nav">
+    <li class="nav-home"><a href="https://pt.plus/">Home</a></li>
+    <li class="nav-gao-zeng-chang-gong-si"><a href="https://pt.plus/tag/company-deep-dives/">高增长公司</a></li>
+    <li class="nav-ai-guan-dian"><a href="https://pt.plus/tag/ai/">AI 观点</a></li>
+    <li class="nav-links-notes"><a href="https://pt.plus/tag/linknotes/">Links + Notes</a></li>
+    <li class="nav-du-shu-bi-ji"><a href="https://pt.plus/tag/book-notes/">读书笔记</a></li>
+    <li class="nav-guan-yu"><a href="https://pt.plus/about/">关于</a></li>
+    <li class="nav-growth-deep-dives"><a href="https://growthdeepdives.substack.com/">Growth Deep Dives</a></li>
+</ul>
+
+        </nav>
+
+        <div class="gh-navigation-actions">
+                <button class="gh-search gh-icon-button" aria-label="Search this site" data-ghost-search>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" width="20" height="20"><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg></button>                <div class="gh-navigation-members">
+                            <a href="#/portal/signin" data-portal="signin">Sign in</a>
+                                <a class="gh-button" href="#/portal/signup" data-portal="signup">Subscribe</a>
+                </div>
+        </div>
+
+    </div>
+</header>
+
+    
+
+<main class="gh-main">
+
+    <article class="gh-article post tag-learning-thinking featured">
+
+        <header class="gh-article-header gh-canvas">
+
+                <a class="gh-article-tag" href="https://pt.plus/tag/learning-thinking/">learning &amp; thinking</a>
+            <h1 class="gh-article-title is-title">2024 年度回顾</h1>
+                <p class="gh-article-excerpt is-body">2024 年是一道分水岭。</p>
+
+            <div class="gh-article-meta">
+                <div class="gh-article-author-image instapaper_ignore">
+                            <a href="/author/neozhang/">
+                                <img class="author-profile-image" src="/content/images/size/w160/2020/04/D344E6A8-1619-4844-AEB6-0A8372783328_1_201_a.jpeg" alt="Neo Zhang">
+                            </a>
+                </div>
+                <div class="gh-article-meta-wrapper">
+                    <h4 class="gh-article-author-name"><a href="/author/neozhang/">Neo Zhang</a></h4>
+                    <div class="gh-article-meta-content">
+                        <time class="gh-article-meta-date" datetime="2024-12-31">Dec 31, 2024</time>
+                            <span class="gh-article-meta-length"><span class="bull">—</span> 27 min read</span>
+                    </div>
+                </div>
+            </div>
+
+                <figure class="gh-article-image">
+        <img
+            srcset="https://images.unsplash.com/photo-1635495673385-44de3565203c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;320 320w,
+                    https://images.unsplash.com/photo-1635495673385-44de3565203c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;600 600w,
+                    https://images.unsplash.com/photo-1635495673385-44de3565203c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;960 960w,
+                    https://images.unsplash.com/photo-1635495673385-44de3565203c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200 1200w,
+                    https://images.unsplash.com/photo-1635495673385-44de3565203c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;2000 2000w"
+            sizes="(max-width: 1200px) 100vw, 1120px"
+            src="https://images.unsplash.com/photo-1635495673385-44de3565203c?crop&#x3D;entropy&amp;cs&#x3D;tinysrgb&amp;fit&#x3D;max&amp;fm&#x3D;jpg&amp;ixid&#x3D;M3wxMTc3M3wwfDF8c2VhcmNofDE4fHxhbm51YWx8ZW58MHx8fHwxNzM1NTMxNDQ1fDA&amp;ixlib&#x3D;rb-4.0.3&amp;q&#x3D;80&amp;w&#x3D;1200"
+            alt="2024 年度回顾"
+        >
+            <figcaption><span style="white-space: pre-wrap;">Photo by </span><a href="https://unsplash.com/@leekos?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Kostiantyn Li</span></a><span style="white-space: pre-wrap;"> / </span><a href="https://unsplash.com/?utm_source=ghost&amp;utm_medium=referral&amp;utm_campaign=api-credit"><span style="white-space: pre-wrap;">Unsplash</span></a></figcaption>
+    </figure>
+
+        </header>
+
+        <section class="gh-content gh-canvas is-body">
+            
+<aside class="gh-post-upgrade-cta">
+    <div class="gh-post-upgrade-cta-content" style="background-color: #1647fb">
+            <h2>This post is for subscribers only</h2>
+            <a class="gh-btn" data-portal="signup" href="#/portal/signup" style="color:#1647fb">Subscribe now</a>
+            <p><small>Already have an account? <a data-portal="signin" href="#/portal/signin">Sign in</a></small></p>
+    </div>
+</aside>
+
+        </section>
+
+    </article>
+
+
+</main>
+
+
+            <section class="gh-container is-grid gh-outer">
+                <div class="gh-container-inner gh-inner">
+                    <h2 class="gh-container-title">Read more</h2>
+                    <div class="gh-feed">
+                            <article class="gh-card post">
+    <a class="gh-card-link" href="/01-06-25-start/">
+        <div class="gh-card-wrapper">
+            <h3 class="gh-card-title is-title">01.06.25: 开始总是静悄悄</h3>
+            <div class="gh-card-meta">
+                <time class="gh-card-date" datetime="2025-01-06">Jan 6, 2025</time>
+            </div>
+                <p class="gh-card-excerpt is-body">没有开始，自然哪里也去不了。</p>
+        </div>
+    </a>
+</article>                            <article class="gh-card post featured">
+    <a class="gh-card-link" href="/measurement-of-intelligence/">
+        <div class="gh-card-wrapper">
+            <h3 class="gh-card-title is-title featured">智能的度量：o3 与 AI 的分水岭</h3>
+            <div class="gh-card-meta">
+                <time class="gh-card-date" datetime="2024-12-23">Dec 23, 2024</time>
+            </div>
+                <p class="gh-card-excerpt is-body">“我需要重新校准我对 AI 能力的认知，特别是在这个被 o3 开启的新世界里。”</p>
+        </div>
+    </a>
+</article>                            <article class="gh-card post featured">
+    <a class="gh-card-link" href="/faceless-network/">
+        <div class="gh-card-wrapper">
+            <h3 class="gh-card-title is-title featured">无面之网：重新想象 Agent 网络</h3>
+            <div class="gh-card-meta">
+                <time class="gh-card-date" datetime="2024-12-16">Dec 16, 2024</time>
+            </div>
+                <p class="gh-card-excerpt is-body">Agent 不是标准化产品；Agent 的主要交互对象不是人类；Agent 不是“预制菜”。</p>
+        </div>
+    </a>
+</article>                            <article class="gh-card post">
+    <a class="gh-card-link" href="/12-09-24-this-is-enough/">
+        <div class="gh-card-wrapper">
+            <h3 class="gh-card-title is-title">12.09.24: 这样就够了</h3>
+            <div class="gh-card-meta">
+                <time class="gh-card-date" datetime="2024-12-09">Dec 9, 2024</time>
+            </div>
+                <p class="gh-card-excerpt is-body">泡沫存在，也会破灭，但问题的关键在于：是不是现在？</p>
+        </div>
+    </a>
+</article>                    </div>
+                </div>
+            </section>
+
+    
+    <footer class="gh-footer gh-outer">
+    <div class="gh-footer-inner gh-inner">
+
+        <div class="gh-footer-bar">
+            <span class="gh-footer-logo is-title">
+                    Platform Thinking
+            </span>
+            <nav class="gh-footer-menu">
+                
+            </nav>
+            <div class="gh-footer-copyright">
+                Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
+            </div>
+        </div>
+
+                <section class="gh-footer-signup">
+                    <h2 class="gh-footer-signup-header is-title">
+                        Platform Thinking
+                    </h2>
+                    <p class="gh-footer-signup-subhead is-body">
+                        创造者的思考伙伴
+                    </p>
+                    <form class="gh-form" data-members-form>
+    <input class="gh-form-input" id="footer-email" name="email" type="email" placeholder="jamie@example.com" required data-members-email>
+    <button class="gh-button" type="submit" aria-label="Subscribe">
+        <span><span>Subscribe</span> <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 256 256"><path d="M224.49,136.49l-72,72a12,12,0,0,1-17-17L187,140H40a12,12,0,0,1,0-24H187L135.51,64.48a12,12,0,0,1,17-17l72,72A12,12,0,0,1,224.49,136.49Z"></path></svg></span>
+        <svg xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 24 24">
+    <g stroke-linecap="round" stroke-width="2" fill="currentColor" stroke="none" stroke-linejoin="round" class="nc-icon-wrapper">
+        <g class="nc-loop-dots-4-24-icon-o">
+            <circle cx="4" cy="12" r="3"></circle>
+            <circle cx="12" cy="12" r="3"></circle>
+            <circle cx="20" cy="12" r="3"></circle>
+        </g>
+        <style data-cap="butt">
+            .nc-loop-dots-4-24-icon-o{--animation-duration:0.8s}
+            .nc-loop-dots-4-24-icon-o *{opacity:.4;transform:scale(.75);animation:nc-loop-dots-4-anim var(--animation-duration) infinite}
+            .nc-loop-dots-4-24-icon-o :nth-child(1){transform-origin:4px 12px;animation-delay:-.3s;animation-delay:calc(var(--animation-duration)/-2.666)}
+            .nc-loop-dots-4-24-icon-o :nth-child(2){transform-origin:12px 12px;animation-delay:-.15s;animation-delay:calc(var(--animation-duration)/-5.333)}
+            .nc-loop-dots-4-24-icon-o :nth-child(3){transform-origin:20px 12px}
+            @keyframes nc-loop-dots-4-anim{0%,100%{opacity:.4;transform:scale(.75)}50%{opacity:1;transform:scale(1)}}
+        </style>
+    </g>
+</svg>        <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+    <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+    <style>
+        .checkmark {
+            width: 40px;
+            height: 40px;
+            display: block;
+            stroke-width: 2.5;
+            stroke: currentColor;
+            stroke-miterlimit: 10;
+        }
+
+        .checkmark__check {
+            transform-origin: 50% 50%;
+            stroke-dasharray: 48;
+            stroke-dashoffset: 48;
+            animation: stroke .3s cubic-bezier(0.650, 0.000, 0.450, 1.000) forwards;
+        }
+
+        @keyframes stroke {
+            100% { stroke-dashoffset: 0; }
+        }
+    </style>
+</svg>    </button>
+    <p data-members-error></p>
+</form>                </section>
+
+    </div>
+</footer>    
+</div>
+
+    <div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="pswp__bg"></div>
+
+    <div class="pswp__scroll-wrap">
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)"></button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://pt.plus/assets/built/source.js?v=07dd052e98"></script>
+
+
+
+</body>
+</html>

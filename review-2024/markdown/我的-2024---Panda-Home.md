@@ -1,0 +1,73 @@
+[Skip to content](#content)
+
+[Panda Home](https://old-panda.com/)
+
+苟利国家生死以，岂因祸福避趋之
+
+Menu
+
+-   [首页](https://old-panda.com)
+-   [RSS 订阅](https://old-panda.com/feed/)
+-   [作坊](https://old-panda.com/projects/)
+-   [关于](https://old-panda.com/about/)
+
+# 我的 2024
+
+Posted on [2024-12-312024-12-31](https://old-panda.com/2024/12/31/my-2024/) by [OldPanda](https://old-panda.com/author/oldpanda/)
+
+![](https://i0.wp.com/old-panda.com/wp-content/uploads/2024/12/2024-scaled.jpg?resize=760%2C380&ssl=1)
+
+Photo by [Behnam Norouzi](https://unsplash.com/@behy_studio?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/a-close-up-of-a-calendar-with-numbers-on-it-cCbmjNw71BE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)
+
+> 谈笑风生又一年
+
+时间如白驹过隙，又到岁末，毕竟距离去年年底仅仅间隔了三篇文章。
+
+但现在没时间写，先把时间戳占了，有时间再慢慢填充内容，最近实在太忙了。。
+
+Categories: [随便聊聊](https://old-panda.com/category/anything/)
+
+Tags: [年终总结](https://old-panda.com/tag/%e5%b9%b4%e7%bb%88%e6%80%bb%e7%bb%93/), [谈笑风生](https://old-panda.com/tag/%e8%b0%88%e7%ac%91%e9%a3%8e%e7%94%9f/)
+
+## 文章导航
+
+[< Previous Previous post: 用 Python 试玩十亿行挑战](https://old-panda.com/2024/08/25/1brc-python/)
+
+[Skip to footer](#site-footer)
+
+搜索
+
+搜索
+
+## 最近发布
+
+-   [我的 2024](https://old-panda.com/2024/12/31/my-2024/)
+-   [用 Python 试玩十亿行挑战](https://old-panda.com/2024/08/25/1brc-python/)
+-   [《平民之宴》书评](https://old-panda.com/2024/03/30/%e3%80%8a%e5%b9%b3%e6%b0%91%e4%b9%8b%e5%ae%b4%e3%80%8b%e4%b9%a6%e8%af%84/)
+-   [《把时间当作朋友》书评](https://old-panda.com/2024/02/19/%e6%8a%8a%e6%97%b6%e9%97%b4%e5%bd%93%e4%bd%9c%e6%9c%8b%e5%8f%8b%e4%b9%a6%e8%af%84/)
+-   [我的 2023](https://old-panda.com/2023/12/31/my-2023/)
+
+## 分类
+
+-   [聊聊技术](https://old-panda.com/category/tech/)
+-   [聊聊旅行](https://old-panda.com/category/travels/)
+-   [聊聊游戏](https://old-panda.com/category/games/)
+-   [聊聊书籍](https://old-panda.com/category/books/)
+-   [随便聊聊](https://old-panda.com/category/anything/)
+
+## 友情链接
+
+-   [wilbeibi](https://wilbeibi.com/)
+-   [乱码](https://luan.ma/)
+-   [Emin.ink](https://www.emin.ink/)
+-   [浮云的博客](https://last2win.com/)
+-   [编码妙♂妙♂屋](https://www.skypyb.com/)
+-   [V2方圆](https://www.v2fy.com/)
+
+[![](https://humanitycertified.org/assets/logo-no-background.png)](https://humanitycertified.org/)
+
+[](https://mastodon.social/@oldpanda)
+
+[Proudly powered by WordPress](https://wordpress.org/) | Theme: Panda Yocto by [OldPanda](https://old-panda.com/).
+
+(function(html){html.className = html.className.replace(/\\bno-js\\b/,'js')})(document.documentElement); var mi\_version = '9.2.4'; var mi\_track\_user = true; var mi\_no\_track\_reason = ''; var MonsterInsightsDefaultLocations = {"page\_location":"https:\\/\\/old-panda.com\\/2024\\/12\\/31\\/my-2024\\/"}; if ( typeof MonsterInsightsPrivacyGuardFilter === 'function' ) { var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsPrivacyGuardFilter( MonsterInsightsExcludeQuery ) : MonsterInsightsPrivacyGuardFilter( MonsterInsightsDefaultLocations ); } else { var MonsterInsightsLocations = (typeof MonsterInsightsExcludeQuery === 'object') ? MonsterInsightsExcludeQuery : MonsterInsightsDefaultLocations; } var disableStrs = \[ 'ga-disable-G-3XJRFT7K77', \]; /\* Function to detect opted out users \*/ function \_\_gtagTrackerIsOptedOut() { for (var index = 0; index < disableStrs.length; index++) { if (document.cookie.indexOf(disableStrs\[index\] + '=true') > -1) { return true; } } return false; } /\* Disable tracking if the opt-out cookie exists. \*/ if (\_\_gtagTrackerIsOptedOut()) { for (var index = 0; index < disableStrs.length; index++) { window\[disableStrs\[index\]\] = true; } } /\* Opt-out function \*/ function \_\_gtagTrackerOptout() { for (var index = 0; index < disableStrs.length; index++) { document.cookie = disableStrs\[index\] + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/'; window\[disableStrs\[index\]\] = true; } } if ('undefined' === typeof gaOptout) { function gaOptout() { \_\_gtagTrackerOptout(); } } window.dataLayer = window.dataLayer || \[\]; window.MonsterInsightsDualTracker = { helpers: {}, trackers: {}, }; if (mi\_track\_user) { function \_\_gtagDataLayer() { dataLayer.push(arguments); } function \_\_gtagTracker(type, name, parameters) { if (!parameters) { parameters = {}; } if (parameters.send\_to) { \_\_gtagDataLayer.apply(null, arguments); return; } if (type === 'event') { parameters.send\_to = monsterinsights\_frontend.v4\_id; var hookName = name; if (typeof parameters\['event\_category'\] !== 'undefined') { hookName = parameters\['event\_category'\] + ':' + name; } if (typeof MonsterInsightsDualTracker.trackers\[hookName\] !== 'undefined') { MonsterInsightsDualTracker.trackers\[hookName\](parameters); } else { \_\_gtagDataLayer('event', name, parameters); } } else { \_\_gtagDataLayer.apply(null, arguments); } } \_\_gtagTracker('js', new Date()); \_\_gtagTracker('set', { 'developer\_id.dZGIzZG': true, }); if ( MonsterInsightsLocations.page\_location ) { \_\_gtagTracker('set', MonsterInsightsLocations); } \_\_gtagTracker('config', 'G-3XJRFT7K77', {"forceSSL":"true","link\_attribution":"true"} ); window.gtag = \_\_gtagTracker; (function () { /\* https://developers.google.com/analytics/devguides/collection/analyticsjs/ \*/ /\* ga and \_\_gaTracker compatibility shim. \*/ var noopfn = function () { return null; }; var newtracker = function () { return new Tracker(); }; var Tracker = function () { return null; }; var p = Tracker.prototype; p.get = noopfn; p.set = noopfn; p.send = function () { var args = Array.prototype.slice.call(arguments); args.unshift('send'); \_\_gaTracker.apply(null, args); }; var \_\_gaTracker = function () { var len = arguments.length; if (len === 0) { return; } var f = arguments\[len - 1\]; if (typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function') { if ('send' === arguments\[0\]) { var hitConverted, hitObject = false, action; if ('event' === arguments\[1\]) { if ('undefined' !== typeof arguments\[3\]) { hitObject = { 'eventAction': arguments\[3\], 'eventCategory': arguments\[2\], 'eventLabel': arguments\[4\], 'value': arguments\[5\] ? arguments\[5\] : 1, } } } if ('pageview' === arguments\[1\]) { if ('undefined' !== typeof arguments\[2\]) { hitObject = { 'eventAction': 'page\_view', 'page\_path': arguments\[2\], } } } if (typeof arguments\[2\] === 'object') { hitObject = arguments\[2\]; } if (typeof arguments\[5\] === 'object') { Object.assign(hitObject, arguments\[5\]); } if ('undefined' !== typeof arguments\[1\].hitType) { hitObject = arguments\[1\]; if ('pageview' === hitObject.hitType) { hitObject.eventAction = 'page\_view'; } } if (hitObject) { action = 'timing' === arguments\[1\].hitType ? 'timing\_complete' : hitObject.eventAction; hitConverted = mapArgs(hitObject); \_\_gtagTracker('event', action, hitConverted); } } return; } function mapArgs(args) { var arg, hit = {}; var gaMap = { 'eventCategory': 'event\_category', 'eventAction': 'event\_action', 'eventLabel': 'event\_label', 'eventValue': 'event\_value', 'nonInteraction': 'non\_interaction', 'timingCategory': 'event\_category', 'timingVar': 'name', 'timingValue': 'value', 'timingLabel': 'event\_label', 'page': 'page\_path', 'location': 'page\_location', 'title': 'page\_title', 'referrer' : 'page\_referrer', }; for (arg in args) { if (!(!args.hasOwnProperty(arg) || !gaMap.hasOwnProperty(arg))) { hit\[gaMap\[arg\]\] = args\[arg\]; } else { hit\[arg\] = args\[arg\]; } } return hit; } try { f.hitCallback(); } catch (ex) { } }; \_\_gaTracker.create = newtracker; \_\_gaTracker.getByName = newtracker; \_\_gaTracker.getAll = function () { return \[\]; }; \_\_gaTracker.remove = noopfn; \_\_gaTracker.loaded = true; window\['\_\_gaTracker'\] = \_\_gaTracker; })(); } else { console.log(""); (function () { function \_\_gtagTracker() { return null; } window\['\_\_gtagTracker'\] = \_\_gtagTracker; window\['gtag'\] = \_\_gtagTracker; })(); } /\* <!\[CDATA\[ \*/ window.\_wpemojiSettings = {"baseUrl":"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.0.3\\/72x72\\/","ext":".png","svgUrl":"https:\\/\\/s.w.org\\/images\\/core\\/emoji\\/15.0.3\\/svg\\/","svgExt":".svg","source":{"concatemoji":"https:\\/\\/old-panda.com\\/wp-includes\\/js\\/wp-emoji-release.min.js?ver=6.7.1"}}; /\*! This file is auto-generated \*/ !function(i,n){var o,s,e;function c(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function p(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data),r=(e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0),new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data));return t.every(function(e,t){return e===r\[t\]})}function u(e,t,n){switch(t){case"flag":return n(e,"\\ud83c\\udff3\\ufe0f\\u200d\\u26a7\\ufe0f","\\ud83c\\udff3\\ufe0f\\u200b\\u26a7\\ufe0f")?!1:!n(e,"\\ud83c\\uddfa\\ud83c\\uddf3","\\ud83c\\uddfa\\u200b\\ud83c\\uddf3")&&!n(e,"\\ud83c\\udff4\\udb40\\udc67\\udb40\\udc62\\udb40\\udc65\\udb40\\udc6e\\udb40\\udc67\\udb40\\udc7f","\\ud83c\\udff4\\u200b\\udb40\\udc67\\u200b\\udb40\\udc62\\u200b\\udb40\\udc65\\u200b\\udb40\\udc6e\\u200b\\udb40\\udc67\\u200b\\udb40\\udc7f");case"emoji":return!n(e,"\\ud83d\\udc26\\u200d\\u2b1b","\\ud83d\\udc26\\u200b\\u2b1b")}return!1}function f(e,t,n){var r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):i.createElement("canvas"),a=r.getContext("2d",{willReadFrequently:!0}),o=(a.textBaseline="top",a.font="600 32px Arial",{});return e.forEach(function(e){o\[e\]=t(a,e,n)}),o}function t(e){var t=i.createElement("script");t.src=e,t.defer=!0,i.head.appendChild(t)}"undefined"!=typeof Promise&&(o="wpEmojiSettingsSupports",s=\["flag","emoji"\],n.supports={everything:!0,everythingExceptFlag:!0},e=new Promise(function(e){i.addEventListener("DOMContentLoaded",e,{once:!0})}),new Promise(function(t){var n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+\[JSON.stringify(s),u.toString(),p.toString()\].join(",")+"));",r=new Blob(\[e\],{type:"text/javascript"}),a=new Worker(URL.createObjectURL(r),{name:"wpTestEmojiSupports"});return void(a.onmessage=function(e){c(n=e.data),a.terminate(),t(n)})}catch(e){}c(n=f(s,u,p))}t(n)}).then(function(e){for(var t in e)n.supports\[t\]=e\[t\],n.supports.everything=n.supports.everything&&n.supports\[t\],"flag"!==t&&(n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&n.supports\[t\]);n.supports.everythingExceptFlag=n.supports.everythingExceptFlag&&!n.supports.flag,n.DOMReady=!1,n.readyCallback=function(){n.DOMReady=!0}}).then(function(){return e}).then(function(){var e;n.supports.everything||(n.readyCallback(),(e=n.source||{}).concatemoji?t(e.concatemoji):e.wpemoji&&e.twemoji&&(t(e.twemoji),t(e.wpemoji)))}))}((window,document),window.\_wpemojiSettings); /\* \]\]> \*/ /\* <!\[CDATA\[ \*/ var related\_posts\_js\_options = {"post\_heading":"h4"}; /\* \]\]> \*/ function \_katexRender(rootElement) { const eles = rootElement.querySelectorAll(".katex-eq:not(.katex-rendered)"); for(let idx=0; idx < eles.length; idx++) { const ele = eles\[idx\]; ele.classList.add("katex-rendered"); try { katex.render( ele.textContent, ele, { displayMode: ele.getAttribute("data-katex-display") === 'true', throwOnError: false } ); } catch(n) { ele.style.color="red"; ele.textContent = n.message; } } } function katexRender() { \_katexRender(document); } document.addEventListener("DOMContentLoaded", function() { katexRender(); // Perform a KaTeX rendering step when the DOM is mutated. const katexObserver = new MutationObserver(function(mutations) { \[\].forEach.call(mutations, function(mutation) { if (mutation.target && mutation.target instanceof Element) { \_katexRender(mutation.target); } }); }); const katexObservationConfig = { subtree: true, childList: true, attributes: true, characterData: true }; katexObserver.observe(document.body, katexObservationConfig); }); window.addEventListener( 'load', function() { document.querySelectorAll( 'link' ).forEach( function( e ) {'not all' === e.media && e.dataset.media && ( e.media = e.dataset.media, delete e.dataset.media );} ); var e = document.getElementById( 'jetpack-boost-critical-css' ); e && ( e.media = 'not all' ); } ); /\* <!\[CDATA\[ \*/ !function(e,n){if("undefined"!=typeof EnlighterJS){var o={"selectors":{"block":"pre.EnlighterJSRAW","inline":"code.EnlighterJSRAW"},"options":{"indent":4,"ampersandCleanup":true,"linehover":true,"rawcodeDbclick":false,"textOverflow":"break","linenumbers":true,"theme":"monokai","language":"generic","retainCssClasses":false,"collapse":false,"toolbarOuter":"","toolbarTop":"{BTN\_RAW}{BTN\_COPY}{BTN\_WINDOW}{BTN\_WEBSITE}","toolbarBottom":""}};(e.EnlighterJSINIT=function(){EnlighterJS.init(o.selectors.block,o.selectors.inline,o.options)})()}else{(n&&(n.error||n.log)||function(){})("Error: EnlighterJS resources not loaded yet!")}}(window,console); /\* \]\]> \*/ /\* <!\[CDATA\[ \*/ \_stq = window.\_stq || \[\]; \_stq.push(\[ "view", JSON.parse("{\\"v\\":\\"ext\\",\\"blog\\":\\"172312285\\",\\"post\\":\\"1913\\",\\"tz\\":\\"-8\\",\\"srv\\":\\"old-panda.com\\",\\"j\\":\\"1:14.2.1\\"}") \]); \_stq.push(\[ "clickTrackerInit", "172312285", "1913" \]); /\* \]\]> \*/ (function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.\_\_CF$cv$params={r:'8ffba561ba52fd38',t:'MTczNjUwMTQwMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')\[0\].appendChild(a);";b.getElementsByTagName('head')\[0\].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();

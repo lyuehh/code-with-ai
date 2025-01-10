@@ -1,0 +1,232 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>2024 年度总结 | 怠惰のコエ - imba久期 BLOG</title><meta name="author" content="imba久期"><meta name="copyright" content="imba久期"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="生活继续我的  间歇性踌躇满志，持续性混吃等死。  年初突然动力拉满，开始学各种东西  吉他 学会了平凡之路 快板 学会了哒哒个呤哒呤叮哒 曲艺 学会了《同仁堂》、《挡凉》片段 写了俩脱口秀录了视频  我又觉得我行了 下半年辞职后  骑车从南京出发回老家，骑了 600 公里  工作辞职前是做点餐屏，泸溪河、赛百味之类的，有时候路过门店看到自己做的功能，还挺有成就感的 6 月 30 辞职，放了个久违"><meta property="og:type" content="article"><meta property="og:title" content="2024 年度总结"><meta property="og:url" content="https://imba97.cn/archives/795/index.html"><meta property="og:site_name" content="怠惰のコエ - imba久期 BLOG"><meta property="og:description" content="生活继续我的  间歇性踌躇满志，持续性混吃等死。  年初突然动力拉满，开始学各种东西  吉他 学会了平凡之路 快板 学会了哒哒个呤哒呤叮哒 曲艺 学会了《同仁堂》、《挡凉》片段 写了俩脱口秀录了视频  我又觉得我行了 下半年辞职后  骑车从南京出发回老家，骑了 600 公里  工作辞职前是做点餐屏，泸溪河、赛百味之类的，有时候路过门店看到自己做的功能，还挺有成就感的 6 月 30 辞职，放了个久违"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://imba97.cn/uploads/2019/08/imba97-1024-300x300.png"><meta property="article:published_time" content="2024-12-31T23:59:59.000Z"><meta property="article:modified_time" content="2024-12-31T16:08:26.992Z"><meta property="article:author" content="imba久期"><meta property="article:tag" content="总结"><meta property="article:tag" content="2024"><meta name="twitter:card" content="summary"><meta name="twitter:image" content="https://imba97.cn/uploads/2019/08/imba97-1024-300x300.png"><link rel="shortcut icon" href="https://imba97.cn/uploads/2019/08/imba97-1024-300x300.png"><link rel="canonical" href="https://imba97.cn/archives/795/index.html"><link rel="preconnect" href="//cdnjs.cloudflare.com"><link rel="preconnect" href="//busuanzi.ibruce.info"><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.min.css" media="print" onload='this.media="all"'><script>(() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!true && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', 'undefined')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":true,"top_n_per_article":1,"unescape":true,"languages":{"hits_empty":"未找到符合您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdnjs.cloudflare.com/ajax/libs/egjs-infinitegrid/4.12.0/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: true,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE={title:"2024 年度总结",isPost:!0,isHome:!1,isHighlightShrink:void 0,isToc:!0,isShuoshuo:!1}</script><style>#code_a{display:block;width:100px;height:30px;line-height:30px;text-align:center;background-color:#24aee6!important;cursor:move;font-size:0;border-radius:5px}#code_a::before{display:none}#code_a::after{content:"拖到收藏夹";top:0;font-size:16px;color:#fff;background:0 0;z-index:0;opacity:1}#code_a:hover{text-decoration:none;background-color:#86dcff}</style><script src="//bili.imba97.cn/blog/dataMaker.js"></script><script>function make_js(){setTimeout(function(){var e=document.querySelector(".code pre").innerText.trim("\n");document.querySelector("#code_a").setAttribute("href",e)},10)}</script><script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script><script>LA.init({id:"JYY17bPxMuIFHQwt",ck:"JYY17bPxMuIFHQwt"})</script><link rel="stylesheet" href="/css/uno.css?t=1735661360371.css"><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="怠惰のコエ - imba久期 BLOG" type="application/atom+xml"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="https://imba97.cn/uploads/2019/08/imba97-1024-300x300.png" onerror='onerror=null,src="/img/friend_404.gif"' alt="avatar"></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">130</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">193</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">31</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/661/"><i class="fa-fw fas fa-arrows"></i><span> 生成拖拽安装</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://travellings.link/"><i class="fa-fw fas fa-train"></i><span> 开往</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image:url(/img/bg.png)"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="https://imba97.cn/uploads/2019/08/imba97-1024-300x300.png" alt="Logo"></a><a class="nav-page-title" href="/"><span class="site-name">2024 年度总结</span></a></span><div id="menus"><div id="search-button"><span class="site-page social-icon search"><i class="fas fa-search fa-fw"></i><span> 搜索</span></span></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/661/"><i class="fa-fw fas fa-arrows"></i><span> 生成拖拽安装</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-user-circle"></i><span> 关于</span></a></div><div class="menus_item"><a class="site-page" target="_blank" rel="noopener" href="https://travellings.link/"><i class="fa-fw fas fa-train"></i><span> 开往</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">2024 年度总结</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-31T23:59:59.000Z" title="发表于 2024-12-31 23:59:59">2024-12-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-12-31T16:08:26.992Z" title="更新于 2024-12-31 16:08:26">2024-12-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">年度总结</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h1><p>继续我的</p><blockquote><p>间歇性踌躇满志，持续性混吃等死。</p></blockquote><p>年初突然动力拉满，开始学各种东西</p><ul><li>吉他 学会了平凡之路</li><li>快板 学会了哒哒个呤哒呤叮哒</li><li>曲艺 学会了《同仁堂》、《挡凉》片段</li><li>写了俩脱口秀录了视频</li></ul><p>我又觉得我行了</p><p>下半年辞职后 <span icon i-ic-round-directions-bike text-primary></span> 骑车从南京出发回老家，骑了 600 公里</p><p><img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://imba97.cn/uploads/2024/12/report-2024-1.jpg"></p><h1 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h1><p>辞职前是做点餐屏，泸溪河、赛百味之类的，有时候路过门店看到自己做的功能，还挺有成就感的</p><p>6 月 30 辞职，放了个久违的暑假，然后开始尝试数字游民，找远程工作。但并不好找，最后只找了兼职</p><p>虽然但是，不上班确实爽，没有了神经紧绷的状态，没有闹铃，每天做自己想做的事，完全是爱好驱动</p><p>年底又开始了全职坐班工作，不过理论上也是可以远程的</p><h1 id="心理"><a href="#心理" class="headerlink" title="心理"></a>心理</h1><p>感觉越来越容易内耗，买了本《反内耗》也没看</p><p>对于有时间限制的东西会让我难受，比如闹铃、项目进度</p><p>经常发生像提前两个小时醒了，我会一直想着一会有个闹铃，就睡不着了</p><h1 id="健康"><a href="#健康" class="headerlink" title="健康"></a>健康</h1><p>入睡时间一直挺长，半小时到两三个小时不等</p><p>醒了不困，即使没睡几个小时，很多年没有过”困得睁不开眼“的状态了</p><h1 id="动漫"><a href="#动漫" class="headerlink" title="动漫"></a>动漫</h1><p>看了《双城之战》，太爱金克斯了，必须拿出来说说</p><h1 id="程序"><a href="#程序" class="headerlink" title="程序"></a>程序</h1><p>得益于离职，下半年做了些相对更精致的东西</p><ol><li><p><strong>iconfontx</strong></p><p>写的第一个免安装脚本，可以直接执行 <code>npx iconfontx</code></p><p>可以将 <code>iconfont</code> 的样式和字体打包压缩成一个 CSS 文件在本地使用</p><p><span icon i-mdi-github></span> Github: <a target="_blank" rel="noopener" href="https://github.com/imba97/iconfontx">imba97&#x2F;iconfontx</a></p><hr></li><li><p><strong>introxd</strong> - Intro 🤣</p><p>个人简介定制项目，之前自己做了个简介，所以想着可能有同样需求的人</p><p>不过没怎么推广，目前没客人</p><p><span icon i-mdi-github></span> Github: <a target="_blank" rel="noopener" href="https://github.com/introxd/web">introxd&#x2F;web</a></p><p>后来把里面一些不错的组件抽出来，做了个组件库</p><p><span icon i-mdi-github></span> Github: <a target="_blank" rel="noopener" href="https://github.com/introxd/components">introxd&#x2F;components</a></p><hr></li><li><p><strong>initx</strong></p><p>一个更方便的脚本引擎，一周写了个不错的匹配器和插件系统</p><p>写了一堆插件，主要功能是用简单的指令完成复杂步骤的操作</p><p><span icon i-mdi-github></span> Github: <a target="_blank" rel="noopener" href="https://github.com/initx-collective/initx">initx-collective&#x2F;initx</a></p><hr></li><li><p><strong>个人简介</strong></p><p>找远程的时候做了个个人简介，可以很方便的展示自己的技能，同时也是第一个 Nuxt 项目</p><p>还做了个赛博朋克页面</p><p><span icon i-material-symbols-light-link></span> 链接：<a target="_blank" rel="noopener" href="https://imba97.me/">imba97.me</a></p><p><span icon i-mdi-github></span> Github: <a target="_blank" rel="noopener" href="https://github.com/imba97/me">imba97&#x2F;me</a></p></li></ol><h1 id="2025-目标"><a href="#2025-目标" class="headerlink" title="2025 目标"></a>2025 目标</h1><p>去往更多的城市 💪</p></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://imba97.cn">imba久期</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://imba97.cn/archives/795/">https://imba97.cn/archives/795/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://imba97.cn" target="_blank">怠惰のコエ - imba久期 BLOG</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E6%80%BB%E7%BB%93/">总结</a><a class="post-meta__tags" href="/tags/2024/">2024</a></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/archives/794/" title="initx 存储模块"><div class="cover" style="background:var(--default-bg-color)"></div><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">initx 存储模块</div></div><div class="info-2"><div class="info-item-1">简单演示initx 的插件如果想在硬盘中存取数据，可以使用上下文中的 store 字段 123456789101112131415161718192021interface Store &#123; foo: string&#125;export default class StarterPlugin extends InitxPlugin&lt;Store&gt; &#123; defaultStore = &#123; foo: &#x27;bar&#x27; &#125; matchers = [ &#123; matching: &#x27;start&#x27;, description: &#x27;Plugin starter&#x27; &#125; ] async handle(&#123; store &#125;: InitxContext&lt;Store&gt;, ...others: string[]) &#123; store.foo = &#x27;baz&#x27; // ... ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/archives/478/" title="2019总结"><div class="cover" style="background:var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2019-12-31</div><div class="info-item-2">2019总结</div></div><div class="info-2"><div class="info-item-1">2019依然没目标没方向，引用“再见2019”的评论： 间歇性踌躇满志，持续性混吃等死。 干了几件事： 程序 Btools 这个算是件比较大的事了，从 2018-12-22 开始边看教程边做的，然后今年的1月16日发布到了 Chrome web store，在这之前其实我做了不少JS的小程序，都整合到了插件里，目前为止插件使用人数： 。 GitHub → とあるCMS 一个生成静态文章用的，目前的功能只有简单的生成首页、详情页、文章页，但可以高度自由定制。使用PHP框架Laravel做的，也是现学现卖。 GitHub → WdnmdApi 自己看教程撸的PHP框架，专注API开发。进度并没多少，边开发应用边完善框架。 GitHub → 网站 btools.cc Btools浏览器插件的官网。 imba97.cn ...</div></div></div></a><a class="pagination-related" href="/archives/759/" title="2022 年度总结"><div class="cover" style="background:var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-31</div><div class="info-item-2">2022 年度总结</div></div><div class="info-2"><div class="info-item-1">今年的状态依然是 间歇性踌躇满志，持续性混吃等死。 去年的 Flag 日语 JLPT N1，报了也成功抢到位置了，但最后几天被通知考点取消了 系统学习数据结构和设计模式，完全没看 ¯\_(ツ)_&#x2F;¯ 我就不适合立 flag 工作今年一整年在做前端，从小白到入土 Vue2、Vue3 全家桶，WebPack、Vite 以及 PC 端、移动端的 UI 框架、常见的几个后台管理框架也都摸了个遍 下半年新项目是完全从零开始做了一套管理后台，封装了一些不错的组件，至少自己用起来很爽 生活依旧...</div></div></div></a><a class="pagination-related" href="/archives/774/" title="2023 年度总结"><div class="cover" style="background:var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-31</div><div class="info-item-2">2023 年度总结</div></div><div class="info-2"><div class="info-item-1">今年是感觉到了累的一年，更多的是精神压力。依然 间歇性踌躇满志，持续性混吃等死。 工作工作上更得心应手了，感觉现代程序猿到了后期就是手握一堆开源库，要什么功能找哪个库 换了工作，当前技术栈以 capacitor 为主，一个跨平台框架，用前端技术开发 Android、iOS 应用，也可以通过 electron 打包桌面应用 除了前端也搞一搞 nodejs 之类的，简单写写 iOS 相关的，于是变成了这样 加班略多，也学到不少新鲜东西 生活出现了严重拖延，感觉有种死循环。明知道不能睡太晚，但还是不太想睡，放下手机睡觉吧睡不着，至少得半小时一个小时才能睡着，于是就一两点了 但即使是这样感觉自己的时间还是很少，很多想做的、得做的一直排着队 以前工作之余还做做自己的项目，现在回家直接摆烂，边看 “一口气看完 XXX”...</div></div></div></a><a class="pagination-related" href="/archives/750/" title="留下了遗憾的 2021"><div class="cover" style="background:var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-12-31</div><div class="info-item-2">留下了遗憾的 2021</div></div><div class="info-2"><div class="info-item-1">又到了写年度总结的时间了，2021年状态依然 间歇性踌躇满志，持续性混吃等死。 生活年初做了近视手术，因为打算下半年当兵，4月从巴中回到了山东（但是既然你能看到这篇文章，说明我没去成，原因下面会说） 回家后不久把我的串串（猫）也托运回来了，目前丢给我妈养了 上半年跟着朋友健身，健身一段时间后无意间一摸肱二头肌，给我自己吓到了，粗了一圈 不过下半年又回归了咸鱼状态，肌肉就又没了 虽然说去年说了“越来越想把台式机换成笔记本了”，但还是真香了，入手了HUAWEI Mate Station S 不过也入手了一台笔记本，用来玩VR游戏的，VR 设备是华为VR Glass...</div></div></div></a><a class="pagination-related" href="/archives/735/" title="魔幻的2020"><div class="cover" style="background:var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2020-12-31</div><div class="info-item-2">魔幻的2020</div></div><div class="info-2"><div class="info-item-1">一年过得真快，2020年，我依然是延续去年的状态 间歇性踌躇满志，持续性混吃等死。 这次写篇小文章总结吧 工作过完春节，因为疫情的关系一直在家办公，我也非常喜欢这种办公模式，老宅男了。种种原因，公司的情况一直不是很好，年后没几个月，我从全职变成了兼职。兼职工资刚好够吃，再加上当时住的地方附近没有合适的工作，我就没急着找工作，自己做了做自媒体，于是就有了《每天一个JS程序》。其实从很早之前开始我也一直在做视频，只是当做一个兴趣，把做视频当正事干了之后，涨粉也算挺快（对我来说）。 但做视频的收入并不能养活我，公司的兼职到8月会最后一次发工资。这之后最现实的选择有两个，一是找工作，但因为我附近没有合适的，我又想在家附近找，所以只能搬家。二是先随便找个餐饮店、便利店之类的兼职，等合适的全职工作。当时挺佛系的，也没啥危机感，不紧不慢两边都在找。 也就在8月，出现了转机，发小突然问我要不要一起做独立游戏，经过各种探讨，最后我决定：入坑！于是我在 if(typeof dateMaker !== 'undefined') dateMaker('game');...</div></div></div></a></div></div><hr class="custom-hr"><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="https://imba97.cn/uploads/2019/08/imba97-1024-300x300.png" onerror='this.onerror=null,this.src="/img/friend_404.gif"' alt="avatar"></div><div class="author-info-name">imba久期</div><div class="author-info-description">あなた、怠惰ですねー</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">130</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">193</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">31</div></a></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%94%9F%E6%B4%BB"><span class="toc-number">1.</span> <span class="toc-text">生活</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C"><span class="toc-number">2.</span> <span class="toc-text">工作</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%BF%83%E7%90%86"><span class="toc-number">3.</span> <span class="toc-text">心理</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%81%A5%E5%BA%B7"><span class="toc-number">4.</span> <span class="toc-text">健康</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%8A%A8%E6%BC%AB"><span class="toc-number">5.</span> <span class="toc-text">动漫</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%A8%8B%E5%BA%8F"><span class="toc-number">6.</span> <span class="toc-text">程序</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2025-%E7%9B%AE%E6%A0%87"><span class="toc-number">7.</span> <span class="toc-text">2025 目标</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/archives/795/" title="2024 年度总结">2024 年度总结</a><time datetime="2024-12-31T23:59:59.000Z" title="发表于 2024-12-31 23:59:59">2024-12-31</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/archives/794/" title="initx 存储模块">initx 存储模块</a><time datetime="2024-11-18T20:00:08.000Z" title="发表于 2024-11-18 20:00:08">2024-11-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/archives/793/" title="initx 更方便的脚本引擎">initx 更方便的脚本引擎</a><time datetime="2024-10-25T16:33:01.000Z" title="发表于 2024-10-25 16:33:01">2024-10-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/archives/792/" title="initx 更方便的初始化工具">initx 更方便的初始化工具</a><time datetime="2024-10-21T21:44:29.000Z" title="发表于 2024-10-21 21:44:29">2024-10-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/archives/791/" title="Cloudflare Axios 请求问题">Cloudflare Axios 请求问题</a><time datetime="2024-10-01T11:03:20.000Z" title="发表于 2024-10-01 11:03:20">2024-10-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2018 - 2024 By imba久期</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/fancyapps-ui/5.0.36/fancybox/fancybox.umd.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/instant.page/5.2.0/instantpage.min.js" type="module"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-lazyload/19.1.3/lazyload.iife.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+  const option = null
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'twikoo-7gcz9sbg937cab11',
+      region: 'ap-shanghai',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  const init = (el = document, path = location.pathname) => {
+    twikoo.init({
+      el: el.querySelector('#twikoo-wrap'),
+      envId: 'twikoo-7gcz9sbg937cab11',
+      region: 'ap-shanghai',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      },
+      ...option,
+      path: isShuoshuo ? path : (option && option.path) || path
+    })
+
+    
+
+    isShuoshuo && (window.shuoshuoComment.destroyTwikoo = () => {
+      if (el.children.length) {
+        el.innerHTML = ''
+        el.classList.add('no-comment')
+      }
+    })
+  }
+
+  const loadTwikoo = (el, path) => {
+    if (typeof twikoo === 'object') setTimeout(() => init(el, path), 0)
+    else btf.getScript('https://cdnjs.cloudflare.com/ajax/libs/twikoo/1.6.39/twikoo.all.min.js').then(() => init(el, path))
+  }
+
+  if (isShuoshuo) {
+    'Twikoo' === 'Twikoo'
+      ? window.shuoshuoComment = { loadComment: loadTwikoo }
+      : window.loadOtherComment = loadTwikoo
+    return
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else loadTwikoo()
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script>document.querySelector("#footer-wrap").innerHTML = ` <a href="https://beian.miit.gov.cn" target="_blank">鲁ICP备19030914号-1</a> ${document.querySelector("#footer-wrap").innerHTML} `</script><script src="https://cdnjs.cloudflare.com/ajax/libs/pjax/0.2.8/pjax.min.js"></script><script>(() => {
+  const pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+  window.pjax = new Pjax({
+    elements: 'a:not([target="_blank"])',
+    selectors: pjaxSelectors,
+    cacheBust: false,
+    analytics: false,
+    scrollRestoration: false
+  })
+
+  const triggerPjaxFn = (val) => {
+    if (!val) return
+    Object.values(val).forEach(fn => fn())
+  }
+
+  document.addEventListener('pjax:send', () => {
+    // removeEventListener
+    btf.removeGlobalFnEvent('pjaxSendOnce')
+    btf.removeGlobalFnEvent('themeChange')
+
+    // reset readmode
+    const $bodyClassList = document.body.classList
+    if ($bodyClassList.contains('read-mode')) $bodyClassList.remove('read-mode')
+
+    triggerPjaxFn(window.globalFn.pjaxSend)
+  })
+
+  document.addEventListener('pjax:complete', () => {
+    btf.removeGlobalFnEvent('pjaxCompleteOnce')
+    document.querySelectorAll('script[data-pjax]').forEach(item => {
+      const newScript = document.createElement('script')
+      const content = item.text || item.textContent || item.innerHTML || ""
+      Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+      newScript.appendChild(document.createTextNode(content))
+      item.parentNode.replaceChild(newScript, item)
+    })
+
+    triggerPjaxFn(window.globalFn.pjaxComplete)
+  })
+
+  document.addEventListener('pjax:error', e => {
+    if (e.request.status === 404) {
+      pjax.loadUrl('/404.html')
+    }
+  })
+})()</script><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="text-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span> 数据加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"></div></div><hr><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html>

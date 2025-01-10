@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta itemprop="keywords" content="胡言乱语,我关注的项目这周更新了什么,ssl,acme,redis,mysql,life,wakapi,kubernetes,python,alembic,有意思的问题,poetry,gitea,argocd,grafana,prometheus,mimir,jellyfin,gpu,docker,beancount,waf,safeline,terraform,pve,external-dns,gitlab,cert-manager,memos,hugo,loki,vim,git,doh,dns,blocky,registry-mirror,registry,mongodb,minio,k8s-csi-s3,twitter,blog,Atuin,realip.cc,tailscale,derp,umami,homeassistant,newsletter,action,node-shell,kubectl,snmp-exporter,h3c,listmonk,timedatectl,aliyun,openwrt,linux,aliyunpan,tplink,ack,telegram,k3s,etcd,webssh,zstd,ingress-nginx,promtail,新冠,rclone,kubevip,thanos,webdav,nginx,stern,koyeb,VoceChat,breaking,linkerd,vcluster,nerdctl,buildkit,dockerhub,node-exporter,kaniko,version-checker,hexo,opensearch,oauth2-proxy,popeye,Trivy,squid,loguru,drone,kompose,mysqldumpslow,kt-connect,azcopy,waline,pxc,Brotli,rathole,cloudflare,raspberry,kustomize,soup,gitops,k8s,cronjob,kubepi,colima,lsync,uptime-kuma,logrotate,nessus,mvnd,maven,java,speedtest,openfaas,bark,azure,NginxProxyManager,az,github,crontab,kube-prometheus,mtr,qnap,ward,glusterfs,iscsi,tmate,pigz,iperf3,Netshare,ansible,zsh,nps,openvpn,metallb,kubewatch,smartdns,ping,gping,octant,esxi,swarmpit,swarm,duf,mail,好文推荐,nfs-client-provisioner,htop,fish,mac,ubuntu,network,cloudfront,aws,lvm,disk,kubespray,ssh,一周要闻,nas,sqlserver,winget,windows,elasticsearch,zfile,zookeeper,kong,bitwarden,traefik,kind,Lens,frp,blackbox,pyinstaller,mertics-server,coredns,shell,serve,node,福利,jetbrains,域名,gogs,ups,freenom,s3,multipass,microk8s,snap,vscode,JetBrainsMono,pwa,mosh,mitmproxy,wechat,keepalived,nfs,koolshare,systemed,rds,Kuboard,huawei,ethtool,centos,innobackupex,nacos,kali,filebrowser,javascript,exiftool,CVE-2019-0708,drawio,served,axel,freenas,bsd,docker-compose,diskutil,elk,redhat,edge,go,zabbix,metasploit,syncd,webmap,r410,ipmi,ios,vmware,omsa,dell,mariadb,kodexplorer,jumpserver,rtmp,ffmpeg,facebook,harbor,steam,ArchiSteamFarm,wifi,esp8266,dnsmasq,gdebi,kubekit,netdiscover,oneinstack,raid,odoo,wordpress,vsphere,docker-machine,gotop,minikube,qq,zstack,Th3inspector,ncdu,rwho,matomo,software,server,open-falcon,ao,gooderp,oss,ccat,cat,xmr,vps,bbr,脚本,httpstat,Spectre,Meltdown,sudo,cheat,etcher,lutris,game,youtube-dl,swap,mkdocs,spotify,wxpython,云计算,opensuse,cdn,office,turtle,tkinter,apache,树莓派,zeronet,lnmp,dvwa,armitage,portainer,flatpak,openstack,fedora,pycharm,nodejs,c,acm" />
+    <meta name="keywords" content="胡言乱语,我关注的项目这周更新了什么,ssl,acme,redis,mysql,life,wakapi,kubernetes,python,alembic,有意思的问题,poetry,gitea,argocd,grafana,prometheus,mimir,jellyfin,gpu,docker,beancount,waf,safeline,terraform,pve,external-dns,gitlab,cert-manager,memos,hugo,loki,vim,git,doh,dns,blocky,registry-mirror,registry,mongodb,minio,k8s-csi-s3,twitter,blog,Atuin,realip.cc,tailscale,derp,umami,homeassistant,newsletter,action,node-shell,kubectl,snmp-exporter,h3c,listmonk,timedatectl,aliyun,openwrt,linux,aliyunpan,tplink,ack,telegram,k3s,etcd,webssh,zstd,ingress-nginx,promtail,新冠,rclone,kubevip,thanos,webdav,nginx,stern,koyeb,VoceChat,breaking,linkerd,vcluster,nerdctl,buildkit,dockerhub,node-exporter,kaniko,version-checker,hexo,opensearch,oauth2-proxy,popeye,Trivy,squid,loguru,drone,kompose,mysqldumpslow,kt-connect,azcopy,waline,pxc,Brotli,rathole,cloudflare,raspberry,kustomize,soup,gitops,k8s,cronjob,kubepi,colima,lsync,uptime-kuma,logrotate,nessus,mvnd,maven,java,speedtest,openfaas,bark,azure,NginxProxyManager,az,github,crontab,kube-prometheus,mtr,qnap,ward,glusterfs,iscsi,tmate,pigz,iperf3,Netshare,ansible,zsh,nps,openvpn,metallb,kubewatch,smartdns,ping,gping,octant,esxi,swarmpit,swarm,duf,mail,好文推荐,nfs-client-provisioner,htop,fish,mac,ubuntu,network,cloudfront,aws,lvm,disk,kubespray,ssh,一周要闻,nas,sqlserver,winget,windows,elasticsearch,zfile,zookeeper,kong,bitwarden,traefik,kind,Lens,frp,blackbox,pyinstaller,mertics-server,coredns,shell,serve,node,福利,jetbrains,域名,gogs,ups,freenom,s3,multipass,microk8s,snap,vscode,JetBrainsMono,pwa,mosh,mitmproxy,wechat,keepalived,nfs,koolshare,systemed,rds,Kuboard,huawei,ethtool,centos,innobackupex,nacos,kali,filebrowser,javascript,exiftool,CVE-2019-0708,drawio,served,axel,freenas,bsd,docker-compose,diskutil,elk,redhat,edge,go,zabbix,metasploit,syncd,webmap,r410,ipmi,ios,vmware,omsa,dell,mariadb,kodexplorer,jumpserver,rtmp,ffmpeg,facebook,harbor,steam,ArchiSteamFarm,wifi,esp8266,dnsmasq,gdebi,kubekit,netdiscover,oneinstack,raid,odoo,wordpress,vsphere,docker-machine,gotop,minikube,qq,zstack,Th3inspector,ncdu,rwho,matomo,software,server,open-falcon,ao,gooderp,oss,ccat,cat,xmr,vps,bbr,脚本,httpstat,Spectre,Meltdown,sudo,cheat,etcher,lutris,game,youtube-dl,swap,mkdocs,spotify,wxpython,云计算,opensuse,cdn,office,turtle,tkinter,apache,树莓派,zeronet,lnmp,dvwa,armitage,portainer,flatpak,openstack,fedora,pycharm,nodejs,c,acm" />
+    <meta name="viewport" content="width=device-width">
+
+    <meta name="baidu-site-verification" content="codeva-I3tH8rZpre" />
+    <meta name="sogou_site_verification" content="StaJY6bV2B" />
+
+
+
+    
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@bboysoulcn" />
+    <meta name="twitter:creator" content="@bboysoulcn" />
+    <meta property="og:url" content="https://www.bboy.app/2025/01/02/2024%E5%B9%B4%E6%80%BB%E7%BB%93/" />
+    <meta property="og:title" content="2024年总结" />
+    <meta property="og:description" content="
+简介
+是时候总结2024年了" />
+    <meta property="og:image" content="https://www.bboy.app/oss/head.webp" />
+    
+
+
+
+    <link rel="icon" type="image/png" href="/oss/head.webp">
+    <link rel='stylesheet' href='/LXGWWenKaiRegular/result.css' /> 
+    
+
+
+
+    <title>2024年总结</title>
+
+    <script async defer data-website-id="19d15b5b-1cc2-4488-9dd2-34fbc7ea61d7"
+        src="https://umami.bboysoul.cn/script.js"></script>
+    
+    <script type="text/javascript" src="/js/clicklove.js"></script>
+    <script type="text/javascript" src="/js/simple.js"></script>
+    <script type="text/javascript" src="/js/hosts.js"></script>
+
+    
+    <script src="/js/quicklink.umd.js"></script>
+    <script>
+        window.addEventListener('load', () => {
+            quicklink.listen();
+        });
+    </script>
+
+
+
+
+    
+    
+
+
+    <link rel="stylesheet" href="/css/stylesheet.css">
+    <link rel="stylesheet" href="/css/copy-to-clipboard.css">
+    <script src="/js/8e7b3b62a2.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+
+    <a href="https://github.com/bboysoulcn" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#FAF9DE; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <div id="reading-progress"></div>
+    <div class="container">
+        <div class="container-head">
+            <div class="head-box">
+                
+
+                
+                    <a data-umami-event="head_page" href="/"><img src="/oss/head.webp" class="head-image"></a>
+                
+                
+                    <h1 class="page-title"><a data-umami-event="head_page" href="/"
+                            style="font-size: smaller;color: black;">
+                            <p class="typing">Bboysoul&#39;s Blog</p>
+                        </a>
+
+                    </h1>
+                
+
+                
+            </div>
+            
+
+            <table width="100%">
+                <tr align="center" style="font-size: larger;">
+                    
+                    
+                    <td>
+                        <i class="fas fa-regular fa-house" style="color: #ff8e2d;"></i>
+                        <a data-umami-event="menu_url" href="/" style="color: black;">
+
+                            <span>首页</span>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <i class="fas fa-regular fa-bullhorn" style="color: #ff8e2d;"></i>
+                        <a data-umami-event="menu_url" href="/gonggao.html" style="color: black;">
+
+                            <span>公告</span>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <i class="fas fa-regular fa-code" style="color: #ff8e2d;"></i>
+                        <a data-umami-event="menu_url" href="/projects.html" style="color: black;">
+
+                            <span>项目</span>
+                        </a>
+                    </td>
+                    
+                    <td>
+                        <i class="fas fa-regular fa-rss" style="color: #ff8e2d;"></i>
+                        <a data-umami-event="menu_url" href="https://www.bboy.app/atom.xml" style="color: black;">
+
+                            <span>RSS</span>
+                        </a>
+                    </td>
+                    
+
+                </tr>
+
+            </table>
+            <hr>
+        </div>
+
+<div class="container-contact">
+    <section>
+        <div class="box">
+            <p class="animate">⬇️⬇️⬇️ 欢迎关注我的 telegram 频道和 twitter ⬇️⬇️⬇️</p>
+        </div>
+        <hr>
+        <div style="display: block;">
+            联系方式:
+
+            <a data-umami-event="twitter_url" href="https://twitter.com/bboysoulcn">
+                <i class="fa fa-solid fa-twitter fa-flip" style="color: #000000;"></i> Twitter
+            </a>
+            <a data-umami-event="github_url" href="https://github.com/bboysoulcn">
+                <i class="fa fa-solid fa-github fa-flip" style="color: #000000;"></i> Github
+            </a>
+            <a data-umami-event="mail_url" href="/cdn-cgi/l/email-protection#d8babab7a1abb7adb498babab7a1f6b9a8a8">
+                <i class="fa fa-solid fa-envelope fa-flip" style="color: #000000;"></i> Email
+            </a>
+            <a data-umami-event="telegram_url" href="https://t.me/bboyapp">
+                <i class="fa fa-solid fa-telegram fa-flip" style="color: #000000;"></i> Telegram
+            </a>
+            <br>
+
+            <hr>
+
+        </div>
+    </section>
+
+
+
+</div>
+
+
+<div class="container-single">
+  <div class="container-single-left">
+    <article itemscope itemtype="http://schema.org/Article">
+
+      <section class="blog-post">
+        <h1 itemprop="headline">2024年总结</h1>
+        <div class="blog-post-subheader">
+          <i class="fa fa-regular fa-calendar-days" style="color: #ff8e2d;"></i>
+          January 2, 2025
+          <i class="fa fa-regular fa-message" style="color: #ff8e2d;"></i>
+          本文有 335 个字
+          <i class="fa fa-regular fa-clock" style="color: #ff8e2d;"></i>
+          需要花费 1 分钟阅读
+        </div>
+        <div itemprop="articleBody" class="blog-post-content">
+          <p><img src="/oss/20250102-3.webp" alt=""></p>
+<h3 id="简介">简介</h3>
+<p>是时候总结2024年了</p>
+<h3 id="2023年总结">2023年总结</h3>
+<p><a href="https://www.bboy.app/2023/12/21/2023%E5%B9%B4%E6%80%BB%E7%BB%93/">https://www.bboy.app/2023/12/21/2023%E5%B9%B4%E6%80%BB%E7%BB%93/</a></p>
+<h3 id="2022年总结">2022年总结</h3>
+<p><a href="https://www.bboy.app/2023/01/06/2022%E5%B9%B4%E6%80%BB%E7%BB%93/">https://www.bboy.app/2023/01/06/2022%E5%B9%B4%E6%80%BB%E7%BB%93/</a></p>
+<h3 id="2021年总结">2021年总结</h3>
+<p><a href="https://www.bboy.app/2022/01/23/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/">https://www.bboy.app/2022/01/23/2021%E5%B9%B4%E5%BA%A6%E6%80%BB%E7%BB%93/</a></p>
+<h3 id="人生大事">人生大事</h3>
+<ul>
+<li>买车</li>
+<li>不出意外25年当爸爸</li>
+</ul>
+<h3 id="关于博客">关于博客</h3>
+<ul>
+<li>2022年的</li>
+</ul>
+<p><img src="/oss/20230106-1.webp" alt=""></p>
+<ul>
+<li>2023年的</li>
+</ul>
+<p><img src="/oss/20231221-1.webp" alt=""></p>
+<ul>
+<li>今年的</li>
+</ul>
+<p><img src="/oss/20250102-1.webp" alt=""></p>
+<p>感觉就是正常的流量增长，今年更新的东西不多，总觉得没啥东西可以写</p>
+<h3 id="关于realipcc">关于realip.cc</h3>
+<ul>
+<li>目前调用次数: 16149万</li>
+</ul>
+<p>加了一个前端页面，去年才1000万这样，今年破亿了</p>
+<h3 id="git-相关">git 相关</h3>
+<p>首先是gitea</p>
+<p><img src="/oss/20250102-3.webp" alt=""></p>
+<p>然后是github的</p>
+<p><img src="/oss/20250102-2.webp" alt=""></p>
+<ul>
+<li>github 关注人数: 113</li>
+</ul>
+<h3 id="wakapi-编码时间">wakapi 编码时间</h3>
+<p><img src="/oss/20250102-4.webp" alt=""></p>
+<h3 id="telegram-频道">telegram 频道</h3>
+<p>欢迎关注我的telegram频道: <a href="https://t.me/bboyapp">https://t.me/bboyapp</a></p>
+<ul>
+<li>频道关注人数: 493</li>
+</ul>
+<p><img src="/oss/20250102-5.webp" alt=""></p>
+<h3 id="twitter">twitter</h3>
+<p>欢迎关注我的twitter: <a href="https://twitter.com/bboysoulcn">https://twitter.com/bboysoulcn</a></p>
+<ul>
+<li>twitter 目前关注人数: 205</li>
+</ul>
+<h3 id="滴答清单">滴答清单</h3>
+<ul>
+<li>完成任务数: 1291</li>
+<li>专注时间: 147h 13m</li>
+<li>排名: 99</li>
+<li>等级: 9</li>
+</ul>
+<h3 id="xbox">xbox</h3>
+<ul>
+<li>游戏时间: 65 小时</li>
+</ul>
+<p>年纪大了确实不喜欢玩游戏了，也有可能没有时间</p>
+<h3 id="2025年目标">2025年目标</h3>
+<ul>
+<li>当个好爸爸</li>
+<li>要有肌肉</li>
+</ul>
+<p>欢迎关注我的博客<a href="https://www.bboy.app/">www.bboy.app</a></p>
+<p>Have Fun</p>
+        </div>
+      </section>
+    </article>
+
+
+
+
+    
+    <section class="post-tags">
+      <hr>
+      <i class="fa fa-regular fa-hashtag" style="color: #ff8e2d;"></i>
+      Tags:
+      <ul class="post-tag-list">
+        
+        <li class="post-tag-list-item"><a href="https://www.bboy.app/tags/life/">Life</a>;</li>
+        
+      </ul>
+    </section>
+    
+  </div>
+  <div class="container-single-right">
+    <aside>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#简介">简介</a></li>
+        <li><a href="#2023年总结">2023年总结</a></li>
+        <li><a href="#2022年总结">2022年总结</a></li>
+        <li><a href="#2021年总结">2021年总结</a></li>
+        <li><a href="#人生大事">人生大事</a></li>
+        <li><a href="#关于博客">关于博客</a></li>
+        <li><a href="#关于realipcc">关于realip.cc</a></li>
+        <li><a href="#git-相关">git 相关</a></li>
+        <li><a href="#wakapi-编码时间">wakapi 编码时间</a></li>
+        <li><a href="#telegram-频道">telegram 频道</a></li>
+        <li><a href="#twitter">twitter</a></li>
+        <li><a href="#滴答清单">滴答清单</a></li>
+        <li><a href="#xbox">xbox</a></li>
+        <li><a href="#2025年目标">2025年目标</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+</aside>
+  </div>
+
+</div>
+
+
+
+<div class="container-comment">
+    <link rel="stylesheet" href="https://unpkg.com/@waline/client@2/dist/waline.css" />
+
+    <div id="waline"></div>
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="module">
+        import { init } from 'https://unpkg.com/@waline/client@2/dist/waline.mjs';
+
+        init({
+            el: '#waline',
+            serverURL: 'https://comment.bboy.app',
+            emoji: false,
+            requiredMeta: ['nick', 'mail'],
+            wordLimit: 200,
+            imageUploader: false,
+            copyright: false,
+        });
+    </script>
+</div>
+
+
+
+<div class="container-footer">
+  <hr>
+  <script async src="/js/umami.js"></script>
+  <table style="width: 100%;">
+    <div id="umami_data">
+    <tr align="center">
+
+      <td> <i class="fa fa-regular fa-eye " style="color: #ff8e2d;"></i> 本站总访问量 <span id="pageviews"></span> 次
+      </td>
+      <td> <i class="fa fa-regular fa-user " style="color: #ff8e2d;"></i> 本站总访客数 <span id="visitors"></span> 人
+      </td>
+    </tr>
+  </div>
+  </table>
+  <div class="copyright" align="center">
+    <i class="fa fa-regular fa-copyright fa-flip fa-sm"></i>
+    <span>
+      2016 - 2025 <i class="fa fa-solid fa-heart fa-beat-fade fa-sm" style="color: #d31212;"></i>
+      Bboysoul
+    </span>
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="/js/copy-to-clipboard.js"></script>
+<script type="text/javascript" src="/js/readingprogress.js"></script>
+
+</body>
+
+
+
+</html>

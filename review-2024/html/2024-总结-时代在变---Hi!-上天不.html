@@ -1,0 +1,333 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2024 总结: 时代在变 | Hi! 上天不?</title><meta name="author" content="Metal A-wing"><meta name="copyright" content="Metal A-wing"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="新一的 2024 个人年终总结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="2024 总结: 时代在变">
+<meta property="og:url" content="https://a-wing.top/self/2024/12/31/2024">
+<meta property="og:site_name" content="Hi! 上天不?">
+<meta property="og:description" content="新一的 2024 个人年终总结">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://a-wing.top/assets/img/2024/gudauri.jpg">
+<meta property="article:published_time" content="2024-12-31T00:00:00.000Z">
+<meta property="article:modified_time" content="2024-12-31T00:00:00.000Z">
+<meta property="article:author" content="Metal A-wing">
+<meta property="article:tag" content="self">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://a-wing.top/assets/img/2024/gudauri.jpg"><link rel="shortcut icon" href="/assets/favicon.ico"><link rel="canonical" href="https://a-wing.top/self/2024/12/31/2024"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//www.google-analytics.com" crossorigin=""/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script async="async" src="https://www.googletagmanager.com/gtag/js?id=UA-117419557-1"></script><script>window.dataLayer = window.dataLayer || []
+function gtag(){dataLayer.push(arguments)}
+gtag('js', new Date())
+gtag('config', 'UA-117419557-1')
+btf.addGlobalFn('pjaxComplete', () => {
+  gtag('config', 'UA-117419557-1', {'page_path': window.location.pathname})
+}, 'google_analytics')
+</script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'medium_zoom',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '2024 总结: 时代在变',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  isShuoshuo: false
+}</script><meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/feed.xml" title="Hi! 上天不?" type="application/atom+xml">
+</head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/assets/avatar.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">46</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页酱</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-square-check"></i><span> 陈列室</span></a></div><div class="menus_item"><a class="site-page" href="/equipment/"><i class="fa-fw fas fa-toolbox"></i><span> 装备篇</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-user-friends"></i><span> 后宫们</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-circle-info"></i><span> 关于我</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url(/assets/img/2024/gudauri.jpg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><img class="site-icon" src="/assets/avatar.png" alt="Logo"><span class="site-name">Hi! 上天不?</span></a><a class="nav-page-title" href="/"><span class="site-name">2024 总结: 时代在变</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页酱</span></a></div><div class="menus_item"><a class="site-page" href="/projects/"><i class="fa-fw fas fa-square-check"></i><span> 陈列室</span></a></div><div class="menus_item"><a class="site-page" href="/equipment/"><i class="fa-fw fas fa-toolbox"></i><span> 装备篇</span></a></div><div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw fas fa-user-friends"></i><span> 后宫们</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-circle-info"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="post-info"><h1 class="post-title">2024 总结: 时代在变</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2024-12-31T00:00:00.000Z" title="发表于 2024-12-31 08:00:00">2024-12-31</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2024-12-31T00:00:00.000Z" title="更新于 2024-12-31 08:00:00">2024-12-31</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/self/">self</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><p>我的生活现在过于简朴，除了旅行和生活必须品之外几乎没有其他开销</p>
+<p>先简单回顾一下去年定的目标：</p>
+<ul>
+<li><input disabled="" type="checkbox"> 马拉松全程四个小时内跑完</li>
+<li><input disabled="" type="checkbox"> 英语达到 CEFR 的 C1 水平</li>
+<li><input disabled="" type="checkbox"> 滑雪教练证</li>
+<li><input checked="" disabled="" type="checkbox"> 去阿勒泰滑雪</li>
+<li><input disabled="" type="checkbox"> 去看万里长城</li>
+<li><input checked="" disabled="" type="checkbox"> 项目能活下去</li>
+<li><input disabled="" type="checkbox"> 发出市场价的薪水</li>
+</ul>
+<h1 id="个人生活"><a href="#个人生活" class="headerlink" title="个人生活"></a>个人生活</h1><p>我的生活现在过于简朴，除了旅行和生活必须品之外几乎没有其他开销</p>
+<h2 id="旅行"><a href="#旅行" class="headerlink" title="旅行"></a>旅行</h2><p>今年只出去玩了五趟</p>
+<ul>
+<li>欧洲之行（40 天）</li>
+<li>日本樱花之旅（4 天）</li>
+<li>219 自驾（32 天）</li>
+<li>张家界马拉松（5 天）</li>
+<li>阿勒泰滑雪（12 天）</li>
+</ul>
+<p>不过我平时周六周日是不休息的，出去玩的时间基本上和双休差不多</p>
+<h3 id="欧洲之行"><a href="#欧洲之行" class="headerlink" title="欧洲之行"></a>欧洲之行</h3><p>去趟欧洲，感觉滤镜破碎了，欧洲没那么美好</p>
+<div class="gallery-container" data-type="data" data-button="">
+      <div class="gallery-items">[{"url":"/assets/img/2024/img_6110.jpeg","alt":"img_6110"},{"url":"/assets/img/2024/img_6341.jpeg","alt":"img_6341"},{"url":"/assets/img/2024/img_7177.jpeg","alt":"img_7177"},{"url":"/assets/img/2024/img_8274.jpeg","alt":"img_8274"}]</div>
+    </div>
+
+<h3 id="日本樱花之旅"><a href="#日本樱花之旅" class="headerlink" title="日本樱花之旅"></a>日本樱花之旅</h3><p>主要是上次去日本没玩够，刚回来就又申请了日本的签证。眼看签证马上要到期了，就去看看樱花吧</p>
+<div class="gallery-container" data-type="data" data-button="">
+      <div class="gallery-items">[{"url":"/assets/img/2024/img_9258.jpeg","alt":"img_9258"},{"url":"/assets/img/2024/img_9202.jpeg","alt":"img_9202"}]</div>
+    </div>
+
+<h3 id="219-自驾去西藏"><a href="#219-自驾去西藏" class="headerlink" title="219 自驾去西藏"></a>219 自驾去西藏</h3><p>早在几年前我就有这个想法，这回终于实现了</p>
+<div class="gallery-container" data-type="data" data-button="">
+      <div class="gallery-items">[{"url":"/assets/img/2024/img_0856.jpeg","alt":"img_0856"},{"url":"/assets/img/2024/img_1517.jpeg","alt":"img_1517"},{"url":"/assets/img/2024/img_2433.jpeg","alt":"img_2433"}]</div>
+    </div>
+
+<h3 id="张家界马拉松"><a href="#张家界马拉松" class="headerlink" title="张家界马拉松"></a>张家界马拉松</h3><p>今年终于恢复跑马拉松了，报名张家界马拉松，景区门票免费！</p>
+<div class="gallery-container" data-type="data" data-button="">
+      <div class="gallery-items">[{"url":"/assets/img/2024/img_2891.jpeg","alt":"img_2891"},{"url":"/assets/img/2024/img_3010.jpeg","alt":"img_3010"}]</div>
+    </div>
+
+<h3 id="阿勒泰滑雪"><a href="#阿勒泰滑雪" class="headerlink" title="阿勒泰滑雪"></a>阿勒泰滑雪</h3><p>终于去新疆滑雪了</p>
+<div class="gallery-container" data-type="data" data-button="">
+      <div class="gallery-items">[{"url":"/assets/img/2024/img_3620.jpeg","alt":"img_3620"},{"url":"/assets/img/2024/img_3305.jpeg","alt":"img_3305"},{"url":"/assets/img/2024/img_3648.jpeg","alt":"img_3648"}]</div>
+    </div>
+
+<h2 id="买的设备"><a href="#买的设备" class="headerlink" title="买的设备"></a>买的设备</h2><p>今年其实买了非常多的东西，清单可能会太长，只放一个最推荐的吧</p>
+<p>Apple Watch 编织单圈表带，虽然很贵，但这个特别舒服。唯一的缺点就是不防水</p>
+<p><img src="/assets/img/2024/img_9673.jpeg" alt="img_9673"></p>
+<h2 id="看的书"><a href="#看的书" class="headerlink" title="看的书"></a>看的书</h2><p>基本上都集中在历史和地理上了</p>
+<p>今年感觉看的书挺多的。然后拿尺一量，一共才 0.6m。也没看多少书啊，真就不学无术</p>
+<p>比较推荐的书有：</p>
+<ul>
+<li>《技术为径》</li>
+<li>《格鲁夫给经理人的第一课》</li>
+<li>《透过地理看历史》<br>还有一本电子书《激荡三十年》，这个强烈推荐</li>
+</ul>
+<p><img src="/assets/img/2024/img_3875.jpeg" alt="img_3875"></p>
+<h2 id="小结"><a href="#小结" class="headerlink" title="小结"></a>小结</h2><p>今年一共写了 47 篇周报（三种语言）。自驾去西藏那六篇还是没补回来</p>
+<h3 id="明年计划："><a href="#明年计划：" class="headerlink" title="明年计划："></a>明年计划：</h3><ul>
+<li><input disabled="" type="checkbox"> 今年一年一篇博客都没有更新，明年要更四篇。争取一个季度一篇</li>
+<li><input disabled="" type="checkbox"> 周报可以继续坚持下去</li>
+<li><input disabled="" type="checkbox"> 公司规模翻两翻</li>
+<li><input disabled="" type="checkbox"> 跑两场马拉松</li>
+<li><input disabled="" type="checkbox"> 去非洲</li>
+</ul>
+<h1 id="公司状况"><a href="#公司状况" class="headerlink" title="公司状况"></a>公司状况</h1><p>人员没有变化，非常稳定。还是两个兼职。实习生还是增加。</p>
+<p>本质上还是初级和高级人员的比例严重不平衡，然后没有足够的利润去支持高级工程师的薪水</p>
+<p>有一件事情很清楚，明年必须扩张，实习生太多导致人员比例严重不协调（初级人员太多，高级人员太少）。如果想发展，就必须扩张，不然明年和今年情况差不多</p>
+<h2 id="培训"><a href="#培训" class="headerlink" title="培训"></a>培训</h2><p>我曾经有段时间非常不理解，为什么实习生效率这么低。刚开始觉得可能是 Push 力度不够，疯狂 Push。没有效果，然后加钱，发现也没有效果。最后发现培训，这回有效果了</p>
+<p>《格鲁夫给经理人的第一课》有一段令我印象深刻：</p>
+<p>效率低无非就两张情况「没动力」和「不会做」。我反复确认过了这群实习生就是「不会做」</p>
+<p>那就加大培训力度，鉴于都是研究生了，自学能力应该都没啥问题。就迭代出了一个自学清单: <a target="_blank" rel="noopener" href="https://neo-developer.binbat.com/">Neo Developer</a></p>
+<p>什么？你说你学不会？要不要和你们导师解释一下你为什么学不会？</p>
+<h2 id="项目"><a href="#项目" class="headerlink" title="项目"></a>项目</h2><p>大部份项目都不方便透露（保密协议），搞了很多项目。本质上我们就是搞外包赚的钱</p>
+<h2 id="产品线"><a href="#产品线" class="headerlink" title="产品线"></a>产品线</h2><p>长期做的产品只保留了两个 Live777 和连一个稳定版本都没发的 WOOM（原因是因为年初准备砍掉，年底有客户买单了，可以接着搞）</p>
+<p>明年预计有三条产品线，其实我特别想只留一条，这样精力太分散了。但又不能停，大量的实习生没事做。而且项目也严重不足，一条产品线根本消化不完这些人，而且两条线有客户，搞出来就有收益</p>
+<h3 id="产品和项目的边界"><a href="#产品和项目的边界" class="headerlink" title="产品和项目的边界"></a>产品和项目的边界</h3><p>这个问题之前想的很明白，但现在好像又变得不明白了，</p>
+<p>很多时候，我就在想产品和项目有什么区别</p>
+<p>产品不是就是若干个小项目的合集吗？</p>
+<h3 id="Live777"><a href="#Live777" class="headerlink" title="Live777"></a>Live777</h3><p>这算我们的核心产品吗，实际上这个一个巨亏的项目。我们应该放弃这个转而使用其他的开源实现吗？开源真的有意义吗？</p>
+<h3 id="WOOM"><a href="#WOOM" class="headerlink" title="WOOM"></a>WOOM</h3><p>感觉似乎找到了一点方向，也在缓慢迭代产品</p>
+<h3 id="？？？"><a href="#？？？" class="headerlink" title="？？？"></a>？？？</h3><p>先卖个关子吧，准备做点和硬件结合的产品。<del>然后融合 live777 和 WOOM 打通底层逻辑，形成生态闭环</del></p>
+<h2 id="关于开公司的这件事"><a href="#关于开公司的这件事" class="headerlink" title="关于开公司的这件事"></a>关于开公司的这件事</h2><p>很有趣，和财务和销售和各种渠道打交道。对这个世界是如何运转的有了更深刻的理解</p>
+<p>最近很明显的感觉，主将无能累死三军。正确的方向远胜于加班</p>
+<p>以下都是个人一些浅薄的见解</p>
+<h3 id="高标准的待遇来自超额的利润"><a href="#高标准的待遇来自超额的利润" class="headerlink" title="高标准的待遇来自超额的利润"></a>高标准的待遇来自超额的利润</h3><p>实际上我也想发出很高的工资，创造极客风范的公司，可实际上这些需要超额利润的支撑。并不是想做就能做出来的</p>
+<p>或者说你融到了非常多的钱，打造这种团队。但当回归自由市场，超额利润是否能够维持才是这种氛围是否能维持下去的关键</p>
+<h3 id="超额的利润"><a href="#超额的利润" class="headerlink" title="超额的利润"></a>超额的利润</h3><p>说起来很简单，本质上就只有垄断才能获取超额的利润，其他的都会很快被模仿和超越</p>
+<p>这种情况无非只有两个路线可以走：特许经营 和 规模效益</p>
+<p>在中国本质上国企就是特许经营。民营企业只剩下规模效益一条路径可以走。这样的话很自然就是融资然后快速拉大规模，降低边际成本</p>
+<h3 id="融资？"><a href="#融资？" class="headerlink" title="融资？"></a>融资？</h3><p>这件事情挺可笑的，投资机构想听宏大的故事。但保障现金流才是一个公司活下去的根本。要么去编造一个专门针对 VC 优化过的故事，要么就不要去理 VC。</p>
+<p>这里有一件事非常可笑的事是：一群没有开过公司的投资人来指导你如何开公司。创业圈里有一种怪像，有投资才能创业。这就好像是公式化给出的答案一样。事实上，这个开放世界是没有标准解的</p>
+<p>有项目在，公司就能活下去。活下去，才有资格去谈发展。</p>
+<h3 id="开公司很难"><a href="#开公司很难" class="headerlink" title="开公司很难"></a>开公司很难</h3><p>做一家很垃圾的小公司光活下去就已经非常难了，想做一家伟大的公司那个更是难上加难</p>
+<h3 id="远程工作"><a href="#远程工作" class="headerlink" title="远程工作"></a>远程工作</h3><p>远程工作很酷，我也想做一家这么酷的公司，但事实上远程工作对团队要求非常高，管理成本其实非常大。或者是 80% 以上的人都不适合这种模式</p>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>这件事情太复杂，每次创业感受都不一样，我要不知道哪个才是对的，哪个是错的，或者根本没有对错。本质上还是：你到底想做什么？</p>
+<p>但这就回到了一个非常抽象的事情：企业的愿景是什么？</p>
+<h1 id="时代在变"><a href="#时代在变" class="headerlink" title="时代在变"></a>时代在变</h1><p>从美国封杀 TikTok 开始，我意识到这个时代变了。不要看媒体怎么说，要看实际是怎么做的（看立法和关税）</p>
+<p>之后到企业发展会进入到下一个版本，谁能最先探索出这个版本的答案，谁就有机会成为独角兽</p>
+<p>我注意到过去几年的科技企业的发展路径已经不在适用了（抄国外的产品靠 GFW 占领国内市场）</p>
+<p>很多人的企业都在迷茫，但我不知道这个答案。甚至我不知道我的判断是否正确。因为创业本质上就是赌博</p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://a-wing.top">Metal A-wing</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://a-wing.top/self/2024/12/31/2024">https://a-wing.top/self/2024/12/31/2024</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://a-wing.top" target="_blank">Hi! 上天不?</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/self/">self</a></div><div class="post-share"><div class="social-share" data-image="/assets/img/2024/gudauri.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/self/2023/12/31/2023" title="2023 总结：新的冒险"><img class="cover" src="/assets/img/2023/img_5700.jpeg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">2023 总结：新的冒险</div></div><div class="info-2"><div class="info-item-1">不管怎么样，今年我开始了新的冒险 目标先来看一下今年的 OKR   英语达到 CEFR 的 C1 水平。没考，不过显然我目前没有这个水平  日语 N2。考了，没出结果，感觉过不了  出国工作。没有  Filegogo 10k star。目前 0.2k。已经准备弃坑了  用 Rust 做个项目。（自己写或者用开源的产品来满足一些商业上的项目）。Live777  马拉松全程四个小时内跑完。一场马拉松都没跑 ...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/self/2021/04/01/2020" title="2020 年的总结"><img class="cover" src="/assets/img/2020/sanya.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-04-01</div><div class="info-item-2">2020 年的总结</div></div><div class="info-2"><div class="info-item-1"> 1565 年，法国国王查理九世颁布法令改以1月1日为一年的开端，改变了过去以4月1日为新年的传统。一些守旧派反对该改革，依然按照旧历法在新历4月1日送新年礼，庆祝新年。支持新年改革的人借此对守旧派大加嘲弄，在当天给他们送假礼物，邀请他们参加假聚会。从此在4月1日捉弄人的习惯便流传开来。当有人上当受骗的时候，捉弄他的人就会高呼 “Poisson d’avril（四月恶作剧）”。  顺便把 2019 年的总结也做了。反正没有发生什么。我就是觉得我改写个总结了。总是在忙 四月做总结好像不太合理。时间顺序感觉不太好） 生活2019 年初猫丢了这大概是不幸的开端了，虽说 24 岁有逆流。。。这年过的真是惨。不喜欢卖惨，就少讲点 肝生病肝生病，就是平时太肝的结果。（不过还好：肝，是人体唯一一个可以再生的器官） 生病了，灰色的生活。每一天都是灰色的，我觉得我已经命不久矣。我需要做一些什么，不然以后我的墓志铭上就只能空空如也 我几乎不生病，我一生病就吃很多的东西，很快就好了。。。但是这次我不能吃东西了 每天最开心的事就是下班之后看吃播，这个妹子吃了好多东西啊。好几人份 KFC 啊。b站...</div></div></div></a><a class="pagination-related" href="/self/2022/01/01/2021" title="2021 年的总结"><img class="cover" src="/assets/img/2021/changbaishan/img_3151.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-01-01</div><div class="info-item-2">2021 年的总结</div></div><div class="info-2"><div class="info-item-1">今年最大的变化是换了工作，离开了陪伴我三年的  草莓 。去了互联网公司 工作换了新工作，在家里 Gap 了半年。每天都在思考：  我是谁，我在哪，我在做什么  在家里总结之前的工作，写了一个关于无人机系列的文章（共七篇，每篇大概 5000 字），这些知识给需要的人吧，我估计以后用不到了，草莓也已经放弃了自研无人机，全面转向和大疆合作 我在草莓做的的东西类似于...</div></div></div></a><a class="pagination-related" href="/self/2022/12/31/2022" title="2022 年的总结"><img class="cover" src="/assets/img/2022/img_1038.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2022-12-31</div><div class="info-item-2">2022 年的总结</div></div><div class="info-2"><div class="info-item-1">这是一件令人血压飙升到事情。最不想总结的就是工作。我今年炒掉的我全职工作的老板 工作？为什么会血压飙升。大概原因应该是这样的：  同事在做一件无意义的事情。它知道无意义。但理由是老板说的  我当时就差点操起凳子砸过去了。。。。 但我是成熟的职场人，我是成熟的职场人，我是成熟的职场人。我忍住了 🥹。我做到了，我忍住了！！！   大概就这样吧。我觉得这应该是我今年做的最正确的一件事了 而且我感觉我的脾气越来越暴躁了。很难和人合作，经常想操起板凳砸过去。做的都是什么垃圾 生活尝试写周报，变成生活的一部分 买买买 iPhone 13 mini 很棒！ Macbook Pro 13 m2 那款。不推荐。。。因为祖传的屏幕和非整数倍缩放 iPad Air 5 除了续航，一切都好 滑雪板 Fischer worldcup rc4 sc 和 硬度 110...</div></div></div></a><a class="pagination-related" href="/self/2023/12/31/2023" title="2023 总结：新的冒险"><img class="cover" src="/assets/img/2023/img_5700.jpeg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-12-31</div><div class="info-item-2">2023 总结：新的冒险</div></div><div class="info-2"><div class="info-item-1">不管怎么样，今年我开始了新的冒险 目标先来看一下今年的 OKR   英语达到 CEFR 的 C1 水平。没考，不过显然我目前没有这个水平  日语 N2。考了，没出结果，感觉过不了  出国工作。没有  Filegogo 10k star。目前 0.2k。已经准备弃坑了  用 Rust 做个项目。（自己写或者用开源的产品来满足一些商业上的项目）。Live777  马拉松全程四个小时内跑完。一场马拉松都没跑 ...</div></div></div></a><a class="pagination-related" href="/self/2021/02/11/innovator/2021-02-12-innovator-1" title="创新者异闻录（1&#x2F;7）——多旋翼无人机历史与大疆"><img class="cover" src="/assets/img/innovator/figure_1907-first-multicopter.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-12</div><div class="info-item-2">创新者异闻录（1&#x2F;7）——多旋翼无人机历史与大疆</div></div><div class="info-2"><div class="info-item-1"> 特殊声明：本篇文章不保证内容真实性，有些事情是业内口口相传的，不排除有人故意黑别人，使用资料来源也无法确保真实性，大家看了乐就好了，请研究无人机历史的不要以这篇文章为准  早在 1907 年 Bregue 兄弟就进行了他们的旋翼式直升机的飞行试验  航模无人机旧时代各种无人机很早就有，不过属于航模，和遥控玩具车是一类东西 固定翼和直升机的航模也经常使用 固定翼和直升机可以通过纯机械就可以飞行 还有一部分是做军事用途的无人机，军工背景做无人机 这也也造成了无人机的两大派系：航模派（长三角，珠三角一带）和军工派（比如：零度，地址在东北或西北的无人机厂商） 还有一类是机器人派：比如大疆，极飞，零零无限 这几类思路有明显的区别：  航模派注意成本，卖配件的居多（那些玩具机就是他们做的） 军工派不注意成本，做那种超大的，靠关系销售 机器人派天天研究软件算法  **多旋翼崛起的主要原因是：**基于MEMS（Microelectromechanical...</div></div></div></a><a class="pagination-related" href="/self/2021/02/11/innovator/2021-02-12-innovator-2" title="创新者异闻录（2&#x2F;7）——多旋翼无人机原理"><img class="cover" src="/assets/img/innovator/airplane.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2021-02-12</div><div class="info-item-2">创新者异闻录（2&#x2F;7）——多旋翼无人机原理</div></div><div class="info-2"><div class="info-item-1">先来科普一点知识：科普 PWM 信号 PWM 的全称是脉冲宽度调制（Pulse-width modulation），是通过将有效的电信号分散成离散形式从而来降低电信号所传递的平均功率的一种方式 所以根据面积等效法则，可以通过对改变脉冲的时间宽度，来等效的获得所需要合成的相应幅值和频率的波形 想完整的讲清楚，这个有点复杂，请自行查阅资料吧 最简单通俗易懂的说就是：我有一个 5V 电源，我只能控制 “通” 和 “断” 两种状态，（0 和 1 两种状态），0V 或 5V。但我想要 2.5V 的电压，那就在单位时间内 50% 的时间是通电的，剩下 50% 的时间是断电的，这样就可以等效得到一个 2.5V 的电压，这就是 PWM 什么是无人机“无人机” 标准的说法应该是 “无人驾驶飞行器” 是属于无人驾驶的 “robotic （机器人）” 设备，可以远程或自动控制。 不同类型的无人机器人可用于空中、地面、海上和水下。 这些（更正式地）被称为  无人驾驶飞行器（UAV）Unmanned Aerial Vehicles 无人驾驶地面车辆（UGV）Unmanned Ground...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="disqus_thread"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/assets/avatar.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Metal A-wing</div><div class="author-info-description">新一的个人博客</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">46</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">12</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">18</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/a-wing"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/a-wing" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="https://twitter.com/_a_wing" target="_blank" title="Twitter"><i class="fab fa-twitter" style="color: #359aff;"></i></a><a class="social-icon" href="/cdn-cgi/l/email-protection#e7d6a7d5d4d4c9828a868e8b" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">实在是忍不了了，重新换了博客风格</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%B8%AA%E4%BA%BA%E7%94%9F%E6%B4%BB"><span class="toc-number">1.</span> <span class="toc-text">个人生活</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%97%85%E8%A1%8C"><span class="toc-number">1.1.</span> <span class="toc-text">旅行</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%AC%A7%E6%B4%B2%E4%B9%8B%E8%A1%8C"><span class="toc-number">1.1.1.</span> <span class="toc-text">欧洲之行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%97%A5%E6%9C%AC%E6%A8%B1%E8%8A%B1%E4%B9%8B%E6%97%85"><span class="toc-number">1.1.2.</span> <span class="toc-text">日本樱花之旅</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#219-%E8%87%AA%E9%A9%BE%E5%8E%BB%E8%A5%BF%E8%97%8F"><span class="toc-number">1.1.3.</span> <span class="toc-text">219 自驾去西藏</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%A0%E5%AE%B6%E7%95%8C%E9%A9%AC%E6%8B%89%E6%9D%BE"><span class="toc-number">1.1.4.</span> <span class="toc-text">张家界马拉松</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%98%BF%E5%8B%92%E6%B3%B0%E6%BB%91%E9%9B%AA"><span class="toc-number">1.1.5.</span> <span class="toc-text">阿勒泰滑雪</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%B9%B0%E7%9A%84%E8%AE%BE%E5%A4%87"><span class="toc-number">1.2.</span> <span class="toc-text">买的设备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%9C%8B%E7%9A%84%E4%B9%A6"><span class="toc-number">1.3.</span> <span class="toc-text">看的书</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B0%8F%E7%BB%93"><span class="toc-number">1.4.</span> <span class="toc-text">小结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%8E%E5%B9%B4%E8%AE%A1%E5%88%92%EF%BC%9A"><span class="toc-number">1.4.1.</span> <span class="toc-text">明年计划：</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%AC%E5%8F%B8%E7%8A%B6%E5%86%B5"><span class="toc-number">2.</span> <span class="toc-text">公司状况</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%9F%B9%E8%AE%AD"><span class="toc-number">2.1.</span> <span class="toc-text">培训</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A1%B9%E7%9B%AE"><span class="toc-number">2.2.</span> <span class="toc-text">项目</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E7%BA%BF"><span class="toc-number">2.3.</span> <span class="toc-text">产品线</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%A7%E5%93%81%E5%92%8C%E9%A1%B9%E7%9B%AE%E7%9A%84%E8%BE%B9%E7%95%8C"><span class="toc-number">2.3.1.</span> <span class="toc-text">产品和项目的边界</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Live777"><span class="toc-number">2.3.2.</span> <span class="toc-text">Live777</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#WOOM"><span class="toc-number">2.3.3.</span> <span class="toc-text">WOOM</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%EF%BC%9F%EF%BC%9F%EF%BC%9F"><span class="toc-number">2.3.4.</span> <span class="toc-text">？？？</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%B3%E4%BA%8E%E5%BC%80%E5%85%AC%E5%8F%B8%E7%9A%84%E8%BF%99%E4%BB%B6%E4%BA%8B"><span class="toc-number">2.4.</span> <span class="toc-text">关于开公司的这件事</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E9%AB%98%E6%A0%87%E5%87%86%E7%9A%84%E5%BE%85%E9%81%87%E6%9D%A5%E8%87%AA%E8%B6%85%E9%A2%9D%E7%9A%84%E5%88%A9%E6%B6%A6"><span class="toc-number">2.4.1.</span> <span class="toc-text">高标准的待遇来自超额的利润</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%B6%85%E9%A2%9D%E7%9A%84%E5%88%A9%E6%B6%A6"><span class="toc-number">2.4.2.</span> <span class="toc-text">超额的利润</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%9E%8D%E8%B5%84%EF%BC%9F"><span class="toc-number">2.4.3.</span> <span class="toc-text">融资？</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%BC%80%E5%85%AC%E5%8F%B8%E5%BE%88%E9%9A%BE"><span class="toc-number">2.4.4.</span> <span class="toc-text">开公司很难</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%9C%E7%A8%8B%E5%B7%A5%E4%BD%9C"><span class="toc-number">2.4.5.</span> <span class="toc-text">远程工作</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">2.4.6.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%97%B6%E4%BB%A3%E5%9C%A8%E5%8F%98"><span class="toc-number">3.</span> <span class="toc-text">时代在变</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/self/2024/12/31/2024" title="2024 总结: 时代在变"><img src="/assets/img/2024/gudauri.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2024 总结: 时代在变"/></a><div class="content"><a class="title" href="/self/2024/12/31/2024" title="2024 总结: 时代在变">2024 总结: 时代在变</a><time datetime="2024-12-31T00:00:00.000Z" title="发表于 2024-12-31 08:00:00">2024-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/self/2023/12/31/2023" title="2023 总结：新的冒险"><img src="/assets/img/2023/img_5700.jpeg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2023 总结：新的冒险"/></a><div class="content"><a class="title" href="/self/2023/12/31/2023" title="2023 总结：新的冒险">2023 总结：新的冒险</a><time datetime="2023-12-31T00:00:00.000Z" title="发表于 2023-12-31 08:00:00">2023-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/linux/2023/05/01/start-openwrt" title="从零开始的 OpenWrt"><img src="/assets/img/start-openwrt/img_2952.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="从零开始的 OpenWrt"/></a><div class="content"><a class="title" href="/linux/2023/05/01/start-openwrt" title="从零开始的 OpenWrt">从零开始的 OpenWrt</a><time datetime="2023-05-01T04:00:00.000Z" title="发表于 2023-05-01 12:00:00">2023-05-01</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/self/2022/12/31/2022" title="2022 年的总结"><img src="/assets/img/2022/img_1038.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2022 年的总结"/></a><div class="content"><a class="title" href="/self/2022/12/31/2022" title="2022 年的总结">2022 年的总结</a><time datetime="2022-12-31T00:00:00.000Z" title="发表于 2022-12-31 08:00:00">2022-12-31</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/linux/2022/01/03/translate_wayland" title="[译] Arch Linux 上的完整 Wayland 设置"><img src="/assets/img/translate_wayland/wofi.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="[译] Arch Linux 上的完整 Wayland 设置"/></a><div class="content"><a class="title" href="/linux/2022/01/03/translate_wayland" title="[译] Arch Linux 上的完整 Wayland 设置">[译] Arch Linux 上的完整 Wayland 设置</a><time datetime="2022-01-03T00:00:00.000Z" title="发表于 2022-01-03 08:00:00">2022-01-03</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2015 - 2025 By Metal A-wing</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/medium-zoom/dist/medium-zoom.min.js"></script><div class="js-pjax"><script>(() => {
+  const isShuoshuo = GLOBAL_CONFIG_SITE.isShuoshuo
+
+  const disqusReset = conf => {
+    window.DISQUS && window.DISQUS.reset({
+      reload: true,
+      config: conf
+    })
+  }
+
+  const loadDisqus = (el, path) => {
+    if (isShuoshuo) {
+      window.shuoshuoComment.destroyDisqus = () => {
+        if (el.children.length) {
+          el.innerHTML = ''
+          el.classList.add('no-comment')
+        }
+      }
+    }
+
+    window.disqus_identifier = isShuoshuo ? path : '/self/2024/12/31/2024'
+    window.disqus_url = isShuoshuo ? location.origin + path : 'https://a-wing.top/self/2024/12/31/2024'
+
+    const disqus_config = function () {
+      this.page.url = disqus_url
+      this.page.identifier = disqus_identifier
+      this.page.title = '2024 总结: 时代在变'
+    }
+
+    if (window.DISQUS) disqusReset(disqus_config)
+    else {
+      const script = document.createElement('script')
+      script.src = 'https://a-wing-1.disqus.com/embed.js'
+      script.setAttribute('data-timestamp', +new Date())
+      document.head.appendChild(script)
+    }
+
+    btf.addGlobalFn('themeChange', () => disqusReset(disqus_config), 'disqus')
+  }
+
+  const getCount = async() => {
+    try {
+      const eleGroup = document.querySelector('#post-meta .disqus-comment-count')
+      if (!eleGroup) return
+      const cleanedLinks = eleGroup.href.replace(/#post-comment$/, '')
+
+      const res = await fetch(`https://disqus.com/api/3.0/threads/set.json?forum=a-wing-1&api_key=&thread:link=${cleanedLinks}`,{
+        method: 'GET'
+      })
+      const result = await res.json()
+
+      const count = result.response.length ? result.response[0].posts : 0
+      eleGroup.textContent = count
+    } catch (err) {
+      console.error(err)
+    }
+  }
+
+  if (isShuoshuo) {
+    'Disqus' === 'Disqus'
+      ? window.shuoshuoComment = { loadComment: loadDisqus }
+      : window.loadOtherComment = loadDisqus
+    return
+  }
+
+  if ('Disqus' === 'Disqus' || !false) {
+    if (false) btf.loadComment(document.getElementById('disqus_thread'), loadDisqus)
+    else {
+      loadDisqus()
+      
+    }
+  } else {
+    window.loadOtherComment = loadDisqus
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

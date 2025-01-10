@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="zh-CN" itemscope itemtype="http://schema.org/Blog">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+<meta http-equiv="x-ua-compatible" content="IE=edge">
+<meta name="applicable-device" content="pc,mobile">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="google-site-verification" content="duZDdOaw4MjHSnPf2QGli35H4xHr0ysRMJjgbitW9Zk" />
+<meta name="keywords" content="沈唁,鲁飞,sy-records,php开发,php程序员,php博客,swoole博客,沈唁博客,技术笔记" />
+<meta name="description" content="2024 年，对于我而言，是一段充满挑战与成长的旅程。 从工作中的挫折到家庭的变故，这一年让我更加体会到坚韧的意义，也在风雨中积累了成长的力量。 虽然充满波折，但我仍然选择在逆境中寻找方向，努力让自己…" />
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<meta property="og:site_name" content="沈唁志" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@lufeidot" />
+<meta name="twitter:title" content="坚韧与成长的2024年" />
+<meta name="twitter:description" content="2024 年，对于我而言，是一段充满挑战与成长的旅程。 从工作中的挫折到家庭的变故，这一年让我更加体会到坚韧的意义，也在风雨中积累了成长的力量。 虽然充满波折，但我仍然选择在逆境中寻找方向，努力让自己…" />
+<meta name="twitter:image" content="https://img.qq52o.me/wp-content/uploads/2025/01/2024.png" />
+<meta property="og:title" content="坚韧与成长的2024年" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://qq52o.me/2850.html" />
+<meta property="og:description" content="2024 年，对于我而言，是一段充满挑战与成长的旅程。 从工作中的挫折到家庭的变故，这一年让我更加体会到坚韧的意义，也在风雨中积累了成长的力量。 虽然充满波折，但我仍然选择在逆境中寻找方向，努力让自己…" />
+<meta property="og:image" content="https://img.qq52o.me/wp-content/uploads/2025/01/2024.png" />
+
+<meta property="og:release_date" content="2025-01-01T19:20:35+08:00"/>
+<meta property="og:updated_time" content="2025-01-01T19:20:35+08:00" />
+<meta property="article:published_time" content="2025-01-01T19:20:35+08:00"/>
+<meta property="article:modified_time" content="2025-01-01T19:20:35+08:00"/>
+<meta property="article:published_first" content="沈唁志, https://qq52o.me/2850.html" />
+<meta property="bytedance:published_time" content="2025-01-01T19:20:35+08:00" />
+<meta property="bytedance:updated_time" content="2025-01-01T19:20:35+08:00" />
+<meta property="bytedance:lrDate_time" content="2025-01-02T12:08:29+08:00" />
+<title>坚韧与成长的2024年 &#8211; 沈唁志</title>
+<meta name='robots' content='max-image-preview:large' />
+<link rel="alternate" type="application/rss+xml" title="沈唁志 RSS Feed" href="https://qq52o.me/feed" />
+<style id='global-styles-inline-css' type='text/css'>
+body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('#wp-duotone-dark-grayscale');--wp--preset--duotone--grayscale: url('#wp-duotone-grayscale');--wp--preset--duotone--purple-yellow: url('#wp-duotone-purple-yellow');--wp--preset--duotone--blue-red: url('#wp-duotone-blue-red');--wp--preset--duotone--midnight: url('#wp-duotone-midnight');--wp--preset--duotone--magenta-yellow: url('#wp-duotone-magenta-yellow');--wp--preset--duotone--purple-green: url('#wp-duotone-purple-green');--wp--preset--duotone--blue-orange: url('#wp-duotone-blue-orange');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+</style>
+<link rel='stylesheet' id='material-icons-css'  href='https://qq52o.me/wp-content/themes/c7v5/fonts/material-icons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='c7v5-css'  href='https://qq52o.me/wp-content/themes/c7v5/style.min.css?ver=677b70d29adea' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<script type='text/javascript' src='https://qq52o.me/wp-content/themes/c7v5/js/vendor/html5shiv.min.js?ver=3.7.3' id='html5shiv-js'></script>
+<![endif]-->
+<script type='text/javascript' src='https://qq52o.me/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+<script type='text/javascript' src='https://qq52o.me/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+
+<link rel="canonical" href="https://qq52o.me/2850.html" />
+<link rel='shortlink' href='https://qq52o.me/?p=2850' />
+<link rel="alternate" type="application/json+oembed" href="https://qq52o.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqq52o.me%2F2850.html" />
+<link rel="alternate" type="text/xml+oembed" href="https://qq52o.me/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fqq52o.me%2F2850.html&#038;format=xml" />
+<meta name="theme-color" content="#a47b67"/><link rel="shortcut icon" href="/favicon.ico" /><meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="apple-touch-icon" href="/icon-192x192.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="search" type="application/opensearchdescription+xml" href="/opensearch.xml" title="沈唁志" />
+<script type='text/javascript' src="//qq52o.me/wp-content/themes/c7v5/js/vendor/jquery.min.js?ver=3.4.0"></script>
+</head>
+
+<body class="post-template-default single single-post postid-2850 single-format-standard">
+
+<!--[if lt IE 9]><div id="browsehappy">你正在使用的浏览器版本过低，请<a href="https://browsehappy.com/" target="_blank" ><strong>升级你的浏览器</strong></a>，获得最佳的浏览体验！</div><![endif]-->
+
+<header id="header" role="banner" itemscope itemtype="http://schema.org/WPHeader" >
+	<div id="site-branding">
+		<a href="https://qq52o.me" rel="home">
+			<svg id="logo" class="logo logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.95 511.95">
+  <path d="M511.93 7.63c-.02-.19-.1-.37-.13-.55-.09-.53-.15-1.08-.35-1.58-.01-.05-.06-.1-.09-.17-.06-.18-.2-.34-.27-.52l-.4-.76a9.27 9.27 0 0 0-.83-1.1c-.1-.12-.12-.25-.21-.35-.12-.12-.28-.16-.4-.28-.11-.1-.2-.24-.33-.34-.07-.05-.1-.14-.17-.19l-.05-.02-.08-.08c-.41-.32-.9-.53-1.37-.76-.19-.1-.36-.23-.56-.31-.22-.09-.44-.14-.66-.2-.27-.1-.56-.15-.85-.2-.42-.09-.85-.2-1.28-.22-.27-.02-.53.04-.79.04l-.1.01c-.28.01-.53 0-.8.05-.42.06-.82.18-1.24.31-.3.09-.57.17-.86.3-.18.08-.39.1-.58.2L21.68 248.38C7.59 255.68-.3 266.68.02 278.58c.3 11.5 8.36 21.62 22.21 27.87l92.2 39.51a8.54 8.54 0 0 0 6.71-15.68L29.1 290.84c-7.52-3.4-11.89-8.02-12.02-12.71-.14-5.04 4.51-10.5 12.44-14.6l424.7-219.94-315.05 300.05c-.01.03-.02.06-.05.08-.57.55-.95 1.24-1.35 1.93-.16.28-.41.52-.55.8-.12.3-.11.62-.2.92a8.4 8.4 0 0 0-.47 2.36l-.02.09v153.6c0 .83.14 1.63.36 2.4l.01.1c.3.94.79 1.8 1.38 2.59.17.23.37.42.57.63a8.2 8.2 0 0 0 1.76 1.45c.17.1.26.27.43.36.15.07.31.1.45.17.1.05.18.13.3.18.12.06.24.03.37.07a8.5 8.5 0 0 0 2.9.58h.01a8.61 8.61 0 0 0 3.56-.86 8.52 8.52 0 0 0 2.32-1.54c.03-.04.1-.06.15-.1l.08-.08.03-.03 85.22-85.22a8.52 8.52 0 1 0-12.07-12.07l-44.77 44.78 40.93-76.75L487.6 42.32l-79.17 374.22c-1.5 7.2-4.84 12.38-9.67 14.98-5.22 2.8-12.02 2.64-19.78-.45L247.3 379.55a8.54 8.54 0 0 0-6.21 15.9l131.6 51.49a47.76 47.76 0 0 0 17.63 3.6 34.6 34.6 0 0 0 16.5-3.99c9.3-4.98 15.8-14.41 18.3-26.5l86.7-409.8c.06-.34.03-.69.06-1.04.02-.29.06-.56.06-.86 0-.24.01-.48-.01-.72zm-305.3 362.5c-.15.2-.2.45-.32.66-.16.23-.38.37-.52.61l-52.2 97.88v-115.8L421.7 98.13l-215.05 272z"/>
+</svg>					<h1 id="site-title" itemprop="name">沈唁志</h1>
+					<p id="site-description" itemprop="description">与鲁飞同行, 追寻成长之路</p>
+					</a>
+	</div><!-- #site-branding -->
+
+	<div id="navbar" class="unpinned">
+		<span class="mbtn mbtn-menu" title="导航菜单"></span>
+		<span class="mbtn mbtn-search" title="搜索"></span>
+
+		<a class="brand brand-svg" href="https://qq52o.me" title="沈唁志"><svg class="logo logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.95 511.95">
+  <path d="M511.93 7.63c-.02-.19-.1-.37-.13-.55-.09-.53-.15-1.08-.35-1.58-.01-.05-.06-.1-.09-.17-.06-.18-.2-.34-.27-.52l-.4-.76a9.27 9.27 0 0 0-.83-1.1c-.1-.12-.12-.25-.21-.35-.12-.12-.28-.16-.4-.28-.11-.1-.2-.24-.33-.34-.07-.05-.1-.14-.17-.19l-.05-.02-.08-.08c-.41-.32-.9-.53-1.37-.76-.19-.1-.36-.23-.56-.31-.22-.09-.44-.14-.66-.2-.27-.1-.56-.15-.85-.2-.42-.09-.85-.2-1.28-.22-.27-.02-.53.04-.79.04l-.1.01c-.28.01-.53 0-.8.05-.42.06-.82.18-1.24.31-.3.09-.57.17-.86.3-.18.08-.39.1-.58.2L21.68 248.38C7.59 255.68-.3 266.68.02 278.58c.3 11.5 8.36 21.62 22.21 27.87l92.2 39.51a8.54 8.54 0 0 0 6.71-15.68L29.1 290.84c-7.52-3.4-11.89-8.02-12.02-12.71-.14-5.04 4.51-10.5 12.44-14.6l424.7-219.94-315.05 300.05c-.01.03-.02.06-.05.08-.57.55-.95 1.24-1.35 1.93-.16.28-.41.52-.55.8-.12.3-.11.62-.2.92a8.4 8.4 0 0 0-.47 2.36l-.02.09v153.6c0 .83.14 1.63.36 2.4l.01.1c.3.94.79 1.8 1.38 2.59.17.23.37.42.57.63a8.2 8.2 0 0 0 1.76 1.45c.17.1.26.27.43.36.15.07.31.1.45.17.1.05.18.13.3.18.12.06.24.03.37.07a8.5 8.5 0 0 0 2.9.58h.01a8.61 8.61 0 0 0 3.56-.86 8.52 8.52 0 0 0 2.32-1.54c.03-.04.1-.06.15-.1l.08-.08.03-.03 85.22-85.22a8.52 8.52 0 1 0-12.07-12.07l-44.77 44.78 40.93-76.75L487.6 42.32l-79.17 374.22c-1.5 7.2-4.84 12.38-9.67 14.98-5.22 2.8-12.02 2.64-19.78-.45L247.3 379.55a8.54 8.54 0 0 0-6.21 15.9l131.6 51.49a47.76 47.76 0 0 0 17.63 3.6 34.6 34.6 0 0 0 16.5-3.99c9.3-4.98 15.8-14.41 18.3-26.5l86.7-409.8c.06-.34.03-.69.06-1.04.02-.29.06-.56.06-.86 0-.24.01-.48-.01-.72zm-305.3 362.5c-.15.2-.2.45-.32.66-.16.23-.38.37-.52.61l-52.2 97.88v-115.8L421.7 98.13l-215.05 272z"/>
+</svg></a>
+
+				<nav id="nav" class="wp" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+			<ul id="site-menu" class="nav-menu"><li id="menu-item-182" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-182"><a href="https://qq52o.me">首页</a></li>
+<li id="menu-item-246" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-246"><a href="https://qq52o.me/category/tech">技术笔记</a></li>
+<li id="menu-item-2841" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-2841"><a href="https://qq52o.me/category/backend">后端</a>
+<ul class="sub-menu">
+	<li id="menu-item-2843" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2843"><a href="https://qq52o.me/category/backend/php">PHP</a></li>
+	<li id="menu-item-2715" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2715"><a href="https://qq52o.me/category/swoole">Swoole</a></li>
+	<li id="menu-item-2842" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2842"><a href="https://qq52o.me/category/backend/go">Golang</a></li>
+	<li id="menu-item-47" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-47"><a href="https://qq52o.me/category/wordpress">WordPress</a></li>
+</ul>
+</li>
+<li id="menu-item-245" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-245"><a href="https://qq52o.me/category/resource">实用资源</a></li>
+<li id="menu-item-164" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-164"><a href="/?random">随便看看</a></li>
+<li id="menu-item-184" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-184"><a href="https://qq52o.me/category/more">更多</a>
+<ul class="sub-menu">
+	<li id="menu-item-2717" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2717"><a href="https://qq52o.me/category/python">Python</a></li>
+	<li id="menu-item-46" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-46"><a href="https://qq52o.me/category/linux">Linux运维</a></li>
+	<li id="menu-item-541" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-541"><a href="https://qq52o.me/category/seo">SEO优化</a></li>
+	<li id="menu-item-48" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-48"><a href="https://qq52o.me/category/record">网站记录</a></li>
+	<li id="menu-item-43" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-43"><a href="https://qq52o.me/category/life">生活杂谈</a></li>
+</ul>
+</li>
+</ul>		</nav>
+		
+		<form id="search-form" action="https://qq52o.me" method="get" role="search">
+			<label for="s" title="搜索"></label>
+			<input type="search" placeholder="总有你想要的…" name="s" id="s" required>
+			<input type="submit" class="search-submit" value="搜索">
+			<p class="popular-tags"><strong>热门标签：</strong><a href="https://qq52o.me/tag/php7" class="tag-cloud-link tag-link-91 tag-link-position-1" style="font-size: 8pt;" aria-label="PHP7 (11个项目)">PHP7</a>
+<a href="https://qq52o.me/tag/python" class="tag-cloud-link tag-link-121 tag-link-position-2" style="font-size: 9.1136363636364pt;" aria-label="Python (13个项目)">Python</a>
+<a href="https://qq52o.me/tag/javascript" class="tag-cloud-link tag-link-46 tag-link-position-3" style="font-size: 9.9090909090909pt;" aria-label="JavaScript (15个项目)">JavaScript</a>
+<a href="https://qq52o.me/tag/thinkphp" class="tag-cloud-link tag-link-59 tag-link-position-4" style="font-size: 10.386363636364pt;" aria-label="ThinkPHP (16个项目)">ThinkPHP</a>
+<a href="https://qq52o.me/tag/linux" class="tag-cloud-link tag-link-43 tag-link-position-5" style="font-size: 10.863636363636pt;" aria-label="Linux (17个项目)">Linux</a>
+<a href="https://qq52o.me/tag/github" class="tag-cloud-link tag-link-55 tag-link-position-6" style="font-size: 10.863636363636pt;" aria-label="GitHub (17个项目)">GitHub</a>
+<a href="https://qq52o.me/tag/plugin" class="tag-cloud-link tag-link-140 tag-link-position-7" style="font-size: 10.863636363636pt;" aria-label="Plugin (17个项目)">Plugin</a>
+<a href="https://qq52o.me/tag/swoole" class="tag-cloud-link tag-link-96 tag-link-position-8" style="font-size: 12.136363636364pt;" aria-label="Swoole (21个项目)">Swoole</a>
+<a href="https://qq52o.me/tag/wordpress" class="tag-cloud-link tag-link-72 tag-link-position-9" style="font-size: 15.795454545455pt;" aria-label="WordPress (36个项目)">WordPress</a>
+<a href="https://qq52o.me/tag/php" class="tag-cloud-link tag-link-31 tag-link-position-10" style="font-size: 22pt;" aria-label="PHP (91个项目)">PHP</a></p>		</form>
+	</div><!-- #navbar -->
+
+	<div id="navbar-placeholder"></div><!-- #navbar-placeholder -->
+</header><!-- #header -->
+
+	<main id="main" role="main" itemprop="mainEntityOfPage">
+		
+<script>
+if (typeof localStorage !== "undefined") {
+    (function adaptivePostCoverLocalColor(pic, style) {
+        var color = localStorage.getItem("pcc_" + (pic.indexOf("http") !== 0 ? location.protocol : "") + pic);
+        if (color) {
+            style = document.createElement("style");
+            style.rel = "stylesheet";
+            style.appendChild(document.createTextNode(".single .entry-header .inner { background-color: rgba(" + color + ",0.97) }"));
+            document.head.appendChild(style);
+        }
+    })("https://img.qq52o.me/wp-content/uploads/2025/01/2024.png");
+}
+</script>
+
+<article id="post-2850" class="has-post-cover post-2850 post type-post status-publish format-standard hentry category-life tag-yearly-summary" itemscope itemtype="http://schema.org/BlogPosting" itemprop="blogPost">
+
+	<header class="entry-header" style="background-image:url(https://img.qq52o.me/wp-content/uploads/2025/01/2024.png)">
+		<div class="inner">
+			<div class="wp">
+				<h1 class="entry-title" itemprop="headline">坚韧与成长的2024年</h1>				<div class="entry-meta">
+					<span class="cats" itemprop="keywords"><a href="https://qq52o.me/category/life" rel="category tag">生活杂谈</a></span><span class="slash"> / </span><time class="entry-date published" datetime="2025-01-01T19:20:35+08:00" itemprop="datePublished">2025年1月1日</time><span class="slash"> / </span><a href="https://qq52o.me/2850.html#comments" class="comments-link" ><span itemprop="commentCount">2</span> 条评论</a> <span class="byline"><span class="slash"> / </span><span class="author vcard"><a class="url fn" href="https://qq52o.me/" rel="author" itemprop="author" itemscope itemtype="http://schema.org/Person"><span itemprop="name">沈唁</span></a></span></span>				</div><!-- .entry-meta -->
+			</div>
+		</div>
+	</header><!-- .entry-header -->
+
+	<div class="entry-content wp" itemprop="articleBody">
+					<div class="post-cover" itemprop="image" itemscope itemtype="https://schema.org/ImageObject">
+						<img src="https://img.qq52o.me/wp-content/uploads/2025/01/2024.png" width="700" alt="" itemprop="contentUrl" loading="lazy" />
+			</div>
+		
+		<p>2024 年，对于我而言，是一段充满挑战与成长的旅程。<span id="more-2850"></span></p>
+<p>从工作中的挫折到家庭的变故，这一年让我更加体会到坚韧的意义，也在风雨中积累了成长的力量。</p>
+<p>虽然充满波折，但我仍然选择在逆境中寻找方向，努力让自己变得更加强大。</p>
+<h2>挑战：逆境的洗礼</h2>
+<p>在 2024 年中生活与工作的双重挑战交织而来，让我猝不及防。</p>
+<h3>工作的波折与解脱</h3>
+<p>其实在去年的年终总结中也提到了，自己已经内耗很久了，而且大部分同事其实也是，职业道路面临着严峻考验，加上大环境不好，工作和家庭多方面带来的压力并不小。</p>
+<p>内耗了大概有快一年吧，今年最终也是爆发了：我和一位关系较好的同事一起离职了。</p>
+<p>主要原因也是多方面，一是内耗这么久了，不想耗了，世界这么大我想去看看；二是自己的直性格和新同事的背刺；三是公司内部种种事件的发生，使得原本热爱的工作逐渐成为负担。</p>
+<p>内耗严重，消耗了我的热情与精力。经过一段时间的挣扎，我决定离开这个让我不再快乐的环境。</p>
+<p>离职后的日子可能并不轻松，但也让我重新掌握了生活的主动权，离职后也有听到有几位关系好的同事也先后离开了公司，活成了吃瓜群众...</p>
+<h3>生活的波澜与坚守</h3>
+<p>因为房租还未到期，自己也选择了继续在青岛待上一段时间，跟关系好的同事们陆续告别，吃饭喝酒，侃侃而谈，大家也在聊着各自的看法和感受。</p>
+<p>离职后，尝试让自己暂时放下压力，为未来的职业方向重新规划，也有疑问为什么不等到过年后再离职？答案还是上面提到的不想耗了，世界这么大我想去看看。</p>
+<p>于是我也答应了跟我同一天离职的同事，帮她送兔子去北京，顺便溜达散心，从北京回来之后再起程回老家。</p>
+<p>在北京我俩也是喝酒畅聊，还去了一趟雍和宫，在上班和上进之间选择了上香。时间仓促，第三天早上我便出发返程了，不料半路下雨，在出服务区时过了一个小水坑，结果车出现了问题（后来检查得知是电子转向机由于进水坏了），没办法只能一路坚持从高速开回了住处，找了地方维修车辆，避免耽误回老家。</p>
+<p>由于转向机突然损坏，不得不承担一笔不小的维修费用，这让本不富裕的家庭雪上加霜，虽然看似是一次小意外，却让我深刻意识到，人生的计划往往会被突如其来的问题打断，我们能做的，是从容面对。</p>
+<p>青岛的短暂停留给了我片刻喘息，与老同事的聚会让我感受到人情的温暖。然而，在房租到期后回到老家，奶奶的去世又一次让我面对人生的无常，同时也第一次在医院过夜。</p>
+<p>这段时间，我更多地陪伴家人，感悟到亲情的重要性，也开始学会放慢脚步。</p>
+<p>就在我努力整理心情，接受上海新工作的同时，命运再次掀起波澜：父亲突然离世，很急很急，我只能在视频中去医院之前见了最后一眼，没想到隔了不到几个小时就得到了人已经走了的消息。</p>
+<p>这一噩耗让我深陷悲痛，当晚就请假第二天乘坐最早的飞机回家，奶奶去世时还有父亲在前面撑着，而父亲突然走了，让我手足无措，但我知道我不能垮掉，还有更多的事情在等着我处理。</p>
+<p>这个家的生活还要继续，处理完父亲的身后事，直到三七结束，我也重返工作岗位。这段经历不仅考验了我的承受能力，也让我更加清楚地理解了责任的真正含义。</p>
+<h2>坚韧：在风雨中积累力量</h2>
+<p>生活和工作的波折让我意识到，坚韧不仅仅是一种态度，更是一种能力。</p>
+<p>面对工作中的失落，我学会了取舍，明白了有时候“止损”是对自己最好的成全；面对生活中的离别，我选择直面悲伤，在亲情的回忆中汲取前行的力量。</p>
+<p>这一年，尽管前路坎坷，但我始终没有停下脚步。</p>
+<p>在适应新的工作节奏中，我不断调整状态，力求用最好的表现迎接挑战。生活的种种考验让我学会了平衡，懂得了如何在压力中找到一丝安慰，让自己变得更坚强、更从容。</p>
+<h2>成长：收获与前行</h2>
+<p>2024 年的经历让我深刻体会到，成长往往藏在不经意的每一个瞬间。</p>
+<p>离职后的三个月是我重新审视自己的机会，除了本质工作以外，开源事业也是我发自内心热爱的方向。</p>
+<p>Docsify 成为 Gitee 成为 GVP 的那一刻，我感受到努力被认可的喜悦，也让我更加坚定地投入到技术与开源社区中。</p>
+<p>此外，成为 Apache Answer 的 PPMC Member 也是今年的一大收获。</p>
+<p>这份荣誉不仅是一种认可，更是一份责任，促使我不断提升自己，为开源社区贡献更多价值。</p>
+<p>无论是在工作还是生活中，我都在这些起起伏伏中找到了成长的契机。</p>
+<p>从经历挫折到收获信心，这一年的每一步都让我离更好的自己更近了一些。</p>
+<h2>展望：迈向崭新的明天</h2>
+<p>回顾 2024 年，我经历了从失望到解脱，从低谷到重生的全过程。</p>
+<p>这些经历让我更加明白，生活并不会因为我们的疲惫而停下脚步，而我们能做的就是在每一次风雨中找到支撑自己的力量。</p>
+<p>展望未来，我希望自己能更加沉着应对工作中的挑战，也会投入更多精力到开源社区中，用技术赋能更多人，在社区活动中认识更多人；在生活中，我会更加珍惜与家人、朋友的每一刻，用心感受生活带来的温暖与感动。</p>
+<p>这一年让我更加坚信，无论面对什么，只要心中有光，终能走出阴霾。</p>
+<p>2025 年，希望是一个充满希望和新机遇的年份，我期待着更多的可能性，也期待着与成长同行，继续前行。</p><div class="copyright"><br/>
+<br/>
+<br/>
+<img src="https://img.qq52o.me/staticfiles/202012/wechat_white.png" alt="沈唁志" title="沈唁志">
+任何个人或团体，未经允许禁止转载本文：<a href="https://qq52o.me/2850.html">《坚韧与成长的2024年》</a>，谢谢合作！</div>	</div><!-- .entry-content -->
+
+	<div class="entry-footer wp">
+		<div class="tip-box">
+			<div class="tip-button">
+				赞赏
+				<div class="tip-popover">
+					<div class="tip-alipay"><img src="https://img.qq52o.me/staticfiles/donate/tip_qrcode_alipay.jpg" alt="alipay"><span>支付宝赞赏</span></div>
+					<div class="tip-wechatpay"><img src="https://img.qq52o.me/staticfiles/donate/tip_qrcode_wechatpay.jpg" alt="wechat"><span>微信赞赏</span></div>
+				</div>
+			</div>
+			<p class="tip-desc">如果给您解决燃眉之急或带来些许明朗，您可以打赏一杯咖啡或一杯香茗</p>
+		</div>		<span class="tag-links"><a href="https://qq52o.me/tag/yearly-summary" rel="tag" itemprop="keywords">年终总结</a></span>		<div class="social-sharer" data-twitter-via="lufeidot"></div>	</div><!-- .entry-footer -->
+
+</article><!-- #post-## -->
+
+	<div class="wp">
+		<nav class="navigation post-navigation" role="navigation">
+			<a class='prev' href="https://qq52o.me/2849.html" rel="prev"><span class="meta-nav"><i class="arrow"></i><span class="text">上一篇</span></span><strong>如何使用 Nginx 配置自定义日志并记录用户信息</strong></a><a class='next' href="https://qq52o.me/2851.html" rel="next"><span class="meta-nav"><i class="arrow"></i><span class="text">下一篇</span></span><strong>PHP 中生成带毫秒的时间戳</strong></a>		</nav><!-- .navigation -->
+	</div>
+	<div class='yarpp yarpp-related yarpp-related-website yarpp-template-yarpp-template-c7v5'>
+
+
+<section id="related-posts">
+	<h3>你可能感兴趣</h3>
+	<div class="related-posts-body">
+		<ul class="size-5">
+						<li>
+				<a href="https://qq52o.me/2584.html" rel="bookmark">
+					<img src="https://img.qq52o.me/wp-content/uploads/2018/12/2019.png" loading="lazy" />					<span>2018 年结束，2019 年我依旧在路上</span>
+				</a>
+			</li>
+						<li>
+				<a href="https://qq52o.me/2718.html" rel="bookmark">
+					<img src="https://img.qq52o.me/wp-content/uploads/2018/10/qq52o-logo.png" loading="lazy" />					<span>写在2019年年末，让我们一起拥抱21世纪第三个十年</span>
+				</a>
+			</li>
+						<li>
+				<a href="https://qq52o.me/2776.html" rel="bookmark">
+					<img src="https://img.qq52o.me/wp-content/uploads/2018/10/qq52o-logo.png" loading="lazy" />					<span>今天，告别 2020 年</span>
+				</a>
+			</li>
+						<li>
+				<a href="https://qq52o.me/2800.html" rel="bookmark">
+					<img src="https://img.qq52o.me/wp-content/uploads/2021/12/2021-bye.png" loading="lazy" />					<span>当 2021 年的寒冬遇到疫情和离职</span>
+				</a>
+			</li>
+						<li>
+				<a href="https://qq52o.me/2813.html" rel="bookmark">
+					<img src="https://img.qq52o.me/wp-content/uploads/2022/12/goodbye2022.png" loading="lazy" />					<span>告别在好与坏之间来回徘徊的 2022</span>
+				</a>
+			</li>
+					</ul>
+	</div>
+</section>
+</div>
+
+
+<section id="comments" class="comments-area">
+	<div class="wp">
+		
+				<h2 class="comments-title">2 条评论</h2>
+						<div id="respond" class="comment-respond">
+			<h3 id="reply-title" class="comment-reply-title"><span>发表评论</span> <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2850.html#respond" style="display:none;">取消回复</a></small></h3>				<form action="https://qq52o.me/wp-comments-post.php" method="post" id="commentform" class="comment-form">
+											<div class="author-info guest"><img src="//cravatar.cn/avatar/?d=mm&s=100" width="100" class="avatar"></div>
+										<div class="comment-form-main">
+						<div class="comment-textarea-wrapper">
+							<p class="comment-form-comment"><label for="comment">评论</label> <textarea id="comment" name="comment" cols="45" rows="8"  aria-required="true" required="required" placeholder="来都来了说点什么再走吧…"></textarea></p>							<div class="comment-form-toolbar">
+															</div>
+						</div>
+
+													<div class="comment-form-fields">
+							<p class="comment-form-author"><label for="author">昵称</label>  <span class="required">*</span><input id="author" name="author" type="text" value="" size="30" aria-required='true' required='required' placeholder="昵称" /></p>
+<p class="comment-form-email"><label for="email">邮箱</label>  <span class="required">*</span><input id="email" name="email" type="email" value="" size="30" aria-describedby="email-notes" aria-required='true' required='required' placeholder="邮箱" /></p>
+<p class="comment-form-url"><label for="url">网站</label> <input id="url" name="url" type="url" value="" size="30" placeholder="网站" /></p>
+							</div>
+						
+						<p class="form-submit"><button name="submit" type="submit" id="submit" class="submit" title="发表评论"><span class="icon"></span></button> <input type='hidden' name='comment_post_ID' value='2850' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p>					</div>
+					<div class="comment-form-extra">
+						<input type="checkbox" name="comment_mail_notify" id="comment_mail_notify" value="1" checked="checked" /><label for="comment_mail_notify">有人回复时邮件通知我</label>					</div>
+				</form>
+					</div><!-- #respond -->
+				
+		
+		<ul class="comment-list">
+					<li id="comment-5413" class="comment even thread-even depth-1" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
+			<article id="div-comment-5413" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='//cravatar.cn/avatar/9b0184896389054a6fe867e11cb7ebfb?s=50&#038;d=mm&#038;r=g' srcset='//cravatar.cn/avatar/9b0184896389054a6fe867e11cb7ebfb?s=100&#038;d=mm&#038;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />						<b class="fn" itemprop="author"><a href='https://www.anji66.net' target='_blank' rel='external nofollow' class='url'>西枫里</a></b>
+					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+												<a href="https://qq52o.me/2850.html#comment-5413" itemprop="url">
+							<time datetime="2025-01-02T12:08:29+08:00" itemprop="datePublished">1周前</time>
+							<span class="comment_address">· 上海上海市 电信</span>
+						</a>
+					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" itemprop="text">
+					<p>过，好，财</p>
+				</div><!-- .comment-content -->
+
+				<div class="comment-actions">
+																<a rel='nofollow' class='comment-reply-link' href='https://qq52o.me/2850.html?replytocom=5413#respond' data-commentid="5413" data-postid="2850" data-belowelement="div-comment-5413" data-respondelement="respond" data-replyto="回复给西枫里" aria-label='回复给西枫里'>回复</a>									</div><!-- .comment-actions -->
+			</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+		<li id="comment-5412" class="comment odd alt thread-odd thread-alt depth-1" itemprop="comment" itemscope itemtype="http://schema.org/Comment">
+			<article id="div-comment-5412" class="comment-body">
+				<footer class="comment-meta">
+					<div class="comment-author vcard">
+						<img alt='' src='//cravatar.cn/avatar/ea5447f001efd92e0d2a92185fb92b22?s=50&#038;d=mm&#038;r=g' srcset='//cravatar.cn/avatar/ea5447f001efd92e0d2a92185fb92b22?s=100&#038;d=mm&#038;r=g 2x' class='avatar avatar-50 photo' height='50' width='50' />						<b class="fn" itemprop="author">龙笑天</b>
+					</div><!-- .comment-author -->
+
+					<div class="comment-metadata">
+												<a href="https://qq52o.me/2850.html#comment-5412" itemprop="url">
+							<time datetime="2025-01-02T12:05:31+08:00" itemprop="datePublished">1周前</time>
+							<span class="comment_address">· 广东省广州市 联通</span>
+						</a>
+					</div><!-- .comment-metadata -->
+
+									</footer><!-- .comment-meta -->
+
+				<div class="comment-content" itemprop="text">
+					<p>2025水逆退散 喜至福来！</p>
+				</div><!-- .comment-content -->
+
+				<div class="comment-actions">
+																<a rel='nofollow' class='comment-reply-link' href='https://qq52o.me/2850.html?replytocom=5412#respond' data-commentid="5412" data-postid="2850" data-belowelement="div-comment-5412" data-respondelement="respond" data-replyto="回复给龙笑天" aria-label='回复给龙笑天'>回复</a>									</div><!-- .comment-actions -->
+			</article><!-- .comment-body -->
+	</li><!-- #comment-## -->
+		</ul><!-- .comment-list -->
+
+		
+			</div>
+</section><!-- #comments -->
+	</main><!-- #main -->
+
+<section id="newsletter" class="">
+	<div class="envelope wp">
+		<div class="inner">
+							<div class="subscribe">
+					<div style="float: left;">
+						<h3 class="title">微信扫码关注</h3>
+						<small class="desc">第一时间 get 新动态</small>
+					</div>
+					<div>
+						<img src="https://img.qq52o.me/staticfiles/202006/mp_weixin_qrcode.jpg" style="width:121px;height:auto;padding-left: 30px;">
+					</div>
+				</div><!-- .subscribe -->
+			
+						<div class="promo">
+				<div class="slides">
+					<ul class="list">
+											<li class="item">
+							<a target="_blank" rel="nofollow noopener" href="https://cloud.tencent.com/developer/support-plan?invite_code=cqidlih5bagj">
+								<img src="https://img.qq52o.me/wp-content/uploads/2019/12/cloud-tencent-developer.png" alt="加入云+社区定制周边礼品等你来拿" title="加入云+社区定制周边礼品等你来拿">
+							</a>
+						</li>
+											<li class="item">
+							<a  href="https://qq52o.me/2748.html">
+								<img src="https://img.qq52o.me/wp-content/uploads/2018/12/wordpress-rss.png" alt="WordPress媒体对象云存储支持插件" title="WordPress媒体对象云存储支持插件">
+							</a>
+						</li>
+											<li class="item">
+							<a  href="https://qq52o.me/2720.html">
+								<img src="https://img.qq52o.me/wp-content/uploads/2020/01/bdtc-rss.png" alt="过滤文章/评论敏感内容插件" title="过滤文章/评论敏感内容插件">
+							</a>
+						</li>
+											<li class="item">
+							<a  href="https://qq52o.me/welfare.html">
+								<img src="https://img.qq52o.me/wp-content/uploads/2018/10/welfare-rss.jpg" alt="快来看看我给你送了些什么福利" title="快来看看我给你送了些什么福利">
+							</a>
+						</li>
+											<li class="item">
+							<a  href="https://qq52o.me/2249.html">
+								<img src="https://img.qq52o.me/wp-content/uploads/2018/10/foreverblog-rss.png" alt="一个人的寂寞，一群人的狂欢" title="一个人的寂寞，一群人的狂欢">
+							</a>
+						</li>
+										</ul>
+				</div>
+				<nav class="slides-nav">
+					<span class="current"></span><span></span><span></span><span></span><span></span>				</nav>
+			</div><!-- .promo -->
+			
+		</div><!-- .inner -->
+	</div><!-- .envelope -->
+</section><!-- #newsletter -->
+	<nav id="breadcrumbs">
+
+			<ol class="container" itemprop="breadcrumb" itemscope itemtype="http://schema.org/BreadcrumbList">
+			<li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://qq52o.me/" itemprop="item"><span itemprop="name">首页</span></a><meta itemprop="position" content="1" /></li>
+			 › <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem"><a href="https://qq52o.me/category/life" itemprop="item"><span itemprop="name">生活杂谈</span></a><meta itemprop="position" content="2" /></li> › <li>坚韧与成长的2024年</li>
+		</ol>
+	
+	</nav><!-- #breadcrumbs -->
+
+
+	
+		<div id="sidebar" class="has-3-widgets" role="complementary" itemscope itemtype="http://schema.org/WPSideBar">
+			<div class="container">
+								<aside id="tag_cloud-3" class="widget widget_tag_cloud"><h3 class="widget-title">标签云</h3><div class="tagcloud"><a href="https://qq52o.me/tag/api" class="tag-cloud-link tag-link-69 tag-link-position-1" style="font-size: 11.602941176471pt;" aria-label="API (8个项目)">API</a>
+<a href="https://qq52o.me/tag/c7v5" class="tag-cloud-link tag-link-129 tag-link-position-2" style="font-size: 9.8529411764706pt;" aria-label="c7v5 (5个项目)">c7v5</a>
+<a href="https://qq52o.me/tag/chrome" class="tag-cloud-link tag-link-111 tag-link-position-3" style="font-size: 9.0294117647059pt;" aria-label="Chrome (4个项目)">Chrome</a>
+<a href="https://qq52o.me/tag/cmd" class="tag-cloud-link tag-link-77 tag-link-position-4" style="font-size: 8pt;" aria-label="CMD (3个项目)">CMD</a>
+<a href="https://qq52o.me/tag/composer" class="tag-cloud-link tag-link-116 tag-link-position-5" style="font-size: 12.529411764706pt;" aria-label="Composer (10个项目)">Composer</a>
+<a href="https://qq52o.me/tag/cos" class="tag-cloud-link tag-link-142 tag-link-position-6" style="font-size: 11.088235294118pt;" aria-label="COS (7个项目)">COS</a>
+<a href="https://qq52o.me/tag/css" class="tag-cloud-link tag-link-51 tag-link-position-7" style="font-size: 10.573529411765pt;" aria-label="CSS (6个项目)">CSS</a>
+<a href="https://qq52o.me/tag/docker" class="tag-cloud-link tag-link-125 tag-link-position-8" style="font-size: 10.573529411765pt;" aria-label="Docker (6个项目)">Docker</a>
+<a href="https://qq52o.me/tag/git" class="tag-cloud-link tag-link-54 tag-link-position-9" style="font-size: 12.529411764706pt;" aria-label="Git (10个项目)">Git</a>
+<a href="https://qq52o.me/tag/github" class="tag-cloud-link tag-link-55 tag-link-position-10" style="font-size: 14.794117647059pt;" aria-label="GitHub (17个项目)">GitHub</a>
+<a href="https://qq52o.me/tag/https" class="tag-cloud-link tag-link-93 tag-link-position-11" style="font-size: 10.573529411765pt;" aria-label="HTTPS (6个项目)">HTTPS</a>
+<a href="https://qq52o.me/tag/javascript" class="tag-cloud-link tag-link-46 tag-link-position-12" style="font-size: 14.176470588235pt;" aria-label="JavaScript (15个项目)">JavaScript</a>
+<a href="https://qq52o.me/tag/jquery" class="tag-cloud-link tag-link-42 tag-link-position-13" style="font-size: 9.8529411764706pt;" aria-label="JQuery (5个项目)">JQuery</a>
+<a href="https://qq52o.me/tag/linux" class="tag-cloud-link tag-link-43 tag-link-position-14" style="font-size: 14.794117647059pt;" aria-label="Linux (17个项目)">Linux</a>
+<a href="https://qq52o.me/tag/lnmp" class="tag-cloud-link tag-link-83 tag-link-position-15" style="font-size: 8pt;" aria-label="LNMP (3个项目)">LNMP</a>
+<a href="https://qq52o.me/tag/mac" class="tag-cloud-link tag-link-133 tag-link-position-16" style="font-size: 12.117647058824pt;" aria-label="Mac (9个项目)">Mac</a>
+<a href="https://qq52o.me/tag/mqtt" class="tag-cloud-link tag-link-146 tag-link-position-17" style="font-size: 11.602941176471pt;" aria-label="MQTT (8个项目)">MQTT</a>
+<a href="https://qq52o.me/tag/mysql" class="tag-cloud-link tag-link-48 tag-link-position-18" style="font-size: 8pt;" aria-label="MySQL (3个项目)">MySQL</a>
+<a href="https://qq52o.me/tag/nginx" class="tag-cloud-link tag-link-130 tag-link-position-19" style="font-size: 9.8529411764706pt;" aria-label="Nginx (5个项目)">Nginx</a>
+<a href="https://qq52o.me/tag/php" class="tag-cloud-link tag-link-31 tag-link-position-20" style="font-size: 22pt;" aria-label="PHP (91个项目)">PHP</a>
+<a href="https://qq52o.me/tag/php7" class="tag-cloud-link tag-link-91 tag-link-position-21" style="font-size: 12.941176470588pt;" aria-label="PHP7 (11个项目)">PHP7</a>
+<a href="https://qq52o.me/tag/phpstorm" class="tag-cloud-link tag-link-56 tag-link-position-22" style="font-size: 12.117647058824pt;" aria-label="PhpStorm (9个项目)">PhpStorm</a>
+<a href="https://qq52o.me/tag/plugin" class="tag-cloud-link tag-link-140 tag-link-position-23" style="font-size: 14.794117647059pt;" aria-label="Plugin (17个项目)">Plugin</a>
+<a href="https://qq52o.me/tag/python" class="tag-cloud-link tag-link-121 tag-link-position-24" style="font-size: 13.661764705882pt;" aria-label="Python (13个项目)">Python</a>
+<a href="https://qq52o.me/tag/seo" class="tag-cloud-link tag-link-40 tag-link-position-25" style="font-size: 11.088235294118pt;" aria-label="SEO (7个项目)">SEO</a>
+<a href="https://qq52o.me/tag/ssl" class="tag-cloud-link tag-link-71 tag-link-position-26" style="font-size: 10.573529411765pt;" aria-label="SSL (6个项目)">SSL</a>
+<a href="https://qq52o.me/tag/swoole" class="tag-cloud-link tag-link-96 tag-link-position-27" style="font-size: 15.617647058824pt;" aria-label="Swoole (21个项目)">Swoole</a>
+<a href="https://qq52o.me/tag/thinkphp" class="tag-cloud-link tag-link-59 tag-link-position-28" style="font-size: 14.485294117647pt;" aria-label="ThinkPHP (16个项目)">ThinkPHP</a>
+<a href="https://qq52o.me/tag/wechat" class="tag-cloud-link tag-link-115 tag-link-position-29" style="font-size: 10.573529411765pt;" aria-label="WeChat (6个项目)">WeChat</a>
+<a href="https://qq52o.me/tag/windows" class="tag-cloud-link tag-link-60 tag-link-position-30" style="font-size: 9.0294117647059pt;" aria-label="Windows (4个项目)">Windows</a>
+<a href="https://qq52o.me/tag/wordpress" class="tag-cloud-link tag-link-72 tag-link-position-31" style="font-size: 17.985294117647pt;" aria-label="WordPress (36个项目)">WordPress</a>
+<a href="https://qq52o.me/tag/yii" class="tag-cloud-link tag-link-124 tag-link-position-32" style="font-size: 9.0294117647059pt;" aria-label="Yii (4个项目)">Yii</a>
+<a href="https://qq52o.me/tag/mini-apps" class="tag-cloud-link tag-link-95 tag-link-position-33" style="font-size: 10.573529411765pt;" aria-label="小程序 (6个项目)">小程序</a>
+<a href="https://qq52o.me/tag/yearly-summary" class="tag-cloud-link tag-link-154 tag-link-position-34" style="font-size: 11.088235294118pt;" aria-label="年终总结 (7个项目)">年终总结</a>
+<a href="https://qq52o.me/tag/tenpay" class="tag-cloud-link tag-link-97 tag-link-position-35" style="font-size: 9.8529411764706pt;" aria-label="微信支付 (5个项目)">微信支付</a></div>
+</aside><aside id="categories-5" class="widget widget_categories"><h3 class="widget-title">分类目录</h3>
+			<ul>
+					<li class="cat-item cat-item-24"><a href="https://qq52o.me/category/resource">实用资源</a> (111)
+</li>
+	<li class="cat-item cat-item-17"><a href="https://qq52o.me/category/backend/php">PHP</a> (90)
+</li>
+	<li class="cat-item cat-item-23"><a href="https://qq52o.me/category/tech">技术笔记</a> (87)
+</li>
+	<li class="cat-item cat-item-6"><a href="https://qq52o.me/category/wordpress" title="WordPress 是一个注重美学、易用性和网络标准的个人信息发布平台。">WordPress</a> (55)
+</li>
+	<li class="cat-item cat-item-2"><a href="https://qq52o.me/category/life">生活杂谈</a> (36)
+</li>
+	<li class="cat-item cat-item-5"><a href="https://qq52o.me/category/linux">Linux运维</a> (30)
+</li>
+	<li class="cat-item cat-item-7"><a href="https://qq52o.me/category/record">网站记录</a> (18)
+</li>
+	<li class="cat-item cat-item-39"><a href="https://qq52o.me/category/seo">SEO优化</a> (18)
+</li>
+	<li class="cat-item cat-item-137"><a href="https://qq52o.me/category/swoole" title="Swoole：面向生产环境的 PHP 异步网络通信引擎">Swoole</a> (18)
+</li>
+	<li class="cat-item cat-item-120"><a href="https://qq52o.me/category/python">Python</a> (14)
+</li>
+	<li class="cat-item cat-item-155"><a href="https://qq52o.me/category/backend/go" title="Go（又称 Golang）是 Google 开发的一种编译型、并发型，并具有垃圾回收功能的编程语言。">Golang</a> (1)
+</li>
+			</ul>
+
+			</aside><aside id="text-3" class="widget widget_text"><h3 class="widget-title">说明</h3>			<div class="textwidget"><p><img src="https://img.qq52o.me/staticfiles/202012/wechat_white.png" alt="鲁飞的公众号二维码" title="鲁飞"></p>
+<p>博主是一名 PHP Developer，在生活中不断折腾找到乐趣，通过坚持不懈的学习和奋斗，提升自己的技术。建立博客是为了记录工作经验以及生活点滴，感谢您的关注！</p>
+<p>🎉 已在风雨中度过<span id="htmer_time"></span></p>
+</div>
+		</aside>			</div><!-- .container -->
+		</div><!-- #secondary -->
+
+	
+
+<footer id="footer" role="contentinfo" itemscope itemtype="http://schema.org/WPFooter">
+
+    <div class="container">
+        <div class="follow">
+            <a target="_blank" rel="nofollow noopener" href="https://weibo.com/5384435686" class="icon-weibo" title="微博"></a><a href="javascript:;" class="icon-wechat" title="微信"><img src="https://img.qq52o.me/staticfiles/202101/wechat.jpg" alt="" loading="lazy" /></a><a target="_blank" rel="nofollow noopener" href="https://www.zhihu.com/people/sy-records" class="icon-zhihu" title="知乎"></a><a target="_blank" rel="nofollow noopener" href="https://twitter.com/lufeidot" class="icon-twitter" title="Twitter"></a><a target="_blank" rel="nofollow noopener" href="https://github.com/sy-records" class="icon-github" title="GitHub"></a><a target="_blank" rel="nofollow noopener" href="https://qq52o.me/feed" class="icon-rss" title="RSS"></a><a target="_blank" rel="nofollow noopener" href="/cdn-cgi/l/email-protection#73000a2c0116101c0117003302025d101c1e" class="icon-mail" title="邮箱"></a>        </div><!-- .follow -->
+
+        <div class="footer-links">
+
+            <ul><li id="menu-item-50" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-50"><a href="https://qq52o.me/about.html">关于</a></li><li id="menu-item-55" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-55"><a href="https://qq52o.me/links.html">友链</a></li><li id="menu-item-1561" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1561"><a href="https://qq52o.me/sponsor.html">赞赏</a></li><li id="menu-item-2466" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2466"><a href="https://qq52o.me/guestbook.html">留言簿</a></li><li id="menu-item-2576" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2576"><a href="//qq52o.me/sitemap.html">站点地图</a></li><li id="menu-item-2248" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2248"><a href="https://qq52o.me/statements.html">使用声明</a></li><li id="menu-item-2731" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2731"><a href="https://qq52o.me/opensource.html">开源项目</a></li></ul>            <ul>
+                <li class="copyright">&copy; 2017-2025 沈唁志</li>
+                <li><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript" src="//v1.hitokoto.cn/?encode=js&select=%23hitokoto" defer></script>
+                    <span id="hitokoto">左手代码右手诗，亦是生活亦是痴</span></li>
+                            </ul>
+            <ul><li><a href="https://beian.miit.gov.cn" target="_blank" rel="nofollow noopener"><img src="//img.qq52o.me/wp-content/uploads/2019/01/icp.png" alt="陕ICP备"> 陕ICP备16002024号</a></li><li><a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=61032602000128" target="_blank" rel="nofollow noopener"><img src="//img.qq52o.me/wp-content/uploads/2017/10/2017101502244348.png" alt="陕公安网备"> 陕公网安备 61032602000128号</a></li><li>查询 14 次，耗时 0.101 秒</li>
+            </ul>
+        </div>
+        <a id="backtop" href="#top" title="返回顶部"></a>
+    </div><!-- .container -->
+</footer><!-- #footer -->
+
+<div id="m-panel">
+    <ul id="m-nav" class="m-nav"><li id="menu-item-2109" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2109"><a href="https://qq52o.me/category/backend/php">PHP</a></li>
+<li id="menu-item-2691" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2691"><a href="https://qq52o.me/category/swoole">Swoole</a></li>
+<li id="menu-item-2110" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2110"><a href="https://qq52o.me/category/wordpress">WordPress</a></li>
+<li id="menu-item-2392" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2392"><a href="https://qq52o.me/category/tech">技术笔记</a></li>
+<li id="menu-item-2312" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2312"><a href="https://qq52o.me/category/resource">实用资源</a></li>
+<li id="menu-item-2581" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2581"><a href="/?random">随便看看</a></li>
+</ul><!-- .m-nav -->
+
+    <ul id="m-subnav" class="m-subnav"><li id="menu-item-2579" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2579"><a href="https://qq52o.me/guestbook.html">留言簿</a></li>
+<li id="menu-item-2568" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2568"><a href="https://qq52o.me/welfare.html">福利专区</a></li>
+<li id="menu-item-2570" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-2570"><a href="https://qq52o.me/category/record">网站记录</a></li>
+<li id="menu-item-2730" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2730"><a href="https://qq52o.me/opensource.html">开源项目</a></li>
+</ul><!-- .m-subnav -->
+
+    <div class="m-follow">
+        <a target="_blank" rel="nofollow noopener" href="https://weibo.com/5384435686" class="icon-weibo" title="微博"></a><a target="_blank" rel="nofollow noopener" href="https://www.zhihu.com/people/sy-records" class="icon-zhihu" title="知乎"></a><a target="_blank" rel="nofollow noopener" href="https://twitter.com/lufeidot" class="icon-twitter" title="Twitter"></a><a target="_blank" rel="nofollow noopener" href="https://github.com/sy-records" class="icon-github" title="GitHub"></a><a target="_blank" rel="nofollow noopener" href="https://qq52o.me/feed" class="icon-rss" title="RSS"></a><a target="_blank" rel="nofollow noopener" href="/cdn-cgi/l/email-protection#c9bab096bbacaaa6bbadba89b8b8e7aaa6a4" class="icon-mail" title="邮箱"></a>    </div><!-- .m-follow -->
+
+</div><!-- #m-panel -->
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script><script type="text/javascript">jinrishici.load(function(result) { var id = "comment", c = result.data.content+" ---- "+result.data.origin.dynasty+"·"+result.data.origin.author+"《"+result.data.origin.title+"》"; if (document.getElementById(id)){ document.getElementById(id).placeholder=c; } });</script><script type='text/javascript' src='https://qq52o.me/wp-includes/js/comment-reply.min.js?ver=5.9.10' id='comment-reply-js'></script>
+<script type='text/javascript' src='https://qq52o.me/wp-content/themes/c7v5/js/vendor.js?ver=677b70d29adea' id='c7v5-vendor-js'></script>
+<script type='text/javascript' id='c7v5-js-extra'>
+/* <![CDATA[ */
+var C7V5 = {"ajax_url":"https:\/\/qq52o.me\/wp-admin\/admin-ajax.php","qiniu_host":"","upyun_host":"","share_services":"weibo,qq,yingxiang,email,twitter,webshare","infinite_scroll":"0","ajax_comment":"1","comment_smilies":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://qq52o.me/wp-content/themes/c7v5/js/script.min.js?ver=677b70d29adea' id='c7v5-js'></script>
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?9790fd2258796254efee4760e2987e79";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<script src="//qq52o.me/wp-content/themes/c7v5/js/vendor/instantclick.js?ver=1.2.2" type="module"></script>
+
+<link rel="stylesheet" href="//qq52o.me/wp-content/themes/c7v5/fancybox/jquery.fancybox.min.css" />
+<script type="text/javascript" src="//qq52o.me/wp-content/themes/c7v5/fancybox/jquery.fancybox.min.js?ver=3.5.7"></script>
+<script type="text/javascript">$(function(){$(".entry-content p img,.entry-content figure img,.comment-content img").each(function(i){if(!this.parentNode.href){var $img = $(this).not(".emoji,.wp-smiley");$($img).wrap("<a href='"+this.src+"' data-fancybox='fancybox' data-caption='"+this.alt+"'></a>")}})});$(document).ready(function(){$("[data-fancybox]").fancybox({protect:true,buttons:["zoom","slideShow","fullScreen","thumbs","close"]});$("[data-fancybox]").click(function(){$(".fancybox-progress").remove()});});</script>
+<style type="text/css">.fancybox-thumbs__list a:before{border:3px solid #00bcd4};</style>
+<script>(function(u,c){var d=document,t="script",o=d.createElement(t),s=d.getElementsByTagName(t)[0];o.src=u;if(c){o.addEventListener("load",function(e){c(e)})}s.parentNode.insertBefore(o,s)})("//qq52o.me/wp-content/themes/c7v5/js/vendor/pangu.min.js?ver=4.0.7",function(){pangu.spacingElementByClassName('entry-content')});</script>
+<link rel="stylesheet" href="//qq52o.me/wp-content/themes/c7v5/prism/prism-toolbar.min.css" data-noprefix />
+<link rel="stylesheet" href="//qq52o.me/wp-content/themes/c7v5/prism/prism-line-numbers.css" data-noprefix />
+<script src="//qq52o.me/wp-content/themes/c7v5/prism/prism-toolbar.min.js?ver=1.29"></script>
+<script src="//qq52o.me/wp-content/themes/c7v5/prism/prism-copy-to-clipboard.min.js?ver=1.29"></script>
+<script src="//qq52o.me/wp-content/themes/c7v5/prism/prism-line-numbers.js?ver=1.29"></script>
+
+<script>$(document).keydown(function(event){if(document.getElementsByClassName('fancybox-active').length)return false;var focus=$("textarea:focus").length===0&&$("input:focus").length===0;if(focus&&event.keyCode===37){var prev=$(".prev").attr("href");if(prev!==undefined){window.location.href=prev}}else{if(focus&&event.keyCode===39){var next=$(".next").attr("href");if(next!==undefined){window.location.href=next}}}});$(function(){$(".icon-login").click(function(){$(".login-icons").css("display",$(".login-icons").css("display")=="none"?"block":"none")})});</script>
+
+<img style="display:none" src=" " onerror='this.onerror=null;var currentDomain="qq52o." + "me"; var str1=currentDomain; str2="docu"+"ment.loca"+"tion.host"; str3=eval(str2) ;if( str1!=str3 && str3!="cache.baiducontent.com" && str3!="webcache.googleusercontent.com" && str3!="c.360webcache.com" && str3!="cncc.bingj.com" && str3!="snapshot.sogoucdn.com" ){ do_action = "loca" + "tion." + "href = loca" + "tion.href" + ".rep" + "lace(docu" +"ment"+".loca"+"tion.ho"+"st," + "currentDomain" + ")";eval(do_action) }' />
+
+</body>
+</html>

@@ -1,0 +1,866 @@
+<!DOCTYPE html>
+<html
+  lang="zh-CN"
+  data-theme="dark"
+  data-overlayscrollbars-initialize
+>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>2024 年度总结 - 阿猫的博客</title>
+
+    
+
+    
+      <link rel="manifest" href="/themes/theme-walker/assets/dist/.vite/manifest.json" />
+      <script src="/themes/theme-walker/assets/dist/main.js?v=1.12.1"></script>
+      <link rel="stylesheet" href="/themes/theme-walker/assets/dist/main.css?v=1.12.1" />
+    
+    <script src="/themes/theme-walker/assets/lit-dist/walker-components.iife.js?v=1.12.1"></script>
+
+    
+      
+    <link
+      rel="stylesheet"
+      href="/themes/theme-walker/assets/dist/github-markdown.css?v=1.12.1"
+    />
+  
+    
+
+    
+
+    <script>
+      window.initColorScheme("system","emerald","dracula",true,true)
+    </script>
+
+    <style>
+      .main {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+    </style>
+
+    <noscript>
+      <style>
+        body {
+          display: block !important;
+        }
+      </style>
+    </noscript>
+  <meta name="keywords" content="猫鱼周刊,周刊,go,golang,copilot,ai,aigc,llm" />
+<meta name="follow.it-verification-code" content="uTTgF1zN5nQYBWGAzpHs"/>
+<meta name="generator" content="Halo 2.20.11"/><meta name="description" content="去年差不多时候也做了一份年终总结，去年我对自己还是相对满意的，在开源、写作方面都做得不错。今年感觉有更多的成果可以总结出来，而且比去年要做得更好。其实有些提升非常不知不觉，趁着年度总结的机会，仔细盘点一把。 去年我把总结分成了技术和生活两大块，今年则是会从技术、写作、运动、文娱这几块去总结。 技术 "/><!-- plugin-comment-widget start -->
+<script src="/plugins/PluginCommentWidget/assets/static/comment-widget.iife.js?version=2.5.1"></script>
+<link rel="stylesheet" href="/plugins/PluginCommentWidget/assets/static/style.css?version=2.5.1" />
+<!-- plugin-comment-widget end -->
+<!-- PluginSearchWidget start -->
+<script src="/plugins/PluginSearchWidget/assets/static/search-widget.iife.js?version=1.6.2" async></script>
+<link rel="stylesheet" href="/plugins/PluginSearchWidget/assets/static/style.css?version=1.6.2" />
+<!-- PluginSearchWidget end -->
+<!-- PluginHighlightJS start -->
+<link href="/plugins/PluginHighlightJS/assets/static/styles/stackoverflow-light.min.css?version=1.3.2" rel="stylesheet"/>
+<script defer src="/plugins/PluginHighlightJS/assets/static/highlight.min.js?version=1.3.2"></script>
+
+
+
+<link href="/plugins/PluginHighlightJS/assets/static/plugins/override.css?version=1.3.2" rel="stylesheet"/>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    
+    document.querySelectorAll("pre code").forEach((el) => {
+        hljs.highlightElement(el);
+    });
+});
+</script>
+<!-- PluginHighlightJS end -->
+<!-- PluginLightGallery start -->
+<link href="/plugins/PluginLightGallery/assets/static/css/lightgallery.min.css" rel="stylesheet" />
+<script defer src="/plugins/PluginLightGallery/assets/static/js/lightgallery.min.js"></script>
+<!-- PluginLightGallery zoom plugin -->
+<script defer src="/plugins/PluginLightGallery/assets/static/js/plugins/zoom/lg-zoom.min.js"></script>
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+       document.querySelectorAll(`#post-content img`)?.forEach(function (node) {
+  if (node) {
+    node.dataset.src = node.src;
+  }
+
+  const galleries = document.querySelectorAll(`#post-content`);
+
+  if (galleries.length > 0) {
+    galleries.forEach(function (node) {
+      lightGallery(node, {
+          selector: "img",
+      });
+    });
+  }
+});
+
+    });
+</script>
+<!-- PluginLightGallery end -->
+<meta name="baidu-site-verification" content="CPIbS1iSXpE3zctd"/><meta name="google-site-verification" content="TAeWo6Uiq1pQbKtQaiLui8ooULxo_EaNivF2MIy5Y1A"/><meta content="https://img.ameow.xyz/20241229232210931.webp" property="og:image"/><meta content="article" property="og:type"/><meta content="2024-12-29T18:39:32.587594905Z" property="article:published_time"/><meta content="2024-12-30T19:46:49.379150067Z" property="article:modified_time"/><meta content="2024 年度总结" property="og:title"/><meta content="去年差不多时候也做了一份年终总结，去年我对自己还是相对满意的，在开源、写作方面都做得不错。今年感觉有更多的成果可以总结出来，而且比去年要做得更好。其实有些提升非常不知不觉，趁着年度总结的机会，仔细盘点一把。 去年我把总结分成了技术和生活两大块，今年则是会从技术、写作、运动、文娱这几块去总结。 技术 " property="og:description"/><meta content="https://ameow.xyz/authors/admin" property="article:author"/><meta name="twitter:card" content="summary"/><meta name="twitter:creator" content="https://ameow.xyz/authors/admin"/><meta name="twitter:title" content="2024 年度总结"/><meta name="twitter:description" content="去年差不多时候也做了一份年终总结，去年我对自己还是相对满意的，在开源、写作方面都做得不错。今年感觉有更多的成果可以总结出来，而且比去年要做得更好。其实有些提升非常不知不觉，趁着年度总结的机会，仔细盘点一把。 去年我把总结分成了技术和生活两大块，今年则是会从技术、写作、运动、文娱这几块去总结。 技术 "/><meta name="twitter:image" content="https://img.ameow.xyz/20241229232210931.webp"/><script async defer data-website-id="52217c70-133b-40c4-8145-a5379d13faef" src="https://umami.ameow.xyz/script.js"></script>
+<script async defer src="/halo-tracker.js" data-group="content.halo.run" data-plural="posts" data-name="76c52d34-6ff2-4219-8f53-1e93890281e3"></script>
+<link rel="icon" href="/upload/favicon.png" />
+</head>
+  <body x-data="app" class="hidden" data-overlayscrollbars-initialize>
+    <div class="fixed left-0 right-0 top-0 z-50 flex items-center bg-base-100 p-4 shadow-sm lg:hidden">
+  <i class="animated fadeIn i-ri-menu-2-line inline-block cursor-pointer text-2xl" @click="openMenu()"> </i>
+  <a href="https://ameow.xyz">
+    <img
+      class="animated fadeIn avatar mx-4 mt-0 size-9 rounded-full"
+      src="/upload/favicon.png"
+      alt="阿猫的博客"
+      width="36"
+      height="36"
+    />
+  </a>
+  <h1
+    class="animated fadeIn mt-0 text-xl font-extrabold"
+    style="animation-delay: 0.1s"
+  >阿猫的博客</h1>
+  <!-- https://github.com/halo-sigs/plugin-search-widget -->
+  <div class="flex flex-1 items-center justify-end gap-4">
+    <a
+      class="animated fadeIn i-ri-search-line inline-block cursor-pointer text-xl text-base-content/60 hover:text-base-content"
+      href="javascript:SearchWidget.open()"
+    ></a>
+
+    
+      
+      <label
+        class="swap swap-rotate hidden [@supports(color:oklch(0_0_0))]:inline-grid"
+        x-data="colorSchemeSwitcher"
+      >
+        <input type="checkbox" x-model="checked" @click="handleChange" />
+        <i class="i-tabler-sun swap-on text-xl text-base-content/60 hover:text-base-content"></i>
+        <i class="i-tabler-moon-stars swap-off text-xl text-base-content/60 hover:text-base-content"></i>
+      </label>
+    
+  </div>
+</div>
+
+    
+    <div id="app" class="main flex flex-col px-4 lg:flex-row" x-data="upvote('post','content.halo.run','posts')">
+      <div id="sidebar" class="sidebar-wrapper lg:static lg:w-1/4">
+  <div class="top-0 lg:sticky">
+    <div class="sidebar-content">
+      <div class="static left-0 right-0 top-0 z-50 hidden items-center p-4 px-0 lg:block">
+        <div class="flex items-center justify-between">
+          
+
+          <div
+            class="inline-flex items-center gap-4 justify-between !flex w-full"
+          >
+            
+              
+
+              <label
+                class="swap swap-rotate mt-4 hidden [@supports(color:oklch(0_0_0))]:inline-grid"
+                x-data="colorSchemeSwitcher"
+              >
+                <input type="checkbox" x-model="checked" @click="handleChange" />
+                <i class="i-tabler-sun swap-on text-2xl text-base-content/60 hover:text-base-content"></i>
+                <i class="i-tabler-moon-stars swap-off text-2xl text-base-content/60 hover:text-base-content"></i>
+              </label>
+            
+
+            <!-- https://github.com/halo-sigs/plugin-search-widget -->
+            <a
+              class="animated fadeIn i-ri-search-line mt-4 inline-block cursor-pointer text-2xl text-base-content/60 hover:text-base-content"
+              href="javascript:SearchWidget.open()"
+            ></a>
+          </div>
+        </div>
+        <div class="group relative mt-32 inline-block">
+          <a href="https://ameow.xyz">
+            <img
+              class="animated fadeIn avatar mx-0 size-24 rounded-full"
+              src="/upload/favicon.png"
+              alt="阿猫的博客"
+              width="96"
+              height="96"
+            />
+          </a>
+
+          
+        </div>
+        <h1
+          class="animated fadeIn mt-8 text-4xl font-extrabold"
+          style="animation-delay: 0.1s"
+        >阿猫的博客</h1>
+      </div>
+      
+      
+      <div class="animated fadeIn" style="animation-delay: 0.4s">
+        <p class="my-4 hidden font-light text-base-content/80 lg:block">文章目录</p>
+        <div class="toc-container hidden lg:block"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="menu-container" :class="{ 'open' : menuVisible }">
+  <i
+    class="animated fadeIn close-menu-btn i-ri-arrow-left-line inline-block cursor-pointer text-2xl"
+    @click="closeMenu()"
+  ></i>
+
+  <div class="w-full" :class="{ 'animated fadeIn' : menuVisible}">
+    <ul x-data="menu" id="menu-container" class="w-full space-y-6">
+  
+    <li>
+      <a
+        class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+        href="/"
+        target="_self"
+      >
+        <img
+          class="inline-block size-6 flex-none"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjEzZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTc2IDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTU3NS44IDI1NS41YzAgMTgtMTUgMzIuMS0zMiAzMi4xaC0zMmwuNyAxNjAuMmMwIDIuNy0uMiA1LjQtLjUgOC4xdjE2LjJjMCAyMi4xLTE3LjkgNDAtNDAgNDBoLTE2Yy0xLjEgMC0yLjIgMC0zLjMtLjFjLTEuNC4xLTIuOC4xLTQuMi4xTDQxNiA1MTJoLTI0Yy0yMi4xIDAtNDAtMTcuOS00MC00MHYtODhjMC0xNy43LTE0LjMtMzItMzItMzJoLTY0Yy0xNy43IDAtMzIgMTQuMy0zMiAzMnY4OGMwIDIyLjEtMTcuOSA0MC00MCA0MGgtNTUuOWMtMS41IDAtMy0uMS00LjUtLjJjLTEuMi4xLTIuNC4yLTMuNi4yaC0xNmMtMjIuMSAwLTQwLTE3LjktNDAtNDBWMzYwYzAtLjkgMC0xLjkuMS0yLjh2LTY5LjdoLTMyYy0xOCAwLTMyLTE0LTMyLTMyLjFjMC05IDMtMTcgMTAtMjRMMjY2LjQgOGM3LTcgMTUtOCAyMi04czE1IDIgMjEgN2wyNTUuNCAyMjQuNWM4IDcgMTIgMTUgMTEgMjQiLz48L3N2Zz4="
+        />
+        <span>首页</span>
+      </a>
+    </li>
+
+    
+  
+    <li>
+      <a
+        class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+        href="/photos"
+        target="_self"
+      >
+        <img
+          class="inline-block size-6 flex-none"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTIyMC42IDEyMS4yTDI3MS4xIDk2SDQ0OHY5NkgzMzMuMmMtMjEuOS0xNS4xLTQ4LjUtMjQtNzcuMi0yNHMtNTUuMiA4LjktNzcuMiAyNEg2NHYtNjRoMTI4YzkuOSAwIDE5LjctMi4zIDI4LjYtNi44TTAgMTI4djI4OGMwIDM1LjMgMjguNyA2NCA2NCA2NGgzODRjMzUuMyAwIDY0LTI4LjcgNjQtNjRWOTZjMC0zNS4zLTI4LjctNjQtNjQtNjRIMjcxLjFjLTkuOSAwLTE5LjcgMi4zLTI4LjYgNi44TDE5MiA2NGgtMzJWNDhjMC04LjgtNy4yLTE2LTE2LTE2SDgwYy04LjggMC0xNiA3LjItMTYgMTZ2MTZDMjguNyA2NCAwIDkyLjcgMCAxMjhtMTY4IDE3NmE4OCA4OCAwIDEgMSAxNzYgMGE4OCA4OCAwIDEgMS0xNzYgMCIvPjwvc3ZnPg=="
+        />
+        <span>影集</span>
+      </a>
+    </li>
+
+    
+  
+    <li>
+      <a
+        class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+        href="/categories/weekly"
+        target="_self"
+      >
+        <img
+          class="inline-block size-6 flex-none"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTk2IDk2YzAtMzUuMyAyOC43LTY0IDY0LTY0aDI4OGMzNS4zIDAgNjQgMjguNyA2NCA2NHYzMjBjMCAzNS4zLTI4LjcgNjQtNjQgNjRIODBjLTQ0LjIgMC04MC0zNS44LTgwLTgwVjEyOGMwLTE3LjcgMTQuMy0zMiAzMi0zMnMzMiAxNC4zIDMyIDMydjI3MmMwIDguOCA3LjIgMTYgMTYgMTZzMTYtNy4yIDE2LTE2em02NCAyNHY4MGMwIDEzLjMgMTAuNyAyNCAyNCAyNGgxMTJjMTMuMyAwIDI0LTEwLjcgMjQtMjR2LTgwYzAtMTMuMy0xMC43LTI0LTI0LTI0SDE4NGMtMTMuMyAwLTI0IDEwLjctMjQgMjRtMjA4LThjMCA4LjggNy4yIDE2IDE2IDE2aDQ4YzguOCAwIDE2LTcuMiAxNi0xNnMtNy4yLTE2LTE2LTE2aC00OGMtOC44IDAtMTYgNy4yLTE2IDE2bTAgOTZjMCA4LjggNy4yIDE2IDE2IDE2aDQ4YzguOCAwIDE2LTcuMiAxNi0xNnMtNy4yLTE2LTE2LTE2aC00OGMtOC44IDAtMTYgNy4yLTE2IDE2bS0yMDggOTZjMCA4LjggNy4yIDE2IDE2IDE2aDI1NmM4LjggMCAxNi03LjIgMTYtMTZzLTcuMi0xNi0xNi0xNkgxNzZjLTguOCAwLTE2IDcuMi0xNiAxNm0wIDk2YzAgOC44IDcuMiAxNiAxNiAxNmgyNTZjOC44IDAgMTYtNy4yIDE2LTE2cy03LjItMTYtMTYtMTZIMTc2Yy04LjggMC0xNiA3LjItMTYgMTYiLz48L3N2Zz4="
+        />
+        <span>猫鱼周刊</span>
+      </a>
+    </li>
+
+    
+  
+    
+
+    <li id="menu-item-GXpAI" x-data="subMenu(&#39;menu-item-GXpAI&#39;)"
+    >
+      <div class="group transition-all duration-300" :class="{ 'py-2.5 px-3 rounded-lg bg-base-200' : open }">
+        <div @click="open = !open" class="flex cursor-pointer items-center justify-between">
+          <a
+            class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+            :class="{ '!text-base-content' : open }"
+            href="/docs"
+            target="_self"
+            @click.stop
+          >
+            <img
+              class="inline-block size-6 flex-none"
+              src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjEzZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTc2IDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTI0OS42IDQ3MS41YzEwLjggMy44IDIyLjQtNC4xIDIyLjQtMTUuNVY3OC42YzAtNC4yLTEuNi04LjQtNS0xMUMyNDcuNCA1MiAyMDIuNCAzMiAxNDQgMzJDOTMuNSAzMiA0Ni4zIDQ1LjMgMTguMSA1Ni4xQzYuOCA2MC41IDAgNzEuNyAwIDgzLjh2MzcwLjNjMCAxMS45IDEyLjggMjAuMiAyNC4xIDE2LjVDNTUuNiA0NjAuMSAxMDUuNSA0NDggMTQ0IDQ0OGMzMy45IDAgNzkgMTQgMTA1LjYgMjMuNW03Ni44IDBDMzUzIDQ2MiAzOTguMSA0NDggNDMyIDQ0OGMzOC41IDAgODguNCAxMi4xIDExOS45IDIyLjZjMTEuMyAzLjggMjQuMS00LjYgMjQuMS0xNi41VjgzLjhjMC0xMi4xLTYuOC0yMy4zLTE4LjEtMjcuNkM1MjkuNyA0NS4zIDQ4Mi41IDMyIDQzMiAzMmMtNTguNCAwLTEwMy40IDIwLTEyMyAzNS42Yy0zLjMgMi42LTUgNi44LTUgMTFWNDU2YzAgMTEuNCAxMS43IDE5LjMgMjIuNCAxNS41Ii8+PC9zdmc+"
+            />
+            <span>系列小书</span>
+          </a>
+
+          <i
+            class="i-tabler-chevron-right inline-block text-base-content/60 transition-all group-hover:text-base-content"
+            :class="{ 'rotate-90' : open }"
+          ></i>
+        </div>
+
+        <ul class="mt-3 select-none space-y-2" x-show="open">
+          <li>
+            <a
+              href="/docs/aigc"
+              target="_blank"
+              class="flex items-center space-x-2.5 text-sm text-base-content/70 hover:text-base-content"
+            >
+              <img
+                class="inline-block size-6 flex-none"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjI1ZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNjQwIDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTMyMCAwYzE3LjcgMCAzMiAxNC4zIDMyIDMydjY0aDEyMGMzOS44IDAgNzIgMzIuMiA3MiA3MnYyNzJjMCAzOS44LTMyLjIgNzItNzIgNzJIMTY4Yy0zOS44IDAtNzItMzIuMi03Mi03MlYxNjhjMC0zOS44IDMyLjItNzIgNzItNzJoMTIwVjMyYzAtMTcuNyAxNC4zLTMyIDMyLTMyTTIwOCAzODRjLTguOCAwLTE2IDcuMi0xNiAxNnM3LjIgMTYgMTYgMTZoMzJjOC44IDAgMTYtNy4yIDE2LTE2cy03LjItMTYtMTYtMTZ6bTk2IDBjLTguOCAwLTE2IDcuMi0xNiAxNnM3LjIgMTYgMTYgMTZoMzJjOC44IDAgMTYtNy4yIDE2LTE2cy03LjItMTYtMTYtMTZ6bTk2IDBjLTguOCAwLTE2IDcuMi0xNiAxNnM3LjIgMTYgMTYgMTZoMzJjOC44IDAgMTYtNy4yIDE2LTE2cy03LjItMTYtMTYtMTZ6TTI2NCAyNTZhNDAgNDAgMCAxIDAtODAgMGE0MCA0MCAwIDEgMCA4MCAwbTE1MiA0MGE0MCA0MCAwIDEgMCAwLTgwYTQwIDQwIDAgMSAwIDAgODBNNDggMjI0aDE2djE5Mkg0OGMtMjYuNSAwLTQ4LTIxLjUtNDgtNDh2LTk2YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4bTU0NCAwYzI2LjUgMCA0OCAyMS41IDQ4IDQ4djk2YzAgMjYuNS0yMS41IDQ4LTQ4IDQ4aC0xNlYyMjR6Ii8+PC9zdmc+"
+              />
+              <span>AI 笔记</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="/docs/how-to-build-a-blog"
+              target="_blank"
+              class="flex items-center space-x-2.5 text-sm text-base-content/70 hover:text-base-content"
+            >
+              <img
+                class="inline-block size-6 flex-none"
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0ibTM2OC40IDE4LjNsLTU1LjcgNTUuOGwxMjUuMiAxMjUuMmw1NS43LTU1LjdjMjEuOS0yMS45IDIxLjktNTcuMyAwLTc5LjJsLTQ2LTQ2LjFjLTIxLjktMjEuOS01Ny4zLTIxLjktNzkuMiAwTTI4OCA5NC42bC05LjIgMi44bC0xNDQuMSA0My4yYy0xOS45IDYtMzUuNyAyMS4yLTQyLjMgNDFMMy44IDQ0NS44Yy0zLjggMTEuMy0xIDIzLjkgNy4zIDMyLjRsMTUzLjYtMTUzLjVjLTMtNi4zLTQuNy0xMy4zLTQuNy0yMC43YzAtMjYuNSAyMS41LTQ4IDQ4LTQ4czQ4IDIxLjUgNDggNDhzLTIxLjUgNDgtNDggNDhjLTcuNCAwLTE0LjQtMS43LTIwLjctNC43TDMzLjcgNTAwLjljOC42IDguMyAyMS4xIDExLjIgMzIuNCA3LjNsMjY0LjMtODguNmMxOS43LTYuNiAzNS0yMi40IDQxLTQyLjNsNDMuMi0xNDQuMWwyLjctOS4yeiIvPjwvc3ZnPg=="
+              />
+              <span>博客搭建教程</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+  
+    <li>
+      <a
+        class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+        href="/archives"
+        target="_self"
+      >
+        <img
+          class="inline-block size-6 flex-none"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTMyIDMyaDQ0OGMxNy43IDAgMzIgMTQuMyAzMiAzMnYzMmMwIDE3LjctMTQuMyAzMi0zMiAzMkgzMmMtMTcuNyAwLTMyLTE0LjMtMzItMzJWNjRjMC0xNy43IDE0LjMtMzIgMzItMzJtMCAxMjhoNDQ4djI1NmMwIDM1LjMtMjguNyA2NC02NCA2NEg5NmMtMzUuMyAwLTY0LTI4LjctNjQtNjR6bTEyOCA4MGMwIDguOCA3LjIgMTYgMTYgMTZoMTYwYzguOCAwIDE2LTcuMiAxNi0xNnMtNy4yLTE2LTE2LTE2SDE3NmMtOC44IDAtMTYgNy4yLTE2IDE2Ii8+PC9zdmc+"
+        />
+        <span>文章归档</span>
+      </a>
+    </li>
+
+    
+  
+    <li>
+      <a
+        class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+        href="/projects"
+        target="_self"
+      >
+        <img
+          class="inline-block size-6 flex-none"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIwLjg4ZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNDQ4IDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTQyOS42IDkyLjFjNC45LTExLjkgMi4xLTI1LjYtNy0zNC43cy0yMi44LTExLjktMzQuNy03bC0zNTIgMTQ0Yy0xNC4yIDUuOC0yMi4yIDIwLjgtMTkuMyAzNS44UzMyLjcgMjU2IDQ4IDI1NmgxNzZ2MTc2YzAgMTUuMyAxMC44IDI4LjQgMjUuOCAzMS40czMwLTUuMSAzNS44LTE5LjN6Ii8+PC9zdmc+"
+        />
+        <span>项目导航</span>
+      </a>
+    </li>
+
+    
+  
+    <li>
+      <a
+        class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+        href="https://bento.me/leslieleung"
+        target="_blank"
+      >
+        <img
+          class="inline-block size-6 flex-none"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNTEyIDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTMzOC45IDQ0Ni44Yy0yNS40IDExLTUzLjQgMTcuMi04Mi45IDE3LjJjLTExNC45IDAtMjA4LTkzLjEtMjA4LTIwOFMxNDEuMSA0OCAyNTYgNDhzMjA4IDkzLjEgMjA4IDIwOGMwIDIyLjQtMy41IDQzLjktMTAuMSA2NC4xYzMuMSA0LjUgNS43IDkuNCA3LjggMTQuNmMxMi43LTEuNiAyNS4xLjQgMzYuMiA1YzkuMS0yNi4yIDE0LTU0LjQgMTQtODMuN0M1MTIgMTE0LjYgMzk3LjQgMCAyNTYgMFMwIDExNC42IDAgMjU2czExNC42IDI1NiAyNTYgMjU2YzM1LjQgMCA2OS4xLTcuMiA5OS43LTIwLjJjLTQuOC01LjUtOC41LTEyLjItMTAuNC0xOS43bC02LjUtMjUuM3pNMjk2IDMxNmMwLTYuOS0zLjEtMTMuMi03LjMtMTguM2MtNC4zLTUuMi0xMC4xLTkuNy0xNi43LTEzLjRjLTEzLjMtNy40LTMwLjYtMTIuMy00OC0xMi4zYy0zLjYgMC02LjggMi41LTcuNyA2cy42IDcuMiAzLjggOWwuMi4xYy4yLjEuNS4zLjkuNWMuOC41IDIgMS4yIDMuNCAyLjFjMi44IDEuOSA2LjUgNC41IDEwLjIgNy42czcuMiA2LjYgOS42IDEwLjFjMi41IDMuNSAzLjUgNi40IDMuNSA4LjZzLTEgNS0zLjUgOC42Yy0yLjUgMy41LTUuOSA2LjktOS42IDEwLjFjLTMuNyAzLjEtNy40IDUuNy0xMC4yIDcuNmMtMS40LjktMi42IDEuNi0zLjQgMi4xYy0uNC4yLS43LjQtLjkuNWwtLjIuMWMtMi41IDEuNC00LjEgNC4xLTQuMSA3czEuNiA1LjYgNC4xIDdsLjIuMWMuMi4xLjUuMy45LjVjLjguNSAyIDEuMiAzLjQgMi4xYzIuOCAxLjkgNi41IDQuNSAxMC4yIDcuNnM3LjIgNi42IDkuNiAxMC4xYzIuNSAzLjUgMy41IDYuNCAzLjUgOC42cy0xIDUtMy41IDguNmMtMi41IDMuNS01LjkgNi45LTkuNiAxMC4xYy0zLjcgMy4xLTcuNCA1LjctMTAuMiA3LjZjLTEuNC45LTIuNiAxLjYtMy40IDIuMWMtLjQuMi0uNy40LS45LjVsLS4yLjFjLTMuMiAxLjgtNC43IDUuNS0zLjggOXM0LjEgNiA3LjcgNmMxNy40IDAgMzQuNy00LjkgNDcuOS0xMi4zYzYuNi0zLjcgMTIuNS04LjIgMTYuNy0xMy40YzQuMy01LjEgNy4zLTExLjQgNy4zLTE4LjNzLTMuMS0xMy4yLTcuMy0xOC4zYy00LjMtNS4yLTEwLjEtOS43LTE2LjctMTMuNGMtMi43LTEuNS01LjctMy04LjctNC4zYzMuMS0xLjMgNi0yLjcgOC43LTQuM2M2LjYtMy43IDEyLjUtOC4yIDE2LjctMTMuNGM0LjMtNS4xIDcuMy0xMS40IDcuMy0xOC4zem0tMTE5LjYtNzZhMzIgMzIgMCAxIDAgMC02NGEzMiAzMiAwIDEgMCAwIDY0bTE1OS4zLTIwYzEwLjYgMCAxOS45IDMuOCAyNS40IDkuN2M3LjYgOC4xIDIwLjIgOC41IDI4LjMuOXM4LjUtMjAuMi45LTI4LjNDMzc1LjcgMTg2LjggMzU1IDE4MCAzMzUuNiAxODBzLTQwLjEgNi44LTU0LjYgMjIuM2MtNy42IDguMS03LjEgMjAuNy45IDI4LjNzMjAuNyA3LjEgMjguMy0uOWM1LjUtNS44IDE0LjgtOS43IDI1LjQtOS43ek00MzQgMzUyLjNjLTYtMjMuMi0yOC44LTM3LTUxLjEtMzAuOHMtMzUuNCAzMC4xLTI5LjUgNTMuNGwyMi45IDg5LjNjMi4yIDguNyAxMS4yIDEzLjkgMTkuOCAxMS40bDg0LjktMjMuOGMyMi4yLTYuMiAzNS40LTMwLjEgMjkuNS01My40cy0yOC44LTM3LTUxLjEtMzAuOGwtMjAuMiA1LjZsLTUuNC0yMXoiLz48L3N2Zz4="
+        />
+        <span>关于本猫</span>
+      </a>
+    </li>
+
+    
+  
+    <li>
+      <a
+        class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+        href="https://www.travellings.cn/go.html"
+        target="_blank"
+      >
+        <img
+          class="inline-block size-6 flex-none"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIwLjg4ZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNDQ4IDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTk2IDBDNDMgMCAwIDQzIDAgOTZ2MjU2YzAgNDggMzUuMiA4Ny43IDgxLjEgOTQuOWwtNDYgNDZjLTcgNy0yIDE5LjEgNy45IDE5LjFoMzkuN2M4LjUgMCAxNi42LTMuNCAyMi42LTkuNEwxNjAgNDQ4aDEyOGw1NC42IDU0LjZjNiA2IDE0LjEgOS40IDIyLjYgOS40aDM5LjdjMTAgMCAxNS0xMi4xIDcuOS0xOS4xbC00Ni00NmM0Ni03LjEgODEuMS00Ni45IDgxLjEtOTQuOVY5NmMwLTUzLTQzLTk2LTk2LTk2ek02NCAxMjhjMC0xNy43IDE0LjMtMzIgMzItMzJoODBjMTcuNyAwIDMyIDE0LjMgMzIgMzJ2OTZjMCAxNy43LTE0LjMgMzItMzIgMzJIOTZjLTE3LjcgMC0zMi0xNC4zLTMyLTMyem0yMDgtMzJoODBjMTcuNyAwIDMyIDE0LjMgMzIgMzJ2OTZjMCAxNy43LTE0LjMgMzItMzIgMzJoLTgwYy0xNy43IDAtMzItMTQuMy0zMi0zMnYtOTZjMC0xNy43IDE0LjMtMzIgMzItMzJNNjQgMzUyYTMyIDMyIDAgMSAxIDY0IDBhMzIgMzIgMCAxIDEtNjQgMG0yODgtMzJhMzIgMzIgMCAxIDEgMCA2NGEzMiAzMiAwIDEgMSAwLTY0Ii8+PC9zdmc+"
+        />
+        <span>开往</span>
+      </a>
+    </li>
+
+    
+  
+    <li>
+      <a
+        class="flex items-center space-x-2.5 text-base-content/70 hover:text-base-content"
+        href="/links"
+        target="_self"
+      >
+        <img
+          class="inline-block size-6 flex-none"
+          src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxLjI1ZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgNjQwIDUxMiI+PHBhdGggZmlsbD0iIzg4ODg4OCIgZD0iTTU3OS44IDI2Ny43YzU2LjUtNTYuNSA1Ni41LTE0OCAwLTIwNC41Yy01MC01MC0xMjguOC01Ni41LTE4Ni4zLTE1LjRsLTEuNiAxLjFjLTE0LjQgMTAuMy0xNy43IDMwLjMtNy40IDQ0LjZzMzAuMyAxNy43IDQ0LjYgNy40bDEuNi0xLjFjMzIuMS0yMi45IDc2LTE5LjMgMTAzLjggOC42YzMxLjUgMzEuNSAzMS41IDgyLjUgMCAxMTRMNDIyLjMgMzM0LjhjLTMxLjUgMzEuNS04Mi41IDMxLjUtMTE0IDBjLTI3LjktMjcuOS0zMS41LTcxLjgtOC42LTEwMy44bDEuMS0xLjZjMTAuMy0xNC40IDYuOS0zNC40LTcuNC00NC42cy0zNC40LTYuOS00NC42IDcuNGwtMS4xIDEuNkMyMDYuNSAyNTEuMiAyMTMgMzMwIDI2MyAzODBjNTYuNSA1Ni41IDE0OCA1Ni41IDIwNC41IDB6TTYwLjIgMjQ0LjNjLTU2LjUgNTYuNS01Ni41IDE0OCAwIDIwNC41YzUwIDUwIDEyOC44IDU2LjUgMTg2LjMgMTUuNGwxLjYtMS4xYzE0LjQtMTAuMyAxNy43LTMwLjMgNy40LTQ0LjZzLTMwLjMtMTcuNy00NC42LTcuNGwtMS42IDEuMWMtMzIuMSAyMi45LTc2IDE5LjMtMTAzLjgtOC42Qzc0IDM3MiA3NCAzMjEgMTA1LjUgMjg5LjVsMTEyLjItMTEyLjNjMzEuNS0zMS41IDgyLjUtMzEuNSAxMTQgMGMyNy45IDI3LjkgMzEuNSA3MS44IDguNiAxMDMuOWwtMS4xIDEuNmMtMTAuMyAxNC40LTYuOSAzNC40IDcuNCA0NC42czM0LjQgNi45IDQ0LjYtNy40bDEuMS0xLjZDNDMzLjUgMjYwLjggNDI3IDE4MiAzNzcgMTMyYy01Ni41LTU2LjUtMTQ4LTU2LjUtMjA0LjUgMHoiLz48L3N2Zz4="
+        />
+        <span>友链</span>
+      </a>
+    </li>
+
+    
+  
+</ul>
+
+  </div>
+</div>
+<div class="mask" :class="{ 'open' : menuVisible}" @click="closeMenu()"></div>
+
+      <div
+        class="content-wrapper post-detail animated fadeIn pt-32 lg:w-3/4 lg:p-8"
+        :class="{ 'is-second' : menuVisible }" x-data="{name:&#39;76c52d34-6ff2-4219-8f53-1e93890281e3&#39;}"
+      >
+        <div
+          class="flex flex-wrap items-center justify-between gap-2" x-data="uiPermission(&#39;anonymousUser&#39;,&#39;system:posts:manage&#39;)"
+        >
+          <h1 class="break-all text-3xl font-bold">2024 年度总结</h1>
+          <template x-if="shouldDisplay">
+            <a
+              class="btn btn-ghost btn-sm"
+              href="/console/posts/editor?name=76c52d34-6ff2-4219-8f53-1e93890281e3&amp;returnToView=true"
+            >
+              <i class="i-tabler-edit"></i>
+              <span> 编辑 </span>
+            </a>
+          </template>
+        </div>
+
+        <div class="my-4 flex flex-wrap items-center justify-between lg:my-8">
+          <div class="flex gap-4">
+            
+            <div class="inline-flex items-center gap-1.5">
+              <div class="i-ri-eye-line text-base-content/50"></div>
+              <span class="text-sm font-light text-base-content/50">299</span>
+            </div>
+            
+          </div>
+          <div>
+            <div
+              class="text-sm font-light text-base-content/50"
+              title="2024-12-29T18:39:32.587594905Z"
+            >2024-12-30</div>
+          </div>
+        </div>
+
+        
+
+        <div
+          class="break-all py-4 markdown-body"
+          id="post-content"
+        ><div data-type="sign" id="vditor-article-sign"></div><div data-type="var" id="vditor-var-cdn" value="/plugins/vditor-mde/assets/static"></div><link rel="stylesheet" type="text/css" href="/plugins/vditor-mde/assets/static/vditor-render.css?version=1.8.0" id="vditor-style"><script src="/plugins/vditor-mde/assets/static/dist/method.min.js?version=1.8.0" id="vditor-methods"></script><script src="/plugins/vditor-mde/assets/static/render-utils.js?version=1.8.0" id="vditor-render-utils"></script><script src="/plugins/vditor-mde/assets/static/halo-renders/index.js?version=1.8.0" id="vditor-halo-render-js"></script><link rel="stylesheet" type="text/css" href="/plugins/vditor-mde/assets/static/halo-renders/index.css?version=1.8.0" id="vditor-halo-render-css"><script src="/plugins/vditor-mde/assets/static/external/halo-renders.js?version=1.8.0" id="vditor-halo-render"></script><script src="/plugins/vditor-mde/assets/static/render.js?version=1.8.0" id="vditor-render"></script>
+<p>去年差不多时候也做了一份<a href="https://ameow.xyz/archives/2023-wrapup">年终总结</a>，去年我对自己还是相对满意的，在开源、写作方面都做得不错。今年感觉有更多的成果可以总结出来，而且比去年要做得更好。其实有些提升非常不知不觉，趁着年度总结的机会，仔细盘点一把。</p>
+<p>去年我把总结分成了技术和生活两大块，今年则是会从技术、写作、运动、文娱这几块去总结。</p>
+<h2 id="技术">技术</h2>
+<h3 id="开源">开源</h3>
+<p>今年在 GitHub 上有 802 个 commit（主要是自动提交的，有点作弊了），获得了 1886 个 star（应该是累计的），最常用 Python。</p>
+<p><img src="https://img.ameow.xyz/20241229232210931.webp" alt="" srcset="https://img.ameow.xyz/20241229232210931.webp 800w, https://img.ameow.xyz/20241229232210931.webp 1600w, https://img.ameow.xyz/20241229232210931.webp 1200w, https://img.ameow.xyz/20241229232210931.webp 400w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>今年主要是重构了我的通知项目 <a href="https://github.com/LeslieLeung/heimdallr">Heimdallr</a>，让它变成得更加现代化（强类型、Poetry 依赖管理）、支持了更多通知方式、增加了兼容接口以及部署方式；另外是一个 Markdown 项目 <a href="https://github.com/LeslieLeung/opensource-lighthouse">opensource-lighthouse</a>，汇总统计各「大厂」的开源团队和项目，主要是满足了我对国内外大公司开源现状的好奇心，不过这个项目后半年因为没有时间，就没再维护了，剩一个自动脚本一直在跑。</p>
+<p>不得不说，开源这方面今年有点颓势。现有的项目因为跑得好好的，也没有新的需求，所以没动力多加功能；有几个挺好的 idea，由于时间精力有限也没有开展。希望明年能抽出更多时间 code for fun 吧！</p>
+<h3 id="时间统计">时间统计</h3>
+<p>从时间统计上看，今年代码时长一共为 882 小时，主要是 Go，其次是 Python 和 PHP，这点倒也没什么大变化，主要是 AI 爆发导致 Python 又被捞出来做项目了。不过总的代码时长其实有所下降（去年是 960 个小时），感觉可能是自己花了更多时间在调研（摸鱼）和规划（发呆）上，也有可能是 GitHub Copilot 和 Cursor 的介入，使得原本枯燥的码代码过程变得更快了。</p>
+<p><img src="https://img.ameow.xyz/20241229232858016.webp" alt="" srcset="https://img.ameow.xyz/20241229232858016.webp 1200w, https://img.ameow.xyz/20241229232858016.webp 800w, https://img.ameow.xyz/20241229232858016.webp 400w, https://img.ameow.xyz/20241229232858016.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>细算一下，在 GitHub Copilot 和 Cursor 的投入一年在两百美元左右，折合人民币约 1400 元；节省的时间按时薪算，扣除这两个 「AI 小弟」的工钱，还是血赚！</p>
+<h3 id="今年技术焦点-AI-LLM-">今年技术焦点：AI（LLM）</h3>
+<p>今年的技术焦点毫无疑问就是 AI，或者更贴切地说是 LLM。今年探索了不少 LLM 落地的场景，有偏 C 端应用的，也有偏 B 端的，碰了不少钉子，也有一些确实取得了效果。</p>
+<p>如果要我对 2024 年的 AI（LLM）做个总结，我觉得它从懵懂的实习生渐渐变成熟练的得力助手。更大的上下文窗口、结构化输出（JSON mode）支持、多模态、基础能力的提升等等，都使得过去基本只能聊着玩玩的 LLM 渐渐有了一点生产力。这些功能和能力提升使得 LLM 不再是「玩具」，能做进一些产品功能了。</p>
+<p>对待 AI，人们有两种很常见的态度：神化和威胁论。第一种是对 AI 比较没有理解的或自认为有点理解的，他们觉得 AI 什么都能做，什么需求都能使用 AI 实现——「有什么不会，问问 ChatGPT」。另一种则是对 AI 有一些反感，尤其是 AI 可能对其职业有比较大影响的工作，例如翻译和审校等，他们下意识会比较排斥 AI，对 AI 的结果有比较强的质疑。</p>
+<p>我个人的观点是，「<strong>AI 决定下限，人决定上限</strong>」。现阶段的 AI 不过是一个很熟练的助手，或者说工具，它不会替代人，但它确实会比某些人做得更好，而用得好的人不论是效率还是能力都能得到提升。</p>
+<h2 id="写作">写作</h2>
+<p>今年把写作单列出来，是因为这个去年不怎么起眼的事情不知不觉坚持了一整年，也取得了非常好的成果。它几乎已经是我生活的一小部分，每周承担起消耗我表达欲的「重任」。</p>
+<h3 id="博客">博客</h3>
+<p>今年一共发表博客 70 篇，站点累计 PV 88.5k，UV 42.3k，相比去年是 20 倍的增长。（包含了猫鱼周刊的数据）</p>
+<p><img src="https://img.ameow.xyz/20241230000921956.webp" alt="" srcset="https://img.ameow.xyz/20241230000921956.webp 400w, https://img.ameow.xyz/20241230000921956.webp 1600w, https://img.ameow.xyz/20241230000921956.webp 1200w, https://img.ameow.xyz/20241230000921956.webp 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>阅读量 Top 5 的是以下几篇文章：</p>
+<ul>
+<li>14.6k <a href="https://ameow.xyz/archives/develop-a-frontend-site-with-copilot">联手 Copilot，我在 10 个小时内上线了一个前端网站</a>：被阮一峰老师推荐的文章，分享使用 GitHub Copilot 编写一个前端网站的过程以及一些经验分享。</li>
+<li>5.67k <a href="https://ameow.xyz/archives/info-source-2024">我的信息源 2024</a>：今年 RSS 生态繁荣发展，社区有个现象级产品 Follow 产生，带火了 RSS。这篇文章很多流量来自于搜索，看来大家对构建自己的信息源很感兴趣，明年再更新一版。</li>
+<li>1.55k <a href="https://ameow.xyz/archives/2024-double-11-cloud-service-sales">2024 年双十一&amp;黑五云服务优惠集合</a>：一篇优惠集合。</li>
+<li>1.32k <a href="https://ameow.xyz/archives/android-cicd-with-github-actions">Android 项目使用 Github Actions 实现自动打包发布</a>：去年的销冠，今年还在持续带来流量。</li>
+<li>807 <a href="https://ameow.xyz/archives/llm-structural-output">LLM 结构化输出</a>：我很得意的文章，不过发布后没多久 OpenAI 就更新了 JSON mode，它的意义就不大了。</li>
+</ul>
+<h3 id="猫鱼周刊">猫鱼周刊</h3>
+<p>周刊方面，由于同时有在多个平台发布，因此分开统计。</p>
+<p>博客平台 26.1k PV，14.7k UV。考虑到有部分是 RSS 订阅，所以这个数字可能不是很准确。<br>
+<img src="https://img.ameow.xyz/20241230002105671.webp" alt="" srcset="https://img.ameow.xyz/20241230002105671.webp 800w, https://img.ameow.xyz/20241230002105671.webp 1600w, https://img.ameow.xyz/20241230002105671.webp 400w, https://img.ameow.xyz/20241230002105671.webp 1200w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>阅读量方面一般般，每篇多的六七百，少的四五百左右。Top 5 如下，感觉还是别的文章火的时候带来的流量。</p>
+<p><img src="https://img.ameow.xyz/20241230002210197.webp" alt="" srcset="https://img.ameow.xyz/20241230002210197.webp 800w, https://img.ameow.xyz/20241230002210197.webp 1600w, https://img.ameow.xyz/20241230002210197.webp 1200w, https://img.ameow.xyz/20241230002210197.webp 400w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>Quail 平台目前有 58 个订阅者，有几十位读者选择从 Email 或者 Quail 阅读，虽然这部分量比较少，后续应该也会维持在 Quail 的更新。</p>
+<p>微信公众号不支持全年数据的查看，就只挑有意思的提一下。目前有 590 个关注，最多有一篇内容有 4k 多阅读，也有一篇有 3k 多阅读，其余内容的阅读量都在数百左右。</p>
+<p><img src="https://img.ameow.xyz/20241230002751477.webp" alt="" srcset="https://img.ameow.xyz/20241230002751477.webp 400w, https://img.ameow.xyz/20241230002751477.webp 1600w, https://img.ameow.xyz/20241230002751477.webp 1200w, https://img.ameow.xyz/20241230002751477.webp 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"><br>
+<img src="https://img.ameow.xyz/20241230002813806.webp" alt="" srcset="https://img.ameow.xyz/20241230002813806.webp 400w, https://img.ameow.xyz/20241230002813806.webp 1200w, https://img.ameow.xyz/20241230002813806.webp 1600w, https://img.ameow.xyz/20241230002813806.webp 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<h3 id="小结">小结</h3>
+<p>上面放了很多数据，虽然阅读量是评判写作内容的核心指标，但其实有很长一段时间我都没有很关注它，就大概一周看一次。从今年下半年开始，由于比较忙，其实我没有很费心去做博客的推广，被大 v 推荐的流量下降之后数据其实也不怎么好看，所以更多聚焦在写作这件事本身。从周刊可以看到，每篇中的条目其实有减少，但是字数甚至更多，我会比较用心地去记录我对某件事的看法。</p>
+<p>在写作这件事上，我觉得取得最有意义的事情是满足了我的表达欲。我身边的同事、朋友并非都对这些事情感兴趣，因此博客是一个表达自我的最佳途径。另外一个收获就是写作能力的提升，现在我能毫不费劲地写出一两千字，每周花两个小时左右就能做好周刊。</p>
+<h2 id="运动">运动</h2>
+<p>运动今年也被单拎出来总结，今年最大的变化是三月份体检之后开始了减肥，九月份开始健身，因此运动量大增，效果也很显著。</p>
+<p><img src="https://img.ameow.xyz/20241230003844381.webp" alt="" srcset="https://img.ameow.xyz/20241230003844381.webp 400w, https://img.ameow.xyz/20241230003844381.webp 800w, https://img.ameow.xyz/20241230003844381.webp 1200w, https://img.ameow.xyz/20241230003844381.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>「显著」的效果，减重 34.9 斤。</p>
+<p><img src="https://img.ameow.xyz/20241230004126901.webp" alt="" srcset="https://img.ameow.xyz/20241230004126901.webp 400w, https://img.ameow.xyz/20241230004126901.webp 800w, https://img.ameow.xyz/20241230004126901.webp 1200w, https://img.ameow.xyz/20241230004126901.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>今年的运动量增加了很多，主要是游泳和健身。在发现宝安体育场的游泳馆 50 米室外池一次只要 10 块钱之后，夏天每周都去两三次。后来开始健身，一周练三四次，每次有氧 40 分钟以上，整体运动量大了不少。</p>
+<p>说到减肥，一开始在三甲医院就医，医生建议控制饮食，以及服用二甲双胍辅助。这套组合拳前期效果不错，嘎嘎掉了差不多 20 斤，但是很快遇到了瓶颈（再控制饮食和服药，都不再降了）。于是开始健身，继续控制饮食，同时增大运动量，又继续掉了。有几个因素不得不提：</p>
+<ul>
+<li>控制饮食。这是最大头。只要吃得干净，真的很容易瘦，肠胃负担也小很多。</li>
+<li>运动消耗。跟控制饮食打配合，形成热量缺口。</li>
+<li>睡眠。这算是我做得不好的地方。睡得好才容易掉称，要是一连几天熬夜，基本体重会瓶颈几天。</li>
+<li>药物，这个有点用，但扛不起大旗。药物的副作用也比较强烈，长时间肠胃不好，再加上控制饮食，使得整个人都会有点闷闷不乐。</li>
+</ul>
+<p>一开始我没有考虑健身，一是觉得费钱，而是觉得每天要固定投入时间，也比较蛋疼。练了几个月后，开始觉得这是一笔非常值得的投资。时间的问题，其实本来每天就要在无所事事里浪费几个小时刷短视频，把这个时间抽出来健身也没什么不妥；另外是，原本每天饭后都会因为胰岛素抵抗瞌睡一会儿，健身之后整个人精神很多。</p>
+<h2 id="文娱">文娱</h2>
+<h3 id="旅行-演出">旅行/演出</h3>
+<p>今年去了一次香港，看了一场房东的猫的音乐节（还因此阳了一次），看了一场话剧，以及看了一场 SpicyComedy 的英文脱口秀。</p>
+<p><img src="https://img.ameow.xyz/20241230011121562.webp" alt="" srcset="https://img.ameow.xyz/20241230011121562.webp 400w, https://img.ameow.xyz/20241230011121562.webp 800w, https://img.ameow.xyz/20241230011121562.webp 1200w, https://img.ameow.xyz/20241230011121562.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>音乐节版本的房东的猫，一年看一次猫成就达成。上次是家门口（广州），这次也是在家门口（深圳）。明年希望猫再来一下广深，我包去的！比较遗憾是等开场实在太久走开了一下，前排一下被粉丝占光，只能在很远的地方看（不过视野其实也不错）。音乐节在世界之窗，结束之后还有一场小小的烟花，算是一点额外福利。世界之窗本身倒是很无聊，微缩景观没什么好看的，铁塔下这个舞台空间也不大，体验一般。</p>
+<p><img src="https://img.ameow.xyz/20241230010536151.webp" alt="" srcset="https://img.ameow.xyz/20241230010536151.webp 400w, https://img.ameow.xyz/20241230010536151.webp 1200w, https://img.ameow.xyz/20241230010536151.webp 1600w, https://img.ameow.xyz/20241230010536151.webp 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>SpicyComedy 的脱口秀，纯英文，现场氛围非常好。是一个大杂烩的性质，所以有一些 host 其实之前我没听说过（去之前只知道 Frankie 和 Norah）。虽然不是每一个梗都很好笑，口音、外国人这些元素用多了会觉得有点滥，但英文脱口秀确实比中文的更能 get 到我的笑点。听英文脱口秀有点像大学上 Peter 的综英，懂的人笑爽了，不懂的人一头雾水。第一次刷到 Norah 的视频估计是大学的时候了，过去好多年了，终于在线下看一次。这次因为抢票有点晚，只买到二楼的山顶票，有机会搞一个前排互动一波。</p>
+<h3 id="游戏">游戏</h3>
+<p>今年打的游戏不是很多，简单列举一下。按索尼的年度总结，今年应该在 PS5 上花了 478 个小时，「真是惊人」。</p>
+<ul>
+<li>GT 赛车 7（246 小时）：年度游戏，没话说，每天下班开几个小时车。练习带来的进步非常明显，印象最深刻的是有一场线上赛事，斯帕，中间有雨，差不多跑了一个小时，P2。最近新购入了直驱基座套装，明年的目标是用方向盘正经进行模拟赛车。</li>
+<li>赛博朋克 2077（50 小时）：不知道为什么又玩了这么久，现在还想再过一遍，黑客流没玩过。</li>
+<li>剑星（40 小时）：等黑悟空出来之前玩的，算是入门了偏硬核一点的动作游戏。它的音效和动画都做得很好，战斗酣畅淋漓，打击感很足，最重要是傻瓜化做得比较好，即使我比较手残也不会在里面坐牢。最近出了一个尼尔联动的 DLC，还没时间捡起来打完。</li>
+<li>消逝的光芒（29 小时）：老游戏了，之前玩过一小段，在 PS5 上把主线剧情打完了。后来才发现有一个 DLC，买的碟又不是一个版本，要从头重新打过。重新买了数字版，但还没时间打。还有一个 2 代，有时间也通完吧。</li>
+<li>黑神话：悟空（22 小时）：嗯，就玩了这么点，可能就打了 40%左右。今年终极热度游戏，可以体会到制作组的用心，但是我就是有点玩不下去。打击感说实话不如剑星，甚至不如法国团队做的 Sifu。</li>
+<li>无人星空：自由度超高的游戏，题材是我很喜欢的星际探索。官方自带了一个挂，可以修改无限资源，好处是不再为了收集坐牢，坏处是咔咔地过任务，游戏体验大打折扣。</li>
+<li>绝地潜兵 2：刷副本打小怪游戏，射击手感很爽，游戏玩法也很有意思。感觉跟朋友一起玩会更有意思。</li>
+<li>皇牌空战 7：也是经典老游戏，重温一下。还是没把主线打完，但不得不说 PS5 的画质比 Steam Deck 好太多。</li>
+<li>三角洲行动：最近才开始玩，战地 + cod + 塔克夫终极缝合怪。还算可以。</li>
+</ul>
+<p>最近购入了图马斯特 T598P，闻说是最有性价比的入门直驱，正好觉得自己手柄的车技也挺好了，搞一套方向盘来再精进一下模拟赛车，也算是完成小时候的愿望清单了。明年应该会花不少时间在模拟赛车上。</p>
+<p>游戏装备上，其实有点想买 PS Portal，听说现在串流体验优化了，另外也有了云游戏，如果网络能优化好应该是值的。再有就是 PS5 有点想升级成 PS5 Pro，毕竟已经决定了不在 PC 上玩单机游戏，不过 PS5 目前画质比我的老 2060 好，蹲到 Pro 有好价再入手。另外 Switch 2 也准备要出了，持币观望中。</p>
+<h3 id="摄影">摄影</h3>
+<p>今年年初买了 DJI Action 4，年中的时候买了索尼 A6700，又购置了几支镜头。</p>
+<p>自以为 A6700 是个非常明智的选择，一是机身和镜头都比全画幅便宜，购入新镜头没有负担（最近国产出了非常多千元镜头，可玩性很高）；二是轻便，保证不会被手机下位替代。摄影方面我不是新手，对出片质量来说，器材影响不是很大，所以自信购入，事实证明也非常香。</p>
+<p>另外购置的几支镜头也分享一下：</p>
+<ul>
+<li>适马 1650 F2.8：真正挂机的变焦头，F2.8 白天够用，也不至于天黑回家。而且非常轻便，一套下来一斤出头，可以随时塞在包里。画质也过得去，业余拍下，拍到比拍好是更重要。</li>
+<li>唯卓仕 56 F1.7：玩了一段时间之后入的定焦头。拍了一段时间后，发现自己很喜欢长焦，主要是好构图。它最大的特点就是便宜，仅需 899，适马 56 是它的三倍有余。大光圈拍人像和夜景都不错。</li>
+<li>唯卓仕 28 F4.5：终极饼干头。在此之前我还买过一个整活的奥利奥镜头（只要几十块），那个有一种特殊的色散，感觉像很古早的相机。这个是正经一点的饼干头，虽然光圈小，成像还算可以的，至少能拍到。这个搭配机身，简直轻飘飘，可以塞进裤袋带走。价格也很实在，439，当玩具还不错。</li>
+</ul>
+<p>一些作品：</p>
+<p>欢乐港湾的摩天轮，在深圳最喜欢的东西之一。</p>
+<p><img src="https://img.ameow.xyz/20241230023754675.webp" alt="" srcset="https://img.ameow.xyz/20241230023754675.webp 800w, https://img.ameow.xyz/20241230023754675.webp 400w, https://img.ameow.xyz/20241230023754675.webp 1600w, https://img.ameow.xyz/20241230023754675.webp 1200w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>某个夏日的下午。</p>
+<p><img src="https://img.ameow.xyz/20241230024009472.webp" alt="" srcset="https://img.ameow.xyz/20241230024009472.webp 800w, https://img.ameow.xyz/20241230024009472.webp 400w, https://img.ameow.xyz/20241230024009472.webp 1200w, https://img.ameow.xyz/20241230024009472.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>自拍像。</p>
+<p><img src="https://img.ameow.xyz/20241230024031003.webp" alt="" srcset="https://img.ameow.xyz/20241230024031003.webp 800w, https://img.ameow.xyz/20241230024031003.webp 400w, https://img.ameow.xyz/20241230024031003.webp 1200w, https://img.ameow.xyz/20241230024031003.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>傍晚，工作台倒影在窗上，跟窗外的斑马线重合。</p>
+<p><img src="https://img.ameow.xyz/20241230024047191.webp" alt="" srcset="https://img.ameow.xyz/20241230024047191.webp 400w, https://img.ameow.xyz/20241230024047191.webp 800w, https://img.ameow.xyz/20241230024047191.webp 1600w, https://img.ameow.xyz/20241230024047191.webp 1200w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>幸福几钱，十蚊一大把。</p>
+<p><img src="https://img.ameow.xyz/20241230024359156.webp" alt="" srcset="https://img.ameow.xyz/20241230024359156.webp 400w, https://img.ameow.xyz/20241230024359156.webp 800w, https://img.ameow.xyz/20241230024359156.webp 1200w, https://img.ameow.xyz/20241230024359156.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>蓝调时刻</p>
+<p><img src="https://img.ameow.xyz/20241230024440344.webp" alt="" srcset="https://img.ameow.xyz/20241230024440344.webp 400w, https://img.ameow.xyz/20241230024440344.webp 800w, https://img.ameow.xyz/20241230024440344.webp 1600w, https://img.ameow.xyz/20241230024440344.webp 1200w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>车流</p>
+<p><img src="https://img.ameow.xyz/20241230024445933.webp" alt="" srcset="https://img.ameow.xyz/20241230024445933.webp 800w, https://img.ameow.xyz/20241230024445933.webp 400w, https://img.ameow.xyz/20241230024445933.webp 1200w, https://img.ameow.xyz/20241230024445933.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>烟火气</p>
+<p><img src="https://img.ameow.xyz/20241230024510763.webp" alt="" srcset="https://img.ameow.xyz/20241230024510763.webp 400w, https://img.ameow.xyz/20241230024510763.webp 1200w, https://img.ameow.xyz/20241230024510763.webp 800w, https://img.ameow.xyz/20241230024510763.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>吉星</p>
+<p><img src="https://img.ameow.xyz/20241230024520660.webp" alt="" srcset="https://img.ameow.xyz/20241230024520660.webp 400w, https://img.ameow.xyz/20241230024520660.webp 800w, https://img.ameow.xyz/20241230024520660.webp 1200w, https://img.ameow.xyz/20241230024520660.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>锦木千束的手办</p>
+<p><img src="https://img.ameow.xyz/20241230024615643.webp" alt="" srcset="https://img.ameow.xyz/20241230024615643.webp 400w, https://img.ameow.xyz/20241230024615643.webp 1200w, https://img.ameow.xyz/20241230024615643.webp 800w, https://img.ameow.xyz/20241230024615643.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>毛茸茸，软绵绵</p>
+<p><img src="https://img.ameow.xyz/20241230024735458.webp" alt="" srcset="https://img.ameow.xyz/20241230024735458.webp 800w, https://img.ameow.xyz/20241230024735458.webp 1600w, https://img.ameow.xyz/20241230024735458.webp 400w, https://img.ameow.xyz/20241230024735458.webp 1200w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>信心花舍</p>
+<p><img src="https://img.ameow.xyz/20241230024735062.webp" alt="" srcset="https://img.ameow.xyz/20241230024735062.webp 400w, https://img.ameow.xyz/20241230024735062.webp 1200w, https://img.ameow.xyz/20241230024735062.webp 800w, https://img.ameow.xyz/20241230024735062.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>梦幻（就是那个饼干头拍的）</p>
+<p><img src="https://img.ameow.xyz/20241230025025337.webp" alt="" srcset="https://img.ameow.xyz/20241230025025337.webp 400w, https://img.ameow.xyz/20241230025025337.webp 800w, https://img.ameow.xyz/20241230025025337.webp 1200w, https://img.ameow.xyz/20241230025025337.webp 1600w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>港味</p>
+<p><img src="https://img.ameow.xyz/20241230024957145.webp" alt="" srcset="https://img.ameow.xyz/20241230024957145.webp 400w, https://img.ameow.xyz/20241230024957145.webp 1600w, https://img.ameow.xyz/20241230024957145.webp 1200w, https://img.ameow.xyz/20241230024957145.webp 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>日落下的教堂</p>
+<p><img src="https://img.ameow.xyz/20241230025000038.webp" alt="" srcset="https://img.ameow.xyz/20241230025000038.webp 400w, https://img.ameow.xyz/20241230025000038.webp 1600w, https://img.ameow.xyz/20241230025000038.webp 1200w, https://img.ameow.xyz/20241230025000038.webp 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<h3 id="购物">购物</h3>
+<p>列举一些买到的好物。</p>
+<ul>
+<li>iPad mini (A17 Pro)：健身房神器，挑好视频一边看一边有氧；另外就是睡前抱着刷一会儿资讯。教育优惠拿下，还算值。</li>
+<li>九号 FzMix（铅酸 7223）：出行自由，宝安区内交通神器，正常时间段会比较堵，深夜骑行体验很好，有几个晚上睡不着从家里飞到红树林海边兜风。也跑过几次长途，去过平湖、沙井、罗湖，满电续航七十多公里，非常优秀。有了电鸡之后出门觅食方便很多，早上也可以极限出门上班。</li>
+<li>LiiGear 章鱼老师 2：入坑机能圈！一个能装背负好的双肩包非常重要。加了一些副包和配饰，酷的。缺点是容量有点少，一台电脑，一台相机，几件换洗衣服，空间就不剩很多了，只适合一两天的装备。不过极端情况下，可以终极过载，再挂点副包来装下更多衣物。</li>
+<li>DJI Action 4：执法记录仪的角色。买来从来没有出过片，因为懒得剪。拿来记录过几次骑行，以及一些家庭重要时刻。留着以后有机会再剪吧。</li>
+<li>Meshtastic：之前周刊介绍过，拼装是男人的浪漫，不知不觉买了一个成品，自己装了六个。最近国内玩家群体起来了，期待尽早通联成功。</li>
+<li>DualSense 30 周年限定手柄：运气好抽签抽到了购买资格，原价入手。经典配色，收藏手柄 +1。</li>
+<li>小电拼影视飓风款、Testv 快乐能量停机坪：充电类的产品，算是给喜欢的 up 主信仰充值。</li>
+<li>阿卡西斯雷电 4 拓展坞：隶属整理桌面计划，在家里 MacBook 合盖竖在一边使用，用机械键盘打字，不占用桌面空间。为了 2.5G，加钱搞了接口最全的雷电 4 拓展坞。</li>
+<li>宜家洞洞板及配件：也是桌面整理计划。把平铺的东西垂直收纳，节省了很多空间，维持了一段时间桌面的整洁。</li>
+<li>2.5G 交换机、华硕 TUF 小旋风 Pro WiFi7：<a href="https://ameow.xyz/archives/home-network-upgrade-2024">家庭网络升级</a>，解决了原来小米路由器老是重启的问题。</li>
+<li>米家标签打印机：给桶装水打开封时间，避免放得太久。给一些物品打标签也挺方便。</li>
+</ul>
+<p>一些想买但是没买的物品：</p>
+<ul>
+<li>无人机：新出了个 2000 元档的，太入门；有避障功能的要加价到七八千，想着没什么机会出门（广深都不太好飞），转而买了相机。</li>
+<li>拓竹 3D 打印机：国补 3500 太香啦！可惜不会建模，家里真的没地方，而且使用频率应该也不高，以后再说吧！</li>
+<li>M4 Mac mini：国补三千多，太值了。暂时没有需求，如果实在有需要后面教育优惠买吧。</li>
+</ul>
+<h3 id="音乐">音乐</h3>
+<p>今年的年度歌手还是陈奕迅，其实不怎么专门挑他的歌听，只是他的歌实在太多，加起来就是最多。</p>
+<p><img src="https://img.ameow.xyz/20241231032302705.webp" alt="" srcset="https://img.ameow.xyz/20241231032302705.webp 400w, https://img.ameow.xyz/20241231032302705.webp 800w, https://img.ameow.xyz/20241231032302705.webp 1600w, https://img.ameow.xyz/20241231032302705.webp 1200w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>今年的年度单曲是《永远几远》，林夕的填词，王菀之的声线，开口就跪。开头的 talk 真的印象深刻。「起步永远合衬，结尾没人可挑选」真的唱出很多遗憾。<br>
+<img src="https://img.ameow.xyz/20241231032322520.webp" alt="" srcset="https://img.ameow.xyz/20241231032322520.webp 400w, https://img.ameow.xyz/20241231032322520.webp 1200w, https://img.ameow.xyz/20241231032322520.webp 1600w, https://img.ameow.xyz/20241231032322520.webp 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<p>年度歌单也贴一下，除了永远几远，剩下很多歌都值得说道：</p>
+<ul>
+<li>《钱买不到的东西》：今年反复跟朋友分享，时间才是最贵的，整首歌很有深意。</li>
+<li>《无尽》：「梦想，于漆黑里仍然铿锵」。</li>
+<li>《下一次》：「理想和现实，难免有时差」。</li>
+<li>《树木真美》：「仍要心里紧记，那真美的最初」。</li>
+<li>《隐形游乐场》：「想得到烟花，马上有烟花」。</li>
+<li>《边界》：「哪怕此刻身处在荒原也有星火点点」。</li>
+<li>《广州南》：歌词倒不是很出彩，但是今年去了几十次广州南，这几年反复来往广深，已是两个高铁站的常客。</li>
+<li>《爱情是一种法国甜品》：「爱是满屋法国造甜品，外酥心软」。</li>
+<li>《Dear Myself》：老歌手尹光跟自己的 AI 声线合唱的作品。「我把这个使命过继 AI 了」让人唏嘘。</li>
+</ul>
+<p><img src="https://img.ameow.xyz/20241231032653216.webp" alt="" srcset="https://img.ameow.xyz/20241231032653216.webp 1200w, https://img.ameow.xyz/20241231032653216.webp 1600w, https://img.ameow.xyz/20241231032653216.webp 400w, https://img.ameow.xyz/20241231032653216.webp 800w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<h2 id="年度照片">年度照片</h2>
+<p>保留节目。今年年度照片当属春节期间广州放的烟花，我当时的配文是「希望每天都像今天一样闪闪发光」。</p>
+<p>广州之前每年年初一晚上都有一场烟花汇演，在珠江白鹅潭举行。已经 12 年没有办了，我对看烟花的记忆也停留在童年。十二年正好是一纪，这十二年里正好经历了中高考、疫情、毕业、工作，今年年终总结竟然挖掘出这么多亮点，也算是这个「闪闪发光」带来的好彩头。</p>
+<p><img src="https://img.ameow.xyz/20241230031957483.webp" alt="" srcset="https://img.ameow.xyz/20241230031957483.webp 400w, https://img.ameow.xyz/20241230031957483.webp 800w, https://img.ameow.xyz/20241230031957483.webp 1600w, https://img.ameow.xyz/20241230031957483.webp 1200w" sizes="(max-width: 400px) 400px, (max-width: 800px) 800px, (max-width: 1200px) 1200px, (max-width: 1600px) 1600px"></p>
+<h2 id="总结和展望">总结和展望</h2>
+<p>本以为这篇总结写个千来字就能收尾，结果写的时候才发现细细盘点，今年竟然做成了很多事，也过得相对很精彩。技术方面在 AI 上找到了比较多的兴趣点，虽然由于现实原因限制不能一一探索，也算是小有所成。明年希望能把一两个点完全做透，出点狠货；同时，借助 AI，进军更多领域。写作上取得非常长足的进步，感叹坚持的力量确实很强大。明年希望可以在这方面有更多的探索，做一些社交媒体的运营。健康方面也取得进展，明年除了解决体重问题，希望把睡眠问题也改善一下。文娱方面，明年一定要多去几次旅游，多出去玩。</p>
+<p>总结写得很长，展望却很短。今年一句很火的话叫「人生是旷野，不是轨道」。我不喜欢给自己制定非常详细的目标，不给自己定 DDL，也很少想象我将来会是什么样子，有时候跟别人比起来有点「烂」的感觉。我会给自己定一些大的方向，然后开始闲逛，有时最终到达了我想要的地方也没有发觉（就像这篇一不小心写了五千多字的总结）。</p>
+<p>今年还有一件非常重磅的事情没有包含在总结里，算是种下种子，明年如果发芽开花结果，再细细叙述。</p>
+</div>
+
+        
+
+        <div
+          class="sticky bottom-10 flex items-center justify-center"
+        >
+          <ul
+            class="z-10 flex h-12 items-center gap-2 rounded-full border border-base-content/10 bg-base-100 px-2 py-1.5 shadow-lg"
+          >
+            <li
+              class="group inline-flex h-full cursor-pointer items-center justify-center gap-1.5 rounded-full px-2 hover:bg-base-200"
+              @click="handleUpvote(name)"
+            >
+              <div x-show="upvoted(name)" class="i-ri-heart-3-fill text-red-700"></div>
+              <div
+                x-show="!upvoted(name)"
+                class="i-ri-heart-3-line text-base-content/70 group-hover:text-red-600"
+              ></div>
+              <span
+                class="text-sm text-base-content/70"
+                data-upvote-post-name="76c52d34-6ff2-4219-8f53-1e93890281e3"
+              >0</span>
+            </li>
+            <li
+              class="group inline-flex h-full cursor-pointer items-center rounded-full px-2 hover:bg-base-200"
+            >
+              <a class="inline-flex size-full items-center justify-center gap-1.5" href="#post-comment">
+                <div class="i-ri-message-3-line text-base-content/70"></div>
+                <span class="text-sm text-base-content/70">0</span>
+              </a>
+            </li>
+            <li
+              x-data="{donateModal:false}"
+              class="group inline-flex h-full cursor-pointer items-center justify-center gap-1.5 rounded-full px-2 hover:bg-base-200"
+              @click="donateModal = true"
+            >
+              <div class="i-ri-money-cny-circle-line text-base-content/70"></div>
+              <template x-teleport="body">
+  <div>
+    <div
+      class="fixed inset-0 z-50 bg-[#0006] opacity-100 backdrop-blur-sm"
+      aria-hidden="true"
+      x-show="donateModal"
+      x-transition:enter="ease-in-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="ease-in-out duration-300"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+    ></div>
+    <div
+      class="fixed inset-0 z-50 overflow-y-auto"
+      tabindex="-1"
+      x-show="donateModal"
+      x-transition:enter="ease-out duration-200"
+      x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave="ease-in duration-100"
+      x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+    >
+      <div class="flex min-h-full flex-col items-center justify-center p-4 text-center sm:p-0">
+        <div
+          @click.outside="donateModal = false"
+          class="relative my-4 w-full transform overflow-hidden rounded-lg bg-base-100 p-4 text-left shadow-xl transition-all sm:w-auto"
+        >
+          <h1 class="text-lg font-semibold">赞助</h1>
+          <div class="mt-5">
+            <div class="grid grid-cols-2 gap-6">
+              <div
+                class="flex w-full flex-col justify-center space-y-3 text-center sm:w-36"
+              >
+                <img
+                  class="size-full"
+                  src="https://img.ameow.xyz/202407210053577.jpg"
+                  loading="lazy"
+                  alt="微信赞赏码"
+                  width="144"
+                  height="144"
+                />
+                <span class="text-sm text-base-content/60">微信赞赏码</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            @click="donateModal = false"
+            class="group inline-flex cursor-pointer items-center justify-center rounded-full bg-base-100 p-1.5"
+          >
+            <i class="i-ri-close-line block text-base-content/60 group-hover:text-base-content"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+            </li>
+            <li
+              class="group inline-flex h-full cursor-pointer items-center justify-center gap-1.5 rounded-full px-2 hover:bg-base-200"
+              @click="shareModal = true" x-data="share([{&quot;id&quot;:&quot;wechat&quot;},{&quot;id&quot;:&quot;x&quot;},{&quot;id&quot;:&quot;telegram&quot;},{&quot;id&quot;:&quot;native&quot;}],[&quot;wechat&quot;,&quot;x&quot;,&quot;telegram&quot;,&quot;facebook&quot;,&quot;qq&quot;,&quot;qzone&quot;,&quot;weibo&quot;,&quot;douban&quot;,&quot;native&quot;])"
+            >
+              <div class="i-ri-share-line text-base-content/70"></div>
+              <template x-teleport="body">
+  <div>
+    <div
+      class="fixed inset-0 z-50 bg-[#0006] opacity-100 backdrop-blur-sm"
+      aria-hidden="true"
+      x-show="shareModal"
+      x-transition:enter="ease-in-out duration-300"
+      x-transition:enter-start="opacity-0"
+      x-transition:enter-end="opacity-100"
+      x-transition:leave="ease-in-out duration-300"
+      x-transition:leave-start="opacity-100"
+      x-transition:leave-end="opacity-0"
+    ></div>
+    <div
+      class="fixed inset-0 z-50 overflow-y-auto"
+      tabindex="-1"
+      x-show="shareModal"
+      x-transition:enter="ease-out duration-200"
+      x-transition:enter-start="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+      x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave="ease-in duration-100"
+      x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
+      x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
+    >
+      <div class="flex min-h-full flex-col items-center justify-center p-4 text-center sm:p-0">
+        <div
+          @click.outside="shareModal = false"
+          class="relative my-4 transform overflow-hidden rounded-lg bg-base-100 p-4 text-left shadow-xl transition-all sm:w-full sm:max-w-xl"
+        >
+          <h1 class="text-lg font-semibold">分享</h1>
+          <div class="my-8">
+            <div class="grid grid-cols-5 gap-6 sm:grid-cols-6">
+              <template x-for="item in activeShareItems">
+                <div class="inline-flex flex-col items-center justify-center gap-1.5 rounded-full">
+                  <div
+                    class="inline-flex size-12 cursor-pointer items-center justify-center rounded-full bg-base-200 transition-all hover:bg-base-300 sm:size-16"
+                    @click="handleShare(item.id)"
+                  >
+                    <div class="text-xl text-base-content" :class="item.icon"></div>
+                  </div>
+                  <div class="text-base-content/60˝ hidden text-xs sm:block" x-text="item.name"></div>
+                </div>
+              </template>
+            </div>
+            <div class="mt-10">
+              <div
+                class="flex flex-wrap items-center justify-center gap-1 rounded-lg bg-base-200 px-3 py-2 sm:justify-between"
+              >
+                <div class="select-all text-xs font-light text-base-content/60" x-text="permalink"></div>
+                <div
+                  class="cursor-pointer select-none text-sm text-base-content/60 hover:text-base-content"
+                  @click="handleCopy"
+                  x-text="copied ? '已复制':'复制'"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            @click="shareModal = false"
+            class="group inline-flex cursor-pointer items-center justify-center rounded-full bg-base-100 p-1.5"
+          >
+            <i class="i-ri-close-line block text-base-content/60 group-hover:text-base-content"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex justify-between py-8">
+          <div class="w-1/2 pr-4">
+            
+          </div>
+          <div class="w-1/2 pl-4 text-right">
+            <a
+              href="/archives/develop-a-frontend-site-with-copilot"
+              title="联手 Copilot，我在10个小时内上线了一个前端网站"
+            >
+              <div
+                class="inline-flex items-center gap-1 border-b-2 border-b-transparent text-sm text-base-content/90 hover:border-base-content hover:text-base-content"
+              >
+                <span class="flex-1 shrink break-all">联手 Copilot，我在10个小时内上线了一个前端网站</span>
+                <i class="i-ri-arrow-right-line inline-block flex-none"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div id="post-comment" class="comment-widget">
+          <div id="comment-content-halo-run-Post-76c52d34-6ff2-4219-8f53-1e93890281e3"></div>
+<script>
+  CommentWidget.init(
+    "#comment-content-halo-run-Post-76c52d34-6ff2-4219-8f53-1e93890281e3",
+    {
+      group: "content.halo.run",
+      kind: "Post",
+      name: "76c52d34-6ff2-4219-8f53-1e93890281e3",
+      size: 20,
+      replySize: 10,
+      withReplies: false,
+      withReplySize: 5,
+      useAvatarProvider: false,
+      avatarProvider: "gravatar",
+      avatarProviderMirror: "",
+      avatarPolicy: "anonymousUser",
+      captchaEnabled: false,
+    }
+  );
+</script>
+
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        generateToc();
+      });
+    </script>
+  
+    <footer class="mt-10 space-y-2 bg-base-100 py-8">
+  <hr class="my-6 border-base-content/5 sm:mx-auto lg:my-8" />
+  <span class="container mx-auto block text-center text-sm text-base-content/70">
+    ©
+    2025
+    <a href="/">阿猫的博客</a> Powered by
+    <a href="https://halo.run" class="hover:text-base-content" target="_blank">Halo</a> Theme
+    <a href="https://halo.run/store/apps/app-GHgAR" target="_blank" class="hover:text-base-content">Walker</a>
+  </span>
+  <span class="container mx-auto block text-center text-sm text-base-content/70">
+    <p>如果你觉得我的内容还不错，可以请我<a href="https://ameow.xyz/donate" class="hover:text-base-content" target="_blank">喝杯咖啡</a></p>
+<p><a href="https://beian.miit.gov.cn/" class="hover:text-base-content" target="_blank">粤ICP备19129275号-1</a>
+</p>
+  </span>
+</footer>
+
+
+    <button
+      type="button"
+      id="btn-scroll-to-top"
+      class="duration-300 fixed bottom-5 right-5 flex items-center justify-center rounded-full bg-neutral p-3 opacity-0 shadow transition-all hover:opacity-70 hover:shadow-lg lg:bottom-10 lg:right-10"
+    >
+      <span class="i-tabler-chevron-up text-2xl text-neutral-content"></span>
+    </button>
+  </body>
+</html>
