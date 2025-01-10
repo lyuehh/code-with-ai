@@ -6,8 +6,7 @@ const { createCanvas } = require('canvas');
 const config = {
     fontSize: 64,        // 字体大小
     padding: 10,         // 内边距
-    backgroundColor: 'white',
-    textColor: 'black'
+    textColor: 'black'   // 文字颜色
 };
 
 async function convertNumbersToPNG(fontPath, outputDir) {
@@ -29,9 +28,8 @@ async function convertNumbersToPNG(fontPath, outputDir) {
         const canvas = createCanvas(config.fontSize + config.padding * 2, config.fontSize + config.padding * 2);
         const ctx = canvas.getContext('2d');
 
-        // 设置背景
-        ctx.fillStyle = config.backgroundColor;
-        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        // 清除画布
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         // 设置字体
         ctx.fillStyle = config.textColor;
@@ -44,10 +42,16 @@ async function convertNumbersToPNG(fontPath, outputDir) {
         const centerY = canvas.height / 2;
         ctx.fillText(num.toString(), centerX, centerY);
 
-        // 保存为PNG
-        const buffer = canvas.toBuffer('image/png');
+        // 保存为PNG，设置为支持透明度的格式
+        const buffer = canvas.toBuffer('image/png', {
+            compressionLevel: 9,
+            filters: canvas.PNG_ALL_FILTERS,
+            palette: undefined,
+            backgroundIndex: 0,
+            resolution: 96
+        });
+        
         fs.writeFileSync(`${outputDir}/${num}.png`, buffer);
-
         console.log(`Generated ${num}.png`);
     }
 }
